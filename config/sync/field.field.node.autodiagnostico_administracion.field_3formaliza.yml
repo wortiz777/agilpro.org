@@ -1,0 +1,21 @@
+uuid: 0cd52d93-7e82-4fee-8b7d-2bdbb0e6cee1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3formaliza
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_3formaliza
+field_name: field_3formaliza
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '3.Pago de IVA'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

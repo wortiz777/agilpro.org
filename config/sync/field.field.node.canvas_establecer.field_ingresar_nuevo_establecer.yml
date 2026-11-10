@@ -1,0 +1,19 @@
+uuid: ac162bc5-127b-48ae-b318-17bb397a2f31
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresar_nuevo_establecer
+    - node.type.canvas_establecer
+id: node.canvas_establecer.field_ingresar_nuevo_establecer
+field_name: field_ingresar_nuevo_establecer
+entity_type: node
+bundle: canvas_establecer
+label: 'Ingresar nuevo Establecer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

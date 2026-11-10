@@ -1,0 +1,26 @@
+uuid: 04f3e2fc-0008-48b3-9513-31ba982e71a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_12financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_12financiero
+field_name: field_12financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '12. Conoce los productos financieros que pueden ayudar al desarrollo del negocio. (leasing, compra de cartera, sobregiros, entre'
+description: 'Conoce los productos financieros que pueden ayudar al desarrollo del negocio. (leasing, compra de cartera, sobregiros, entre otros) '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 1bb475dc-d5c1-4157-ae12-2e267f25ea87
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acciones
+    - node.type.ruta_desarrollo_competencias
+    - node.type.ruta_desarrollo_competencias_dim
+id: node.ruta_desarrollo_competencias_dim.field_acciones
+field_name: field_acciones
+entity_type: node
+bundle: ruta_desarrollo_competencias_dim
+label: Acciones
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ruta_desarrollo_competencias: ruta_desarrollo_competencias
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

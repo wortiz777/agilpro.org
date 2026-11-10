@@ -1,0 +1,26 @@
+uuid: 90572950-5a36-4472-b2f4-e06727e5a564
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5admin
+    - node.type.autodiagnostico_administracion
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_administracion.field_5admin
+field_name: field_5admin
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '5. La empresa cuenta con un manual de perfiles, funciones y responsabilidades de los colaboradores.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

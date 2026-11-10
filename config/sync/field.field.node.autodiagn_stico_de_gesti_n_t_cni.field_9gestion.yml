@@ -1,0 +1,26 @@
+uuid: 725cc816-c3c9-4cf0-b76b-7808a49043c7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_9gestion
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_9gestion
+field_name: field_9gestion
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '9. La empresa tiene establecida una ficha técnica o documentación descriptiva de los requisitos del producto o servicio.'
+description: "Los indicadores de productividad son aquellas variables que nos ayudan a identificar algún defecto o imperfección que exista cuando elaboramos un producto u ofrecemos un servicio, y de este modo reflejan la eficiencia en el uso de los recursos generales y recursos humanos de la empresa, y pueden ser cuantitativos y cualitativos.\r\n\r\nEl mejoramiento continuo es el conjunto de todas las acciones diarias que permiten que los procesos y la empresa sean más competitivos en la satisfacción del cliente.\r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,20 @@
+uuid: 0789e48c-0d85-4728-9af8-e1c38aa64638
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_nombre_del_emprendimiento
+  module:
+    - user
+id: user.user.field_nombre_del_emprendimiento
+field_name: field_nombre_del_emprendimiento
+entity_type: user
+bundle: user
+label: 'Nombre del Emprendimiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

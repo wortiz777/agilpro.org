@@ -1,0 +1,18 @@
+uuid: 8b574c01-e46b-4c4d-bbee-510f4e188f86
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Administración, Normatividad y Talento Humano'
+type: autodiagnostico_administracion
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

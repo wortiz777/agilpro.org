@@ -1,0 +1,26 @@
+uuid: f84354a9-559f-4173-ba6f-f2fff94950e3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_10mercadeo
+field_name: field_10mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '10.La empresa cuenta con una estrategia de comparación de  sus precios, calidad, imagen, instalaciones con los de la competencia'
+description: 'En sectores competitivos crean un cuadro con 4 o 5 competidores y 4 o 5 variables críticas que seguir y medir en un periodo de tiempo que necesario (mensual, bimensual o trimestral) para ir controlando los movimientos de los competidores y poder tomar decisiones rápidamente.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

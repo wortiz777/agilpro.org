@@ -1,0 +1,24 @@
+uuid: 8f50ef8f-b805-42bc-9f9e-6e16e322d472
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linea_intervencion
+    - node.type.fosfec_transaction
+    - taxonomy.vocabulary.lineas_intervencion
+id: node.fosfec_transaction.field_linea_intervencion
+field_name: field_linea_intervencion
+entity_type: node
+bundle: fosfec_transaction
+label: 'Línea de Intervención'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      lineas_intervencion: lineas_intervencion
+field_type: entity_reference

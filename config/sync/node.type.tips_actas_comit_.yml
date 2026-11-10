@@ -1,0 +1,18 @@
+uuid: 2bc759b7-6496-4298-8e80-65f968b3ae0b
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Tips Actas Comité'
+type: tips_actas_comit_
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

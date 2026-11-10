@@ -1,0 +1,33 @@
+uuid: 4fe92e49-0d73-4f48-b23a-abb25e29c44b
+langcode: es
+status: true
+dependencies:
+  module:
+    - agilpro_org
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_saludo_emprendedor
+theme: subtema
+region: content
+weight: -23
+provider: null
+plugin: agilpro_saludo_block
+settings:
+  id: agilpro_saludo_block
+  label: subtema_saludo_emprendedor
+  label_display: '0'
+  provider: agilpro_org
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

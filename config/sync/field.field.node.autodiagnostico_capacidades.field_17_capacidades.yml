@@ -1,0 +1,26 @@
+uuid: 533c608d-3737-4dc7-b044-2a7a86bceca4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_17_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_17_capacidades
+field_name: field_17_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '17. Identifica las necesidades antes de ofrecer el servicio o producto.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,45 @@
+uuid: bf4ba36d-e43a-497c-8cdf-edf445099b82
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_nivel_educativo
+field_name: field_nivel_educativo
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Primaria
+    -
+      value: '2'
+      label: Secundaria
+    -
+      value: '3'
+      label: Técnico
+    -
+      value: '4'
+      label: Tecnológico
+    -
+      value: '5'
+      label: Profesional
+    -
+      value: '6'
+      label: Especialización
+    -
+      value: '7'
+      label: Maestría
+    -
+      value: '8'
+      label: Doctorado
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

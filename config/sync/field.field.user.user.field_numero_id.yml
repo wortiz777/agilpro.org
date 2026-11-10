@@ -1,0 +1,24 @@
+uuid: 18c747ec-35cf-443d-b500-45a32d0fdd20
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_numero_id
+  module:
+    - user
+id: user.user.field_numero_id
+field_name: field_numero_id
+entity_type: user
+bundle: user
+label: 'Número de Identificación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

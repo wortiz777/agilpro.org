@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Hooks para el módulo AgilPro.org.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function agilpro_org_theme($existing, $type, $theme, $path) {
+  return [
+    'mi_empresa_dashboard' => [
+      'variables' => [
+        'empresa' => [],
+        'is_admin_empresa' => FALSE,
+        'active_tab' => 'programas',
+        'convocatorias' => [],
+        'sesiones' => [],
+        'perfil_form' => NULL,
+        'colaboradores' => [],
+        'invite_form' => NULL,
+        'certificados' => [],
+      ],
+      'template' => 'mi-empresa-dashboard',
+      'path' => $path . '/templates',
+    ],
+  ];
+}

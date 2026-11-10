@@ -1,0 +1,14 @@
+uuid: b6649bc0-e426-4210-9ec2-7e76ed64eb2e
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.coordinador_regional
+  module:
+    - user
+id: user_remove_role_action.coordinador_regional
+label: 'Elimina el rol Coordinador Regional al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: coordinador_regional

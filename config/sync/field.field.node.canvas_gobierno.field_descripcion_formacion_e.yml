@@ -1,0 +1,21 @@
+uuid: 68d81222-8db4-423e-8625-13fe7f65ad64
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_formacion_e
+    - node.type.canvas_gobierno
+id: node.canvas_gobierno.field_descripcion_formacion_e
+field_name: field_descripcion_formacion_e
+entity_type: node
+bundle: canvas_gobierno
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Las organizaciones públicas que facilitan el desarrollo económico, representan un papel importante por su apoyo, vía políticas, fondos y eventos entre otros.  (Cámaras de Comercio, Ministerios y organizaciones de desarrollo economico.  Los estamentos del '
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: bbf1ba1f-2efb-4d17-a4ef-a9a795179f9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_id
+    - node.type.participantes_ficha_inscripci_n
+    - taxonomy.vocabulary.tipo_documento
+id: node.participantes_ficha_inscripci_n.field_tipo_id
+field_name: field_tipo_id
+entity_type: node
+bundle: participantes_ficha_inscripci_n
+label: 'Tipo de Identificación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      tipo_documento: tipo_documento
+    sort:
+      field: _none
+field_type: entity_reference

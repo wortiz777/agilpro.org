@@ -1,0 +1,19 @@
+uuid: f9566f31-2d65-4001-9024-1970ce455466
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valoracio_resultados_
+    - node.type.ruta_desarrollo_competencias
+id: node.ruta_desarrollo_competencias.field_valoracio_resultados_
+field_name: field_valoracio_resultados_
+entity_type: node
+bundle: ruta_desarrollo_competencias
+label: 'valoracio de resultados.  '
+description: "Realice seguiento de los resultado. Cheque logros, reprograme pendientes, analice por que lo logro o por que auno no lo ha logrado.  \r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

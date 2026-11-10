@@ -1,0 +1,26 @@
+uuid: df3d27e3-a5a6-480f-9efd-9b5136fa41a3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_7financiero
+field_name: field_7financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '7. Le empresa maneja el flujo de caja para cumplir oportunamente con los compromisos adquiridos'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

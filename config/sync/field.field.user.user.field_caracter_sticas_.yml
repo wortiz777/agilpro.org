@@ -1,0 +1,21 @@
+uuid: d3178744-5a04-4e59-9f26-b96e9a7504f4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_caracter_sticas_
+  module:
+    - options
+    - user
+id: user.user.field_caracter_sticas_
+field_name: field_caracter_sticas_
+entity_type: user
+bundle: user
+label: 'Características Grupo Poblacional'
+description: 'Indique cual o cuales grupos poblacionales lo identifican. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,31 @@
+uuid: ae8d3d86-0f99-4853-ac9f-b40e1dc8c68b
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tips_listado_grupos_talleres_hab.body
+    - node.type.tips_listado_grupos_talleres_hab
+  module:
+    - text
+    - user
+id: node.tips_listado_grupos_talleres_hab.teaser
+targetEntityType: node
+bundle: tips_listado_grupos_talleres_hab
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

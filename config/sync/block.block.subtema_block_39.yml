@@ -1,0 +1,37 @@
+uuid: 53df1261-3512-4d6c-bb1c-995acc8c0766
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000039'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_39
+theme: subtema
+region: none
+weight: -8
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000039'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000039'
+  label: 'Paso 4A'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      colaborador: colaborador

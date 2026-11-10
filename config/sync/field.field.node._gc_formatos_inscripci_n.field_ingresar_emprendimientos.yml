@@ -1,0 +1,30 @@
+uuid: 68ecd5c0-f0f3-4828-9188-1ce8c99db7dd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresar_emprendimientos
+    - node.type._gc_formatos_inscripci_n
+    - node.type.formatos_inscripci_n_emprendimie
+id: node._gc_formatos_inscripci_n.field_ingresar_emprendimientos
+field_name: field_ingresar_emprendimientos
+entity_type: node
+bundle: _gc_formatos_inscripci_n
+label: 'Ingresar Emprendimiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      formatos_inscripci_n_emprendimie: formatos_inscripci_n_emprendimie
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

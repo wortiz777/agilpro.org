@@ -1,0 +1,48 @@
+uuid: 72581a80-c68e-4e6e-9e97-4ff69c911d1d
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-360-emprendimiento
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_360_emprendimiento
+theme: subtema
+region: highlighted
+weight: -23
+provider: null
+plugin: 'system_menu_block:menu-360-emprendimiento'
+settings:
+  id: 'system_menu_block:menu-360-emprendimiento'
+  label: menu-360-emprendimiento
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /content/360*
+      /node/121
+      /node/122
+      /node/123
+      /node/125
+      /node/127
+      /node/462
+      /node/add/componente-financiero-adicional
+      /node/add/componente_financiero_adicional
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated
+      administrator: administrator
+      colaborador: colaborador

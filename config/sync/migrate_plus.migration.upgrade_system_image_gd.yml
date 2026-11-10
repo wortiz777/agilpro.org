@@ -1,0 +1,32 @@
+uuid: b65a3de8-26ff-463c-a1ec-ba1ec71f73b4
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_system_image_gd
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Image quality configuration'
+source:
+  plugin: variable
+  variables:
+    - image_jpeg_quality
+  source_module: system
+process:
+  jpeg_quality:
+    -
+      plugin: get
+      source: image_jpeg_quality
+destination:
+  plugin: config
+  config_name: system.image.gd
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }
+include: null

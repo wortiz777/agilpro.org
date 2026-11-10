@@ -1,0 +1,26 @@
+uuid: 5d8bef13-568d-48d4-81d2-ddd65d629f30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_5financiero
+field_name: field_5financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '5. Cuenta con la herramienta para identificar  cómo se componen sus ingresos y analiza su comportamiento para tomar decisiones'
+description: 'Ingresos que provienen de cada segmento de clientes y propuesta de valor que ofrece la empresa. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

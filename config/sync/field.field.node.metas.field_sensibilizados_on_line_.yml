@@ -1,0 +1,23 @@
+uuid: e30d1121-0eb2-4313-b0e2-7f216243a6b6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sensibilizados_on_line_
+    - node.type.metas
+id: node.metas.field_sensibilizados_on_line_
+field_name: field_sensibilizados_on_line_
+entity_type: node
+bundle: metas
+label: 'Sensibilizados | On-Line '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

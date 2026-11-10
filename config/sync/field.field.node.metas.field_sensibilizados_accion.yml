@@ -1,0 +1,22 @@
+uuid: ac5115bf-a6ba-4810-b753-5dd502ca3e1b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sensibilizados_accion
+    - node.type.metas
+  module:
+    - text
+id: node.metas.field_sensibilizados_accion
+field_name: field_sensibilizados_accion
+entity_type: node
+bundle: metas
+label: 'Sensibilizados | Acción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

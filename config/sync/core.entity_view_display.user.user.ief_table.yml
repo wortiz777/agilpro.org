@@ -1,0 +1,341 @@
+uuid: d1917bbb-57d6-4129-9acc-c414210d05e6
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.ief_table
+    - field.field.user.user.feeds_item
+    - field.field.user.user.field__dv
+    - field.field.user.user.field_actividad
+    - field.field.user.user.field_apellidos
+    - field.field.user.user.field_asesor_fase_empoderar
+    - field.field.user.user.field_camara
+    - field.field.user.user.field_caracter_sticas_
+    - field.field.user.user.field_cargo
+    - field.field.user.user.field_ciudad_municipio
+    - field.field.user.user.field_como_se_enter_del_programa
+    - field.field.user.user.field_departamento
+    - field.field.user.user.field_direccion_comercial
+    - field.field.user.user.field_documento_id
+    - field.field.user.user.field_e_mail_contacto
+    - field.field.user.user.field_empresa_ref
+    - field.field.user.user.field_estado_civil
+    - field.field.user.user.field_estado_emprendimient
+    - field.field.user.user.field_estrato_socioecon_mico
+    - field.field.user.user.field_fase_pre_app
+    - field.field.user.user.field_fecha_de_naciomiento
+    - field.field.user.user.field_fecha_inicio_actividades
+    - field.field.user.user.field_ingresos
+    - field.field.user.user.field_ingresos_por_ventas_promed
+    - field.field.user.user.field_logo_emprendimiento
+    - field.field.user.user.field_movil
+    - field.field.user.user.field_n_mero_de_empleados_formal
+    - field.field.user.user.field_nit
+    - field.field.user.user.field_nivel_educativo
+    - field.field.user.user.field_nombre
+    - field.field.user.user.field_nombre_del_emprendimiento
+    - field.field.user.user.field_nombres
+    - field.field.user.user.field_numero_id
+    - field.field.user.user.field_pagina_web
+    - field.field.user.user.field_presentacion_emprendimient
+    - field.field.user.user.field_rol_emprendimiento
+    - field.field.user.user.field_rol_empresa
+    - field.field.user.user.field_sector_economico
+    - field.field.user.user.field_sexo
+    - field.field.user.user.field_telefono_fijo_emprendimien
+    - field.field.user.user.field_terminos_condiciones
+    - field.field.user.user.field_tipo_id
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - colorbox
+    - datetime
+    - link
+    - options
+    - user
+id: user.user.ief_table
+targetEntityType: user
+bundle: user
+mode: ief_table
+content:
+  field__dv:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_actividad:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_apellidos:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_ciudad_municipio:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_como_se_enter_del_programa:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_departamento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_direccion_comercial:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_e_mail_contacto:
+    type: email_mailto
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_estado_civil:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_estado_emprendimient:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_estrato_socioecon_mico:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_fecha_de_naciomiento:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_fecha_inicio_actividades:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_ingresos:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_ingresos_por_ventas_promed:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_logo_emprendimiento:
+    type: colorbox
+    label: hidden
+    settings:
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: auto
+      colorbox_caption_custom: ''
+      colorbox_node_style: thumbnail
+      colorbox_node_style_first: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_movil:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_n_mero_de_empleados_formal:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_nit:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_nivel_educativo:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_nombre:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_nombre_del_emprendimiento:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_numero_id:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_pagina_web:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_presentacion_emprendimient:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_rol_emprendimiento:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_sector_economico:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_sexo:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_telefono_fijo_emprendimien:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_terminos_condiciones:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_tipo_id:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  member_for:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  feeds_item: true
+  field_asesor_fase_empoderar: true
+  field_camara: true
+  field_caracter_sticas_: true
+  field_cargo: true
+  field_documento_id: true
+  field_empresa_ref: true
+  field_fase_pre_app: true
+  field_nombres: true
+  field_rol_empresa: true
+  langcode: true
+  user_picture: true

@@ -1,0 +1,19 @@
+uuid: c78c70c9-b45d-41a5-a2be-3487c6c13d5b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_perfil
+    - node.type.perfil_mentores
+id: node.perfil_mentores.field_perfil
+field_name: field_perfil
+entity_type: node
+bundle: perfil_mentores
+label: Perfil
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

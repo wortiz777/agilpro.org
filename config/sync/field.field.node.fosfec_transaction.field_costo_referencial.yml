@@ -1,0 +1,23 @@
+uuid: 68f4a7c0-2f50-4e77-b727-5400bf5fa4b0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_costo_referencial
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_costo_referencial
+field_name: field_costo_referencial
+entity_type: node
+bundle: fosfec_transaction
+label: 'Costo Referencial'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

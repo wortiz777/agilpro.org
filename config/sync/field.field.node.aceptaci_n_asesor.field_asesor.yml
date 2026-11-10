@@ -1,0 +1,26 @@
+uuid: 16f5ef47-e843-4e8a-a970-841eb0bd7f37
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asesor
+    - node.type.aceptaci_n_asesor
+    - taxonomy.vocabulary.asesores
+id: node.aceptaci_n_asesor.field_asesor
+field_name: field_asesor
+entity_type: node
+bundle: aceptaci_n_asesor
+label: Asesor
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      asesores: asesores
+    sort:
+      field: _none
+field_type: entity_reference

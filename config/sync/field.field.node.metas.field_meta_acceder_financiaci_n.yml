@@ -1,0 +1,23 @@
+uuid: cedb85ad-6c1b-4e61-8403-77034e43040c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_acceder_financiaci_n
+    - node.type.metas
+id: node.metas.field_meta_acceder_financiaci_n
+field_name: field_meta_acceder_financiaci_n
+entity_type: node
+bundle: metas
+label: 'Meta Acceder - Financiación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

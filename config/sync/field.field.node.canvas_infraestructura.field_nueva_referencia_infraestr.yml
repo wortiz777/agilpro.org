@@ -1,0 +1,19 @@
+uuid: cb90a6b8-700c-4cc2-95b6-b45039488196
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_infraestr
+    - node.type.canvas_infraestructura
+id: node.canvas_infraestructura.field_nueva_referencia_infraestr
+field_name: field_nueva_referencia_infraestr
+entity_type: node
+bundle: canvas_infraestructura
+label: 'Ingresar Nueva Referencia Infraestructura'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

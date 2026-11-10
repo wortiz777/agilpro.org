@@ -1,0 +1,23 @@
+uuid: 1508f23b-7017-45ec-9c86-8769e9883285
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_costos_de_ventas_ltimos_6_
+    - node.type.componente_financiero_adicional
+id: node.componente_financiero_adicional.field_costos_de_ventas_ltimos_6_
+field_name: field_costos_de_ventas_ltimos_6_
+entity_type: node
+bundle: componente_financiero_adicional
+label: 'Costos de ventas últimos 6 meses'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

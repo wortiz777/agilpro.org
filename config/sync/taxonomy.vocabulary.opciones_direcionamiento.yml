@@ -1,0 +1,9 @@
+uuid: 058dadc2-0785-4222-bd9a-ec0c166c9b58
+langcode: es
+status: true
+dependencies: {  }
+name: 'Opciones Respuesta Autodiagnóstico Direccionamiento'
+vid: opciones_direcionamiento
+description: null
+weight: 1
+new_revision: false

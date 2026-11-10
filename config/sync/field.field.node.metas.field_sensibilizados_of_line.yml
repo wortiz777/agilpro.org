@@ -1,0 +1,23 @@
+uuid: e81e0066-ad27-485b-b6af-0415f3eba783
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sensibilizados_of_line
+    - node.type.metas
+id: node.metas.field_sensibilizados_of_line
+field_name: field_sensibilizados_of_line
+entity_type: node
+bundle: metas
+label: 'Sensibilizados | Off-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

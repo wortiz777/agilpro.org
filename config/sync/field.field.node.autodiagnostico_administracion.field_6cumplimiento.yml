@@ -1,0 +1,21 @@
+uuid: 9b8f6134-a60c-407f-943e-c22d1cbb279a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_6cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_6cumplimiento
+field_name: field_6cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '6. Corporación Autónoma Regional '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,8 @@
+uuid: 560d176b-c036-4da6-a9b6-03f602e127fd
+langcode: en
+status: true
+dependencies: {  }
+id: menu-gesti-n-general
+label: 'Gestión General'
+description: ''
+locked: false

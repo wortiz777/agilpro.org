@@ -1,0 +1,21 @@
+_core:
+  default_config_hash: jdY7AU0tU-QsjmiOw3W8vwpYMb-By--_MSFgbqKUTYM
+definitions:
+  standard__front_page:
+    menu_name: main
+    parent: ''
+    weight: -42
+    expanded: false
+    enabled: false
+  user__page:
+    menu_name: account
+    parent: ''
+    weight: -10
+    expanded: false
+    enabled: false
+  user__logout:
+    menu_name: account
+    parent: ''
+    weight: 10
+    expanded: false
+    enabled: false

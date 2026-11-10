@@ -1,0 +1,19 @@
+uuid: 66c8bd25-2a50-497a-883f-a8fb1bfe8c75
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_invitacion
+    - node.type.invitaciones_a_la_red
+id: node.invitaciones_a_la_red.field_descripcion_invitacion
+field_name: field_descripcion_invitacion
+entity_type: node
+bundle: invitaciones_a_la_red
+label: 'Rápida Descripción '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

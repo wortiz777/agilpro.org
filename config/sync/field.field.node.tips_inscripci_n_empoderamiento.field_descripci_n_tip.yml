@@ -1,0 +1,22 @@
+uuid: bbcab4e4-8556-4694-b177-5886acd33986
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripci_n_tip
+    - node.type.tips_inscripci_n_empoderamiento
+  module:
+    - text
+id: node.tips_inscripci_n_empoderamiento.field_descripci_n_tip
+field_name: field_descripci_n_tip
+entity_type: node
+bundle: tips_inscripci_n_empoderamiento
+label: 'Descripción Tip'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

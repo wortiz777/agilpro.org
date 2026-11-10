@@ -1,0 +1,18 @@
+uuid: d2d5dca3-0a8a-4fb6-9931-8676bafd5600
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Tips Listado Grupos Fortalecimiento'
+type: tips_listado_grupos_fortalecimie
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

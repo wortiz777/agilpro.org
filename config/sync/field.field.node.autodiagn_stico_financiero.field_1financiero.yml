@@ -1,0 +1,26 @@
+uuid: a877458d-b287-4136-bb55-402cd4be8122
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_1financiero
+field_name: field_1financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '1. La empresa cuenta con un proceso para organizar y mantener al día los libros contables y de seguimiento de cuentas'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

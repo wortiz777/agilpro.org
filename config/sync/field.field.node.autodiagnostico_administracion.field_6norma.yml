@@ -1,0 +1,23 @@
+uuid: d7020d5b-380a-4cb2-b442-b6ac9f2a88fe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_6norma
+    - node.type.autodiagnostico_administracion
+id: node.autodiagnostico_administracion.field_6norma
+field_name: field_6norma
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '6. Número de empleados con pago de seguridad social'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

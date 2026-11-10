@@ -1,0 +1,19 @@
+uuid: cc2436d1-890a-4159-a59e-a320fae57384
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_dinamizad
+    - node.type.canvas_dinamizadores_de_semilla
+id: node.canvas_dinamizadores_de_semilla.field_nueva_referencia_dinamizad
+field_name: field_nueva_referencia_dinamizad
+entity_type: node
+bundle: canvas_dinamizadores_de_semilla
+label: 'Ingresar Nueva Referencia Dinamizadores'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

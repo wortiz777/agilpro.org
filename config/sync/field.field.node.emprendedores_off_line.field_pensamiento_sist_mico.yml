@@ -1,0 +1,23 @@
+uuid: d0bc2904-52c4-4013-8446-dc547ab56b3d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_pensamiento_sist_mico
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_pensamiento_sist_mico
+field_name: field_pensamiento_sist_mico
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Pensamiento Sistémico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

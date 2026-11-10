@@ -1,0 +1,24 @@
+uuid: c34d45eb-d455-4ed1-b097-0ab3570b2391
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_terminos_condiciones
+  module:
+    - user
+id: user.user.field_terminos_condiciones
+field_name: field_terminos_condiciones
+entity_type: user
+bundle: user
+label: 'Acepto los Términos y Condiciones'
+description: '<a href="/node/47" target="_blank"> <strong>Lea y acepte los términos de tratamiento de datos y de uso de la plataforma</strong></a>'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

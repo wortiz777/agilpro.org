@@ -1,0 +1,39 @@
+uuid: 7ee8a924-33bf-495a-a8ee-ac6f5dcc9567
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_ingresos
+field_name: field_ingresos
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Aún no recibo remuneración'
+    -
+      value: '2'
+      label: 'Menos de 1 SMMLV'
+    -
+      value: '3'
+      label: 'De 1 a 2 SMMLV'
+    -
+      value: '4'
+      label: 'De 2 a 3 SMMLV'
+    -
+      value: '5'
+      label: 'De 3 a 4 SMMLV'
+    -
+      value: '6'
+      label: 'Más de 4 SMMLV'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

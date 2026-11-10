@@ -1,0 +1,19 @@
+uuid: 798165e6-11fa-45ef-a83c-da7e74cfdfa1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_puntos_debiles_
+    - node.type.ruta_desarrollo_competencias
+id: node.ruta_desarrollo_competencias.field_puntos_debiles_
+field_name: field_puntos_debiles_
+entity_type: node
+bundle: ruta_desarrollo_competencias
+label: 'Puntos Debiles '
+description: "Revise sus notas y consigne asui sus debilidades personales en cada area. \r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

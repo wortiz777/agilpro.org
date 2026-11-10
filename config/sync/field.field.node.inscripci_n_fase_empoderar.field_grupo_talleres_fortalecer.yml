@@ -1,0 +1,21 @@
+uuid: fc4af58e-3f09-4d44-a63d-24117873e9cd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grupo_talleres_fortalecer
+    - node.type.inscripci_n_fase_empoderar
+  module:
+    - options
+id: node.inscripci_n_fase_empoderar.field_grupo_talleres_fortalecer
+field_name: field_grupo_talleres_fortalecer
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Grupo Talleres Fortalecer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

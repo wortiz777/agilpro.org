@@ -1,0 +1,23 @@
+uuid: fe71025b-4c65-4d00-b345-01f8299780e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencias_off_line
+    - node.type.metas
+id: node.metas.field_competencias_off_line
+field_name: field_competencias_off_line
+entity_type: node
+bundle: metas
+label: 'Empoderados | Off-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

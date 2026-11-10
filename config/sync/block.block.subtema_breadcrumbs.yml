@@ -1,0 +1,22 @@
+uuid: 47cdac5a-7f2f-481a-8482-fd792c6de732
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - subtema
+_core:
+  default_config_hash: cLEgLqfGgUPrrw9pC1IZ4q3MrB6Nfg710UX4uONnz_k
+id: subtema_breadcrumbs
+theme: subtema
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

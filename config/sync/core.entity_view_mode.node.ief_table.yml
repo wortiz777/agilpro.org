@@ -1,0 +1,11 @@
+uuid: d2547625-54cb-4bc2-80b1-26f873775f5a
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.ief_table
+label: ief_table
+description: null
+targetEntityType: node
+cache: true

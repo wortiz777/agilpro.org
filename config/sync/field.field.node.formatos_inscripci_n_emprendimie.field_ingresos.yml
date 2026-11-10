@@ -1,0 +1,21 @@
+uuid: 57a37c84-7b0c-4ea7-a48a-4ca9cadc7c42
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresos
+    - node.type.formatos_inscripci_n_emprendimie
+  module:
+    - options
+id: node.formatos_inscripci_n_emprendimie.field_ingresos
+field_name: field_ingresos
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Rango de ingresos mensuales percibe del Emprendimiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

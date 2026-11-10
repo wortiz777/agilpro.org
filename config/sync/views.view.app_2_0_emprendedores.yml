@@ -1,0 +1,5531 @@
+uuid: 35130d08-083e-4b04-b9e5-7aed616be2bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_camara
+    - taxonomy.vocabulary.c_maras_de_comercio
+  content:
+    - 'taxonomy_term:c_maras_de_comercio:6d4e948b-17ce-4620-b3a3-f3b956b12ab5'
+  module:
+    - taxonomy
+    - user
+id: app_2_0_emprendedores
+label: 'App 2.0 | Emprendedores'
+module: views
+description: ''
+tag: default
+base_table: users_field_data
+base_field: uid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'App 2.0 | Emprendedores'
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<i class="fa fa-plug" aria-hidden="true"></i> Conectados'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 0
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: Número
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Empoderar'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '210'
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-list-alt fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '4'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: '([views_conditional] / 210)*100'
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 0
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente ›'
+            previous: '‹ anterior'
+            first: '« primero'
+            last: 'última »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 20, 40, 60'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 9
+      exposed_form:
+        type: basic
+      access:
+        type: perm
+        options:
+          perm: 'access user profiles'
+        perm: 'access user profiles'
+      cache:
+        type: none
+      sorts:
+        created:
+          id: created
+          table: users_field_data
+          field: created
+          plugin_id: date
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: users_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        field_camara_tid:
+          id: field_camara_tid
+          table: user__field_camara
+          field: field_camara_target_id
+          relationship: none
+          group_type: group
+          entity_type: user
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            19: 19
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: in
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_label: ''
+            limit_operators: false
+            available_operators: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: c_maras_de_comercio
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+          ui_name: ''
+          optgroups: 0
+          use_chosen: never
+          field_name: field_camara
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: false
+          row_class_special: 0
+          override: 0
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            field_camara: field_camara
+            rid: rid
+            views_conditional_4: views_conditional_4
+            views_conditional: views_conditional
+            views_conditional_1: views_conditional_1
+            views_conditional_2: views_conditional_2
+            views_conditional_3: views_conditional_3
+            expression_2: expression_2
+            expression: expression
+            expression_1: expression_1
+            nothing: nothing
+            nothing_1: nothing_1
+          info:
+            field_camara:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            rid:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional_4:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional_2:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional_3:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression_2:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_sum: views_aggregator_sum
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options: {  }
+      css_class: ''
+      display_extenders: {  }
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 0
+        row_class_special: 0
+        override: 0
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          rid: rid
+          views_conditional_4: views_conditional_4
+          views_conditional: views_conditional
+          views_conditional_1: views_conditional_1
+          views_conditional_2: views_conditional_2
+          views_conditional_3: views_conditional_3
+          expression_2: expression_2
+          expression: expression
+          expression_1: expression_1
+          nothing: nothing
+          nothing_1: nothing_1
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          rid:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional_4:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional_2:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional_3:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression_2:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_sum: views_aggregator_sum
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'
+  attachment_1:
+    id: attachment_1
+    display_title: 'Adjunto - Total'
+    display_plugin: attachment
+    position: 8
+    display_options:
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: Totales
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 0
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Registrado'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '418'
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '4'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: ''
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            field_camara: field_camara
+            name: name
+            rid: rid
+            views_conditional: views_conditional
+            expression: expression
+            expression_1: expression_1
+            nothing: nothing
+            nothing_1: nothing_1
+          info:
+            field_camara:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            name:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            rid:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_replace: views_aggregator_replace
+              aggr_par: ' '
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_description: ''
+      display_extenders: {  }
+      displays:
+        block_1: block_1
+        default: '0'
+        page: '0'
+        page_1: '0'
+      attachment_position: after
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          name: name
+          rid: rid
+          views_conditional: views_conditional
+          expression: expression
+          expression_1: expression_1
+          nothing: nothing
+          nothing_1: nothing_1
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          name:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          rid:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_replace: views_aggregator_replace
+            aggr_par: ' '
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'
+  attachment_6:
+    id: attachment_6
+    display_title: 'Adjunto - Empoderados'
+    display_plugin: attachment
+    position: 4
+    display_options:
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<i class="fa fa-heart" aria-hidden="true"></i> Empoderados'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 0
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Empoderar'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '210'
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '4'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: '([views_conditional] / 210)*100'
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-list-alt fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            field_camara: field_camara
+            name: name
+            rid: rid
+            views_conditional: views_conditional
+            expression: expression
+            expression_1: expression_1
+            nothing: nothing
+            nothing_1: nothing_1
+          info:
+            field_camara:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            name:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            rid:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_sum: views_aggregator_sum
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_description: ''
+      display_extenders: {  }
+      displays:
+        block_1: block_1
+        default: '0'
+        page: '0'
+        page_1: '0'
+      attachment_position: after
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          name: name
+          rid: rid
+          views_conditional: views_conditional
+          expression: expression
+          expression_1: expression_1
+          nothing: nothing
+          nothing_1: nothing_1
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          name:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          rid:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_sum: views_aggregator_sum
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'
+  attachment_7:
+    id: attachment_7
+    display_title: 'Adjunto - Fortalecidos'
+    display_plugin: attachment
+    position: 5
+    display_options:
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<i class="fa fa-star" aria-hidden="true"></i> Fortalecidos'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 0
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Fortalecer'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '105'
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '4'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: '([views_conditional] / 105)*100'
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-list-alt fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            field_camara: field_camara
+            name: name
+            rid: rid
+            views_conditional: views_conditional
+            expression: expression
+            expression_1: expression_1
+            nothing: nothing
+            nothing_1: nothing_1
+          info:
+            field_camara:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            name:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            rid:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_sum: views_aggregator_sum
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_description: ''
+      display_extenders: {  }
+      displays:
+        block_1: block_1
+        default: '0'
+        page: '0'
+        page_1: '0'
+      attachment_position: after
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          name: name
+          rid: rid
+          views_conditional: views_conditional
+          expression: expression
+          expression_1: expression_1
+          nothing: nothing
+          nothing_1: nothing_1
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          name:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          rid:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_sum: views_aggregator_sum
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'
+  attachment_8:
+    id: attachment_8
+    display_title: 'Adjunto - Mentoría'
+    display_plugin: attachment
+    position: 6
+    display_options:
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<i class="fa fa-comments" aria-hidden="true"></i> Mentoria'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 0
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Acceder - Mentoría'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '50'
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '4'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: '([views_conditional] / 50)*100'
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-list-alt fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            field_camara: field_camara
+            name: name
+            rid: rid
+            views_conditional: views_conditional
+            expression: expression
+            expression_1: expression_1
+            nothing: nothing
+            nothing_1: nothing_1
+          info:
+            field_camara:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            name:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            rid:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_sum: views_aggregator_sum
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_description: ''
+      display_extenders: {  }
+      displays:
+        block_1: block_1
+        default: '0'
+        page: '0'
+        page_1: '0'
+      attachment_position: after
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          name: name
+          rid: rid
+          views_conditional: views_conditional
+          expression: expression
+          expression_1: expression_1
+          nothing: nothing
+          nothing_1: nothing_1
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          name:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          rid:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_sum: views_aggregator_sum
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'
+  attachment_9:
+    id: attachment_9
+    display_title: 'Adjunto - Financiación'
+    display_plugin: attachment
+    position: 7
+    display_options:
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<i class="fa fa-line-chart" aria-hidden="true"></i> Financiación'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 0
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Acceder - Financiamiento'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '53'
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '4'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: '([views_conditional] / 53)*100'
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-list-alt fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+      pager:
+        type: none
+        options:
+          offset: 0
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            field_camara: field_camara
+            name: name
+            rid: rid
+            views_conditional: views_conditional
+            expression: expression
+            expression_1: expression_1
+            nothing: nothing
+            nothing_1: nothing_1
+          info:
+            field_camara:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            name:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_count
+              aggr_par_column: ''
+            rid:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            views_conditional:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            expression_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 1
+              aggr:
+                views_aggregator_sum: views_aggregator_sum
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            nothing_1:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_description: ''
+      display_extenders: {  }
+      displays:
+        block_1: block_1
+        default: '0'
+        page: '0'
+        page_1: '0'
+      attachment_position: after
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          name: name
+          rid: rid
+          views_conditional: views_conditional
+          expression: expression
+          expression_1: expression_1
+          nothing: nothing
+          nothing_1: nothing_1
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          name:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+          rid:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          views_conditional:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_sum: views_aggregator_sum
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          nothing_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'
+  block_1:
+    id: block_1
+    display_title: 'Bloque - Conectados'
+    display_plugin: block
+    position: 3
+    display_options:
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Fases ¡empréndelo!'
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<i class="fa fa-plug" aria-hidden="true"></i> Conectados'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: h3
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        views_conditional_4:
+          id: views_conditional_4
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Registrado'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Empoderar'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        views_conditional_1:
+          id: views_conditional_1
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Fortalecer'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        views_conditional_2:
+          id: views_conditional_2
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Acceder - Financiamiento'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        views_conditional_3:
+          id: views_conditional_3
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '7'
+          equalto: 'Emprendedor Fase Acceder - Mentoría'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression_2:
+          id: expression_2
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Cantidad
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '[views_conditional_4] - [views_conditional] - [views_conditional_1] - [views_conditional_2] - [views_conditional_3]'
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Meta
+          exclude: false
+          alter:
+            alter_text: true
+            text: '-'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: ''
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Avance
+          exclude: false
+          alter:
+            alter_text: true
+            text: '-'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+            unwanted_characters: ''
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '4'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: ''
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: Listados
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-list-alt fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: Descargar
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        css_class: false
+        fields: false
+      css_class: table-responsive
+      display_description: ''
+      display_extenders: {  }
+      block_description: 'App2.0 | Emprendedores'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      enabled: true
+      fields:
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Estado del Emprendedor'
+          exclude: false
+          alter:
+            alter_text: true
+            text: Empoderados
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 0
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        views_conditional:
+          id: views_conditional
+          table: views_conditional
+          field: views_conditional
+          relationship: none
+          group_type: group
+          label: 'Número de Emprendedores'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          if: rid
+          condition: '8'
+          equalto: 'Emprendedor Fase Acceder - Financiamiento, Emprendedor Fase Empoderar, Emprendedor Fase Fortalecer'
+          then: '1'
+          or: ''
+          strip_tags: 0
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Meta
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 0
+          precision: '0'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '210'
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: 'Ver Listados'
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-list-ol fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        nothing_1:
+          id: nothing_1
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: 'Descargar Datos'
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/C2/Listados-Sensibilizacion"><i class="fa fa-cloud-download fa-lg" aria-hidden="true"> </i> </a>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Math expression'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '4'
+          decimal: .
+          separator: ''
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: '%'
+          expression: '([views_conditional] / 210)*100'
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            field_camara: field_camara
+            name: name
+            rid: rid
+            views_conditional: views_conditional
+            expression: expression
+            nothing: nothing
+            nothing_1: nothing_1
+            expression_1: expression_1
+          default: '-1'
+          info:
+            field_camara:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+            rid:
+              align: ''
+              separator: ''
+              empty_column: false
+            views_conditional:
+              align: ''
+              separator: ''
+              empty_column: false
+            expression:
+              align: ''
+              separator: ''
+              empty_column: false
+            nothing:
+              align: ''
+              separator: ''
+              empty_column: false
+            nothing_1:
+              align: ''
+              separator: ''
+              empty_column: false
+            expression_1:
+              align: ''
+              separator: ''
+              empty_column: false
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          class: ''
+          row_class_special: 1
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+      display_extenders: {  }
+      path: app2/emprendedores
+      style_plugin: table
+      style_options:
+        grouping: {  }
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          name: name
+          rid: rid
+          views_conditional: views_conditional
+          expression: expression
+          nothing: nothing
+          nothing_1: nothing_1
+          expression_1: expression_1
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          name:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+          rid:
+            align: ''
+            separator: ''
+            empty_column: 0
+          views_conditional:
+            align: ''
+            separator: ''
+            empty_column: 0
+          expression:
+            align: ''
+            separator: ''
+            empty_column: 0
+          nothing:
+            align: ''
+            separator: ''
+            empty_column: 0
+          nothing_1:
+            align: ''
+            separator: ''
+            empty_column: 0
+          expression_1:
+            align: ''
+            separator: ''
+            empty_column: 0
+        default: '-1'
+        empty_table: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user.permissions
+      tags:
+        - 'config:field.storage.user.field_camara'

@@ -1,0 +1,190 @@
+uuid: 3c19ffb4-dd64-4918-8240-677ae4107aef
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.gestion_componentes_mapeo.field_cargo_o_rol
+    - field.field.node.gestion_componentes_mapeo.field_categoria_entidad
+    - field.field.node.gestion_componentes_mapeo.field_dependencia
+    - field.field.node.gestion_componentes_mapeo.field_direccion_entidad_ecosis
+    - field.field.node.gestion_componentes_mapeo.field_e_mail_contacto
+    - field.field.node.gestion_componentes_mapeo.field_genero
+    - field.field.node.gestion_componentes_mapeo.field_horario_de_atencion_entida
+    - field.field.node.gestion_componentes_mapeo.field_mail_entidad_ecosis
+    - field.field.node.gestion_componentes_mapeo.field_naturaleza_juridica
+    - field.field.node.gestion_componentes_mapeo.field_nombre_persona_de_contacto
+    - field.field.node.gestion_componentes_mapeo.field_otros_contactos
+    - field.field.node.gestion_componentes_mapeo.field_telefonos_contacto
+    - field.field.node.gestion_componentes_mapeo.field_telefonos_entidad_ecosis
+    - field.field.node.gestion_componentes_mapeo.field_tipo_de_emprendimiento_pob
+    - field.field.node.gestion_componentes_mapeo.field_web_entidad_ecosis
+    - node.type.gestion_componentes_mapeo
+  module:
+    - link
+    - path
+id: node.gestion_componentes_mapeo.default
+targetEntityType: node
+bundle: gestion_componentes_mapeo
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cargo_o_rol:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_categoria_entidad:
+    type: options_buttons
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_dependencia:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_direccion_entidad_ecosis:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_e_mail_contacto:
+    type: email_default
+    weight: 25
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_genero:
+    type: options_buttons
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_horario_de_atencion_entida:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mail_entidad_ecosis:
+    type: email_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_naturaleza_juridica:
+    type: options_buttons
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_nombre_persona_de_contacto:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_otros_contactos:
+    type: string_textarea
+    weight: 26
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_telefonos_contacto:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_telefonos_entidad_ecosis:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_tipo_de_emprendimiento_pob:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_web_entidad_ecosis:
+    type: link_default
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

@@ -1,0 +1,26 @@
+uuid: d05eda3a-ab88-4888-ab90-eedd914111e9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_3financiero
+field_name: field_3financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '3. Se cuenta con la herramienta que indica el nivel de liquidez apropiado para el normal funcionamiento de la empresa.'
+description: 'la capacidad que tiene la empresa de cumplir con sus obligaciones de corto plazo'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

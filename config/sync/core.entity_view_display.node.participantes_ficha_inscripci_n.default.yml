@@ -1,0 +1,90 @@
+uuid: 1fa5f66e-d176-4ec9-897f-4abba51ac394
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.participantes_ficha_inscripci_n.field_caracter_sticas_
+    - field.field.node.participantes_ficha_inscripci_n.field_edad
+    - field.field.node.participantes_ficha_inscripci_n.field_estado_civil
+    - field.field.node.participantes_ficha_inscripci_n.field_genero
+    - field.field.node.participantes_ficha_inscripci_n.field_nivel_educativo
+    - field.field.node.participantes_ficha_inscripci_n.field_numero_id
+    - field.field.node.participantes_ficha_inscripci_n.field_rol
+    - field.field.node.participantes_ficha_inscripci_n.field_tipo_id
+    - node.type.participantes_ficha_inscripci_n
+  module:
+    - options
+    - user
+id: node.participantes_ficha_inscripci_n.default
+targetEntityType: node
+bundle: participantes_ficha_inscripci_n
+mode: default
+content:
+  field_caracter_sticas_:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_edad:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_estado_civil:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_genero:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_nivel_educativo:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_numero_id:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_rol:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_tipo_id:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

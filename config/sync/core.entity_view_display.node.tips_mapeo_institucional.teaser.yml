@@ -1,0 +1,31 @@
+uuid: a97e3864-6422-4323-b0d4-0b1986c74cc5
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tips_mapeo_institucional.body
+    - node.type.tips_mapeo_institucional
+  module:
+    - text
+    - user
+id: node.tips_mapeo_institucional.teaser
+targetEntityType: node
+bundle: tips_mapeo_institucional
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

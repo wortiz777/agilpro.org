@@ -1,0 +1,24 @@
+uuid: 21248df6-f09e-4260-b6e9-f60aaf66f113
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_nit
+  module:
+    - user
+id: user.user.field_nit
+field_name: field_nit
+entity_type: user
+bundle: user
+label: NIT
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,61 @@
+uuid: d20b4b39-f800-454d-9733-69c502cd6002
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.listados_de_asistencia_emprended.field_cargar_listado
+    - field.field.node.listados_de_asistencia_emprended.field_fecha_encuentro
+    - field.field.node.listados_de_asistencia_emprended.field_lugar_del_encuentro
+    - field.field.node.listados_de_asistencia_emprended.field_n_mero_de_emprendedores_se
+    - node.type.listados_de_asistencia_emprended
+  module:
+    - datetime
+    - file
+    - user
+id: node.listados_de_asistencia_emprended.default
+targetEntityType: node
+bundle: listados_de_asistencia_emprended
+mode: default
+content:
+  field_cargar_listado:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_fecha_encuentro:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_lugar_del_encuentro:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_n_mero_de_emprendedores_se:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

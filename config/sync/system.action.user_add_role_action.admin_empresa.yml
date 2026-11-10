@@ -1,0 +1,14 @@
+uuid: bf76d922-0536-4fe5-8289-24681196585a
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.admin_empresa
+  module:
+    - user
+id: user_add_role_action.admin_empresa
+label: 'Añade el rol Admin Empresa al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: admin_empresa

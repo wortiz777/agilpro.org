@@ -1,0 +1,196 @@
+uuid: 85aa1b07-0501-485f-adc4-24819c554ae5
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.actas_selecci_n_comit_
+    - node.type.actas_seleccion_comit_fortalecim
+    - node.type.article
+    - node.type.biblioteca_abierta
+    - node.type.canvas_capitalistas_de_riesgo
+    - node.type.canvas_construir_el_primer_produ
+    - node.type.canvas_dinamizadores_de_semilla
+    - node.type.canvas_espacios_de_trabajo_
+    - node.type.canvas_establecer
+    - node.type.canvas_expansi_n
+    - node.type.canvas_formacion
+    - node.type.canvas_formalizar
+    - node.type.canvas_gobierno
+    - node.type.canvas_infraestructura
+    - node.type.canvas_medios
+    - node.type.canvas_medios_principales
+    - node.type.canvas_mejores_practicas
+    - node.type.canvas_ngeles
+    - node.type.canvas_persuadir_y_demostrar
+    - node.type.canvas_practica_y_retroalimentac
+    - node.type.canvas_prepare_la_semilla
+    - node.type.canvas_red_de_inversionistas
+    - node.type.canvas_talento
+    - node.type.emprendedores_off_line
+    - node.type.evangelistas
+    - node.type.eventos_inspiradores
+    - node.type.gestion_componentes_mapeo
+    - node.type.informe_semestral
+    - node.type.material_pedagogico
+    - node.type.ruta_de_mejoramiento
+  module:
+    - field_permissions
+    - node
+id: coordinador_nacional
+label: 'Coordinador Nacional'
+weight: 3
+is_admin: false
+permissions:
+  - 'create actas_selecci_n_comit_ content'
+  - 'create actas_seleccion_comit_fortalecim content'
+  - 'create article content'
+  - 'create biblioteca_abierta content'
+  - 'create canvas_capitalistas_de_riesgo content'
+  - 'create canvas_construir_el_primer_produ content'
+  - 'create canvas_dinamizadores_de_semilla content'
+  - 'create canvas_espacios_de_trabajo_ content'
+  - 'create canvas_establecer content'
+  - 'create canvas_expansi_n content'
+  - 'create canvas_formacion content'
+  - 'create canvas_formalizar content'
+  - 'create canvas_gobierno content'
+  - 'create canvas_infraestructura content'
+  - 'create canvas_medios content'
+  - 'create canvas_medios_principales content'
+  - 'create canvas_mejores_practicas content'
+  - 'create canvas_ngeles content'
+  - 'create canvas_persuadir_y_demostrar content'
+  - 'create canvas_practica_y_retroalimentac content'
+  - 'create canvas_prepare_la_semilla content'
+  - 'create canvas_red_de_inversionistas content'
+  - 'create canvas_talento content'
+  - 'create emprendedores_off_line content'
+  - 'create evangelistas content'
+  - 'create eventos_inspiradores content'
+  - 'create gestion_componentes_mapeo content'
+  - 'create informe_semestral content'
+  - 'create material_pedagogico content'
+  - 'create ruta_de_mejoramiento content'
+  - 'delete any actas_selecci_n_comit_ content'
+  - 'delete any actas_seleccion_comit_fortalecim content'
+  - 'delete any article content'
+  - 'delete any biblioteca_abierta content'
+  - 'delete any canvas_capitalistas_de_riesgo content'
+  - 'delete any canvas_construir_el_primer_produ content'
+  - 'delete any canvas_dinamizadores_de_semilla content'
+  - 'delete any canvas_espacios_de_trabajo_ content'
+  - 'delete any canvas_establecer content'
+  - 'delete any canvas_expansi_n content'
+  - 'delete any canvas_formacion content'
+  - 'delete any canvas_formalizar content'
+  - 'delete any canvas_gobierno content'
+  - 'delete any canvas_infraestructura content'
+  - 'delete any canvas_medios content'
+  - 'delete any canvas_medios_principales content'
+  - 'delete any canvas_mejores_practicas content'
+  - 'delete any canvas_ngeles content'
+  - 'delete any canvas_persuadir_y_demostrar content'
+  - 'delete any canvas_practica_y_retroalimentac content'
+  - 'delete any canvas_prepare_la_semilla content'
+  - 'delete any canvas_red_de_inversionistas content'
+  - 'delete any canvas_talento content'
+  - 'delete any emprendedores_off_line content'
+  - 'delete any evangelistas content'
+  - 'delete any eventos_inspiradores content'
+  - 'delete any gestion_componentes_mapeo content'
+  - 'delete any informe_semestral content'
+  - 'delete own actas_selecci_n_comit_ content'
+  - 'delete own actas_seleccion_comit_fortalecim content'
+  - 'delete own article content'
+  - 'delete own biblioteca_abierta content'
+  - 'delete own canvas_capitalistas_de_riesgo content'
+  - 'delete own canvas_construir_el_primer_produ content'
+  - 'delete own canvas_dinamizadores_de_semilla content'
+  - 'delete own canvas_espacios_de_trabajo_ content'
+  - 'delete own canvas_establecer content'
+  - 'delete own canvas_expansi_n content'
+  - 'delete own canvas_formacion content'
+  - 'delete own canvas_formalizar content'
+  - 'delete own canvas_gobierno content'
+  - 'delete own canvas_infraestructura content'
+  - 'delete own canvas_medios content'
+  - 'delete own canvas_medios_principales content'
+  - 'delete own canvas_mejores_practicas content'
+  - 'delete own canvas_ngeles content'
+  - 'delete own canvas_persuadir_y_demostrar content'
+  - 'delete own canvas_practica_y_retroalimentac content'
+  - 'delete own canvas_prepare_la_semilla content'
+  - 'delete own canvas_red_de_inversionistas content'
+  - 'delete own canvas_talento content'
+  - 'delete own emprendedores_off_line content'
+  - 'delete own evangelistas content'
+  - 'delete own eventos_inspiradores content'
+  - 'delete own gestion_componentes_mapeo content'
+  - 'delete own informe_semestral content'
+  - 'delete own material_pedagogico content'
+  - 'delete own ruta_de_mejoramiento content'
+  - 'edit any actas_selecci_n_comit_ content'
+  - 'edit any actas_seleccion_comit_fortalecim content'
+  - 'edit any article content'
+  - 'edit any canvas_capitalistas_de_riesgo content'
+  - 'edit any canvas_construir_el_primer_produ content'
+  - 'edit any canvas_dinamizadores_de_semilla content'
+  - 'edit any canvas_espacios_de_trabajo_ content'
+  - 'edit any canvas_establecer content'
+  - 'edit any canvas_expansi_n content'
+  - 'edit any canvas_formacion content'
+  - 'edit any canvas_formalizar content'
+  - 'edit any canvas_gobierno content'
+  - 'edit any canvas_infraestructura content'
+  - 'edit any canvas_medios content'
+  - 'edit any canvas_medios_principales content'
+  - 'edit any canvas_mejores_practicas content'
+  - 'edit any canvas_ngeles content'
+  - 'edit any canvas_persuadir_y_demostrar content'
+  - 'edit any canvas_practica_y_retroalimentac content'
+  - 'edit any canvas_prepare_la_semilla content'
+  - 'edit any canvas_red_de_inversionistas content'
+  - 'edit any canvas_talento content'
+  - 'edit any emprendedores_off_line content'
+  - 'edit any evangelistas content'
+  - 'edit any eventos_inspiradores content'
+  - 'edit any gestion_componentes_mapeo content'
+  - 'edit any informe_semestral content'
+  - 'edit own actas_selecci_n_comit_ content'
+  - 'edit own actas_seleccion_comit_fortalecim content'
+  - 'edit own article content'
+  - 'edit own biblioteca_abierta content'
+  - 'edit own canvas_capitalistas_de_riesgo content'
+  - 'edit own canvas_construir_el_primer_produ content'
+  - 'edit own canvas_dinamizadores_de_semilla content'
+  - 'edit own canvas_espacios_de_trabajo_ content'
+  - 'edit own canvas_establecer content'
+  - 'edit own canvas_expansi_n content'
+  - 'edit own canvas_formacion content'
+  - 'edit own canvas_formalizar content'
+  - 'edit own canvas_gobierno content'
+  - 'edit own canvas_infraestructura content'
+  - 'edit own canvas_medios content'
+  - 'edit own canvas_medios_principales content'
+  - 'edit own canvas_mejores_practicas content'
+  - 'edit own canvas_ngeles content'
+  - 'edit own canvas_persuadir_y_demostrar content'
+  - 'edit own canvas_practica_y_retroalimentac content'
+  - 'edit own canvas_prepare_la_semilla content'
+  - 'edit own canvas_red_de_inversionistas content'
+  - 'edit own canvas_talento content'
+  - 'edit own emprendedores_off_line content'
+  - 'edit own evangelistas content'
+  - 'edit own eventos_inspiradores content'
+  - 'edit own gestion_componentes_mapeo content'
+  - 'edit own informe_semestral content'
+  - 'edit own material_pedagogico content'
+  - 'edit own ruta_de_mejoramiento content'
+  - 'view field_acepto_el_reto'
+  - 'view field_fase_pre_app'
+  - 'view field_manifiesto_que_deseo_parti'
+  - 'view field_yo'
+  - 'view own field_acepto_el_reto'
+  - 'view own field_fase_pre_app'
+  - 'view own field_manifiesto_que_deseo_parti'
+  - 'view own field_yo'

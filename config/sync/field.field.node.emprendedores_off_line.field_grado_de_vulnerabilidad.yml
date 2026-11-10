@@ -1,0 +1,19 @@
+uuid: 4bf8c1a0-fc6d-465b-af18-a540d8e3ff6a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grado_de_vulnerabilidad
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_grado_de_vulnerabilidad
+field_name: field_grado_de_vulnerabilidad
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Grado de vulnerabilidad'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

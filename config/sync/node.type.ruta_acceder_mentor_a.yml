@@ -1,0 +1,18 @@
+uuid: e0721486-c33b-49c5-b14f-a29e3c93b53d
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Ruta | Acceder > Mentoría'
+type: ruta_acceder_mentor_a
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

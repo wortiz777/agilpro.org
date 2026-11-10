@@ -1,0 +1,24 @@
+uuid: 657115ec-540b-4288-a9f9-649a96184132
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_fortalecidos_reporte_excel
+field_name: field_fortalecidos_reporte_excel
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: b826064f-8222-420e-b6ca-3fa3103c0e6d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_asesores
+    - node.type.metas
+id: node.metas.field_meta_asesores
+field_name: field_meta_asesores
+entity_type: node
+bundle: metas
+label: 'Meta Asesores'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

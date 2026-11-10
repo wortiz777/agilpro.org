@@ -1,0 +1,19 @@
+uuid: 1e156d6a-4bf7-416d-bbb5-5377dd7a63a9
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_presentacion_emprendimient
+field_name: field_presentacion_emprendimient
+entity_type: user
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

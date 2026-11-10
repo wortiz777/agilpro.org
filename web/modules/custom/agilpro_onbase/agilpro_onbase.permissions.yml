@@ -1,0 +1,10 @@
+administer onbase integration:
+  title: 'Administrar integración con Hyland OnBase'
+  description: 'Permite configurar credenciales, ejecutar pruebas de conexión en vivo y reprocesar colas de documentos.'
+  restrict access: true
+
+view onbase audit logs:
+  title: 'Ver registros de auditoría de OnBase'
+  description: 'Permite consultar el historial de transferencias, metadatos y trazabilidad de documentos hacia OnBase.'
+  restrict access: true
+

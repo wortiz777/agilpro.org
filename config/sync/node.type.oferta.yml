@@ -1,0 +1,11 @@
+uuid: 788ccc86-8a0c-45a4-80b0-549f42b80514
+langcode: es
+status: true
+dependencies: {  }
+name: 'Oferta / Convocatoria'
+type: oferta
+description: 'Programas, cursos, convocatorias y oferta formativa FOSFEC.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

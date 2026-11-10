@@ -1,0 +1,117 @@
+{#
+/**
+ * @file
+ * Template Twig para el tipo de contenido Oferta (node--oferta.html.twig).
+ *
+ * Despliega la cabecera corporativa, badges de convocatoria, landing content
+ * y la botonera dinámica de postulación AJAX B2B y descarga de términos PDF.
+ */
+#}
+{%
+  set classes = [
+    'node',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'oferta-page-wrapper',
+  ]
+%}
+{{ attach_library('agilpro_fosfec/agilpro_fosfec_oferta') }}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {# 1. Cabecera / Hero Banner #}
+  <header class="oferta-hero-banner">
+    {% if banner_image_url %}
+      <div class="oferta-banner-image mb-3">
+        <img src="{{ banner_image_url }}" alt="{{ node.label }}" class="img-fluid rounded" />
+      </div>
+    {% endif %}
+
+    <h1 class="oferta-title">{{ node.label }}</h1>
+
+    {# Badges de Convocatoria #}
+    <div class="oferta-badges-container">
+      {% if cupos is not null %}
+        <span class="oferta-badge oferta-badge-cupos">
+          <strong>👥 Cupos:</strong> {{ cupos }} {% if cupos == 1 %}disponible{% else %}disponibles{% endif %}
+        </span>
+      {% endif %}
+
+      {% if fecha_inicio and fecha_fin %}
+        <span class="oferta-badge oferta-badge-fechas">
+          <strong>📅 Convocatoria:</strong> {{ fecha_inicio }} al {{ fecha_fin }}
+        </span>
+      {% endif %}
+
+      {% if modalidad_label %}
+        <span class="oferta-badge oferta-badge-modalidad">
+          <strong>🎯 Modalidad:</strong> {{ modalidad_label }}
+        </span>
+      {% endif %}
+    </div>
+  </header>
+
+  {# 2. Cuerpo de la Landing #}
+  <div class="oferta-content-body my-4">
+    {{ landing_content|raw }}
+  </div>
+
+  {# 3. Botonera CTA Dinámica #}
+  <div class="oferta-cta-container">
+    <div class="cta-headline">¿Listo para impulsar tu Mipyme con Compensar?</div>
+    <div class="cta-subheadline">Accede a consultoría 1 a 1, acompañamiento técnico y herramientas de fomento empresarial FOSFEC.</div>
+
+    <div class="oferta-cta-actions">
+      {# Botón 1: Postulación Dinámica #}
+      {% if can_apply %}
+        <a href="{{ postular_url }}"
+           class="use-ajax btn-postular-oferta"
+           data-dialog-type="modal"
+           data-dialog-options='{"width": 650, "dialogClass": "modal-postular-oferta"}'>
+          🚀 Postular mi Empresa Ahora
+        </a>
+      {% else %}
+        <a href="{{ postular_url }}"
+           class="use-ajax btn-postular-lista-espera"
+           data-dialog-type="modal"
+           data-dialog-options='{"width": 650, "dialogClass": "modal-postular-oferta"}'>
+          ⏳ Postular a Lista de Espera
+        </a>
+      {% endif %}
+
+      {# Botón 2: Descargar Términos de Referencia PDF #}
+      {% if pdf_url %}
+        <a href="{{ pdf_url }}"
+           class="btn-terminos-pdf"
+           target="_blank"
+           download>
+          📄 Descargar Términos de Referencia (PDF)
+        </a>
+      {% endif %}
+    </div>
+
+    {# Botonera de Agendamiento / Sincronización de Calendario #}
+    {% if cal_urls %}
+      <div class="oferta-calendar-sync">
+        <span class="sync-label">Añadir convocatoria a mi calendario:</span>
+        <a href="{{ cal_urls.google }}" target="_blank" rel="noopener noreferrer" class="btn-cal-sync">
+          📅 Google Calendar
+        </a>
+        <a href="{{ cal_urls.outlook }}" target="_blank" rel="noopener noreferrer" class="btn-cal-sync">
+          💼 Outlook
+        </a>
+        <a href="{{ cal_urls.teams }}" target="_blank" rel="noopener noreferrer" class="btn-cal-sync">
+          👥 Microsoft Teams
+        </a>
+        <a href="{{ cal_urls.ical }}" target="_blank" rel="noopener noreferrer" class="btn-cal-sync">
+          🗓️ Apple / iCal (.ics)
+        </a>
+      </div>
+    {% endif %}
+  </div>
+
+</article>
+

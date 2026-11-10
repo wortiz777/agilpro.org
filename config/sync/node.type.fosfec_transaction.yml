@@ -1,0 +1,11 @@
+uuid: 6361034d-9ca6-4e1c-a389-7b3844f5fd36
+langcode: es
+status: true
+dependencies: {  }
+name: 'Atención Empresarial FOSFEC'
+type: fosfec_transaction
+description: 'Registro inmutable de la intervención ejecutada y aceptada por el empresario beneficiario.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

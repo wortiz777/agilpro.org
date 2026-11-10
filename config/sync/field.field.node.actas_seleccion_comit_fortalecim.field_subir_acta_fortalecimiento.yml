@@ -1,0 +1,27 @@
+uuid: 6490ef67-6a54-4876-bec5-003f791101c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subir_acta_fortalecimiento
+    - node.type.actas_seleccion_comit_fortalecim
+  module:
+    - file
+id: node.actas_seleccion_comit_fortalecim.field_subir_acta_fortalecimiento
+field_name: field_subir_acta_fortalecimiento
+entity_type: node
+bundle: actas_seleccion_comit_fortalecim
+label: 'Subir Acta'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: Actas-Comite-Seleccion-Fortalecimiento
+  file_extensions: 'pdf jpg jpeg png bpm gif doc docx ppt pptx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,27 @@
+uuid: 5406c46e-6984-44b8-b584-2faaa3c4f59f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_asesor_fase_empoderar
+    - taxonomy.vocabulary.asesores
+  module:
+    - user
+id: user.user.field_asesor_fase_empoderar
+field_name: field_asesor_fase_empoderar
+entity_type: user
+bundle: user
+label: 'Index Asesor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      asesores: asesores
+    sort:
+      field: _none
+field_type: entity_reference

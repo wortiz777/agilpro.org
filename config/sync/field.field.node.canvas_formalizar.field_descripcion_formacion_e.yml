@@ -1,0 +1,21 @@
+uuid: 3e44ec6c-d5b2-44f2-a488-c71f3c6377d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_formacion_e
+    - node.type.canvas_formalizar
+id: node.canvas_formalizar.field_descripcion_formacion_e
+field_name: field_descripcion_formacion_e
+entity_type: node
+bundle: canvas_formalizar
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'A medida que una compañía o equipo va creciendo, necesita recursos para preparar su infraestructura formalmente.  Esta sección incluye, contadores, cazatalentos, desarrolladores de sotware'
+default_value_callback: ''
+settings: {  }
+field_type: string

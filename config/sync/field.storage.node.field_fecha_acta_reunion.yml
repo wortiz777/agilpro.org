@@ -1,0 +1,24 @@
+uuid: 04334d87-89fe-46d0-bbae-09f923116d71
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_fecha_acta_reunion
+field_name: field_fecha_acta_reunion
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

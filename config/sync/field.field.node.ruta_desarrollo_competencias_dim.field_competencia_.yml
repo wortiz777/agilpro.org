@@ -1,0 +1,21 @@
+uuid: 0221f86b-9ecf-4c63-88bd-d20b2cd188ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencia_
+    - node.type.ruta_desarrollo_competencias_dim
+  module:
+    - options
+id: node.ruta_desarrollo_competencias_dim.field_competencia_
+field_name: field_competencia_
+entity_type: node
+bundle: ruta_desarrollo_competencias_dim
+label: 'Competencia '
+description: 'Asigne un número consecutivo a su conveniencia (No.*) y seleccione una competencia a evaluar. A continuación agregue una o varias acciones (+ Agregar Acciones) según su "Ruta de Desarrollo de Competencias para el Emprendedo"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

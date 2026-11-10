@@ -1,0 +1,20 @@
+uuid: a17b7e61-ec33-444b-956c-c4600f66c19f
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_cupos_disponibles
+field_name: field_cupos_disponibles
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

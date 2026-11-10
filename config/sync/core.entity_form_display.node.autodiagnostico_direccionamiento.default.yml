@@ -1,0 +1,297 @@
+uuid: c2ca569c-288b-4fa8-84c7-5934885c86d8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagnostico_direccionamiento.field_10_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_10direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_11_n_mero_de_objetivos_emp
+    - field.field.node.autodiagnostico_direccionamiento.field_11_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_12_n_mero_de_indicadores_q
+    - field.field.node.autodiagnostico_direccionamiento.field_12_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_13_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_13_porcentaje_de_avance_de
+    - field.field.node.autodiagnostico_direccionamiento.field_14_el_n_mero_de_veces_que_
+    - field.field.node.autodiagnostico_direccionamiento.field_14_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_1_direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_1_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_2_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_2direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_3_direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_3_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_4_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_4direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_5_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_5direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_6_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_6direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_7_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_7direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_8_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_8direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_9_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_9direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_observaciones_generales_de
+    - node.type.autodiagnostico_direccionamiento
+  module:
+    - path
+id: node.autodiagnostico_direccionamiento.default
+targetEntityType: node
+bundle: autodiagnostico_direccionamiento
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_10_observaciones:
+    type: string_textarea
+    weight: 21
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_10direccionamiento:
+    type: options_select
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_11_n_mero_de_objetivos_emp:
+    type: number
+    weight: 22
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_11_observaciones:
+    type: string_textarea
+    weight: 23
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_12_n_mero_de_indicadores_q:
+    type: number
+    weight: 24
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_12_observaciones:
+    type: string_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_13_observaciones:
+    type: string_textarea
+    weight: 27
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_13_porcentaje_de_avance_de:
+    type: number
+    weight: 26
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_14_el_n_mero_de_veces_que_:
+    type: number
+    weight: 28
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_14_observaciones:
+    type: string_textarea
+    weight: 29
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_1_direccionamiento:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_1_observaciones:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_observaciones:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_2direccionamiento:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_3_direccionamiento:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_3_observaciones:
+    type: string_textarea
+    weight: 7
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_4_observaciones:
+    type: string_textarea
+    weight: 9
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_4direccionamiento:
+    type: options_select
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_5_observaciones:
+    type: string_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_5direccionamiento:
+    type: options_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_6_observaciones:
+    type: string_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_6direccionamiento:
+    type: options_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_7_observaciones:
+    type: string_textarea
+    weight: 15
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  field_7direccionamiento:
+    type: options_select
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_8_observaciones:
+    type: string_textarea
+    weight: 17
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_8direccionamiento:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_9_observaciones:
+    type: string_textarea
+    weight: 19
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_9direccionamiento:
+    type: options_select
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_observaciones_generales_de:
+    type: string_textarea
+    weight: 30
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

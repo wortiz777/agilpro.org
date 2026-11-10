@@ -1,0 +1,30 @@
+uuid: c2a90dc8-6f05-4476-bb03-6da84316a140
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_sexo
+field_name: field_sexo
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Femenino
+      label: Femenino
+    -
+      value: Masculino
+      label: Masculino
+    -
+      value: Otro
+      label: Otro
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

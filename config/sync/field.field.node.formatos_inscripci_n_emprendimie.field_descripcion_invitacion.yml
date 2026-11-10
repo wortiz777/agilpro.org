@@ -1,0 +1,19 @@
+uuid: 2d7a012b-3b4d-4538-820d-2c9871c48fa5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_invitacion
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_descripcion_invitacion
+field_name: field_descripcion_invitacion
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Rápida Descripción '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

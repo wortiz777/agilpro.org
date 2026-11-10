@@ -1,0 +1,23 @@
+uuid: c5d0a544-7467-41f8-860b-d874e7d2cec9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5norma
+    - node.type.autodiagnostico_administracion
+id: node.autodiagnostico_administracion.field_5norma
+field_name: field_5norma
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '5. Numero total de empleados actuales'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

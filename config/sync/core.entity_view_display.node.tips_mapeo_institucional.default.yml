@@ -1,0 +1,29 @@
+uuid: b33c2d3e-900f-4277-b4e2-538a79c3a57e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_mapeo_institucional.body
+    - node.type.tips_mapeo_institucional
+  module:
+    - text
+    - user
+id: node.tips_mapeo_institucional.default
+targetEntityType: node
+bundle: tips_mapeo_institucional
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

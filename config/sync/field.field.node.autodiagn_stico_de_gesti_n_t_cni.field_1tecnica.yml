@@ -1,0 +1,23 @@
+uuid: 34bfd7cf-5253-4ddc-8078-3f8399db56dc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1tecnica
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_1tecnica
+field_name: field_1tecnica
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '1. Numero de unidades de productos o servicios producidos en promedio por mes en el ultimo año'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

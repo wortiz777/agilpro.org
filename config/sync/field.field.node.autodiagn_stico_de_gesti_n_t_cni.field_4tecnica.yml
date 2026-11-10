@@ -1,0 +1,23 @@
+uuid: ea65243c-d87b-4bc9-8908-84a84d3b7ec7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4tecnica
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_4tecnica
+field_name: field_4tecnica
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '4. Número de nuevos productos o servicios en desarrollo.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

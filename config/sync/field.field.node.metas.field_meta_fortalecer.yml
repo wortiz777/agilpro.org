@@ -1,0 +1,23 @@
+uuid: 219b7055-096e-4200-b62e-7ce94217dd8f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_fortalecer
+    - node.type.metas
+id: node.metas.field_meta_fortalecer
+field_name: field_meta_fortalecer
+entity_type: node
+bundle: metas
+label: 'Meta Fortalecidos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

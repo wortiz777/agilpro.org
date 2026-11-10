@@ -1,0 +1,27 @@
+uuid: 5d3f33e1-9b2f-4f3e-a1ba-7f4b9bc0f245
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_cargar_soportes_fortalecer
+field_name: field_cargar_soportes_fortalecer
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 10
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

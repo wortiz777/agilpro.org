@@ -1,0 +1,14 @@
+uuid: c1262d2e-43ab-4d24-9ab8-50dfae7d5681
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.mentor_consultor
+  module:
+    - user
+id: user_remove_role_action.mentor_consultor
+label: 'Elimina el rol Mentor / Consultor al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: mentor_consultor

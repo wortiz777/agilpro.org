@@ -1,0 +1,85 @@
+uuid: eaa49aba-57bb-4813-bc17-5266227ef4f4
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_fontawesome_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Font Awesome migration'
+source:
+  plugin: variable
+  variables:
+    - fontawesome_method
+    - fontawesome_allow_pseudo_elements
+    - fontawesome_external
+    - fontawesome_partial
+    - fontawesome_shim
+  source_module: fontawesome
+process:
+  method:
+    -
+      plugin: default_value
+      source: fontawesome_method
+      default_value: svg
+  allow_pseudo_elements:
+    -
+      plugin: default_value
+      source: fontawesome_allow_pseudo_elements
+      default_value: false
+  use_cdn:
+    -
+      plugin: default_value
+      source: fontawesome_external/use_cdn
+      default_value: true
+  external_svg_location:
+    -
+      plugin: default_value
+      source: fontawesome_external/external_location
+      default_value: ''
+  use_solid_file:
+    -
+      plugin: default_value
+      source: fontawesome_partial/use_solid_file
+      strict: true
+      default_value: true
+  use_regular_file:
+    -
+      plugin: default_value
+      source: fontawesome_partial/use_regular_file
+      strict: true
+      default_value: true
+  use_light_file:
+    -
+      plugin: default_value
+      source: fontawesome_partial/use_light_file
+      strict: true
+      default_value: true
+  use_brands_file:
+    -
+      plugin: default_value
+      source: fontawesome_partial/use_brands_file
+      strict: true
+      default_value: true
+  use_shim:
+    -
+      plugin: default_value
+      source: fontawesome_shim/use_shim
+      default_value: false
+  external_shim_location:
+    -
+      plugin: default_value
+      source: fontawesome_shim/external_location
+      default_value: ''
+destination:
+  plugin: config
+  config_name: fontawesome.settings
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }
+include: null

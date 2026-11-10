@@ -1,0 +1,43 @@
+uuid: 575f65a7-d941-4071-8ebf-75c971eeba3b
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_language
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: Languages
+source:
+  plugin: language
+process:
+  id:
+    -
+      plugin: get
+      source: language
+  label:
+    -
+      plugin: get
+      source: name
+  direction:
+    -
+      plugin: static_map
+      source: direction
+      map:
+        - ltr
+        - rtl
+  weight:
+    -
+      plugin: get
+      source: weight
+destination:
+  plugin: 'entity:configurable_language'
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }
+include: null

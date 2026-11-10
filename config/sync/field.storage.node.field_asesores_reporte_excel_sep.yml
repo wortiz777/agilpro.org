@@ -1,0 +1,24 @@
+uuid: 37b4a288-8add-4cdf-8d29-df63aee1f916
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_asesores_reporte_excel_sep
+field_name: field_asesores_reporte_excel_sep
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,22 @@
+uuid: f0023ca8-a652-467a-8c7d-eccfcaa45f69
+langcode: es
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - subtema
+_core:
+  default_config_hash: 4Qj7O3E8MAAWbaZvzOS2G27EiYCkyW7t5DDUoBT4xhw
+id: subtema_powered
+theme: subtema
+region: footer_fifth
+weight: -7
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Funciona con Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

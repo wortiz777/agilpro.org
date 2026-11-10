@@ -1,0 +1,18 @@
+uuid: 4623384a-2200-488a-a43a-2116ed6342b2
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Mercadeo y Ventas'
+type: autodiagn_stico_mercadeo_y_venta
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

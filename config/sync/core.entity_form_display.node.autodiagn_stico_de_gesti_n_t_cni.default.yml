@@ -1,0 +1,120 @@
+uuid: d74e0db7-b01c-43ed-abfe-8e81c4e3c678
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_10gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_1tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_2gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_2tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_3gestioni
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_3tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_4gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_4tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_5gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_5tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_6gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_7gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_8gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_9gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_la_empresa_cuenta_con_infr
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+  module:
+    - path
+id: node.autodiagn_stico_de_gesti_n_t_cni.default
+targetEntityType: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_1tecnica:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2tecnica:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_3tecnica:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_4tecnica:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_5tecnica:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_10gestion: true
+  field_2gestion: true
+  field_3gestioni: true
+  field_4gestion: true
+  field_5gestion: true
+  field_6gestion: true
+  field_7gestion: true
+  field_8gestion: true
+  field_9gestion: true
+  field_la_empresa_cuenta_con_infr: true
+  promote: true
+  sticky: true

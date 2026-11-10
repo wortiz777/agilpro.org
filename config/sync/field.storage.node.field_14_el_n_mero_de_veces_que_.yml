@@ -1,0 +1,24 @@
+uuid: fcfacdec-5b7e-46c4-bfbe-456571726abb
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_14_el_n_mero_de_veces_que_
+field_name: field_14_el_n_mero_de_veces_que_
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

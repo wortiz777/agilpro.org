@@ -1,0 +1,24 @@
+uuid: b81a4bf5-ae0c-4d7b-9d32-9fa0756e4f8c
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_acceder_reporte_excel_sep_
+field_name: field_acceder_reporte_excel_sep_
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

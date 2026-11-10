@@ -1,0 +1,52 @@
+agilpro_org.settings:
+  type: config_object
+  label: 'Configuración de AgilPro.org'
+  mapping:
+    webform_ids:
+      type: mapping
+      label: 'Identificadores de Webform 360°'
+      mapping:
+        capacidades_emprendedoras:
+          type: string
+          label: 'Webform 360° Capacidades Emprendedoras'
+        direccionamiento:
+          type: string
+          label: 'Webform 360° Direccionamiento'
+        administracion:
+          type: string
+          label: 'Webform 360° Administración'
+        mercadeo:
+          type: string
+          label: 'Webform 360° Mercadeo'
+        tecnico_operativo:
+          type: string
+          label: 'Webform 360° Técnico y Operativo'
+        financiero:
+          type: string
+          label: 'Webform 360° Financiero'
+    role_ids:
+      type: mapping
+      label: 'Identificadores de roles del flujo AgilPro'
+      mapping:
+        asesor:
+          type: string
+          label: 'Rol Asesor'
+        asesor_confirmado:
+          type: string
+          label: 'Rol Asesor Confirmado'
+        emprendedor_registrado:
+          type: string
+          label: 'Rol Emprendedor Registrado'
+        emprendedor_con_perfil:
+          type: string
+          label: 'Rol Emprendedor con Perfil'
+        emprendedor_fase_conectar:
+          type: string
+          label: 'Rol Emprendedor Fase Conectar'
+    camara_restricted_paths:
+      type: sequence
+      label: 'Rutas donde se aplica automáticamente el filtro de cámara'
+      sequence:
+        type: string
+        label: 'Ruta interna'
+

@@ -1,0 +1,21 @@
+uuid: b9ff4f60-e141-419b-98bf-8ee5480e85c5
+langcode: es
+status: true
+dependencies:
+  module:
+    - agilpro_fosfec
+    - node
+    - system
+    - toolbar
+id: super_admin
+label: 'Super Administrador TI'
+weight: 24
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access fosfec dashboard'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'administer users'
+  - 'view the administration theme'

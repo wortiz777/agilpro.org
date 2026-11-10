@@ -1,0 +1,24 @@
+uuid: 889c8f7f-2f8d-4a10-9b0a-7d9d9d0c1a38
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_eje_padre
+    - taxonomy.vocabulary.ejes_estrategicos
+    - taxonomy.vocabulary.lineas_intervencion
+id: taxonomy_term.lineas_intervencion.field_eje_padre
+field_name: field_eje_padre
+entity_type: taxonomy_term
+bundle: lineas_intervencion
+label: 'Eje Padre'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      ejes_estrategicos: ejes_estrategicos
+field_type: entity_reference

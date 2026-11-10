@@ -1,0 +1,27 @@
+uuid: 2fc2bc84-3288-45dc-aa30-337226c47310
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subir_acta
+    - node.type.actas_selecci_n_comit_
+  module:
+    - file
+id: node.actas_selecci_n_comit_.field_subir_acta
+field_name: field_subir_acta
+entity_type: node
+bundle: actas_selecci_n_comit_
+label: 'Subir Acta'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: Actas-Comite-Seleccion
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

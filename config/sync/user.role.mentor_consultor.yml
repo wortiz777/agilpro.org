@@ -1,0 +1,20 @@
+uuid: 78e50d9b-3e23-4268-afb0-eb85d8bd5d48
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.fosfec_transaction
+  module:
+    - agilpro_fosfec
+    - node
+    - system
+id: mentor_consultor
+label: 'Mentor / Consultor'
+weight: 31
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access mentor workspace'
+  - 'create fosfec_transaction content'
+  - 'edit own fosfec_transaction content'
+  - 'view own unpublished content'

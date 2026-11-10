@@ -1,0 +1,21 @@
+uuid: 1550d140-d11c-4a86-a1b8-a366fa850b55
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_log_timestamp_aceptacion
+    - node.type.fosfec_transaction
+  module:
+    - datetime
+id: node.fosfec_transaction.field_log_timestamp_aceptacion
+field_name: field_log_timestamp_aceptacion
+entity_type: node
+bundle: fosfec_transaction
+label: 'Timestamp Aceptación'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: 7d335e79-817b-427a-ae10-c99171c2ffb9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.feeds_item
+    - node.type.empresa
+  module:
+    - feeds
+id: node.empresa.feeds_item
+field_name: feeds_item
+entity_type: node
+bundle: empresa
+label: 'Feeds item'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:feeds_feed'
+  handler_settings: {  }
+field_type: feeds_item

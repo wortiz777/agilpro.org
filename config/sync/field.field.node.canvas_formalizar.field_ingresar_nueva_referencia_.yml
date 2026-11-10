@@ -1,0 +1,19 @@
+uuid: 2d8542f6-3df2-496e-bb98-5eebe9982fd8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresar_nueva_referencia_
+    - node.type.canvas_formalizar
+id: node.canvas_formalizar.field_ingresar_nueva_referencia_
+field_name: field_ingresar_nueva_referencia_
+entity_type: node
+bundle: canvas_formalizar
+label: 'Ingresar Nueva Referencia Formalización'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

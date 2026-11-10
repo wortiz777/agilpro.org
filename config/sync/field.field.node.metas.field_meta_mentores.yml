@@ -1,0 +1,23 @@
+uuid: 565b7410-e1ba-485d-9ff8-5a45d5958313
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_mentores
+    - node.type.metas
+id: node.metas.field_meta_mentores
+field_name: field_meta_mentores
+entity_type: node
+bundle: metas
+label: 'Meta Mentores'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

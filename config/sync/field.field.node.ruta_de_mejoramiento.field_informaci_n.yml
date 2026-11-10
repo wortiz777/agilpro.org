@@ -1,0 +1,19 @@
+uuid: 4a201837-9948-4fc2-bfde-90d0d120bfce
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informaci_n
+    - node.type.ruta_de_mejoramiento
+id: node.ruta_de_mejoramiento.field_informaci_n
+field_name: field_informaci_n
+entity_type: node
+bundle: ruta_de_mejoramiento
+label: Información
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

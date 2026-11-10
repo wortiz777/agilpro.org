@@ -1,0 +1,23 @@
+uuid: 74f126eb-94a2-4d7c-aec9-659191b780e5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asesores_on_line
+    - node.type.metas
+id: node.metas.field_asesores_on_line
+field_name: field_asesores_on_line
+entity_type: node
+bundle: metas
+label: 'Asesores | On-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

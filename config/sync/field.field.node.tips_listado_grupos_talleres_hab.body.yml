@@ -1,0 +1,24 @@
+uuid: c004f831-f0de-4431-9b6d-ddeeaf4f6898
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tips_listado_grupos_talleres_hab
+  module:
+    - text
+id: node.tips_listado_grupos_talleres_hab.body
+field_name: body
+entity_type: node
+bundle: tips_listado_grupos_talleres_hab
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

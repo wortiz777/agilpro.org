@@ -1,0 +1,23 @@
+uuid: 1c6523f9-7ae3-48f4-8120-fe89d741587a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_conectar
+    - node.type.metas
+id: node.metas.field_meta_conectar
+field_name: field_meta_conectar
+entity_type: node
+bundle: metas
+label: 'Meta Sensibilizados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,18 @@
+uuid: 61a368f5-e719-417d-95c2-74eee73312b7
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Canvas - Espacios de Trabajo'
+type: canvas_espacios_de_trabajo_
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

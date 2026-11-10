@@ -1,0 +1,19 @@
+uuid: 34f3b374-efcf-475f-b38d-fac98ad7de61
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_talento
+    - node.type.canvas_talento
+id: node.canvas_talento.field_nueva_referencia_talento
+field_name: field_nueva_referencia_talento
+entity_type: node
+bundle: canvas_talento
+label: 'Ingresar Nueva Referencia Talento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

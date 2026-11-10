@@ -1,0 +1,26 @@
+uuid: fe598251-796f-441a-ad4f-245a10efee32
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_1mercadeo
+field_name: field_1mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '1. La empresa cuenta con un proceso para conocer el Tamaño del Mercado que atiende y el perfil de su cliente.'
+description: "El perfil del cliente es identificar características de las personas u empresas que necesitan o desean comprar los productos o servicios y están dispuestos a pagar por ellos, pueden ser características los que compran actualmente, los que la empresa espera que compren en el futuro o que dejaron de comprar y la empresa espera que regrese.\r\nTamaño del mercado es : saber quiénes son los clientes potenciales, dónde están ubicados y cuánto gastan en promedio en satisfacer sus necesidades o deseos en el producto en cuestión o similares.\r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

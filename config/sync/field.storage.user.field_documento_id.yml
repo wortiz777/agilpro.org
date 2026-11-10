@@ -1,0 +1,21 @@
+uuid: 64b1b7c3-3332-48cd-ab80-6f1ceaf8b5aa
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_documento_id
+field_name: field_documento_id
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

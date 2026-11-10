@@ -1,0 +1,21 @@
+uuid: fa45e0b4-0261-4f23-8d3f-fbbd0dfc9a26
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_terminos_condiciones
+    - node.type.empresa
+id: node.empresa.field_terminos_condiciones
+field_name: field_terminos_condiciones
+entity_type: node
+bundle: empresa
+label: 'Acepto Términos y Condiciones'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

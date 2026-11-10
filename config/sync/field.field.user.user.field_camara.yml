@@ -1,0 +1,30 @@
+uuid: 5ff2d1f4-db84-495d-9d53-e41c28f5185e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_camara
+    - taxonomy.vocabulary.c_maras_de_comercio
+  module:
+    - user
+id: user.user.field_camara
+field_name: field_camara
+entity_type: user
+bundle: user
+label: 'Cámara de Comercio'
+description: 'Seleccione la Cámara de Comercio que tiene presencia en su lugar de residencia. Esta Cámara lo acompañará durante el avance de su ruta de fortalecimiento. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      c_maras_de_comercio: c_maras_de_comercio
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

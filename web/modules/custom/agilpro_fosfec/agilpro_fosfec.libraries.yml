@@ -1,0 +1,21 @@
+agilpro_fosfec_oferta:
+  version: 1.x
+  css:
+    theme:
+      css/oferta-cta.css: {}
+  dependencies:
+    - core/drupal
+    - core/drupal.dialog.ajax
+    - core/jquery
+
+agilpro_fosfec_dashboard:
+  version: 1.x
+  css:
+    theme:
+      css/fosfec-dashboard.css: {}
+  js:
+    js/fosfec-dashboard.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once

@@ -1,0 +1,26 @@
+uuid: 083fdeb4-5145-4b90-bf08-8534d5b04f90
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_2mercadeo
+field_name: field_2mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '2. La empresa tiene clara su propuesta de valor '
+description: "La propuesta de valor es la expresión concreta del conjunto de beneficios que recibirán los clientes, a cambio de esos productos y servicios. \r\nLa propuesta de valor es un componente central en la conformación de modelos de negocio, se establece como el elemento principal al cual la empresa accede al mercado y se relacionan con los procesos internos del negocio."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

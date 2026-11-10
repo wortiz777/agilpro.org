@@ -1,0 +1,26 @@
+uuid: 790eb654-04c0-44c6-b97f-e3f8a9cae0c9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4admin
+    - node.type.autodiagnostico_administracion
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_administracion.field_4admin
+field_name: field_4admin
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '4. Se tiene un proceso para el reclutamiento, selección, contratación e inducción de los colaboradores de la empresa.'
+description: "El reclutamiento, está dado por la necesidad de contar con una base de datos (currículum vitae) de personas, que cumplan con los requisitos académicos y experiencia laboral acordes a las necesidades del cargo.\r\nProceso de Inducción, tiene como finalidad que el trabajador conozca más en detalle la empresa y sus Funciones, se integre a su puesto de trabajo y al entorno Humano en que transcurrirá su vida laboral "
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

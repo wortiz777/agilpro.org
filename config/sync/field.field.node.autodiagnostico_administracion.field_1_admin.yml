@@ -1,0 +1,26 @@
+uuid: 079a59b5-8e7c-4370-9a75-f7eac435c207
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1_admin
+    - node.type.autodiagnostico_administracion
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_administracion.field_1_admin
+field_name: field_1_admin
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '1 La empresa cuenta con un esquema de seguimiento y control del trabajo de los colaboradores que le permite tomar decisiones opo'
+description: 'Son una serie de herramientas que permiten asegurar la ejecución de las actividades y tareas acordadas en un plan, verificar en la medida de lo posible, que se cumplan las metas y objetivos, se pueden tomar las decisiones para hacer acciones correctivas y reencausar el rumbo del plan.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

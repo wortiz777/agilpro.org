@@ -1,0 +1,27 @@
+uuid: b8e82967-ec89-4163-9ea3-9df9620ef1d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargar_informe
+    - node.type.informe_intermedio_del_asesor
+  module:
+    - file
+id: node.informe_intermedio_del_asesor.field_cargar_informe
+field_name: field_cargar_informe
+entity_type: node
+bundle: informe_intermedio_del_asesor
+label: 'Cargar Informe'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'Informes Intermedios del Asesor'
+  file_extensions: 'pdf jpg jpeg png bpm gif doc docx ppt pptx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

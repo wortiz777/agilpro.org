@@ -1,0 +1,18 @@
+uuid: e76db0c5-3740-498a-9690-5686014efb27
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Asesor | Gestión Grupos'
+type: asesor_gestion_grupos
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,21 @@
+uuid: 3f4801f3-109a-4bda-883a-500207495ef2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_formacion_e
+    - node.type.canvas_espacios_de_trabajo_
+id: node.canvas_espacios_de_trabajo_.field_descripcion_formacion_e
+field_name: field_descripcion_formacion_e
+entity_type: node
+bundle: canvas_espacios_de_trabajo_
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Espacios de trabajo flexibles proveen una tierra fertíl para las nuevas compañías.  Poco tiempo en la oficina'
+default_value_callback: ''
+settings: {  }
+field_type: string

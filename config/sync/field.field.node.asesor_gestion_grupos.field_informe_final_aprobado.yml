@@ -1,0 +1,23 @@
+uuid: 5177d8ee-7d1e-422c-9050-3343310b373d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_informe_final_aprobado
+    - node.type.asesor_gestion_grupos
+id: node.asesor_gestion_grupos.field_informe_final_aprobado
+field_name: field_informe_final_aprobado
+entity_type: node
+bundle: asesor_gestion_grupos
+label: 'Aprobar Informe Final'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

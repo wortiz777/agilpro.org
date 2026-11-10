@@ -1,0 +1,40 @@
+uuid: 57053bf1-ae37-4d3d-8f2d-df9d29e57f73
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_talento.field_descripcion_formacion_e
+    - field.field.node.canvas_talento.field_nueva_referencia_talento
+    - node.type.canvas_talento
+  module:
+    - user
+id: node.canvas_talento.default
+targetEntityType: node
+bundle: canvas_talento
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_nueva_referencia_talento:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: 21a8392d-ca9d-461f-b030-4964377dd46a
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.oferta
+  module:
+    - node
+id: oferta_pattern
+label: 'Patrón Oferta'
+type: 'canonical_entities:node'
+pattern: 'ofertas/[node:title]'
+selection_criteria:
+  6aa7f789-cb6c-438b-9734-4520dd5a83a1:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      oferta: oferta
+selection_logic: and
+weight: 0
+relationships: {  }

@@ -1,0 +1,18 @@
+uuid: 06ad6398-bb58-4085-abbf-ede50afdbacf
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Gestión Técnica / Producción'
+type: autodiagn_stico_de_gesti_n_t_cni
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,27 @@
+uuid: 047c8cdd-1ab3-42db-b650-4a321712ea9a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registro_fotografico
+    - node.type.asesor_gesti_n_grupos_talleres
+  module:
+    - file
+id: node.asesor_gesti_n_grupos_talleres.field_registro_fotografico
+field_name: field_registro_fotografico
+entity_type: node
+bundle: asesor_gesti_n_grupos_talleres
+label: 'Registro Fotográfico'
+description: 'Subir archivo PDF'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: Registro-fotograrico-asesores
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

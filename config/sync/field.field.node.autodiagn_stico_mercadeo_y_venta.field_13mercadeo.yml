@@ -1,0 +1,26 @@
+uuid: 3e44341e-5dc7-43fb-9faa-0a7e9512ec6a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_13mercadeo
+field_name: field_13mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '13. La empresa cuenta con un proceso de mejora a la prestación del servicio o producto con base en las quejas, sugerencias y opi'
+description: 'El proceso de mejora entendido como una serie de procesos que deben ser mejorados desde el diseño, fabricación, empaque, funcionalidad, logística y entrega del producto o servicio, etc., hasta la plena satisfacción del cliente o usuario.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 7d56a168-685a-43fd-9fa0-56637e36eaaf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financiamiento_off_line
+    - node.type.metas
+id: node.metas.field_financiamiento_off_line
+field_name: field_financiamiento_off_line
+entity_type: node
+bundle: metas
+label: 'Financiamiento | Off-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

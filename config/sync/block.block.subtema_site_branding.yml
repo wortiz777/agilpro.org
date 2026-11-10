@@ -1,0 +1,25 @@
+uuid: 39cf7193-d909-4894-b975-26ef1d8000d5
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - subtema
+_core:
+  default_config_hash: csVMtEHXdzoEM_RdR8Ds-e6G9Bf7h6Ydo35wX1HVV2c
+id: subtema_site_branding
+theme: subtema
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

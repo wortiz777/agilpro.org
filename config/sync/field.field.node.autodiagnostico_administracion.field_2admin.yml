@@ -1,0 +1,26 @@
+uuid: 3df294ea-39b3-45ad-a91c-0d0cf554d8ef
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2admin
+    - node.type.autodiagnostico_administracion
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_administracion.field_2admin
+field_name: field_2admin
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '2. Con el seguimiento y control del trabajo se establecen planes de mejoramiento en competencias laborales de los colaboradore'
+description: "La competencia laboral  comprenden todos aquellos conocimientos, habilidades y actitudes, que son necesarios para responder exitosamente y llevar a cabo una actividad o tarea, según criterios de desempeño definidos por la empresa o el sector productivo. \r\nLas competencias abarcan los conocimientos (Saber), actitudes (Saber Ser) y habilidades (Saber Hacer) de un individuo. \r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

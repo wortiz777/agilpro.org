@@ -1,0 +1,19 @@
+uuid: 7cfe3d3f-434f-44df-b64a-9ec4310445e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_yo_fortalecer
+    - node.type.c2_fortalecer_inscritos
+id: node.c2_fortalecer_inscritos.field_yo_fortalecer
+field_name: field_yo_fortalecer
+entity_type: node
+bundle: c2_fortalecer_inscritos
+label: Yo
+description: 'Escriba su nombre completo'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

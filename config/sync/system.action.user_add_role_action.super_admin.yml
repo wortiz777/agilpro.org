@@ -1,0 +1,14 @@
+uuid: bef77e1f-75cb-43bd-a33b-4443cc426c66
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.super_admin
+  module:
+    - user
+id: user_add_role_action.super_admin
+label: 'Añade el rol Super Administrador TI al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: super_admin

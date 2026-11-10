@@ -1,0 +1,18 @@
+uuid: 6c358973-808b-42ae-95f0-c729123c70b4
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Componente Financiero Adicional'
+type: componente_financiero_adicional
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

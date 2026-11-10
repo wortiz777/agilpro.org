@@ -1,0 +1,20 @@
+uuid: a7bfe8f0-c888-450f-aa78-5507676078ee
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_cupos_totales
+field_name: field_cupos_totales
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

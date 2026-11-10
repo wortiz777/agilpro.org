@@ -1,0 +1,21 @@
+uuid: 1ae2c7e7-a922-4d40-a300-f334e20abf0e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inscripcion_ref
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_inscripcion_ref
+field_name: field_inscripcion_ref
+entity_type: node
+bundle: fosfec_transaction
+label: 'Inscripción Aprobada'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

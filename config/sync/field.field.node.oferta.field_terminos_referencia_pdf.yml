@@ -1,0 +1,27 @@
+uuid: c7e38eb5-732a-4267-87d0-8341b27e0ce7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_terminos_referencia_pdf
+    - node.type.oferta
+  module:
+    - file
+id: node.oferta.field_terminos_referencia_pdf
+field_name: field_terminos_referencia_pdf
+entity_type: node
+bundle: oferta
+label: 'Términos de Referencia (PDF)'
+description: 'Documento PDF oficial de los términos de referencia de la convocatoria.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ofertas/terminos
+  file_extensions: pdf
+  max_filesize: 20MB
+  description_field: false
+field_type: file

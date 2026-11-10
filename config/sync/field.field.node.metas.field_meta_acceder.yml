@@ -1,0 +1,23 @@
+uuid: 3c2a4b08-8805-4a9f-a88c-471794a9a7df
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_acceder
+    - node.type.metas
+id: node.metas.field_meta_acceder
+field_name: field_meta_acceder
+entity_type: node
+bundle: metas
+label: 'Meta Acceder - Mentoría'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

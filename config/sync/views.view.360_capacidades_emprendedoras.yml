@@ -1,0 +1,4297 @@
+uuid: bd91210f-88d0-4235-8f63-6552ef6ee0d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_camara
+    - field.storage.user.field_nombre
+    - taxonomy.vocabulary.c_maras_de_comercio
+    - user.role.administrator
+    - user.role.asesor
+    - user.role.coordinador_nacional
+    - user.role.coordinador_regional
+    - webform.webform.webform_462
+  module:
+    - node
+    - taxonomy
+    - user
+    - views_aggregator
+    - webform
+id: 360_capacidades_emprendedoras
+label: '360° Capacidades Emprendedoras'
+module: views
+description: ''
+tag: default
+base_table: webform_submission
+base_field: sid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: '<i class="fa fa-user-circle" aria-hidden="true"></i> 360° Capacidades Emprendedoras'
+      fields:
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Ser
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_8]+[value_12]+[value_15]+[value_22]+[value_25])/25)*100 '
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Creatividad e Innovación'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_3]+[value_11]+[value_13]+[value_23]+[value_29])/25)*100'
+        expression_2:
+          id: expression_2
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Amplitud Perceptual'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_9]+[value_10]+[value_19]+[value_20]+[value_34])/25)*100'
+        expression_3:
+          id: expression_3
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Pensamiento Sistémico'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value]+[value_7]+[value_24]+[value_28]+[value_30])/25)*100'
+        expression_4:
+          id: expression_4
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Liderazgo
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_4]+[value_6]+[value_17]+[value_26]+[value_33])/25)*100'
+        expression_5:
+          id: expression_5
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Orientación al Logro'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_1]+[value_14]+[value_18]+[value_31]+[value_32])/25)*100'
+        expression_6:
+          id: expression_6
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Orientación al Mercado'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_2]+[value_5]+[value_16]+[value_21]+[value_27])/25)*100'
+        expression_7:
+          id: expression_7
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Promedio General'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: strong
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '([expression]+[expression_1]+[expression_2]+[expression_3]+[expression_4]+[expression_5]+[expression_6])/7'
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente \u203a'
+            previous: '\u2039 anterior'
+            first: '\u00ab primero'
+            last: '\u00faltima \u00bb'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '25, 50, 100'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todo -'
+            offset: false
+            offset_label: Desplazamiento
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          autosubmit: 0
+          autosubmit_hide: 1
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            asesor: asesor
+            coordinador_nacional: coordinador_nacional
+            coordinador_regional: coordinador_regional
+      cache:
+        type: none
+      sorts:
+        created:
+          id: created
+          table: users_field_data
+          field: created
+          relationship: uid_1
+          group_type: group
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+          exposed: false
+          granularity: second
+          ui_name: ''
+      arguments: {  }
+      filters:
+        webform_id:
+          id: webform_id
+          table: webform_submission
+          field: webform_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: webform_submission
+          plugin_id: bundle
+          operator: in
+          value:
+            webform_462: webform_462
+          group: 1
+          exposed: false
+        field_camara_target_id:
+          id: field_camara_target_id
+          table: user__field_camara
+          field: field_camara_target_id
+          relationship: uid_1
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_camara_target_id_op
+            label: 'Seleccione una Cámara de Comercio'
+            description: ''
+            use_operator: false
+            operator: field_camara_target_id_op
+            identifier: field_camara_tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          vid: c_maras_de_comercio
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: views_aggregator_plugin_style_table
+        options:
+          row_class: ''
+          default_row_class: true
+          columns:
+            value: value
+            value_1: value_1
+            value_2: value_2
+            value_3: value_3
+            value_4: value_4
+            value_5: value_5
+            value_6: value_6
+            value_7: value_7
+            value_8: value_8
+            value_9: value_9
+            value_10: value_10
+            value_11: value_11
+            value_12: value_12
+            value_13: value_13
+            value_14: value_14
+            value_15: value_15
+            value_16: value_16
+            value_17: value_17
+            value_18: value_18
+            value_19: value_19
+            value_20: value_20
+            value_21: value_21
+            value_22: value_22
+            value_23: value_23
+            value_24: value_24
+            value_25: value_25
+            value_26: value_26
+            value_27: value_27
+            value_28: value_28
+            value_29: value_29
+            value_30: value_30
+            value_31: value_31
+            value_32: value_32
+            value_33: value_33
+            value_34: value_34
+            field_camara: field_camara
+            field_nombre: field_nombre
+            field_apellidos: field_apellidos
+            field_numero_id: field_numero_id
+            expression: expression
+            expression_1: expression_1
+            expression_2: expression_2
+            expression_3: expression_3
+            expression_4: expression_4
+            expression_5: expression_5
+            expression_6: expression_6
+            expression_7: expression_7
+            view_submission: view_submission
+          default: '-1'
+          info:
+            value:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_2:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_3:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_4:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_5:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_6:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_7:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_8:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_9:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_10:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_11:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_12:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_13:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_14:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_15:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_16:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_17:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_18:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_19:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_20:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_21:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_22:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_23:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_24:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_25:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_26:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_27:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_28:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_29:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_30:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_31:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_32:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_33:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_34:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_camara:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_nombre:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_replace
+              aggr_par_column: ''
+            field_apellidos:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_numero_id:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-right
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_replace
+              aggr_par_column: Promedios
+            expression:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_1:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_2:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_3:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_4:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_5:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_6:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_7:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            view_submission:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              1: 1
+              2: 2
+            totals_per_page: 1
+            precision: 2
+            totals_row_class: ''
+          row_class_special: 1
+      row:
+        type: fields
+      query:
+        type: views_query
+        options: {  }
+      relationships:
+        uid_1:
+          id: uid_1
+          table: webform_submission
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: 'Webform Submission User'
+          entity_type: webform_submission
+          plugin_id: standard
+          required: false
+          ui_name: ''
+          label: 'Webform Submission User'
+      use_ajax: true
+      header: {  }
+      footer:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          label: ''
+          empty: false
+          ui_name: ''
+          content: '<br/>'
+          tokenize: 0
+      display_extenders: {  }
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          value: value
+          value_1: value_1
+          value_2: value_2
+          value_3: value_3
+          value_4: value_4
+          value_5: value_5
+          value_6: value_6
+          value_7: value_7
+          value_8: value_8
+          value_9: value_9
+          value_10: value_10
+          value_11: value_11
+          value_12: value_12
+          value_13: value_13
+          value_14: value_14
+          value_15: value_15
+          value_16: value_16
+          value_17: value_17
+          value_18: value_18
+          value_19: value_19
+          value_20: value_20
+          value_21: value_21
+          value_22: value_22
+          value_23: value_23
+          value_24: value_24
+          value_25: value_25
+          value_26: value_26
+          value_27: value_27
+          value_28: value_28
+          value_29: value_29
+          value_30: value_30
+          value_31: value_31
+          value_32: value_32
+          value_33: value_33
+          value_34: value_34
+          field_camara: field_camara
+          field_nombre: field_nombre
+          field_apellidos: field_apellidos
+          field_numero_id: field_numero_id
+          expression: expression
+          expression_1: expression_1
+          expression_2: expression_2
+          expression_3: expression_3
+          expression_4: expression_4
+          expression_5: expression_5
+          expression_6: expression_6
+          expression_7: expression_7
+          view_submission: view_submission
+        info:
+          value:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_1:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_2:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_3:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_4:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_5:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_6:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_7:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_8:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_9:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_10:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_11:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_12:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_13:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_14:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_15:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_16:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_17:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_18:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_19:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_20:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_21:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_22:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_23:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_24:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_25:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_26:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_27:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_28:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_29:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_30:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_31:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_32:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_33:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_34:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_nombre:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_replace
+            aggr_par_column: ''
+          field_apellidos:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_numero_id:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-right
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_replace
+            aggr_par_column: Promedios
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_2:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_3:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_4:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_5:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_6:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_7:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          view_submission:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            1: '1'
+            2: '2'
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.roles
+      tags: {  }
+  attachment_1:
+    id: attachment_1
+    display_title: Adjunto
+    display_plugin: attachment
+    position: 3
+    display_options:
+      fields:
+        title:
+          id: title
+          table: views
+          field: counter
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: counter
+          label: No.
+          counter_start: 1
+        field_camara:
+          id: field_camara
+          table: user__field_camara
+          field: field_camara
+          relationship: uid_1
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Cámara de Comercio'
+          type: entity_reference_label
+          settings:
+            link: false
+        field_nombre:
+          id: field_nombre
+          table: user__field_nombre
+          field: field_nombre
+          relationship: uid_1
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Total Autodiagnósticos'
+      pager:
+        type: none
+        options:
+          offset: 0
+      sorts: {  }
+      style:
+        type: views_aggregator_plugin_style_table
+        options:
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            field_camara: field_camara
+            field_nombre: field_nombre
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              has_aggr: true
+              aggr:
+                views_aggregator_group_seq_number: views_aggregator_group_seq_number
+              has_aggr_column: false
+            field_camara:
+              sortable: true
+              has_aggr: true
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              has_aggr_column: true
+              aggr_column: views_aggregator_replace
+              aggr_par_column: Total
+            field_nombre:
+              sortable: false
+              align: views-align-center
+              has_aggr: true
+              aggr:
+                views_aggregator_count: views_aggregator_count
+              has_aggr_column: true
+              aggr_column: views_aggregator_count
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: 2
+              1: 0
+            totals_per_page: 1
+            precision: 2
+            totals_row_class: ''
+          row_class_special: 1
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        style: false
+        row: false
+        fields: false
+        sorts: false
+        filters: true
+        filter_groups: true
+        header: false
+      relationships:
+        uid_1:
+          id: uid_1
+          table: webform_submission
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: 'Webform Submission User'
+          entity_type: webform_submission
+          plugin_id: standard
+          required: false
+          ui_name: ''
+          label: 'Webform Submission User'
+      header: {  }
+      display_extenders: {  }
+      displays:
+        page: page
+        default: '0'
+      inherit_exposed_filters: true
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          title: title
+          field_camara: field_camara
+          field_nombre: field_nombre
+        info:
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_seq_number: views_aggregator_group_seq_number
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_replace
+            aggr_par_column: Total
+          field_nombre:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_count: views_aggregator_count
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_count
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.roles
+      tags:
+        - 'config:field.storage.user.field_camara'
+        - 'config:field.storage.user.field_nombre'
+  page:
+    id: page
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      fields:
+        name:
+          id: name
+          table: users_field_data
+          field: name
+          relationship: uid_1
+          group_type: group
+          plugin_id: field
+          label: Nombre
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          link_to_user: 1
+          overwrite_anonymous: 0
+          anonymous_text: ''
+          format_username: 1
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: No.
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          settings:
+            link_to_entity: 0
+          ui_name: ''
+        expression:
+          id: expression
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Ser
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_8]+[value_12]+[value_15]+[value_22]+[value_25])/25)*100 '
+        expression_1:
+          id: expression_1
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Creatividad e Innovación'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_3]+[value_11]+[value_13]+[value_23]+[value_29])/25)*100'
+        expression_2:
+          id: expression_2
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Amplitud Perceptual'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_9]+[value_10]+[value_19]+[value_20]+[value_34])/25)*100'
+        expression_3:
+          id: expression_3
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Pensamiento Sistémico'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value]+[value_7]+[value_24]+[value_28]+[value_30])/25)*100'
+        expression_4:
+          id: expression_4
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: Liderazgo
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_4]+[value_6]+[value_17]+[value_26]+[value_33])/25)*100'
+        expression_5:
+          id: expression_5
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Orientación al Logro'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_1]+[value_14]+[value_18]+[value_31]+[value_32])/25)*100'
+        expression_6:
+          id: expression_6
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Orientación al Mercado'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '(([value_2]+[value_5]+[value_16]+[value_21]+[value_27])/25)*100'
+        expression_7:
+          id: expression_7
+          table: views
+          field: expression
+          relationship: none
+          group_type: group
+          label: 'Promedio General'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: strong
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          ui_name: ''
+          set_precision: 1
+          precision: '2'
+          decimal: .
+          separator: ','
+          format_plural: 0
+          format_plural_singular: '1'
+          format_plural_plural: '@count'
+          prefix: ''
+          suffix: ''
+          expression: '([expression]+[expression_1]+[expression_2]+[expression_3]+[expression_4]+[expression_5]+[expression_6])/7'
+      style:
+        type: views_aggregator_plugin_style_table
+        options:
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            value: value
+            value_1: value_1
+            value_2: value_2
+            value_3: value_3
+            value_4: value_4
+            value_5: value_5
+            value_6: value_6
+            value_7: value_7
+            value_8: value_8
+            value_9: value_9
+            value_10: value_10
+            value_11: value_11
+            value_12: value_12
+            value_13: value_13
+            value_14: value_14
+            value_15: value_15
+            value_16: value_16
+            value_17: value_17
+            value_18: value_18
+            value_19: value_19
+            value_20: value_20
+            value_21: value_21
+            value_22: value_22
+            value_23: value_23
+            value_24: value_24
+            value_25: value_25
+            value_26: value_26
+            value_27: value_27
+            value_28: value_28
+            value_29: value_29
+            value_30: value_30
+            value_31: value_31
+            value_32: value_32
+            value_33: value_33
+            value_34: value_34
+            field_camara: field_camara
+            field_nombre: field_nombre
+            field_apellidos: field_apellidos
+            field_numero_id: field_numero_id
+            expression: expression
+            expression_1: expression_1
+            expression_2: expression_2
+            expression_3: expression_3
+            expression_4: expression_4
+            expression_5: expression_5
+            expression_6: expression_6
+            expression_7: expression_7
+            view_submission: view_submission
+            name: name
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: true
+              aggr:
+                views_aggregator_group_seq_number: views_aggregator_group_seq_number
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_1:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_2:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_3:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_4:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_5:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_6:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_7:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_8:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_9:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_10:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_11:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_12:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_13:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_14:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_15:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_16:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_17:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_18:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_19:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_20:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_21:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_22:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_23:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_24:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_25:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_26:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_27:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_28:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_29:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_30:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_31:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_32:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_33:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            value_34:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_camara:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_nombre:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_replace
+              aggr_par_column: ''
+            field_apellidos:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_numero_id:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-right
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_replace
+              aggr_par_column: Promedios
+            expression:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_1:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_2:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_3:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_4:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_5:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_6:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            expression_7:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: true
+              aggr_column: views_aggregator_average
+              aggr_par_column: ''
+            view_submission:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: false
+              has_aggr: false
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            name:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              has_aggr: true
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: false
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              1: 1
+              2: 2
+            totals_per_page: 1
+            precision: 2
+            totals_row_class: ''
+          row_class_special: 1
+      row:
+        type: fields
+        options: {  }
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        use_ajax: false
+        style: false
+        row: false
+        fields: false
+        footer: false
+      relationships:
+        uid_1:
+          id: uid_1
+          table: webform_submission
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: 'Webform Submission User'
+          entity_type: webform_submission
+          plugin_id: standard
+          required: false
+          ui_name: ''
+          label: 'Webform Submission User'
+      use_ajax: true
+      footer: {  }
+      display_extenders: {  }
+      path: C2/360-capacidades-emprendedoras
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          title: title
+          value: value
+          value_1: value_1
+          value_2: value_2
+          value_3: value_3
+          value_4: value_4
+          value_5: value_5
+          value_6: value_6
+          value_7: value_7
+          value_8: value_8
+          value_9: value_9
+          value_10: value_10
+          value_11: value_11
+          value_12: value_12
+          value_13: value_13
+          value_14: value_14
+          value_15: value_15
+          value_16: value_16
+          value_17: value_17
+          value_18: value_18
+          value_19: value_19
+          value_20: value_20
+          value_21: value_21
+          value_22: value_22
+          value_23: value_23
+          value_24: value_24
+          value_25: value_25
+          value_26: value_26
+          value_27: value_27
+          value_28: value_28
+          value_29: value_29
+          value_30: value_30
+          value_31: value_31
+          value_32: value_32
+          value_33: value_33
+          value_34: value_34
+          field_camara: field_camara
+          field_nombre: field_nombre
+          field_apellidos: field_apellidos
+          field_numero_id: field_numero_id
+          expression: expression
+          expression_1: expression_1
+          expression_2: expression_2
+          expression_3: expression_3
+          expression_4: expression_4
+          expression_5: expression_5
+          expression_6: expression_6
+          expression_7: expression_7
+          view_submission: view_submission
+          name: name
+        info:
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_seq_number: views_aggregator_group_seq_number
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_1:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_2:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_3:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_4:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_5:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_6:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_7:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_8:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_9:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_10:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_11:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_12:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_13:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_14:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_15:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_16:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_17:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_18:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_19:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_20:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_21:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_22:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_23:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_24:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_25:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_26:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_27:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_28:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_29:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_30:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_31:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_32:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_33:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          value_34:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_nombre:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_replace
+            aggr_par_column: ''
+          field_apellidos:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_numero_id:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-right
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_replace
+            aggr_par_column: Promedios
+          expression:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_1:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_2:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_3:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_4:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_5:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_6:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          expression_7:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 1
+            aggr_column: views_aggregator_average
+            aggr_par_column: ''
+          view_submission:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          name:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 1
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            1: '1'
+            2: '2'
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user
+        - user.roles
+      tags: {  }

@@ -1,0 +1,51 @@
+uuid: c3951dfa-3b2c-4d33-9fdf-e46213271aec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node._gc_formatos_inscripci_n.field_fecha_de_inscripcion
+    - field.field.node._gc_formatos_inscripci_n.field_ingresar_emprendimientos
+    - field.field.node._gc_formatos_inscripci_n.field_ingresar_participantes
+    - node.type._gc_formatos_inscripci_n
+  module:
+    - datetime
+    - user
+id: node._gc_formatos_inscripci_n.default
+targetEntityType: node
+bundle: _gc_formatos_inscripci_n
+mode: default
+content:
+  field_fecha_de_inscripcion:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ingresar_emprendimientos:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ingresar_participantes:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

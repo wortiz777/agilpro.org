@@ -1,0 +1,27 @@
+uuid: 36e43a29-9e7a-4ca5-ad2d-848dc00bfbdb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargar_soportes_fortalecer
+    - node.type.inscripci_n_fase_empoderar
+  module:
+    - file
+id: node.inscripci_n_fase_empoderar.field_cargar_soportes_fortalecer
+field_name: field_cargar_soportes_fortalecer
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Cargar soportes - Fortalecer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'Soportes - Fortalecer'
+  file_extensions: 'pdf xls xlsx doc docx ppt pptx'
+  max_filesize: ''
+  description_field: false
+field_type: file

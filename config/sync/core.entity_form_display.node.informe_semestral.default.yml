@@ -1,0 +1,255 @@
+uuid: cf749ede-4471-4c21-a133-a613106f04d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.informe_semestral.field_1_resumen_general_del_dese
+    - field.field.node.informe_semestral.field_2_10_n_mero_de_j_venes_que
+    - field.field.node.informe_semestral.field_2_11_n_mero_de_j_venes_que
+    - field.field.node.informe_semestral.field_2_12_n_mero_de_mentores_qu
+    - field.field.node.informe_semestral.field_2_1_n_mero_de_personas_sen
+    - field.field.node.informe_semestral.field_2_2_n_mero_de_empresas_for
+    - field.field.node.informe_semestral.field_2_3_n_mero_de_empleados_ad
+    - field.field.node.informe_semestral.field_2_4_n_mero_de_empresas_que
+    - field.field.node.informe_semestral.field_2_5_n_mero_de_j_venes_que_
+    - field.field.node.informe_semestral.field_2_7_n_mero_de_j_venes_que_
+    - field.field.node.informe_semestral.field_2_8_n_mero_de_j_venes_que_
+    - field.field.node.informe_semestral.field_2_9_n_mero_de_facilitadore
+    - field.field.node.informe_semestral.field_3_se_ale_los_factores_cr_t
+    - field.field.node.informe_semestral.field_4_1_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_2_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_3_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_4_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_5_b_detalle_el_o_los_otr
+    - field.field.node.informe_semestral.field_4_riesgos
+    - field.field.node.informe_semestral.field_5_sustente_como_desde_su_c
+    - field.field.node.informe_semestral.field_6_relacione_las_acciones_a
+    - field.field.node.informe_semestral.field_7_mencione_las_lecciones_a
+    - field.field.node.informe_semestral.field_n_mero_de_empresas_fortale
+    - field.field.node.informe_semestral.field_seleccione_el_semestre_a_r
+    - node.type.informe_semestral
+  module:
+    - path
+id: node.informe_semestral.default
+targetEntityType: node
+bundle: informe_semestral
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_1_resumen_general_del_dese:
+    type: string_textarea
+    weight: 3
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_10_n_mero_de_j_venes_que:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_11_n_mero_de_j_venes_que:
+    type: number
+    weight: 15
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_12_n_mero_de_mentores_qu:
+    type: number
+    weight: 16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_1_n_mero_de_personas_sen:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_2_n_mero_de_empresas_for:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_3_n_mero_de_empleados_ad:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_4_n_mero_de_empresas_que:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_5_n_mero_de_j_venes_que_:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_7_n_mero_de_j_venes_que_:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_8_n_mero_de_j_venes_que_:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2_9_n_mero_de_facilitadore:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_3_se_ale_los_factores_cr_t:
+    type: string_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_4_1_b_explique_como_afecta:
+    type: string_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_4_2_b_explique_como_afecta:
+    type: string_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_4_3_b_explique_como_afecta:
+    type: string_textarea
+    weight: 9
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_4_4_b_explique_como_afecta:
+    type: string_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_4_5_b_detalle_el_o_los_otr:
+    type: string_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_4_riesgos:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_5_sustente_como_desde_su_c:
+    type: string_textarea
+    weight: 12
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_6_relacione_las_acciones_a:
+    type: string_textarea
+    weight: 13
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_7_mencione_las_lecciones_a:
+    type: string_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_n_mero_de_empresas_fortale:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_seleccione_el_semestre_a_r: true
+  promote: true
+  sticky: true

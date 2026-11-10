@@ -1,0 +1,14 @@
+uuid: 873749ff-2072-476a-837b-55b10ec4e220
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.coordinador_fosfec
+  module:
+    - user
+id: user_remove_role_action.coordinador_fosfec
+label: 'Elimina el rol Coordinador FOSFEC al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: coordinador_fosfec

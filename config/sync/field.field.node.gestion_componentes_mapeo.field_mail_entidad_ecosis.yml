@@ -1,0 +1,19 @@
+uuid: 92c56801-ff60-47fb-90c4-6d335bf25437
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mail_entidad_ecosis
+    - node.type.gestion_componentes_mapeo
+id: node.gestion_componentes_mapeo.field_mail_entidad_ecosis
+field_name: field_mail_entidad_ecosis
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'E-mail de Contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

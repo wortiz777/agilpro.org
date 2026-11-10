@@ -1,0 +1,104 @@
+uuid: d6b5bd94-2e1e-4c03-ac03-34870844b743
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_asesor_fase_fortalecimient
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_asesor_visita_inicial
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_direccionamiento_estrat_gi
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_financiero
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_mercadeo
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_producci_n
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_talento_humano
+    - node.type.planes_de_capacitaci_n_habilidad
+  module:
+    - path
+id: node.planes_de_capacitaci_n_habilidad.default
+targetEntityType: node
+bundle: planes_de_capacitaci_n_habilidad
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_asesor_visita_inicial:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_direccionamiento_estrat_gi:
+    type: options_buttons
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_financiero:
+    type: options_buttons
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_mercadeo:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_producci_n:
+    type: options_buttons
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_talento_humano:
+    type: options_buttons
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_asesor_fase_fortalecimient: true
+  promote: true
+  sticky: true

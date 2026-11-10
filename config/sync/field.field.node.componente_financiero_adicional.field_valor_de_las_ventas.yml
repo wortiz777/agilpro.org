@@ -1,0 +1,23 @@
+uuid: a73061cf-6ec9-4239-9539-d90f8408c392
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_valor_de_las_ventas
+    - node.type.componente_financiero_adicional
+id: node.componente_financiero_adicional.field_valor_de_las_ventas
+field_name: field_valor_de_las_ventas
+entity_type: node
+bundle: componente_financiero_adicional
+label: 'Valor de las Ventas últimos 6 meses'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

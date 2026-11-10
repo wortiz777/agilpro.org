@@ -1,0 +1,146 @@
+agilpro_org.perfil_emprendedor:
+  path: '/perfil-emprendedor-custom'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PerfilEmprendedorController::build'
+    _title: 'Autodiagnóstico 360° Emprendedor'
+  requirements:
+    _role: 'colaborador'
+
+agilpro_org.emprendimientos_impulsados:
+  path: '/emprendimientos-impulsados'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::emprendimientosImpulsados'
+    _title: 'Emprendimientos Impulsados'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_org.biblioteca_abierta:
+  path: '/biblioteca-abierta'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::bibliotecaAbierta'
+    _title: 'Biblioteca'
+    ubicacion: '1'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_org.biblioteca_conectar:
+  path: '/biblioteca/conectar'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::bibliotecaAbierta'
+    _title: 'Recursos Fase Conectar'
+    ubicacion: '2'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_org.biblioteca_empoderar:
+  path: '/biblioteca/empoderar'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::bibliotecaAbierta'
+    _title: 'Recursos Fase Empoderar'
+    ubicacion: '3'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_org.biblioteca_fortalecer:
+  path: '/biblioteca/fortalecer'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::bibliotecaAbierta'
+    _title: 'Recursos Fase Fortalecer'
+    ubicacion: '4'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_org.biblioteca_acceder:
+  path: '/biblioteca/acceder'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::bibliotecaAbierta'
+    _title: 'Recursos Fase Acceder'
+    ubicacion: '5'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_org.mapeo_institucional:
+  path: '/mapeo-institucional'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::mapeoInstitucional'
+    _title: 'Entidades Participantes'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_org.canvas:
+  path: '/canvas'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\PublicViewsController::canvas'
+    _title: 'Canvas de la Red'
+  requirements:
+    _access: 'TRUE'
+
+# Rutas migradas a Vistas nativas de Drupal 11:
+# agilpro_org.360_emprendimientos -> view.360_emprendimientos.page
+# agilpro_org.360_capacidades_emprendedor -> view.360_capacidades_emprendedoras_emprendedor.page
+# agilpro_org.c2_360_capacidades -> view.360_capacidades_emprendedoras.page
+# agilpro_org.c2_360_emprendimientos -> view.c2_360_emprendimientos.page
+# agilpro_org.360_emprendimientos_todos -> view.360_emprendimientos_todos.page
+# agilpro_org.360_complemento -> view.360_emprendimiento_admon_normatividad_y_talento_.page
+# agilpro_org.paso_1a -> view.paso_1a.page
+
+agilpro_org.mi_empresa_dashboard:
+  path: '/mi-empresa/dashboard'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\MiEmpresaDashboardController::dashboard'
+    _title: 'Portal Privado Mi Empresa'
+  requirements:
+    _role: 'admin_empresa+colaborador+administrator+super_admin'
+
+agilpro_org.mi_empresa_programas:
+  path: '/mi-empresa/programas'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\MiEmpresaDashboardController::dashboard'
+    _title: 'Mis Convocatorias y Mentorías'
+    tab: 'programas'
+  requirements:
+    _role: 'admin_empresa+colaborador+administrator+super_admin'
+
+agilpro_org.mi_empresa_perfil:
+  path: '/mi-empresa/perfil'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\MiEmpresaDashboardController::dashboard'
+    _title: 'Perfil Empresarial y Habeas Data'
+    tab: 'perfil'
+  requirements:
+    _role: 'admin_empresa+colaborador+administrator+super_admin'
+
+agilpro_org.mi_empresa_equipo:
+  path: '/mi-empresa/equipo'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\MiEmpresaDashboardController::dashboard'
+    _title: 'Equipo de Colaboradores'
+    tab: 'equipo'
+  requirements:
+    _role: 'admin_empresa+colaborador+administrator+super_admin'
+
+agilpro_org.mi_empresa_certificados:
+  path: '/mi-empresa/certificados'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\MiEmpresaDashboardController::dashboard'
+    _title: 'Historial FOSFEC y Certificados'
+    tab: 'certificados'
+  requirements:
+    _role: 'admin_empresa+colaborador+administrator+super_admin'
+
+agilpro_org.sesion_aceptar:
+  path: '/mi-empresa/sesion/aceptar'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\MiEmpresaDashboardController::aceptarSesion'
+  requirements:
+    _role: 'admin_empresa+colaborador+administrator+super_admin'
+  methods: [POST]
+
+agilpro_org.certificado_download:
+  path: '/mi-empresa/certificados/{node}/descargar'
+  defaults:
+    _controller: '\Drupal\agilpro_org\Controller\MiEmpresaDashboardController::downloadCertificado'
+    _title: 'Certificado de Asistencia FOSFEC'
+  requirements:
+    _role: 'admin_empresa+colaborador+administrator+super_admin'
+    node: '\d+'

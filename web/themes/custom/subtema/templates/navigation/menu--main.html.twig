@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ * Template Twig para el Menú Principal Vertical (menu--main.html.twig).
+ *
+ * Renderiza el menú en barra lateral vertical izquierda colapsable/expandible,
+ * con iconos Font Awesome, etiquetas y submenús multinivel desplegables.
+ */
+#}
+{% import _self as menus %}
+{{ menus.menu_links(items, attributes, 0) }}
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <aside class="agilpro-sidebar-nav" id="agilpro-sidebar-nav" aria-label="{{ 'Menú Principal'|t }}">
+        <div class="agilpro-sidebar-header">
+          <button type="button" class="agilpro-sidebar-toggle" id="agilpro-sidebar-toggle" aria-expanded="false" title="{{ 'Desplegar / Colapsar Menú'|t }}">
+            <i class="fa fa-bars toggle-icon-bars" aria-hidden="true"></i>
+            <i class="fa fa-chevron-left toggle-icon-arrow" aria-hidden="true"></i>
+          </button>
+          <span class="agilpro-sidebar-brand-text">{{ 'Navegación'|t }}</span>
+        </div>
+
+        <div class="agilpro-sidebar-scroll">
+          <ul{{ attributes.addClass('agilpro-vertical-menu')|without('id', 'data-component-id') }}>
+    {% else %}
+      <ul class="agilpro-submenu" role="menu">
+    {% endif %}
+
+    {% for item in items %}
+      {%
+        set classes = [
+          'agilpro-vmenu-item',
+          loop.first ? 'first',
+          loop.last ? 'last',
+          item.below ? 'has-submenu' : 'is-leaf',
+          item.in_active_trail ? 'active',
+        ]
+      %}
+      <li{{ item.attributes.addClass(classes) }}>
+        {% set item_title_clean = item.title_clean|default(item.title|striptags|trim) %}
+        {% if item.below %}
+          <a href="{{ item.url }}" class="agilpro-vmenu-link agilpro-submenu-toggle" role="button" aria-haspopup="true" aria-expanded="false" title="{{ item_title_clean }}">
+            <span class="agilpro-vmenu-icon">
+              {% if item.icon_class %}
+                <i class="{{ item.icon_class }}" aria-hidden="true"></i>
+              {% else %}
+                <i class="fa fa-folder-o" aria-hidden="true"></i>
+              {% endif %}
+            </span>
+            <span class="agilpro-vmenu-content">{{ item_title_clean }}</span>
+            <i class="fa fa-angle-right submenu-arrow" aria-hidden="true"></i>
+          </a>
+          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+        {% else %}
+          {% set link_classes = item.in_active_trail ? ['active', 'agilpro-vmenu-link'] : ['agilpro-vmenu-link'] %}
+          <a href="{{ item.url }}" class="{{ link_classes|join(' ') }}" title="{{ item_title_clean }}">
+            <span class="agilpro-vmenu-icon">
+              {% if item.icon_class %}
+                <i class="{{ item.icon_class }}" aria-hidden="true"></i>
+              {% else %}
+                <i class="fa fa-circle-o" aria-hidden="true"></i>
+              {% endif %}
+            </span>
+            <span class="agilpro-vmenu-content">{{ item_title_clean }}</span>
+          </a>
+        {% endif %}
+      </li>
+    {% endfor %}
+
+    {% if menu_level == 0 %}
+          </ul>
+        </div>
+      </aside>
+    {% else %}
+      </ul>
+    {% endif %}
+  {% endif %}
+{% endmacro %}

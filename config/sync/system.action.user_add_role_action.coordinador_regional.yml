@@ -1,0 +1,14 @@
+uuid: 8f9e6f72-1b1f-4cd9-831d-9b28ddead766
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.coordinador_regional
+  module:
+    - user
+id: user_add_role_action.coordinador_regional
+label: 'Añade el rol Coordinador Regional al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: coordinador_regional

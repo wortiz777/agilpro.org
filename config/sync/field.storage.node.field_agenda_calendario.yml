@@ -1,0 +1,19 @@
+uuid: be4e247c-d050-482e-8f80-77515034a3c8
+langcode: es
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_agenda_calendario
+field_name: field_agenda_calendario
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

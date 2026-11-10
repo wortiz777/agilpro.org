@@ -1,0 +1,40 @@
+uuid: 5917dec6-02ea-4c7a-a590-9fc020edb801
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.hv_asesores.field_cargar_hv
+    - field.field.node.hv_asesores.field_n_mero_de_identificaci_n_d
+    - node.type.hv_asesores
+  module:
+    - file
+    - user
+id: node.hv_asesores.default
+targetEntityType: node
+bundle: hv_asesores
+mode: default
+content:
+  field_cargar_hv:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_n_mero_de_identificaci_n_d:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 51be3bb5-bdb4-473b-81aa-4ae9e4eb5d25
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_talento_humano
+    - node.type.planes_de_capacitaci_n_habilidad
+  module:
+    - options
+id: node.planes_de_capacitaci_n_habilidad.field_talento_humano
+field_name: field_talento_humano
+entity_type: node
+bundle: planes_de_capacitaci_n_habilidad
+label: 'Talento Humano'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

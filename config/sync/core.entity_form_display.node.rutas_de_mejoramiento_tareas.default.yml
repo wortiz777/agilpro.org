@@ -1,0 +1,84 @@
+uuid: 101ea187-95f2-41d6-95fa-5306e3f8c328
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.rutas_de_mejoramiento_tareas.field_fecha_de_inicio_
+    - field.field.node.rutas_de_mejoramiento_tareas.field_fecha_fin
+    - field.field.node.rutas_de_mejoramiento_tareas.field_tarea_a_desarrollar
+    - node.type.rutas_de_mejoramiento_tareas
+  module:
+    - datetime
+    - path
+id: node.rutas_de_mejoramiento_tareas.default
+targetEntityType: node
+bundle: rutas_de_mejoramiento_tareas
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fecha_de_inicio_:
+    type: datetime_default
+    weight: 32
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fecha_fin:
+    type: datetime_default
+    weight: 33
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_tarea_a_desarrollar:
+    type: string_textarea
+    weight: 31
+    region: content
+    settings:
+      rows: 2
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

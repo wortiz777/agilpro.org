@@ -1,0 +1,20 @@
+uuid: 0bf83e46-186b-4ca1-8067-c309c7384a84
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.field_fechas_inscripcion
+field_name: field_fechas_inscripcion
+entity_type: node
+type: daterange
+settings:
+  datetime_type: date
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

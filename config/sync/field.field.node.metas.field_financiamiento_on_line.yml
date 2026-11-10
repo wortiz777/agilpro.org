@@ -1,0 +1,23 @@
+uuid: d1622cf4-3883-4711-95ba-b2984e24c1ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financiamiento_on_line
+    - node.type.metas
+id: node.metas.field_financiamiento_on_line
+field_name: field_financiamiento_on_line
+entity_type: node
+bundle: metas
+label: 'Financiamiento | On-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

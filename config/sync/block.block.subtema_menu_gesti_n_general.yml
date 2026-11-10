@@ -1,0 +1,33 @@
+uuid: 2ffc3f37-3824-40a5-9743-03b832a0a1e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-gesti-n-general
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_gesti_n_general
+theme: subtema
+region: content
+weight: 12
+provider: null
+plugin: 'system_menu_block:menu-gesti-n-general'
+settings:
+  id: 'system_menu_block:menu-gesti-n-general'
+  label: menu-gesti-n-general
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

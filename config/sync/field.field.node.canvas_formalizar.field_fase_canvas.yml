@@ -1,0 +1,21 @@
+uuid: d1dd2cfa-0bcd-46d6-b642-532845cca001
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_formalizar
+id: node.canvas_formalizar.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_formalizar
+label: 'Fase Canvas'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '2. Desarrollar'
+default_value_callback: ''
+settings: {  }
+field_type: string

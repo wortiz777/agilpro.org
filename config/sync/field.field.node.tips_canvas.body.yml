@@ -1,0 +1,24 @@
+uuid: 2201e9f0-f59d-447e-8fdf-13527b33b270
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tips_canvas
+  module:
+    - text
+id: node.tips_canvas.body
+field_name: body
+entity_type: node
+bundle: tips_canvas
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

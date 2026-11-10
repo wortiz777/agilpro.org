@@ -1,0 +1,21 @@
+uuid: 86c01648-bf5d-4995-b68a-8e0b2f2f2d25
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nivel_educativo
+    - node.type.participantes_ficha_inscripci_n
+  module:
+    - options
+id: node.participantes_ficha_inscripci_n.field_nivel_educativo
+field_name: field_nivel_educativo
+entity_type: node
+bundle: participantes_ficha_inscripci_n
+label: 'Nivel Educativo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

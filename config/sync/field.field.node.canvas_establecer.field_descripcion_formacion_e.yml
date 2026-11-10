@@ -1,0 +1,21 @@
+uuid: 32c06655-cacb-4fa6-a014-acab13b07433
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_formacion_e
+    - node.type.canvas_establecer
+id: node.canvas_establecer.field_descripcion_formacion_e
+field_name: field_descripcion_formacion_e
+entity_type: node
+bundle: canvas_establecer
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Incluye los servicios necesarios para ayudar al emprendedor a preparar el marco financiero  y legal de su compañía.  Ej. Firmas de abogados que apoyan a los emprendedores y entidades de apoyo financiero.'
+default_value_callback: ''
+settings: {  }
+field_type: string

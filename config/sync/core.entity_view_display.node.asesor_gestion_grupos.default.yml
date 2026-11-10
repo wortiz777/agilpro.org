@@ -1,0 +1,74 @@
+uuid: 34a39b0f-68fe-4ffa-9f47-2a68b9d48613
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.asesor_gestion_grupos.field_grupo_asesor
+    - field.field.node.asesor_gestion_grupos.field_informe_final_aprobado
+    - field.field.node.asesor_gestion_grupos.field_informe_pre_aprobado
+    - field.field.node.asesor_gestion_grupos.field_subir_informe_final
+    - field.field.node.asesor_gestion_grupos.field_subir_informe_preliminar
+    - field.field.node.asesor_gestion_grupos.field_taller
+    - node.type.asesor_gestion_grupos
+  module:
+    - file
+    - options
+    - user
+id: node.asesor_gestion_grupos.default
+targetEntityType: node
+bundle: asesor_gestion_grupos
+mode: default
+content:
+  field_grupo_asesor:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_informe_final_aprobado:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_informe_pre_aprobado:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_subir_informe_final:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_subir_informe_preliminar:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_taller:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: custom_1
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

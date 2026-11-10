@@ -1,0 +1,20 @@
+camara_filter:
+  version: 1.0.0
+  js:
+    js/camara-filter.js: {}
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/once
+
+
+mi_empresa_portal:
+  version: 1.x
+  css:
+    theme:
+      css/mi-empresa-portal.css: {}
+  js:
+    js/mi-empresa-portal.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

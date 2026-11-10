@@ -1,0 +1,24 @@
+uuid: 6e63ce38-a682-4f3e-ab80-dd29c802ff23
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field__dv
+  module:
+    - user
+id: user.user.field__dv
+field_name: field__dv
+entity_type: user
+bundle: user
+label: '- DV'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

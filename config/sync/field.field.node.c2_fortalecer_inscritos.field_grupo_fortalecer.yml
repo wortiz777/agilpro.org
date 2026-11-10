@@ -1,0 +1,21 @@
+uuid: d4d55d06-dddf-483b-ad77-1174088edfb2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grupo_fortalecer
+    - node.type.c2_fortalecer_inscritos
+  module:
+    - options
+id: node.c2_fortalecer_inscritos.field_grupo_fortalecer
+field_name: field_grupo_fortalecer
+entity_type: node
+bundle: c2_fortalecer_inscritos
+label: Grupo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

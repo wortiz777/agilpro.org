@@ -1,0 +1,21 @@
+uuid: 414d2811-8f85-4670-8cad-f38c8bc3fca0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mercadeo
+    - node.type.planes_de_capacitaci_n_habilidad
+  module:
+    - options
+id: node.planes_de_capacitaci_n_habilidad.field_mercadeo
+field_name: field_mercadeo
+entity_type: node
+bundle: planes_de_capacitaci_n_habilidad
+label: Mercadeo
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

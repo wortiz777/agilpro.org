@@ -1,0 +1,177 @@
+uuid: 0888592a-1a91-4d5f-bf32-21f4d78bba92
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_formatos_inscripci_n_emprendimie
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Formatos Inscripción | Emprendimiento)'
+source:
+  plugin: d7_node_complete
+  node_type: formatos_inscripci_n_emprendimie
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_formatos_inscripci_n_emprendimie/0/status:
+    -
+      plugin: get
+      source: comment
+  field_estado_emprendimient:
+    -
+      plugin: get
+      source: field_estado_emprendimient
+  field_nit:
+    -
+      plugin: get
+      source: field_nit
+  field__dv:
+    -
+      plugin: get
+      source: field__dv
+  field_direccion_comercial:
+    -
+      plugin: get
+      source: field_direccion_comercial
+  field_departamento:
+    -
+      plugin: sub_process
+      source: field_departamento
+      process:
+        target_id: tid
+  field_ciudad_municipio:
+    -
+      plugin: get
+      source: field_ciudad_municipio
+  field_descripcion_invitacion:
+    -
+      plugin: get
+      source: field_descripcion_invitacion
+  field_actividad:
+    -
+      plugin: sub_process
+      source: field_actividad
+      process:
+        target_id: tid
+  field_ingresos:
+    -
+      plugin: get
+      source: field_ingresos
+  field_telefono_fijo_emprendimien:
+    -
+      plugin: get
+      source: field_telefono_fijo_emprendimien
+  field_movil_contacto:
+    -
+      plugin: get
+      source: field_movil_contacto
+  field_email_empresa:
+    -
+      plugin: sub_process
+      source: field_email_empresa
+      process:
+        value: email
+  field_fecha_de_inicio_de_activid:
+    -
+      plugin: sub_process
+      source: field_fecha_de_inicio_de_activid
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d\TH:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ingresos_por_ventas_promed:
+    -
+      plugin: get
+      source: field_ingresos_por_ventas_promed
+  field_n_mero_de_empleados_formal:
+    -
+      plugin: get
+      source: field_n_mero_de_empleados_formal
+  field__como_se_enter_del_program:
+    -
+      plugin: get
+      source: field__como_se_enter_del_program
+  field_rentabilidad_del_emprendim:
+    -
+      plugin: get
+      source: field_rentabilidad_del_emprendim
+  field_ciiu_:
+    -
+      plugin: sub_process
+      source: field_ciiu_
+      process:
+        target_id: tid
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: formatos_inscripci_n_emprendimie
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

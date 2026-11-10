@@ -1,0 +1,24 @@
+uuid: fd0af2eb-8ae2-49ff-8e95-f24c2ad9cce0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tips_listado_grupos_fortalecimie
+  module:
+    - text
+id: node.tips_listado_grupos_fortalecimie.body
+field_name: body
+entity_type: node
+bundle: tips_listado_grupos_fortalecimie
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,4 @@
+node:
+  label: 'Contenido Nodo'
+  entity_type: node
+

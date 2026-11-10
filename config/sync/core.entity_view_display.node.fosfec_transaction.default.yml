@@ -1,0 +1,215 @@
+uuid: 00f663d2-c746-48e6-ac5e-1b9a95e506ea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.fosfec_transaction.field_aceptacion_digital
+    - field.field.node.fosfec_transaction.field_aliado_proveedor
+    - field.field.node.fosfec_transaction.field_colaborador_asistente
+    - field.field.node.fosfec_transaction.field_costo_referencial
+    - field.field.node.fosfec_transaction.field_duracion_horas
+    - field.field.node.fosfec_transaction.field_eje_estrategico
+    - field.field.node.fosfec_transaction.field_empresa_beneficiaria
+    - field.field.node.fosfec_transaction.field_evidencia_documento
+    - field.field.node.fosfec_transaction.field_fecha_hora_sesion
+    - field.field.node.fosfec_transaction.field_inscripcion_ref
+    - field.field.node.fosfec_transaction.field_linea_intervencion
+    - field.field.node.fosfec_transaction.field_log_ip_aceptacion
+    - field.field.node.fosfec_transaction.field_log_timestamp_aceptacion
+    - field.field.node.fosfec_transaction.field_mentor_consultor
+    - field.field.node.fosfec_transaction.field_modalidad
+    - field.field.node.fosfec_transaction.field_oferta_ref
+    - field.field.node.fosfec_transaction.field_onbase_handle
+    - field.field.node.fosfec_transaction.field_ruta_atencion
+    - field.field.node.fosfec_transaction.field_state
+    - field.field.node.fosfec_transaction.field_tipo_servicio
+    - node.type.fosfec_transaction
+  module:
+    - datetime
+    - datetime_range
+    - file
+    - options
+    - user
+id: node.fosfec_transaction.default
+targetEntityType: node
+bundle: fosfec_transaction
+mode: default
+content:
+  field_aceptacion_digital:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_aliado_proveedor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_colaborador_asistente:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_costo_referencial:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_duracion_horas:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_eje_estrategico:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_empresa_beneficiaria:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_evidencia_documento:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  field_fecha_hora_sesion:
+    type: daterange_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+      from_to: both
+      separator: '-'
+    third_party_settings: {  }
+    weight: 109
+    region: content
+  field_inscripcion_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 110
+    region: content
+  field_linea_intervencion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 111
+    region: content
+  field_log_ip_aceptacion:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 112
+    region: content
+  field_log_timestamp_aceptacion:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 113
+    region: content
+  field_mentor_consultor:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 114
+    region: content
+  field_modalidad:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 115
+    region: content
+  field_oferta_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 116
+    region: content
+  field_onbase_handle:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 117
+    region: content
+  field_ruta_atencion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 118
+    region: content
+  field_state:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 119
+    region: content
+  field_tipo_servicio:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 120
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 54e1d96d-3783-47e7-bb6c-a8495aada471
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_formacion_e
+    - node.type.canvas_ngeles
+id: node.canvas_ngeles.field_descripcion_formacion_e
+field_name: field_descripcion_formacion_e
+entity_type: node
+bundle: canvas_ngeles
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Asociaciones de Inversionistas o inversionistas ángeles.'
+default_value_callback: ''
+settings: {  }
+field_type: string

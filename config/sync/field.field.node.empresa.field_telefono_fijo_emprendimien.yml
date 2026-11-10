@@ -1,0 +1,19 @@
+uuid: e5d466bd-ef1f-49be-be04-2dfa56609170
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefono_fijo_emprendimien
+    - node.type.empresa
+id: node.empresa.field_telefono_fijo_emprendimien
+field_name: field_telefono_fijo_emprendimien
+entity_type: node
+bundle: empresa
+label: 'Teléfono Fijo de Contacto'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

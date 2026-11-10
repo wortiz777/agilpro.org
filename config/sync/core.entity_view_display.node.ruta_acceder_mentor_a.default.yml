@@ -1,0 +1,29 @@
+uuid: b2a7fe37-3bc4-46bd-999a-bd8248f07283
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_acceder_mentor_a.body
+    - node.type.ruta_acceder_mentor_a
+  module:
+    - text
+    - user
+id: node.ruta_acceder_mentor_a.default
+targetEntityType: node
+bundle: ruta_acceder_mentor_a
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

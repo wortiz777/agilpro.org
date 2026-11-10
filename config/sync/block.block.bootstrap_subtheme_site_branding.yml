@@ -1,0 +1,25 @@
+uuid: 04448110-4a36-45d5-9273-dce3d52e885d
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: csVMtEHXdzoEM_RdR8Ds-e6G9Bf7h6Ydo35wX1HVV2c
+id: bootstrap_subtheme_site_branding
+theme: bootstrap_subtheme
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Marca del sitio'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility: {  }

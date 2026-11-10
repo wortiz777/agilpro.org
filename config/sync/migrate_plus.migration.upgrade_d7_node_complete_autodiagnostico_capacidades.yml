@@ -1,0 +1,305 @@
+uuid: 9c892451-8b60-4552-acd6-24b844371acd
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_autodiagnostico_capacidades
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Capacidades Emprendedoras)'
+source:
+  plugin: d7_node_complete
+  node_type: autodiagnostico_capacidades
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_autodiagnostico_capacidades/0/status:
+    -
+      plugin: get
+      source: comment
+  field_2_capacidades:
+    -
+      plugin: sub_process
+      source: field_2_capacidades
+      process:
+        target_id: tid
+  field_3_capacidades:
+    -
+      plugin: sub_process
+      source: field_3_capacidades
+      process:
+        target_id: tid
+  field_4_capacidades:
+    -
+      plugin: sub_process
+      source: field_4_capacidades
+      process:
+        target_id: tid
+  field_5_capacidades:
+    -
+      plugin: sub_process
+      source: field_5_capacidades
+      process:
+        target_id: tid
+  field_6_capacidades:
+    -
+      plugin: sub_process
+      source: field_6_capacidades
+      process:
+        target_id: tid
+  field_7_capacidades:
+    -
+      plugin: sub_process
+      source: field_7_capacidades
+      process:
+        target_id: tid
+  field_8_capacidades:
+    -
+      plugin: sub_process
+      source: field_8_capacidades
+      process:
+        target_id: tid
+  field_9_capacidades:
+    -
+      plugin: sub_process
+      source: field_9_capacidades
+      process:
+        target_id: tid
+  field_10_capacicades:
+    -
+      plugin: sub_process
+      source: field_10_capacicades
+      process:
+        target_id: tid
+  field_11_capacidades:
+    -
+      plugin: sub_process
+      source: field_11_capacidades
+      process:
+        target_id: tid
+  field_12_capacidades:
+    -
+      plugin: sub_process
+      source: field_12_capacidades
+      process:
+        target_id: tid
+  field_13_capacidades:
+    -
+      plugin: sub_process
+      source: field_13_capacidades
+      process:
+        target_id: tid
+  field_14_capacidades:
+    -
+      plugin: sub_process
+      source: field_14_capacidades
+      process:
+        target_id: tid
+  field_15_capacidades:
+    -
+      plugin: sub_process
+      source: field_15_capacidades
+      process:
+        target_id: tid
+  field_16_capacidades:
+    -
+      plugin: sub_process
+      source: field_16_capacidades
+      process:
+        target_id: tid
+  field_17_capacidades:
+    -
+      plugin: sub_process
+      source: field_17_capacidades
+      process:
+        target_id: tid
+  field_18_capacidades:
+    -
+      plugin: sub_process
+      source: field_18_capacidades
+      process:
+        target_id: tid
+  field_19_capacidades:
+    -
+      plugin: sub_process
+      source: field_19_capacidades
+      process:
+        target_id: tid
+  field_20_capacidades:
+    -
+      plugin: sub_process
+      source: field_20_capacidades
+      process:
+        target_id: tid
+  field_21_capacidades:
+    -
+      plugin: sub_process
+      source: field_21_capacidades
+      process:
+        target_id: tid
+  field_22_capacidades:
+    -
+      plugin: sub_process
+      source: field_22_capacidades
+      process:
+        target_id: tid
+  field_23_capacidades:
+    -
+      plugin: sub_process
+      source: field_23_capacidades
+      process:
+        target_id: tid
+  field_24_capacidades:
+    -
+      plugin: sub_process
+      source: field_24_capacidades
+      process:
+        target_id: tid
+  field_25_capacidades:
+    -
+      plugin: sub_process
+      source: field_25_capacidades
+      process:
+        target_id: tid
+  field_26_capacidades:
+    -
+      plugin: sub_process
+      source: field_26_capacidades
+      process:
+        target_id: tid
+  field_27_capacidades:
+    -
+      plugin: sub_process
+      source: field_27_capacidades
+      process:
+        target_id: tid
+  field_28_capacidades:
+    -
+      plugin: sub_process
+      source: field_28_capacidades
+      process:
+        target_id: tid
+  field_29_capacidades:
+    -
+      plugin: sub_process
+      source: field_29_capacidades
+      process:
+        target_id: tid
+  field_30_capacidades:
+    -
+      plugin: sub_process
+      source: field_30_capacidades
+      process:
+        target_id: tid
+  field_31_capacidades:
+    -
+      plugin: sub_process
+      source: field_31_capacidades
+      process:
+        target_id: tid
+  field_32_capacidades:
+    -
+      plugin: sub_process
+      source: field_32_capacidades
+      process:
+        target_id: tid
+  field_33_capaciades:
+    -
+      plugin: sub_process
+      source: field_33_capaciades
+      process:
+        target_id: tid
+  field_34_capacidades:
+    -
+      plugin: sub_process
+      source: field_34_capacidades
+      process:
+        target_id: tid
+  field_35_capacidades:
+    -
+      plugin: sub_process
+      source: field_35_capacidades
+      process:
+        target_id: tid
+  field_1_capaciades:
+    -
+      plugin: sub_process
+      source: field_1_capaciades
+      process:
+        target_id: tid
+  field__desea_inscribirse_para_pa:
+    -
+      plugin: get
+      source: field__desea_inscribirse_para_pa
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: autodiagnostico_capacidades
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

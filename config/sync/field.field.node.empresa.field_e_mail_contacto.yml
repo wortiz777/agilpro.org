@@ -1,0 +1,19 @@
+uuid: 7a4410ad-a72f-4858-9333-0271c4eef15d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_e_mail_contacto
+    - node.type.empresa
+id: node.empresa.field_e_mail_contacto
+field_name: field_e_mail_contacto
+entity_type: node
+bundle: empresa
+label: 'E-mail de Contacto'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

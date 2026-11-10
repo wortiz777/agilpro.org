@@ -1,0 +1,8 @@
+uuid: 81296445-fda1-4385-8056-ebffae4e2fbb
+langcode: en
+status: true
+dependencies: {  }
+id: menu-men-entregables-asesores-ta
+label: 'Menú | Entregables Asesores Talleres Fortalecimiento'
+description: ''
+locked: false

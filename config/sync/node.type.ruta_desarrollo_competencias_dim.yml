@@ -1,0 +1,18 @@
+uuid: 896e7d84-18c2-4bfe-8ece-c4aba583cd8c
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Ruta Desarrollo Competencias | Competencia'
+type: ruta_desarrollo_competencias_dim
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

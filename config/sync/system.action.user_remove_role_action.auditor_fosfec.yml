@@ -1,0 +1,14 @@
+uuid: caa321ef-156a-4a8c-adfb-10f503c3f7cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.auditor_fosfec
+  module:
+    - user
+id: user_remove_role_action.auditor_fosfec
+label: 'Elimina el rol Auditor FOSFEC al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: auditor_fosfec

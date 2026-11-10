@@ -1,0 +1,50 @@
+uuid: 7e851a29-ba71-4c33-952e-58c8d77ca213
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_mejores_practicas.field_descripcion_formacion_e
+    - field.field.node.canvas_mejores_practicas.field_fase_canvas
+    - field.field.node.canvas_mejores_practicas.field_nuevo_registro_mejores_p
+    - node.type.canvas_mejores_practicas
+  module:
+    - user
+id: node.canvas_mejores_practicas.default
+targetEntityType: node
+bundle: canvas_mejores_practicas
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fase_canvas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nuevo_registro_mejores_p:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

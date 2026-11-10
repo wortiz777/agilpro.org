@@ -1,0 +1,23 @@
+uuid: 6ae69295-8fcf-495e-a040-507cb1a8098e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seleccione_el_semestre_a_r
+    - node.type.informe_semestral
+  module:
+    - options
+id: node.informe_semestral.field_seleccione_el_semestre_a_r
+field_name: field_seleccione_el_semestre_a_r
+entity_type: node
+bundle: informe_semestral
+label: 'Seleccione el Semestre a Reportar'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Semestre II - 2018'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

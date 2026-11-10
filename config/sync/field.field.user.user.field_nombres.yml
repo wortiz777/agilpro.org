@@ -1,0 +1,20 @@
+uuid: a8ee04a2-87c7-4cdb-85c7-ca8934f94879
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_nombres
+  module:
+    - user
+id: user.user.field_nombres
+field_name: field_nombres
+entity_type: user
+bundle: user
+label: Nombres
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

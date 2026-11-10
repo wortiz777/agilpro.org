@@ -1,0 +1,19 @@
+uuid: 719ae4ad-4693-4930-93a2-5e51106a0f1f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_horario_de_atencion_entida
+    - node.type.gestion_componentes_mapeo
+id: node.gestion_componentes_mapeo.field_horario_de_atencion_entida
+field_name: field_horario_de_atencion_entida
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'Horario de Atención'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

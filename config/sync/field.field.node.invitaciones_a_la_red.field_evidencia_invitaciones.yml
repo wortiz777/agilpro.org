@@ -1,0 +1,27 @@
+uuid: 73fc7ea0-dcb6-4108-9d53-3b8ef080e59a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evidencia_invitaciones
+    - node.type.invitaciones_a_la_red
+  module:
+    - file
+id: node.invitaciones_a_la_red.field_evidencia_invitaciones
+field_name: field_evidencia_invitaciones
+entity_type: node
+bundle: invitaciones_a_la_red
+label: 'Evidencia Invitación'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'Invitaciones a la Red'
+  file_extensions: 'pdf jpg jpeg png bpm gif doc docx ppt pptx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,19 @@
+uuid: 98eed717-24f7-4468-bdb2-2c43c69a6b6f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nuevo_registro_mejores_p
+    - node.type.canvas_mejores_practicas
+id: node.canvas_mejores_practicas.field_nuevo_registro_mejores_p
+field_name: field_nuevo_registro_mejores_p
+entity_type: node
+bundle: canvas_mejores_practicas
+label: 'Ingresar nuevo registro mejores prácticas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

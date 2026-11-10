@@ -1,0 +1,89 @@
+uuid: bbbec542-3f24-48f7-8a03-d586e3a2771e
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_taxonomy_term_c_maras_de_comercio
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Taxonomy terms (Cámaras de Comercio)'
+source:
+  plugin: d7_taxonomy_term
+  bundle: c_maras_de_comercio
+process:
+  tid:
+    -
+      plugin: get
+      source: tid
+  revision_id:
+    -
+      plugin: get
+      source: tid
+  vid:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_taxonomy_vocabulary
+      source: vid
+  name:
+    -
+      plugin: get
+      source: name
+  description/value:
+    -
+      plugin: get
+      source: description
+  description/format:
+    -
+      plugin: get
+      source: format
+  weight:
+    -
+      plugin: get
+      source: weight
+  parent_id:
+    -
+      plugin: skip_on_empty
+      method: process
+      source: parent
+    -
+      plugin: migration_lookup
+      migration:
+        - upgrade_d7_taxonomy_term_tags
+        - upgrade_d7_taxonomy_term_tipo_documento
+        - upgrade_d7_taxonomy_term_opciones_capacidades
+        - upgrade_d7_taxonomy_term_opciones_direcionamiento
+        - upgrade_d7_taxonomy_term_c_maras_de_comercio
+        - upgrade_d7_taxonomy_term_actividades_empresariales
+        - upgrade_d7_taxonomy_term_sector_econ_mico
+        - upgrade_d7_taxonomy_term_departamento
+        - upgrade_d7_taxonomy_term_asesores
+        - upgrade_d7_taxonomy_term_ciiu_divisi_n_rev_4_
+        - upgrade_d7_taxonomy_term_mentores
+  parent:
+    -
+      plugin: default_value
+      default_value: 0
+      source: '@parent_id'
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  langcode:
+    -
+      plugin: get
+      source: language
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: c_maras_de_comercio
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_taxonomy_vocabulary
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_taxonomy_vocabulary
+include: null

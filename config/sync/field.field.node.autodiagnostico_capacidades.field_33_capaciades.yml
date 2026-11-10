@@ -1,0 +1,26 @@
+uuid: c423e98a-ee5a-4510-8258-c1410e6d4cc5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_33_capaciades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_33_capaciades
+field_name: field_33_capaciades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '33. Tiene la capacidad de enfrentar  variados e inusuales problemas al mismo tiempo.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

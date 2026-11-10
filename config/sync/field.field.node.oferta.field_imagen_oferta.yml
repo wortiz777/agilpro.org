@@ -1,0 +1,38 @@
+uuid: 0f7bf604-13b3-45e8-9c73-142e3c444bb8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_imagen_oferta
+    - node.type.oferta
+  module:
+    - image
+id: node.oferta.field_imagen_oferta
+field_name: field_imagen_oferta
+entity_type: node
+bundle: oferta
+label: 'Imagen / Banner de la Oferta'
+description: 'Banner o imagen corporativa de la oferta.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ofertas/banners
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: 5MB
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

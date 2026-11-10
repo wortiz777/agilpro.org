@@ -1,0 +1,9 @@
+uuid: c13c83d7-569d-4459-b161-0f3aad567b0d
+langcode: es
+status: true
+dependencies: {  }
+name: 'Aliados / Proveedores'
+vid: aliados
+description: null
+weight: -6
+new_revision: false

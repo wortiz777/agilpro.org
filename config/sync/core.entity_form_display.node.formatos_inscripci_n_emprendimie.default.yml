@@ -1,0 +1,201 @@
+uuid: 19b33ad1-3fa5-4c72-9bc6-31d099025fca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.formatos_inscripci_n_emprendimie.field__como_se_enter_del_program
+    - field.field.node.formatos_inscripci_n_emprendimie.field__dv
+    - field.field.node.formatos_inscripci_n_emprendimie.field_actividad
+    - field.field.node.formatos_inscripci_n_emprendimie.field_ciiu_
+    - field.field.node.formatos_inscripci_n_emprendimie.field_ciudad_municipio
+    - field.field.node.formatos_inscripci_n_emprendimie.field_departamento
+    - field.field.node.formatos_inscripci_n_emprendimie.field_descripcion_invitacion
+    - field.field.node.formatos_inscripci_n_emprendimie.field_direccion_comercial
+    - field.field.node.formatos_inscripci_n_emprendimie.field_email_empresa
+    - field.field.node.formatos_inscripci_n_emprendimie.field_estado_emprendimient
+    - field.field.node.formatos_inscripci_n_emprendimie.field_fecha_de_inicio_de_activid
+    - field.field.node.formatos_inscripci_n_emprendimie.field_ingresos
+    - field.field.node.formatos_inscripci_n_emprendimie.field_ingresos_por_ventas_promed
+    - field.field.node.formatos_inscripci_n_emprendimie.field_movil_contacto
+    - field.field.node.formatos_inscripci_n_emprendimie.field_n_mero_de_empleados_formal
+    - field.field.node.formatos_inscripci_n_emprendimie.field_nit
+    - field.field.node.formatos_inscripci_n_emprendimie.field_rentabilidad_del_emprendim
+    - field.field.node.formatos_inscripci_n_emprendimie.field_telefono_fijo_emprendimien
+    - node.type.formatos_inscripci_n_emprendimie
+  module:
+    - datetime
+    - path
+id: node.formatos_inscripci_n_emprendimie.default
+targetEntityType: node
+bundle: formatos_inscripci_n_emprendimie
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field__como_se_enter_del_program:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field__dv:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_actividad:
+    type: options_buttons
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ciudad_municipio:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_departamento:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_descripcion_invitacion:
+    type: string_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_direccion_comercial:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_email_empresa:
+    type: email_default
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_estado_emprendimient:
+    type: options_buttons
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_fecha_de_inicio_de_activid:
+    type: datetime_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ingresos:
+    type: options_buttons
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ingresos_por_ventas_promed:
+    type: number
+    weight: 17
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_movil_contacto:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_n_mero_de_empleados_formal:
+    type: number
+    weight: 16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_nit:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_rentabilidad_del_emprendim:
+    type: number
+    weight: 19
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_telefono_fijo_emprendimien:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_ciiu_: true
+  promote: true
+  sticky: true

@@ -1,0 +1,79 @@
+uuid: 86537b8d-b801-4366-a623-d42ed9c48609
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_asesor_fase_fortalecimient
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_asesor_visita_inicial
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_direccionamiento_estrat_gi
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_financiero
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_mercadeo
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_producci_n
+    - field.field.node.planes_de_capacitaci_n_habilidad.field_talento_humano
+    - node.type.planes_de_capacitaci_n_habilidad
+  module:
+    - options
+    - user
+id: node.planes_de_capacitaci_n_habilidad.default
+targetEntityType: node
+bundle: planes_de_capacitaci_n_habilidad
+mode: default
+content:
+  field_asesor_fase_fortalecimient:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_asesor_visita_inicial:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_direccionamiento_estrat_gi:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_financiero:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_mercadeo:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_producci_n:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_talento_humano:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

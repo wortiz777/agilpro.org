@@ -1,0 +1,23 @@
+uuid: f0210336-7e4a-4995-8f10-48f6e91c7921
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_acceder
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_fase_acceder
+field_name: field_fase_acceder
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Fase Acceder'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

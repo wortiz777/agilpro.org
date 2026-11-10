@@ -1,0 +1,106 @@
+uuid: d095b2a9-2bb1-4811-8e66-1e9133fb33ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - node.type.autodiagn_stico_financiero
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - node.type.autodiagnostico_administracion
+    - node.type.autodiagnostico_capacidades
+    - node.type.autodiagnostico_direccionamiento
+  module:
+    - comment
+    - field_permissions
+    - node
+    - system
+_core:
+  default_config_hash: wkW7P5A53YhGmsgamrmTbfwpZrqdnPYiJdoAZQtdmJg
+id: authenticated
+label: 'usuario autenticado'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access user profiles'
+  - 'create autodiagn_stico_de_gesti_n_t_cni content'
+  - 'create autodiagn_stico_financiero content'
+  - 'create autodiagn_stico_mercadeo_y_venta content'
+  - 'create autodiagnostico_administracion content'
+  - 'create autodiagnostico_capacidades content'
+  - 'create autodiagnostico_direccionamiento content'
+  - 'create field_acepto_el_reto'
+  - 'create field_manifiesto_que_deseo_parti'
+  - 'create field_yo'
+  - 'edit own autodiagnostico_capacidades content'
+  - 'post comments'
+  - 'skip comment approval'
+  - 'view field_acceso_a_financiaci_n_nota'
+  - 'view field_acceso_a_mercados_notas_as'
+  - 'view field_ano_fortalecer'
+  - 'view field_asesor_fase_empoderar'
+  - 'view field_asesor_fase_fortalecer'
+  - 'view field_asesor_fortalecer'
+  - 'view field_cargar_ruta'
+  - 'view field_conocimiento'
+  - 'view field_cualitativos_cifras_cantid'
+  - 'view field_cualitativos_hechos_docume'
+  - 'view field_descripcion_formacion_e'
+  - 'view field_econ_mico'
+  - 'view field_f_sicos'
+  - 'view field_fase_canvas'
+  - 'view field_grupo'
+  - 'view field_grupo_asesor'
+  - 'view field_grupo_fortalecer'
+  - 'view field_humano'
+  - 'view field_informaci_n'
+  - 'view field_informe_final_aprobado'
+  - 'view field_informe_pre_aprobado'
+  - 'view field_mentor_asignado'
+  - 'view field_objetivo_para_qu_lo_quiero'
+  - 'view field_ruta_acceso_a_mercados'
+  - 'view field_ruta_administraci_n'
+  - 'view field_ruta_desarrollo_competenci'
+  - 'view field_ruta_financiero'
+  - 'view field_ruta_mentoria'
+  - 'view field_ruta_mercadeo'
+  - 'view field_ruta_t_c_y_prod_'
+  - 'view field_subir_informe_final'
+  - 'view field_subir_informe_preliminar'
+  - 'view field_taller'
+  - 'view field_tareas'
+  - 'view own field_acceso_a_financiaci_n_nota'
+  - 'view own field_acceso_a_mercados_notas_as'
+  - 'view own field_ano_fortalecer'
+  - 'view own field_asesor_fase_empoderar'
+  - 'view own field_asesor_fase_fortalecer'
+  - 'view own field_asesor_fortalecer'
+  - 'view own field_cargar_ruta'
+  - 'view own field_conocimiento'
+  - 'view own field_cualitativos_cifras_cantid'
+  - 'view own field_cualitativos_hechos_docume'
+  - 'view own field_descripcion_formacion_e'
+  - 'view own field_econ_mico'
+  - 'view own field_f_sicos'
+  - 'view own field_fase_canvas'
+  - 'view own field_grupo'
+  - 'view own field_grupo_asesor'
+  - 'view own field_grupo_fortalecer'
+  - 'view own field_humano'
+  - 'view own field_informaci_n'
+  - 'view own field_informe_final_aprobado'
+  - 'view own field_informe_pre_aprobado'
+  - 'view own field_mentor_asignado'
+  - 'view own field_objetivo_para_qu_lo_quiero'
+  - 'view own field_ruta_acceso_a_mercados'
+  - 'view own field_ruta_administraci_n'
+  - 'view own field_ruta_desarrollo_competenci'
+  - 'view own field_ruta_financiero'
+  - 'view own field_ruta_mentoria'
+  - 'view own field_ruta_mercadeo'
+  - 'view own field_ruta_t_c_y_prod_'
+  - 'view own field_subir_informe_final'
+  - 'view own field_subir_informe_preliminar'
+  - 'view own field_taller'
+  - 'view own field_tareas'

@@ -1,0 +1,26 @@
+uuid: 5c8f1f5a-43c3-4fa6-9f12-3ff3f7c0a9b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_26_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_26_capacidades
+field_name: field_26_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '26. Reconoce sus fortalezas y sus debilidades y hace un plan para mejorarlas.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

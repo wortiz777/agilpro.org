@@ -1,0 +1,29 @@
+uuid: 24489d66-7145-4e68-a7fb-0c4670616395
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tabla_off_ine_asesores.body
+    - node.type.tabla_off_ine_asesores
+  module:
+    - text
+    - user
+id: node.tabla_off_ine_asesores.default
+targetEntityType: node
+bundle: tabla_off_ine_asesores
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

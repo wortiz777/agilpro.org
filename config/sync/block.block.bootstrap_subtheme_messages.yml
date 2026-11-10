@@ -1,0 +1,22 @@
+uuid: 5321b2ec-b3c6-440d-b854-7c23bf13083a
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: kj7QP5SwXD5O5myljMUXK5n0tDa_J12VvmKLTRNWMkk
+id: bootstrap_subtheme_messages
+theme: bootstrap_subtheme
+region: highlighted
+weight: -6
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

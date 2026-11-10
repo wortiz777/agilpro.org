@@ -1,0 +1,18 @@
+uuid: ef76880b-32c6-4601-af46-eb0981fe5574
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Canvas - Gobierno'
+type: canvas_gobierno
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

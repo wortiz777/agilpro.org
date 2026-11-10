@@ -1,0 +1,21 @@
+uuid: ecb276f5-1833-4c07-a989-dbe6309b6970
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_inicio_actividades
+    - node.type.empresa
+  module:
+    - datetime
+id: node.empresa.field_fecha_inicio_actividades
+field_name: field_fecha_inicio_actividades
+entity_type: node
+bundle: empresa
+label: 'Fecha Inicio Actividades'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,23 @@
+uuid: a90925d8-e2b6-4d28-8736-4f28e0b57109
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__dv
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field__dv
+field_name: field__dv
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: '- DV'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

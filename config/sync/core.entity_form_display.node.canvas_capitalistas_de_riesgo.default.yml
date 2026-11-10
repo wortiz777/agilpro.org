@@ -1,0 +1,78 @@
+uuid: 87d4aaca-c439-4ea1-a95b-28ce70e249ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_capitalistas_de_riesgo.field_descripcion_formacion_e
+    - field.field.node.canvas_capitalistas_de_riesgo.field_nueva_referencia_capitalis
+    - node.type.canvas_capitalistas_de_riesgo
+  module:
+    - path
+id: node.canvas_capitalistas_de_riesgo.default
+targetEntityType: node
+bundle: canvas_capitalistas_de_riesgo
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_descripcion_formacion_e:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nueva_referencia_capitalis:
+    type: string_textfield
+    weight: 33
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

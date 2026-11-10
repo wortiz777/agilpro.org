@@ -1,0 +1,19 @@
+uuid: 352b4f40-9634-4151-b2a6-966abb23755b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargo_o_rol
+    - node.type.gestion_componentes_mapeo
+id: node.gestion_componentes_mapeo.field_cargo_o_rol
+field_name: field_cargo_o_rol
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'Cargo o Rol'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

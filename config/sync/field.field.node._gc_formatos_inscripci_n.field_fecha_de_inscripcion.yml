@@ -1,0 +1,21 @@
+uuid: 93ce2906-bc9e-468f-b120-9a8ab5f441ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_inscripcion
+    - node.type._gc_formatos_inscripci_n
+  module:
+    - datetime
+id: node._gc_formatos_inscripci_n.field_fecha_de_inscripcion
+field_name: field_fecha_de_inscripcion
+entity_type: node
+bundle: _gc_formatos_inscripci_n
+label: 'Fecha de Inscripción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

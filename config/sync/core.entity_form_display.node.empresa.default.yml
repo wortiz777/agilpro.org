@@ -1,0 +1,209 @@
+uuid: 1c21503b-0c3f-4d67-9024-3552955d2995
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.empresa.body
+    - field.field.node.empresa.feeds_item
+    - field.field.node.empresa.field__dv
+    - field.field.node.empresa.field_actividad
+    - field.field.node.empresa.field_ciudad_municipio
+    - field.field.node.empresa.field_departamento
+    - field.field.node.empresa.field_direccion_comercial
+    - field.field.node.empresa.field_e_mail_contacto
+    - field.field.node.empresa.field_fecha_inicio_actividades
+    - field.field.node.empresa.field_logo_emprendimiento
+    - field.field.node.empresa.field_movil
+    - field.field.node.empresa.field_nit
+    - field.field.node.empresa.field_pagina_web
+    - field.field.node.empresa.field_presentacion_emprendimient
+    - field.field.node.empresa.field_sector_economico
+    - field.field.node.empresa.field_telefono_fijo_emprendimien
+    - field.field.node.empresa.field_terminos_condiciones
+    - field.field.node.empresa.field_tipo_id
+    - image.style.thumbnail
+    - node.type.empresa
+  module:
+    - datetime
+    - image
+    - link
+    - path
+    - text
+id: node.empresa.default
+targetEntityType: node
+bundle: empresa
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 121
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field__dv:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_actividad:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ciudad_municipio:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_departamento:
+    type: options_select
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_direccion_comercial:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_e_mail_contacto:
+    type: email_default
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_fecha_inicio_actividades:
+    type: datetime_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_logo_emprendimiento:
+    type: image_image
+    weight: 15
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_movil:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nit:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_pagina_web:
+    type: link_default
+    weight: 13
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_presentacion_emprendimient:
+    type: string_textarea
+    weight: 16
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_sector_economico:
+    type: options_select
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_telefono_fijo_emprendimien:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_terminos_condiciones:
+    type: boolean_checkbox
+    weight: 4
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_tipo_id:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  feeds_item: true
+  promote: true
+  sticky: true

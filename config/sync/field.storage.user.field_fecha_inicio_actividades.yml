@@ -1,0 +1,20 @@
+uuid: 38472719-84e2-47c2-9f45-9a4f20263f82
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - user
+id: user.field_fecha_inicio_actividades
+field_name: field_fecha_inicio_actividades
+entity_type: user
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

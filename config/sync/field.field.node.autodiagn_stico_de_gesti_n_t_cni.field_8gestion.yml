@@ -1,0 +1,26 @@
+uuid: 60ad3445-e82b-4b54-9a62-2b8288e8fc60
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_8gestion
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_8gestion
+field_name: field_8gestion
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '8. La empresa tiene establecida una metodología para recibir retroalimentación con el cliente para el mejoramiento del producto.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,24 @@
+uuid: 6e6dfa79-cbee-48ba-9881-737b19c26c7a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ruta_acceder_mentor_a
+  module:
+    - text
+id: node.ruta_acceder_mentor_a.body
+field_name: body
+entity_type: node
+bundle: ruta_acceder_mentor_a
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

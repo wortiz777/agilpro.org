@@ -1,0 +1,23 @@
+uuid: b8224262-7b5d-426f-ac1e-2a4017acae84
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_duracion_horas
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_duracion_horas
+field_name: field_duracion_horas
+entity_type: node
+bundle: fosfec_transaction
+label: 'Duración (Horas)'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

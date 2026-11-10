@@ -1,0 +1,27 @@
+uuid: 8cb3c660-7cdb-4542-b447-34760914d9ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subir_archivo
+    - node.type.biblioteca_abierta
+  module:
+    - file
+id: node.biblioteca_abierta.field_subir_archivo
+field_name: field_subir_archivo
+entity_type: node
+bundle: biblioteca_abierta
+label: 'Subir archivo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: biblioteca-publica
+  file_extensions: 'txt doc docx pdf xls xlsx ppt pptx'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,92 @@
+uuid: 1a84c488-cc9f-4f64-977f-15bc803128c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.c2_fortalecer_inscritos.field_acepto_reto_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_ano_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_asesor_fase_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_grupo_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_manifiesto_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_yo_fortalecer
+    - node.type.c2_fortalecer_inscritos
+  module:
+    - path
+id: node.c2_fortalecer_inscritos.default
+targetEntityType: node
+bundle: c2_fortalecer_inscritos
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_acepto_reto_fortalecer:
+    type: boolean_checkbox
+    weight: 34
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_manifiesto_fortalecer:
+    type: string_textarea
+    weight: 33
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_yo_fortalecer:
+    type: string_textfield
+    weight: 32
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_ano_fortalecer: true
+  field_asesor_fase_fortalecer: true
+  field_grupo_fortalecer: true
+  promote: true
+  sticky: true

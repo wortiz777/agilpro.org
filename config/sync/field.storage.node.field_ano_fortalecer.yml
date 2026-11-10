@@ -1,0 +1,31 @@
+uuid: c00fa6e9-3a0b-4ed0-ac08-39d5329983a1
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_ano_fortalecer
+field_name: field_ano_fortalecer
+entity_type: node
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: '2017'
+    -
+      value: 2
+      label: '2018'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,40 @@
+uuid: 37eec2e3-e8e5-4429-9ea1-b31b848d922c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.evangelistas.field_descripcion_formacion_e
+    - field.field.node.evangelistas.field_ingresar_nuevo_evangelista
+    - node.type.evangelistas
+  module:
+    - user
+id: node.evangelistas.default
+targetEntityType: node
+bundle: evangelistas
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ingresar_nuevo_evangelista:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

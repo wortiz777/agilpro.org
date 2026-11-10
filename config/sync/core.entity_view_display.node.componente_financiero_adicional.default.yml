@@ -1,0 +1,60 @@
+uuid: 65c5be80-22e0-4165-9ec4-13332fe052d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.componente_financiero_adicional.field_arriendos_de_oficinas_bode
+    - field.field.node.componente_financiero_adicional.field_costos_de_ventas_ltimos_6_
+    - field.field.node.componente_financiero_adicional.field_valor_de_las_ventas
+    - field.field.node.componente_financiero_adicional.field_valor_pagado_por_n_mina_lt
+    - node.type.componente_financiero_adicional
+  module:
+    - user
+id: node.componente_financiero_adicional.default
+targetEntityType: node
+bundle: componente_financiero_adicional
+mode: default
+content:
+  field_arriendos_de_oficinas_bode:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_costos_de_ventas_ltimos_6_:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_valor_de_las_ventas:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_valor_pagado_por_n_mina_lt:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

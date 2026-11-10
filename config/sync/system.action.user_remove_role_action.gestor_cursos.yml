@@ -1,0 +1,14 @@
+uuid: 55f6a2fb-f45a-4b40-b617-0e1d6fb9d738
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.gestor_cursos
+  module:
+    - user
+id: user_remove_role_action.gestor_cursos
+label: 'Elimina el rol Gestor de Cursos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: gestor_cursos

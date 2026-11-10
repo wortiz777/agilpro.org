@@ -1,0 +1,23 @@
+uuid: c0ba78e3-abb7-4bbb-b6e5-742f3e686d2e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2_3_n_mero_de_empleados_ad
+    - node.type.informe_semestral
+id: node.informe_semestral.field_2_3_n_mero_de_empleados_ad
+field_name: field_2_3_n_mero_de_empleados_ad
+entity_type: node
+bundle: informe_semestral
+label: '3. Número de empleados adicionales generados.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

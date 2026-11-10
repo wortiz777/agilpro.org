@@ -1,0 +1,21 @@
+uuid: 668a738d-0d50-4eea-9807-b3e4b431b742
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eje_default
+    - node.type.oferta
+id: node.oferta.field_eje_default
+field_name: field_eje_default
+entity_type: node
+bundle: oferta
+label: 'Eje Estratégico Default'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

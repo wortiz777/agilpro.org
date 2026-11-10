@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Esquema de instalación y base de datos para agilpro_onbase.
+ */
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_schema().
+ */
+function agilpro_onbase_schema(): array {
+  $schema = [];
+
+  $schema['agilpro_onbase_audit_log'] = [
+    'description' => 'Registro de auditoría inmutable de transferencias hacia Hyland OnBase.',
+    'fields' => [
+      'id' => [
+        'description' => 'Identificador único primario.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'entity_id' => [
+        'description' => 'ID de la entidad de mentoría o registro asociado.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'file_id' => [
+        'description' => 'ID del archivo PDF gestionado en Drupal (fid).',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'document_handle' => [
+        'description' => 'Identificador único devuelto por OnBase (Document Handle).',
+        'type' => 'varchar',
+        'length' => 128,
+        'not null' => FALSE,
+        'default' => '',
+      ],
+      'status' => [
+        'description' => 'Estado de la transferencia: SUCCESS, FAILED_FATAL, FAILED_RETRY.',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+        'default' => 'PENDING',
+      ],
+      'retries' => [
+        'description' => 'Número de reintentos ejecutados.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+      'metadata_payload' => [
+        'description' => 'Keywords y metadatos enviados en formato JSON.',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+      ],
+      'response_message' => [
+        'description' => 'Respuesta o detalle del resultado de la API de OnBase.',
+        'type' => 'text',
+        'size' => 'medium',
+        'not null' => FALSE,
+      ],
+      'created' => [
+        'description' => 'Timestamp Unix de creación del registro.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'idx_entity_id' => ['entity_id'],
+      'idx_file_id' => ['file_id'],
+      'idx_document_handle' => ['document_handle'],
+      'idx_status' => ['status'],
+      'idx_created' => ['created'],
+    ],
+  ];
+
+  return $schema;
+}
+

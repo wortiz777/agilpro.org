@@ -1,0 +1,310 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.inscripcion_oferta
+  module:
+    - node
+    - user
+id: mentor_empresas_asignadas
+label: 'Mis Empresas Asignadas'
+module: views
+description: 'Muestra las Mipymes y beneficiarios asignados al mentor logueado con postulaciones aprobadas.'
+tag: ''
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Default
+    display_plugin: default
+    position: 0
+    display_options:
+      title: 'Mis Empresas y Beneficiarios Asignados'
+      fields:
+        field_empresa_ref:
+          id: field_empresa_ref
+          table: node__field_empresa_ref
+          field: field_empresa_ref
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Mipyme / Razón Social'
+          exclude: false
+          alter:
+            alter_text: false
+          element_type: ''
+          element_class: ''
+          element_label_type: strong
+          type: entity_reference_label
+          settings:
+            link: true
+        field_oferta_ref:
+          id: field_oferta_ref
+          table: node__field_oferta_ref
+          field: field_oferta_ref
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Convocatoria
+          exclude: false
+          type: entity_reference_label
+          settings:
+            link: true
+        field_ruta_asignada:
+          id: field_ruta_asignada
+          table: node__field_ruta_asignada
+          field: field_ruta_asignada
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Ruta de Atención'
+          exclude: false
+          type: entity_reference_label
+          settings:
+            link: false
+        field_colaborador_ref:
+          id: field_colaborador_ref
+          table: node__field_colaborador_ref
+          field: field_colaborador_ref
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Contacto Mipyme'
+          exclude: false
+          type: entity_reference_label
+          settings:
+            link: false
+        nid:
+          id: nid
+          table: node_field_data
+          field: nid
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: Acciones
+          exclude: false
+          alter:
+            alter_text: true
+            text: '<a href="/node/add/fosfec_transaction?inscripcion={{ nid }}" class="btn-corp btn-corp-orange" style="padding:0.4rem 0.9rem; font-size:0.85rem; text-decoration:none;">➕ Registrar Sesión</a>'
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 25
+          total_pages: null
+          id: 0
+          tags:
+            next: 'Siguiente ›'
+            previous: '‹ Anterior'
+            first: '« Primero'
+            last: 'Último »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- Todos -'
+            offset: false
+            offset_label: Desplazamiento
+          quantity: 9
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Ordenar por'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+      access:
+        type: role
+        options:
+          role:
+            mentor_consultor: mentor_consultor
+            administrator: administrator
+            super_admin: super_admin
+      cache:
+        type: tag
+        options: {  }
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: text_custom
+          empty: true
+          content: '<div class="alert alert-info text-center py-4"><h4>No tienes Mipymes asignadas activas actualmente.</h4><p>Cuando un evaluador apruebe una postulación y te asigne como mentor, aparecerá en esta lista.</p></div>'
+          tokenize: false
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: date
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+          granularity: second
+      arguments:
+        field_mentor_asignado_target_id:
+          id: field_mentor_asignado_target_id
+          table: node__field_mentor_asignado
+          field: field_mentor_asignado_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: numeric
+          default_action: default
+          exception:
+            value: all
+            title_enable: false
+            title: Todos
+          title_enable: false
+          title: ''
+          default_argument_type: current_user
+          default_argument_options: {  }
+          summary_options:
+            base_path: ''
+            count: true
+            override: false
+            items_per_page: 25
+          summary:
+            sort_order: asc
+            number_of_records: 0
+            format: default_summary
+          specify_validation: false
+          validate:
+            type: none
+            fail: 'not found'
+          validate_options: {  }
+          break_phrase: false
+          not: false
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: bundle
+          operator: in
+          value:
+            inscripcion_oferta: inscripcion_oferta
+          group: 1
+          exposed: false
+        field_estado_postulacion_value:
+          id: field_estado_postulacion_value
+          table: node__field_estado_postulacion
+          field: field_estado_postulacion_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: list_field
+          operator: or
+          value:
+            aprobada: aprobada
+          group: 1
+          exposed: false
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default: created
+          info:
+            field_empresa_ref:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_oferta_ref:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_ruta_asignada:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_colaborador_ref:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            nid:
+              sortable: false
+              default_sort_order: asc
+              align: views-align-right
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: true
+          caption: ''
+          description: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options:
+          query_comment: ''
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_tags: {  }
+  page_1:
+    id: page_1
+    display_title: Página
+    display_plugin: page
+    position: 1
+    display_options:
+      display_extenders: {  }
+      path: mi-espacio-mentor/empresas
+      menu:
+        type: none
+        title: 'Mis Empresas Asignadas'
+        description: ''
+        weight: 0
+        expanded: false
+        menu_name: main
+        parent: ''
+        context: '0'

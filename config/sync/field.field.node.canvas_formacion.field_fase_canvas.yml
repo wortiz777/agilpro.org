@@ -1,0 +1,21 @@
+uuid: 42a894e8-3346-4fba-8223-6a27a99d5ad9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_formacion
+id: node.canvas_formacion.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_formacion
+label: 'Fase Canvas'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '3. Validar'
+default_value_callback: ''
+settings: {  }
+field_type: string

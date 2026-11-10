@@ -1,0 +1,23 @@
+uuid: 82e44241-e0ca-4393-81c9-0048d0d1da7e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financier
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_financier
+field_name: field_financier
+entity_type: node
+bundle: emprendedores_off_line
+label: Financiero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

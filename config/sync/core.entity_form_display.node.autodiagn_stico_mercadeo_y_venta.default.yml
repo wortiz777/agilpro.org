@@ -1,0 +1,130 @@
+uuid: adf2ffc1-564c-4dcf-aaff-f426e596f3f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_10mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_11mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_12mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_13mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_14mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_15mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_1mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_1ventas
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_2mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_2ventas
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_3mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_3ventas
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_4mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_4ventas
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_5mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_5ventas
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_6mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_7mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_8mercadeo
+    - field.field.node.autodiagn_stico_mercadeo_y_venta.field_9mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+  module:
+    - path
+id: node.autodiagn_stico_mercadeo_y_venta.default
+targetEntityType: node
+bundle: autodiagn_stico_mercadeo_y_venta
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_1ventas:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2ventas:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_3ventas:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_4ventas:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_5ventas:
+    type: number
+    weight: 15
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_10mercadeo: true
+  field_11mercadeo: true
+  field_12mercadeo: true
+  field_13mercadeo: true
+  field_14mercadeo: true
+  field_15mercadeo: true
+  field_1mercadeo: true
+  field_2mercadeo: true
+  field_3mercadeo: true
+  field_4mercadeo: true
+  field_5mercadeo: true
+  field_6mercadeo: true
+  field_7mercadeo: true
+  field_8mercadeo: true
+  field_9mercadeo: true
+  promote: true
+  sticky: true

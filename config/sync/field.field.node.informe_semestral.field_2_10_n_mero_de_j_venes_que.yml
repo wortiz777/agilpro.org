@@ -1,0 +1,23 @@
+uuid: 0963a5b4-8c3a-4906-9319-6d524eafeb4e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2_10_n_mero_de_j_venes_que
+    - node.type.informe_semestral
+id: node.informe_semestral.field_2_10_n_mero_de_j_venes_que
+field_name: field_2_10_n_mero_de_j_venes_que
+entity_type: node
+bundle: informe_semestral
+label: '10. Número de Jóvenes que reciben el paquete de formación empresarial.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

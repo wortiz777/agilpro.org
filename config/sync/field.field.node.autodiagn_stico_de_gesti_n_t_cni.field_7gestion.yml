@@ -1,0 +1,26 @@
+uuid: 6dd77375-8c87-4bc8-8632-c6747e5ab467
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7gestion
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_7gestion
+field_name: field_7gestion
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '7. El proceso de producción / prestación del servicio de la empresa es flexible y permite cambios de acuerdo a las necesidades d'
+description: '7.El proceso de producción / prestación del servicio de la empresa es flexible y permite cambios de acuerdo a las necesidades del cliente.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

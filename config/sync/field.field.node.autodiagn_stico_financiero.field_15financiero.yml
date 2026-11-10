@@ -1,0 +1,26 @@
+uuid: 71e3db42-f80e-4a61-b1b5-2a6626d97598
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_15financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_15financiero
+field_name: field_15financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '15. Tiene identificada plenamente cuales son las necesidades en materia económica.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

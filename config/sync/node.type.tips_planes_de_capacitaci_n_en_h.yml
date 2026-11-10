@@ -1,0 +1,18 @@
+uuid: 5056e4e8-9565-4c43-b8fc-9887ffc5831a
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Tips Planes de Capacitación en Habilidades Blandas'
+type: tips_planes_de_capacitaci_n_en_h
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

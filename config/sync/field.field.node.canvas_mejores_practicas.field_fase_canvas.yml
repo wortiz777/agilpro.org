@@ -1,0 +1,21 @@
+uuid: 9fedc211-b78b-49a0-8ed5-79cad9791ffc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_mejores_practicas
+id: node.canvas_mejores_practicas.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_mejores_practicas
+label: 'Fase Canvas'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '2. Educar'
+default_value_callback: ''
+settings: {  }
+field_type: string

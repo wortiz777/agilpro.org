@@ -1,0 +1,37 @@
+uuid: 5094c0e4-7db2-4f39-a108-d8153ba28086
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-que-quieres-hacer
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_que_quieres_hacer
+theme: subtema
+region: header
+weight: -81
+provider: null
+plugin: 'system_menu_block:menu-que-quieres-hacer'
+settings:
+  id: 'system_menu_block:menu-que-quieres-hacer'
+  label: menu-que-quieres-hacer
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /test
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator

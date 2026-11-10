@@ -1,0 +1,18 @@
+agilpro_onbase.settings_tab:
+  title: 'Configuración y Diagnóstico'
+  route_name: agilpro_onbase.settings
+  base_route: agilpro_onbase.settings
+  weight: 1
+
+agilpro_onbase.audit_tab:
+  title: 'Auditoría y Trazabilidad'
+  route_name: agilpro_onbase.audit
+  base_route: agilpro_onbase.settings
+  weight: 2
+
+agilpro_onbase.queue_tab:
+  title: 'Procesamiento de Cola'
+  route_name: agilpro_onbase.queue_run
+  base_route: agilpro_onbase.settings
+  weight: 3
+

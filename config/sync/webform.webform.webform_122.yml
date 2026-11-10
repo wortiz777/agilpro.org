@@ -1,0 +1,351 @@
+uuid: 6934f364-1db4-403e-b0c3-76d8694ea15e
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 0
+template: false
+archive: false
+id: webform_122
+title: '360° Administración'
+description: null
+categories: {  }
+elements: |
+  1_administracion:
+      '#type': textfield
+      '#title': '1 La empresa cuenta con un esquema de seguimiento y control del trabajo de los colaboradores que le permite tomar decisiones oportunas.'
+  2_administracion:
+      '#type': textfield
+      '#title': '2. Con el seguimiento y control del trabajo se establecen planes de mejoramiento en competencias laborales de los colaboradore'
+  3_administracion:
+      '#type': textfield
+      '#title': '3. La empresa cuenta con un proceso para mejorar el ambiente de trabajo y las relaciones de los colaboradores.'
+  4_administracion:
+      '#type': textfield
+      '#title': '4. Se tiene un proceso para el reclutamiento, selección, contratación e inducción de los colaboradores de la empresa.'
+  5_ladministracion:
+      '#type': textfield
+      '#title': '5. La empresa cuenta con un manual de perfiles, funciones y responsabilidades de los colaboradores.'
+  6_administracion:
+      '#type': textfield
+      '#title': '6. La empresa busca que los colaboradores desarrollen un sentido de pertenencia y compromiso activo.'
+  7_administracion:
+      '#type': textfield
+      '#title': '7. La empresa estimula el trabajo en equipo a todos los niveles.'
+  8_administracion:
+      '#type': textfield
+      '#title': '8. La empresa cuenta con un sistema de gestión.'
+  9_administracion:
+      '#type': textfield
+      '#title': '9. La empresa cuenta con planes o programas para capacitar el nivel directivo o el personal de la empresa.'
+  10_administracion:
+      '#type': textfield
+      '#title': '10. Se tienen planificadas y organizadas las actividades bajo un esquema de procesos.'
+  administracion_normatividad_y_talento_human2:
+      '#type': textfield
+      '#title': 'ADMINISTRACIÓN, NORMATIVIDAD Y TALENTO HUMANO'
+  administracion_normatividad_y_talento_humano:
+      '#type': textfield
+      '#title': 'ADMINISTRACIÓN, NORMATIVIDAD Y TALENTO HUMANO'
+  1_administracionynormatividad:
+      '#type': number
+      '#title': '1. Numero de empleados actuales con contrato a termino fijo o por labor.'
+  2_administracionynormatividad:
+      '#type': number
+      '#title': '2. Numero de empleados actuales con contrato a termino indefinido.'
+  3_administracionynormatividad:
+      '#type': number
+      '#title': '3. Número total de empleados con otro tipo de contrato.'
+  4_administracionynormatividad:
+      '#type': number
+      '#title': '4. Número total de empleados sin ningún tipo de contrato.'
+  5_administracionynormatividad:
+      '#type': number
+      '#title': '5. Numero total de empleados actuales'
+  6_numero_de_empleados_con_pago_de_seguridad_s:
+      '#type': number
+      '#title': '6. Número de empleados con pago de seguridad social.'
+  administracion_y_normatividad:
+      '#type': textfield
+      '#title': 'ADMINISTRACIÓN Y NORMATIVIDAD'
+  b1_laempresa:
+      '#type': textfield
+      '#title': '1. La empresa cuenta con un esquema de seguimiento y control del trabajo de los colaboradores que le permite tomar decisiones oportunas.'
+  b2_con_el_seguimiento_y_control_:
+      '#type': textfield
+      '#title': '2. Con el seguimiento y control del trabajo se establecen planes de mejoramiento en competencias laborales de los colaboradores'
+  b3_la_empresa_cuenta_:
+      '#type': textfield
+      '#title': '3. La empresa cuenta con un proceso para mejorar el ambiente de trabajo y las relaciones de los colaboradores.'
+  b4_se_tiene_un_proceso:
+      '#type': textfield
+      '#title': '4. Se tiene un proceso para el reclutamiento, selección, contratación e inducción de los colaboradores de la empresa.'
+  b5_la_empresa_cuenta:
+      '#type': textfield
+      '#title': '5. La empresa cuenta con un manual de perfiles, funciones y responsabilidades de los colaboradores.'
+  b6_la_empresa_busca:
+      '#type': textfield
+      '#title': '6. La empresa busca que los colaboradores desarrollen un sentido de pertenencia y compromiso activo'
+  b7_la_empresa_estimula:
+      '#type': textfield
+      '#title': '7. La empresa estimula el trabajo en equipo a todos los niveles.'
+  b8_la_empresa_cuenta_con_un_sistema_de_gestion:
+      '#type': textfield
+      '#title': '8. La empresa cuenta con un sistema de gestión.'
+  b9_la_empresa_cuenta_:
+      '#type': textfield
+      '#title': '9. La empresa cuenta con planes o programas para capacitar el nivel directivo o el personal de la empresa.'
+  b10_se_tienen_planificadas:
+      '#type': textfield
+      '#title': '10. Se tienen planificadas y organizadas las actividades bajo un esquema de procesos.'
+  nivel_de_formalizacion_empre:
+      '#type': textfield
+      '#title': 'NIVEL DE FORMALIZACIÓN EMPRESARIAL.'
+  1_renovacion_matricula_mercantil_el_ultimo_ano:
+      '#type': textfield
+      '#title': '1. Renovación matrícula mercantil el ultimo año.'
+  2_rut_actualizado:
+      '#type': textfield
+      '#title': '2. RUT Actualizado.'
+  3pago_de_iva:
+      '#type': textfield
+      '#title': '3.Pago de IVA.'
+  4_pago_de_retefuente_mensual:
+      '#type': textfield
+      '#title': '4. Pago de RETEFUENTE mensual.'
+  5_pago_de_renta_:
+      '#type': textfield
+      '#title': '5. Pago de RENTA Anual.'
+  cumplimiento_de_requisitos_normativos:
+      '#type': textfield
+      '#title': 'CUMPLIMIENTO DE REQUISITOS NORMATIVOS APLICABLES SEGÚN LA ACTIVIDAD ECONÓMICA.'
+  1_registro_invima:
+      '#type': textfield
+      '#title': '1. Registro INVIMA.'
+  2_licencia_secretaria_de_salud:
+      '#type': textfield
+      '#title': '2. Licencia Secretaria de Salud.'
+  3licencia_o_resolucion_de_superintendencia_o_ministerio_correspondiente:
+      '#type': textfield
+      '#title': '3.Licencia o Resolución de Superintendencia o Ministerio correspondiente.'
+  4_sayco_acinpro:
+      '#type': textfield
+      '#title': '4. Sayco Acinpro.'
+  5_licencia_de_bomberos:
+      '#type': textfield
+      '#title': '5. Licencia de Bomberos.'
+  6_corporacion_autonoma:
+      '#type': textfield
+      '#title': '6. Corporación Autónoma Regional.'
+  7_registro_de_marcas:
+      '#type': textfield
+      '#title': '7. Registro de Marcas y Patentes.'
+  8_marquillas:
+      '#type': textfield
+      '#title': '8. Marquillas.'
+  9_licencias_de_funcionamiento_por_entidad_competente:
+      '#type': textfield
+      '#title': '9. Licencias de funcionamiento por entidad competente.'
+  10_licencias_de_importacion:
+      '#type': textfield
+      '#title': '10. Licencias de Importación.'
+  11_licencias_de_software:
+      '#type': textfield
+      '#title': '11. Licencias de Software.'
+  12_proteccion_de_propiedad_intelectual:
+      '#type': textfield
+      '#title': '12. Protección de Propiedad Intelectual.'
+  13certificados_de_calibracion_de_equipos_de_medicion:
+      '#type': textfield
+      '#title': '13.Certificados de calibración de Equipos de medición.'
+  14_otro_cual:
+      '#type': textfield
+      '#title': '14. Otro ¿Cuál?'
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: ''
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_file_limit_message: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: ''
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

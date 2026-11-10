@@ -1,0 +1,19 @@
+uuid: 8a02827d-2b9a-45d9-b7a3-983eb6cb0e12
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresar_nueva_pr_ctica
+    - node.type.canvas_practica_y_retroalimentac
+id: node.canvas_practica_y_retroalimentac.field_ingresar_nueva_pr_ctica
+field_name: field_ingresar_nueva_pr_ctica
+entity_type: node
+bundle: canvas_practica_y_retroalimentac
+label: 'Ingresar nueva práctica'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

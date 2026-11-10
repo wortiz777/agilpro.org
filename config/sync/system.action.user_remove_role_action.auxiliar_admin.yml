@@ -1,0 +1,14 @@
+uuid: e861c7ad-1343-4433-9b2d-46597d32db9f
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.auxiliar_admin
+  module:
+    - user
+id: user_remove_role_action.auxiliar_admin
+label: 'Elimina el rol Auxiliar Administrativo al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: auxiliar_admin

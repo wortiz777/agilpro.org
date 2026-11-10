@@ -1,0 +1,85 @@
+uuid: 662aa26e-aaba-4a41-8d58-4d1838e12a04
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: custom
+id: node.field_grupo
+field_name: field_grupo
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: ' Grupo 1'
+    -
+      value: '2'
+      label: ' Grupo 2'
+    -
+      value: '3'
+      label: ' Grupo 3'
+    -
+      value: '4'
+      label: ' Grupo 4'
+    -
+      value: '5'
+      label: ' Grupo 5'
+    -
+      value: '6'
+      label: ' Grupo 6'
+    -
+      value: '7'
+      label: ' Grupo 7'
+    -
+      value: '8'
+      label: ' Grupo 8'
+    -
+      value: '9'
+      label: ' Grupo 9'
+    -
+      value: '10'
+      label: ' Grupo 10'
+    -
+      value: '11'
+      label: ' Grupo 11'
+    -
+      value: '12'
+      label: ' Grupo 12'
+    -
+      value: '13'
+      label: ' Grupo 13'
+    -
+      value: '14'
+      label: ' Grupo 14'
+    -
+      value: '15'
+      label: ' Grupo 15'
+    -
+      value: '16'
+      label: ' Grupo 16'
+    -
+      value: '17'
+      label: ' Grupo 17'
+    -
+      value: '18'
+      label: ' Grupo 18'
+    -
+      value: '19'
+      label: ' Grupo 19'
+    -
+      value: '20'
+      label: ' Grupo 20'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

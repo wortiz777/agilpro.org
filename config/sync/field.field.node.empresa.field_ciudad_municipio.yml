@@ -1,0 +1,19 @@
+uuid: 174a446c-c479-4c62-b0d4-eae4d7dbc8a1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ciudad_municipio
+    - node.type.empresa
+id: node.empresa.field_ciudad_municipio
+field_name: field_ciudad_municipio
+entity_type: node
+bundle: empresa
+label: 'Ciudad / Municipio'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

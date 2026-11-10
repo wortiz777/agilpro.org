@@ -1,0 +1,38 @@
+name: agilpro
+# Lando 3.21 no trae receta drupal11; drupal10 con PHP 8.3 corre Drupal 11 sin cambios.
+recipe: drupal10
+config:
+  php: '8.3'
+  composer_version: '2'
+  via: apache:2.4
+  webroot: web
+  xdebug: false
+  config:
+    php: .lando/php.ini
+
+services:
+  database:
+    type: mariadb
+    # Las tags antiguas de bitnami/mariadb fueron retiradas de Docker Hub;
+    # se fuerza 'latest' (MariaDB 11.x, compatible con Drupal 11).
+    overrides:
+      image: bitnami/mariadb:latest
+      environment:
+        ALLOW_EMPTY_PASSWORD: "no"
+        MARIADB_DATABASE: drupal
+        MARIADB_USER: drupal
+        MARIADB_PASSWORD: drupal
+        MARIADB_ROOT_PASSWORD: drupal_root
+    creds:
+      user: drupal
+      password: drupal
+      database: drupal
+
+tooling:
+  drush:
+    service: appserver
+    cmd: /app/vendor/bin/drush
+
+proxy:
+  appserver:
+    - agilpro.lndo.site

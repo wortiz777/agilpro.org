@@ -1,0 +1,7 @@
+agilpro_onbase.admin:
+  title: 'Hyland OnBase'
+  description: 'Configuración, diagnóstico y auditoría del conector documental Hyland OnBase de Compensar.'
+  parent: system.admin_config_services
+  route_name: agilpro_onbase.settings
+  weight: 20
+

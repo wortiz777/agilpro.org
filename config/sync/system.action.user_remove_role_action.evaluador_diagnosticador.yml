@@ -1,0 +1,14 @@
+uuid: ce47daed-5bf9-487f-9eb1-51c9f25b9318
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.evaluador_diagnosticador
+  module:
+    - user
+id: user_remove_role_action.evaluador_diagnosticador
+label: 'Elimina el rol Evaluador / Diagnosticador al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: evaluador_diagnosticador

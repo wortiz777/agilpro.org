@@ -1,0 +1,70 @@
+uuid: 70cc6544-7045-416a-b2dc-8a7faeca3cb1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_inscripci_n_empoderamiento.field_descripci_n_tip
+    - node.type.tips_inscripci_n_empoderamiento
+  module:
+    - path
+    - text
+id: node.tips_inscripci_n_empoderamiento.default
+targetEntityType: node
+bundle: tips_inscripci_n_empoderamiento
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_descripci_n_tip:
+    type: text_textarea
+    weight: 32
+    region: content
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

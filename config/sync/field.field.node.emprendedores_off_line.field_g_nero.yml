@@ -1,0 +1,19 @@
+uuid: fda96e57-6b17-45f1-a430-c9d4a1b95ed0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_g_nero
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_g_nero
+field_name: field_g_nero
+entity_type: node
+bundle: emprendedores_off_line
+label: Género
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

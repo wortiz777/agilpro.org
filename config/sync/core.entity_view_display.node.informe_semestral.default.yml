@@ -1,0 +1,237 @@
+uuid: 5118b9ea-3234-4e59-aba7-d7914bc0e576
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.informe_semestral.field_1_resumen_general_del_dese
+    - field.field.node.informe_semestral.field_2_10_n_mero_de_j_venes_que
+    - field.field.node.informe_semestral.field_2_11_n_mero_de_j_venes_que
+    - field.field.node.informe_semestral.field_2_12_n_mero_de_mentores_qu
+    - field.field.node.informe_semestral.field_2_1_n_mero_de_personas_sen
+    - field.field.node.informe_semestral.field_2_2_n_mero_de_empresas_for
+    - field.field.node.informe_semestral.field_2_3_n_mero_de_empleados_ad
+    - field.field.node.informe_semestral.field_2_4_n_mero_de_empresas_que
+    - field.field.node.informe_semestral.field_2_5_n_mero_de_j_venes_que_
+    - field.field.node.informe_semestral.field_2_7_n_mero_de_j_venes_que_
+    - field.field.node.informe_semestral.field_2_8_n_mero_de_j_venes_que_
+    - field.field.node.informe_semestral.field_2_9_n_mero_de_facilitadore
+    - field.field.node.informe_semestral.field_3_se_ale_los_factores_cr_t
+    - field.field.node.informe_semestral.field_4_1_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_2_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_3_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_4_b_explique_como_afecta
+    - field.field.node.informe_semestral.field_4_5_b_detalle_el_o_los_otr
+    - field.field.node.informe_semestral.field_4_riesgos
+    - field.field.node.informe_semestral.field_5_sustente_como_desde_su_c
+    - field.field.node.informe_semestral.field_6_relacione_las_acciones_a
+    - field.field.node.informe_semestral.field_7_mencione_las_lecciones_a
+    - field.field.node.informe_semestral.field_n_mero_de_empresas_fortale
+    - field.field.node.informe_semestral.field_seleccione_el_semestre_a_r
+    - node.type.informe_semestral
+  module:
+    - options
+    - user
+id: node.informe_semestral.default
+targetEntityType: node
+bundle: informe_semestral
+mode: default
+content:
+  field_1_resumen_general_del_dese:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_2_10_n_mero_de_j_venes_que:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_2_11_n_mero_de_j_venes_que:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_2_12_n_mero_de_mentores_qu:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_2_1_n_mero_de_personas_sen:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_2_2_n_mero_de_empresas_for:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_2_3_n_mero_de_empleados_ad:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_2_4_n_mero_de_empresas_que:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_2_5_n_mero_de_j_venes_que_:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_2_7_n_mero_de_j_venes_que_:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_2_8_n_mero_de_j_venes_que_:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_2_9_n_mero_de_facilitadore:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_3_se_ale_los_factores_cr_t:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_4_1_b_explique_como_afecta:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_4_2_b_explique_como_afecta:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_4_3_b_explique_como_afecta:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_4_4_b_explique_como_afecta:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_4_5_b_detalle_el_o_los_otr:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_4_riesgos:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_5_sustente_como_desde_su_c:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_6_relacione_las_acciones_a:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_7_mencione_las_lecciones_a:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_n_mero_de_empresas_fortale:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_seleccione_el_semestre_a_r:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

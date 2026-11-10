@@ -1,0 +1,19 @@
+uuid: 89ec28ff-30a3-4ffa-b66d-5b2c4c9806d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resena
+    - node.type.biblioteca_abierta
+id: node.biblioteca_abierta.field_resena
+field_name: field_resena
+entity_type: node
+bundle: biblioteca_abierta
+label: Reseña
+description: 'Ingrese una rápida referencia del documento. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

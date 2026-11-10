@@ -1,0 +1,21 @@
+uuid: f7ad0892-de7e-4f5a-b076-cc3877133088
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fechas_inscripcion
+    - node.type.oferta
+  module:
+    - datetime_range
+id: node.oferta.field_fechas_inscripcion
+field_name: field_fechas_inscripcion
+entity_type: node
+bundle: oferta
+label: 'Fechas de Inscripción'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

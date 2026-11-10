@@ -1,0 +1,22 @@
+uuid: 9fad7ea8-f72b-4d3e-b82e-2a04d04f849b
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - subtema
+_core:
+  default_config_hash: 1JzmuTXzMIWbXm-HRVyJlQZtc9zkp3fYnilF2FtjKv0
+id: subtema_content
+theme: subtema
+region: content
+weight: 8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenido principal de la página'
+  label_display: '0'
+  provider: system
+visibility: {  }

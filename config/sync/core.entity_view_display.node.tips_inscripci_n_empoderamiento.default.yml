@@ -1,0 +1,29 @@
+uuid: b251dfa5-33bd-4c9e-9e1a-f9e01d74476a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_inscripci_n_empoderamiento.field_descripci_n_tip
+    - node.type.tips_inscripci_n_empoderamiento
+  module:
+    - text
+    - user
+id: node.tips_inscripci_n_empoderamiento.default
+targetEntityType: node
+bundle: tips_inscripci_n_empoderamiento
+mode: default
+content:
+  field_descripci_n_tip:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

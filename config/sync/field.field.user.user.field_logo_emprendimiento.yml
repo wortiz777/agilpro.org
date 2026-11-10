@@ -1,0 +1,38 @@
+uuid: 428ca220-6a4c-44b1-9d91-5956916a239c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_logo_emprendimiento
+  module:
+    - image
+    - user
+id: user.user.field_logo_emprendimiento
+field_name: field_logo_emprendimiento
+entity_type: user
+bundle: user
+label: 'Logo o Imagen Corporativa'
+description: 'Suba una imagen o logo que identifique su emprendimiento. Sí aún no cuenta, continúe con el formulario, luego podrá actualizar la información. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: logos-emprendimientos
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

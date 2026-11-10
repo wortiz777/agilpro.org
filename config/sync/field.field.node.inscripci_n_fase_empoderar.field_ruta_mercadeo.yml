@@ -1,0 +1,30 @@
+uuid: 1cc737ee-6b26-426f-b116-1221cded54d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_mercadeo
+    - node.type.inscripci_n_fase_empoderar
+    - node.type.ruta_de_mejoramiento
+id: node.inscripci_n_fase_empoderar.field_ruta_mercadeo
+field_name: field_ruta_mercadeo
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Ruta Mercadeo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ruta_de_mejoramiento: ruta_de_mejoramiento
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

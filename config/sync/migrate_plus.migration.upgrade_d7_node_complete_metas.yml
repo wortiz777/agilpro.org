@@ -1,0 +1,223 @@
+uuid: 687cbd35-1748-4ede-b1ae-4e0c46612361
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_metas
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Metas)'
+source:
+  plugin: d7_node_complete
+  node_type: metas
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_metas/0/status:
+    -
+      plugin: get
+      source: comment
+  field_meta_conectar:
+    -
+      plugin: get
+      source: field_meta_conectar
+  field_meta_empoderar:
+    -
+      plugin: get
+      source: field_meta_empoderar
+  field_meta_fortalecer:
+    -
+      plugin: get
+      source: field_meta_fortalecer
+  field_meta_acceder:
+    -
+      plugin: get
+      source: field_meta_acceder
+  field_meta_acceder_financiaci_n:
+    -
+      plugin: get
+      source: field_meta_acceder_financiaci_n
+  field_sensibilizados_on_line_:
+    -
+      plugin: get
+      source: field_sensibilizados_on_line_
+  field_sensibilizados_of_line:
+    -
+      plugin: get
+      source: field_sensibilizados_of_line
+  field_sensibilizados_reporte_exc:
+    -
+      plugin: get
+      source: field_sensibilizados_reporte_exc
+  field_competencias_on_line:
+    -
+      plugin: get
+      source: field_competencias_on_line
+  field_competencias_off_line:
+    -
+      plugin: get
+      source: field_competencias_off_line
+  field_competencias_reporte_excel:
+    -
+      plugin: get
+      source: field_competencias_reporte_excel
+  field_fortalecidos_on_line:
+    -
+      plugin: get
+      source: field_fortalecidos_on_line
+  field_fortalecidos_off_line:
+    -
+      plugin: get
+      source: field_fortalecidos_off_line
+  field_fortalecidos_reporte_excel:
+    -
+      plugin: get
+      source: field_fortalecidos_reporte_excel
+  field_financiamiento_on_line:
+    -
+      plugin: get
+      source: field_financiamiento_on_line
+  field_financiamiento_off_line:
+    -
+      plugin: get
+      source: field_financiamiento_off_line
+  field_financiamiento_reporte_exc:
+    -
+      plugin: get
+      source: field_financiamiento_reporte_exc
+  field_acceder_on_line:
+    -
+      plugin: get
+      source: field_acceder_on_line
+  field_acceder_off_line:
+    -
+      plugin: get
+      source: field_acceder_off_line
+  field_acceder_reporte_excel_sep_:
+    -
+      plugin: get
+      source: field_acceder_reporte_excel_sep_
+  field_meta_asesores:
+    -
+      plugin: get
+      source: field_meta_asesores
+  field_asesores_on_line:
+    -
+      plugin: get
+      source: field_asesores_on_line
+  field_asesores_reporte_excel_sep:
+    -
+      plugin: get
+      source: field_asesores_reporte_excel_sep
+  field_meta_mentores:
+    -
+      plugin: get
+      source: field_meta_mentores
+  field_mentores_on_line:
+    -
+      plugin: get
+      source: field_mentores_on_line
+  field_mentores_reporte_excel_sep:
+    -
+      plugin: get
+      source: field_mentores_reporte_excel_sep
+  field_sensibilizados_accion:
+    -
+      plugin: get
+      source: field_sensibilizados_accion
+  field_competencias_acci_n:
+    -
+      plugin: get
+      source: field_competencias_acci_n
+  field_fortalecidos_acci_n:
+    -
+      plugin: get
+      source: field_fortalecidos_acci_n
+  field_financiamiento_acci_n:
+    -
+      plugin: get
+      source: field_financiamiento_acci_n
+  field_mentor_a_acci_n:
+    -
+      plugin: get
+      source: field_mentor_a_acci_n
+  field_mentores_acci_n:
+    -
+      plugin: get
+      source: field_mentores_acci_n
+  field_asesores_acci_n:
+    -
+      plugin: get
+      source: field_asesores_acci_n
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: metas
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

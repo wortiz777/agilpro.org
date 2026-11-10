@@ -1,0 +1,18 @@
+uuid: c0a9d828-f1b6-40dd-8d3d-b293d3c249f6
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Ruta de Mejoramiento'
+type: ruta_de_mejoramiento
+description: null
+help: 'Asigne un título que identifique la Ruta de Mejoramiento que va a formular. '
+new_revision: false
+preview_mode: 1
+display_submitted: false

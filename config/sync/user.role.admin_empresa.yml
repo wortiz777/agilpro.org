@@ -1,0 +1,12 @@
+uuid: d7b897d9-dc48-4600-9ccb-c9c7c64a9024
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+id: admin_empresa
+label: 'Admin Empresa'
+weight: 33
+is_admin: false
+permissions:
+  - 'access content'

@@ -1,0 +1,39 @@
+uuid: 2151aae4-ae41-4300-9ca7-ea4cdbc89438
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.seguimiento_de_compromisos.field_comentarios_seguimiento
+    - field.field.node.seguimiento_de_compromisos.field_fecha_visita
+    - node.type.seguimiento_de_compromisos
+  module:
+    - datetime
+    - user
+id: node.seguimiento_de_compromisos.default
+targetEntityType: node
+bundle: seguimiento_de_compromisos
+mode: default
+content:
+  field_comentarios_seguimiento:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_fecha_visita:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,24 @@
+uuid: 12baf8af-d481-4e6d-8ef9-1faa4bfc2790
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_eje_estrategico
+    - node.type.fosfec_transaction
+    - taxonomy.vocabulary.ejes_estrategicos
+id: node.fosfec_transaction.field_eje_estrategico
+field_name: field_eje_estrategico
+entity_type: node
+bundle: fosfec_transaction
+label: 'Eje Estratégico'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      ejes_estrategicos: ejes_estrategicos
+field_type: entity_reference

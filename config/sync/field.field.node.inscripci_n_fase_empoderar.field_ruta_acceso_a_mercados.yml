@@ -1,0 +1,30 @@
+uuid: c7ada8f7-da65-4c8f-bcae-2b3cf2246a5b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_acceso_a_mercados
+    - node.type.inscripci_n_fase_empoderar
+    - node.type.ruta_acceder
+id: node.inscripci_n_fase_empoderar.field_ruta_acceso_a_mercados
+field_name: field_ruta_acceso_a_mercados
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Rutas Acceder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ruta_acceder: ruta_acceder
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

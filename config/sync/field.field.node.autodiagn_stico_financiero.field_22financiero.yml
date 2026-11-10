@@ -1,0 +1,23 @@
+uuid: 7085f708-8ba2-41ff-a4a0-152f1164ebe1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_22financiero
+    - node.type.autodiagn_stico_financiero
+id: node.autodiagn_stico_financiero.field_22financiero
+field_name: field_22financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '7. Cual es la utilidad promedio mensual de su negocio en el último año.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

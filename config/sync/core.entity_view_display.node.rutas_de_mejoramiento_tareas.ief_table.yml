@@ -1,0 +1,50 @@
+uuid: b4885ce3-a0dc-425e-a8f3-63fda0c5628d
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.ief_table
+    - field.field.node.rutas_de_mejoramiento_tareas.field_fecha_de_inicio_
+    - field.field.node.rutas_de_mejoramiento_tareas.field_fecha_fin
+    - field.field.node.rutas_de_mejoramiento_tareas.field_tarea_a_desarrollar
+    - node.type.rutas_de_mejoramiento_tareas
+  module:
+    - datetime
+    - user
+id: node.rutas_de_mejoramiento_tareas.ief_table
+targetEntityType: node
+bundle: rutas_de_mejoramiento_tareas
+mode: ief_table
+content:
+  field_fecha_de_inicio_:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fecha_fin:
+    type: datetime_default
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tarea_a_desarrollar:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: 1b095eb1-730d-4996-a846-5f57cfcc56ce
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_6_relacione_las_acciones_a
+    - node.type.informe_semestral
+id: node.informe_semestral.field_6_relacione_las_acciones_a
+field_name: field_6_relacione_las_acciones_a
+entity_type: node
+bundle: informe_semestral
+label: '6. Relacione las acciones a ser implementadas relativas a la sostenibilidad.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

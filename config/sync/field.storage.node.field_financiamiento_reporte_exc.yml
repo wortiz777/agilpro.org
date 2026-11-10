@@ -1,0 +1,24 @@
+uuid: 4627a223-0ccb-45f7-8386-d946f0cf9299
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_financiamiento_reporte_exc
+field_name: field_financiamiento_reporte_exc
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 4b64278e-9d0c-4df7-8170-faf7e924401b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_ngeles
+id: node.canvas_ngeles.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_ngeles
+label: 'Fase Canvas'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '2. Fondos'
+default_value_callback: ''
+settings: {  }
+field_type: string

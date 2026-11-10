@@ -1,0 +1,19 @@
+uuid: 3b80545a-1b6e-4cf7-b137-6ef49ef9450c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7_mencione_las_lecciones_a
+    - node.type.informe_semestral
+id: node.informe_semestral.field_7_mencione_las_lecciones_a
+field_name: field_7_mencione_las_lecciones_a
+entity_type: node
+bundle: informe_semestral
+label: '7. Mencione las lecciones aprendidas en el desarrollo de Empréndelo a la fecha.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

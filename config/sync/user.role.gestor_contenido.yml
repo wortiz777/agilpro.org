@@ -1,0 +1,42 @@
+uuid: 5daa4cf4-0bf5-47e7-a4b2-f6b34e320215
+langcode: es
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.restricted_html
+    - node.type.inscripcion_oferta
+    - node.type.oferta
+  module:
+    - agilpro_fosfec
+    - filter
+    - node
+    - system
+id: gestor_contenido
+label: 'Gestor de Contenidos'
+weight: 26
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access fosfec dashboard'
+  - 'create inscripcion_oferta content'
+  - 'create oferta content'
+  - 'delete any inscripcion_oferta content'
+  - 'delete any oferta content'
+  - 'delete inscripcion_oferta revisions'
+  - 'delete oferta revisions'
+  - 'delete own inscripcion_oferta content'
+  - 'delete own oferta content'
+  - 'edit any inscripcion_oferta content'
+  - 'edit any oferta content'
+  - 'edit own inscripcion_oferta content'
+  - 'edit own oferta content'
+  - 'revert inscripcion_oferta revisions'
+  - 'revert oferta revisions'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'use text format restricted_html'
+  - 'view inscripcion_oferta revisions'
+  - 'view oferta revisions'

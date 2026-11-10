@@ -1,0 +1,50 @@
+uuid: 1c8ecf50-7606-490d-bb94-c8e985c666d9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_dinamizadores_de_semilla.field_descripcion_formacion_e
+    - field.field.node.canvas_dinamizadores_de_semilla.field_fase_canvas
+    - field.field.node.canvas_dinamizadores_de_semilla.field_nueva_referencia_dinamizad
+    - node.type.canvas_dinamizadores_de_semilla
+  module:
+    - user
+id: node.canvas_dinamizadores_de_semilla.default
+targetEntityType: node
+bundle: canvas_dinamizadores_de_semilla
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fase_canvas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nueva_referencia_dinamizad:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,13 @@
+uuid: f021bf20-ad15-4e78-a444-f244976e0e05
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+id: auxiliar_admin
+label: 'Auxiliar Administrativo'
+weight: 30
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'

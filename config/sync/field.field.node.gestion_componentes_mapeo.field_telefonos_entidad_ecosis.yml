@@ -1,0 +1,19 @@
+uuid: 9cf51fc6-c9fe-4b63-9a9e-e31577675b3a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_telefonos_entidad_ecosis
+    - node.type.gestion_componentes_mapeo
+id: node.gestion_componentes_mapeo.field_telefonos_entidad_ecosis
+field_name: field_telefonos_entidad_ecosis
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'Teléfonos de Contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,30 @@
+uuid: 3f8fc82e-f23f-4cd2-91d7-dd54bacf126b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.evaluaciones_presenciales_al_ase.field_cargar_evaluaciones
+    - node.type.evaluaciones_presenciales_al_ase
+  module:
+    - file
+    - user
+id: node.evaluaciones_presenciales_al_ase.default
+targetEntityType: node
+bundle: evaluaciones_presenciales_al_ase
+mode: default
+content:
+  field_cargar_evaluaciones:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

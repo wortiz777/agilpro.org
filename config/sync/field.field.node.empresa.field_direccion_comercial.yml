@@ -1,0 +1,19 @@
+uuid: b730611a-4ab5-4807-ae4f-536cefca9edb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direccion_comercial
+    - node.type.empresa
+id: node.empresa.field_direccion_comercial
+field_name: field_direccion_comercial
+entity_type: node
+bundle: empresa
+label: 'Dirección Comercial'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

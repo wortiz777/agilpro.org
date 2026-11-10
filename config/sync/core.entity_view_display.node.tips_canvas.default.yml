@@ -1,0 +1,29 @@
+uuid: 5d6ae51b-a7bd-440a-b134-d5e4fb8b0ccd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_canvas.body
+    - node.type.tips_canvas
+  module:
+    - text
+    - user
+id: node.tips_canvas.default
+targetEntityType: node
+bundle: tips_canvas
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

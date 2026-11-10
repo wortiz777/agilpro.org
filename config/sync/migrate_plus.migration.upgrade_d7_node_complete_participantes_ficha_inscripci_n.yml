@@ -1,0 +1,125 @@
+uuid: 705d8ff2-0824-492f-8af1-94649aefb02f
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_participantes_ficha_inscripci_n
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Formatos Inscripción | Participantes)'
+source:
+  plugin: d7_node_complete
+  node_type: participantes_ficha_inscripci_n
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_participantes_ficha_inscripci_n/0/status:
+    -
+      plugin: get
+      source: comment
+  field_tipo_id:
+    -
+      plugin: sub_process
+      source: field_tipo_id
+      process:
+        target_id: tid
+  field_rol:
+    -
+      plugin: get
+      source: field_rol
+  field_genero:
+    -
+      plugin: get
+      source: field_genero
+  field_estado_civil:
+    -
+      plugin: get
+      source: field_estado_civil
+  field_caracter_sticas_:
+    -
+      plugin: get
+      source: field_caracter_sticas_
+  field_nivel_educativo:
+    -
+      plugin: get
+      source: field_nivel_educativo
+  field_edad:
+    -
+      plugin: get
+      source: field_edad
+  field_numero_id:
+    -
+      plugin: get
+      source: field_numero_id
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: participantes_ficha_inscripci_n
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

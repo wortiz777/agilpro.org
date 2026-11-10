@@ -1,0 +1,23 @@
+uuid: 55898d37-75ab-4ddf-b9d4-88d1994b27eb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2_7_n_mero_de_j_venes_que_
+    - node.type.informe_semestral
+id: node.informe_semestral.field_2_7_n_mero_de_j_venes_que_
+field_name: field_2_7_n_mero_de_j_venes_que_
+entity_type: node
+bundle: informe_semestral
+label: '7. Número de jóvenes que incrementan sus habilidades para la vida.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

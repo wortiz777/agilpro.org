@@ -1,0 +1,19 @@
+uuid: b63ebc63-a317-47a8-bb90-5d1a4a16b6ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_breve_proyecto
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_breve_proyecto
+field_name: field_breve_proyecto
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Breve descripción de proyecto de vida del Emprendedor Líder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,24 @@
+uuid: 23deea98-4bbf-42a4-a0c1-417e99fbab32
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tips_planes_de_capacitaci_n_en_h
+  module:
+    - text
+id: node.tips_planes_de_capacitaci_n_en_h.body
+field_name: body
+entity_type: node
+bundle: tips_planes_de_capacitaci_n_en_h
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

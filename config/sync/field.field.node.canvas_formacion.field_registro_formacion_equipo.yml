@@ -1,0 +1,19 @@
+uuid: b3058b2c-7be7-4352-bd5b-ce10c21c069c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_registro_formacion_equipo
+    - node.type.canvas_formacion
+id: node.canvas_formacion.field_registro_formacion_equipo
+field_name: field_registro_formacion_equipo
+entity_type: node
+bundle: canvas_formacion
+label: 'Nuevo registro Formación de Equipo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

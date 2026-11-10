@@ -1,0 +1,23 @@
+uuid: 8a61e145-90a0-48eb-9074-5c7dddd17416
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_fortalecer
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_fase_fortalecer
+field_name: field_fase_fortalecer
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Fase Fortalecer'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: ''
+field_type: boolean

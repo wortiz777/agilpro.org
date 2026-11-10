@@ -1,0 +1,25 @@
+uuid: e8a4865f-75cf-413c-a8c7-ce244ba22a49
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_state
+    - node.type.fosfec_transaction
+  module:
+    - state_machine
+id: node.fosfec_transaction.field_state
+field_name: field_state
+entity_type: node
+bundle: fosfec_transaction
+label: 'Estado Workflow'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: programada
+default_value_callback: ''
+settings:
+  workflow: fosfec_transaction_workflow
+  workflow_callback: ''
+field_type: state

@@ -1,0 +1,57 @@
+uuid: 7465de97-fe2e-4bb7-8172-78484019e3d2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.biblioteca_abierta.field_autor_es_
+    - field.field.node.biblioteca_abierta.field_resena
+    - field.field.node.biblioteca_abierta.field_subir_archivo
+    - field.field.node.biblioteca_abierta.field_ubicaci_n_del_recurso
+    - node.type.biblioteca_abierta
+  module:
+    - file
+    - options
+    - user
+id: node.biblioteca_abierta.default
+targetEntityType: node
+bundle: biblioteca_abierta
+mode: default
+content:
+  field_autor_es_:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_resena:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_subir_archivo:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ubicaci_n_del_recurso:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,102 @@
+uuid: 454565ff-bd59-4f5e-956d-7877d99d51fc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_desarrollo_competencias.field__rea_competencia_de_intere
+    - field.field.node.ruta_desarrollo_competencias.field_acciones_
+    - field.field.node.ruta_desarrollo_competencias.field_comentarios_del_asesor
+    - field.field.node.ruta_desarrollo_competencias.field_cuando_
+    - field.field.node.ruta_desarrollo_competencias.field_diagn_stico
+    - field.field.node.ruta_desarrollo_competencias.field_fortalecimiento_de_talento
+    - field.field.node.ruta_desarrollo_competencias.field_objetivos_metas_
+    - field.field.node.ruta_desarrollo_competencias.field_puntos_debiles_
+    - field.field.node.ruta_desarrollo_competencias.field_puntos_fuertes
+    - field.field.node.ruta_desarrollo_competencias.field_valoracio_resultados_
+    - field.field.node.ruta_desarrollo_competencias.field_vencer_o_mejorar_puntos_de
+    - node.type.ruta_desarrollo_competencias
+  module:
+    - user
+id: node.ruta_desarrollo_competencias.default
+targetEntityType: node
+bundle: ruta_desarrollo_competencias
+mode: default
+content:
+  field_acciones_:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_comentarios_del_asesor:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_cuando_:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_diagn_stico:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_fortalecimiento_de_talento:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_objetivos_metas_:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_puntos_debiles_:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_puntos_fuertes:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_valoracio_resultados_:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_vencer_o_mejorar_puntos_de:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field__rea_competencia_de_intere: true
+  langcode: true

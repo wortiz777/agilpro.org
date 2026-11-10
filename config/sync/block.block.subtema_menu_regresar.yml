@@ -1,0 +1,38 @@
+uuid: ffe9684d-0a3b-40a0-a10e-d14474b83199
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-regresar
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_regresar
+theme: subtema
+region: highlighted
+weight: -22
+provider: null
+plugin: 'system_menu_block:menu-regresar'
+settings:
+  id: 'system_menu_block:menu-regresar'
+  label: menu-regresar
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*/roles'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      coordinador_regional: coordinador_regional

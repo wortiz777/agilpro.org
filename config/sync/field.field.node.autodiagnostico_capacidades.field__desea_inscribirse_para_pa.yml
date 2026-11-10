@@ -1,0 +1,21 @@
+uuid: c88a7ad5-998a-41a8-869a-b4a6e3f7432e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__desea_inscribirse_para_pa
+    - node.type.autodiagnostico_capacidades
+id: node.autodiagnostico_capacidades.field__desea_inscribirse_para_pa
+field_name: field__desea_inscribirse_para_pa
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '¿Desea Inscribirse para Participar en los Talleres de Habilidades Blandas para Emprendedores?'
+description: "Los talleres de Habilidades Blandas para Emprendedores están diseñados para potenciar las capacidades personales de los participantes. \r\nSi decide inscribirse, la Cámara de Comercio de su región lo estará contactando para brindarle más información sobre como participar. "
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

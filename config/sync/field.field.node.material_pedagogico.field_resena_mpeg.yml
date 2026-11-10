@@ -1,0 +1,19 @@
+uuid: 6a0db52d-bb40-4d9f-899d-df72ec9fd9c6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resena_mpeg
+    - node.type.material_pedagogico
+id: node.material_pedagogico.field_resena_mpeg
+field_name: field_resena_mpeg
+entity_type: node
+bundle: material_pedagogico
+label: Reseña
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,38 @@
+uuid: fd551c36-e8cf-4779-a179-bf5892279ed5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.invitaciones_a_la_red.field_descripcion_invitacion
+    - field.field.node.invitaciones_a_la_red.field_evidencia_invitaciones
+    - node.type.invitaciones_a_la_red
+  module:
+    - file
+    - user
+id: node.invitaciones_a_la_red.default
+targetEntityType: node
+bundle: invitaciones_a_la_red
+mode: default
+content:
+  field_descripcion_invitacion:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_evidencia_invitaciones:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

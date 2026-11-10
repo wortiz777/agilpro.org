@@ -1,0 +1,26 @@
+uuid: f4568a32-6695-467e-a849-cc93b4e50edf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asesor_fortalecer
+    - node.type.inscripci_n_fase_empoderar
+    - taxonomy.vocabulary.asesores
+id: node.inscripci_n_fase_empoderar.field_asesor_fortalecer
+field_name: field_asesor_fortalecer
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Asesor Fase Fortalecer'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      asesores: asesores
+    sort:
+      field: _none
+field_type: entity_reference

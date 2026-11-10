@@ -1,0 +1,23 @@
+uuid: 12b572c4-7770-4cde-9812-542aac10293a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cupos_disponibles
+    - node.type.oferta
+id: node.oferta.field_cupos_disponibles
+field_name: field_cupos_disponibles
+entity_type: node
+bundle: oferta
+label: 'Cupos Disponibles'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

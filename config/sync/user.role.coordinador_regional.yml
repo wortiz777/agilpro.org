@@ -1,0 +1,200 @@
+uuid: feaa7b71-0688-4df5-a116-25ca469ee585
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type._gc_formatos_inscripci_n
+    - node.type.actas_reunion_red
+    - node.type.actas_selecci_n_comit_
+    - node.type.actas_seleccion_comit_fortalecim
+    - node.type.asesor_gestion_grupos
+    - node.type.biblioteca_abierta
+    - node.type.c2_fortalecer_inscritos
+    - node.type.canvas_capitalistas_de_riesgo
+    - node.type.canvas_construir_el_primer_produ
+    - node.type.canvas_dinamizadores_de_semilla
+    - node.type.canvas_espacios_de_trabajo_
+    - node.type.canvas_establecer
+    - node.type.canvas_expansi_n
+    - node.type.canvas_formacion
+    - node.type.canvas_formalizar
+    - node.type.canvas_gobierno
+    - node.type.canvas_infraestructura
+    - node.type.canvas_medios
+    - node.type.canvas_medios_principales
+    - node.type.canvas_mejores_practicas
+    - node.type.canvas_ngeles
+    - node.type.canvas_persuadir_y_demostrar
+    - node.type.canvas_practica_y_retroalimentac
+    - node.type.canvas_prepare_la_semilla
+    - node.type.canvas_red_de_inversionistas
+    - node.type.canvas_talento
+    - node.type.emprendedores_off_line
+    - node.type.evaluaciones_presenciales_al_ase
+    - node.type.evangelistas
+    - node.type.eventos_inspiradores
+    - node.type.formatos_inscripci_n_emprendimie
+    - node.type.gestion_componentes_mapeo
+    - node.type.hv_asesores
+    - node.type.informe_intermedio_del_asesor
+    - node.type.informe_semestral
+    - node.type.inscripci_n_fase_empoderar
+    - node.type.invitaciones_a_la_red
+    - node.type.listado_asistentes_talleres_habi
+    - node.type.listado_grupos_talleres_fortalec
+    - node.type.listados_de_asistencia_emprended
+    - node.type.material_pedagogico
+    - node.type.metas
+    - node.type.participantes_ficha_inscripci_n
+    - node.type.perfil_mentores
+  module:
+    - field_permissions
+    - node
+id: coordinador_regional
+label: 'Coordinador Regional'
+weight: 4
+is_admin: false
+permissions:
+  - 'create _gc_formatos_inscripci_n content'
+  - 'create actas_reunion_red content'
+  - 'create actas_selecci_n_comit_ content'
+  - 'create actas_seleccion_comit_fortalecim content'
+  - 'create biblioteca_abierta content'
+  - 'create canvas_capitalistas_de_riesgo content'
+  - 'create canvas_construir_el_primer_produ content'
+  - 'create canvas_dinamizadores_de_semilla content'
+  - 'create canvas_espacios_de_trabajo_ content'
+  - 'create canvas_establecer content'
+  - 'create canvas_expansi_n content'
+  - 'create canvas_formacion content'
+  - 'create canvas_formalizar content'
+  - 'create canvas_gobierno content'
+  - 'create canvas_infraestructura content'
+  - 'create canvas_medios content'
+  - 'create canvas_medios_principales content'
+  - 'create canvas_mejores_practicas content'
+  - 'create canvas_ngeles content'
+  - 'create canvas_persuadir_y_demostrar content'
+  - 'create canvas_practica_y_retroalimentac content'
+  - 'create canvas_prepare_la_semilla content'
+  - 'create canvas_red_de_inversionistas content'
+  - 'create canvas_talento content'
+  - 'create emprendedores_off_line content'
+  - 'create evangelistas content'
+  - 'create eventos_inspiradores content'
+  - 'create field_informe_final_aprobado'
+  - 'create field_informe_pre_aprobado'
+  - 'create formatos_inscripci_n_emprendimie content'
+  - 'create gestion_componentes_mapeo content'
+  - 'create hv_asesores content'
+  - 'create informe_semestral content'
+  - 'create invitaciones_a_la_red content'
+  - 'create listados_de_asistencia_emprended content'
+  - 'create material_pedagogico content'
+  - 'create metas content'
+  - 'create participantes_ficha_inscripci_n content'
+  - 'create perfil_mentores content'
+  - 'delete any emprendedores_off_line content'
+  - 'delete any material_pedagogico content'
+  - 'delete own _gc_formatos_inscripci_n content'
+  - 'delete own actas_reunion_red content'
+  - 'delete own actas_selecci_n_comit_ content'
+  - 'delete own actas_seleccion_comit_fortalecim content'
+  - 'delete own biblioteca_abierta content'
+  - 'delete own canvas_capitalistas_de_riesgo content'
+  - 'delete own canvas_construir_el_primer_produ content'
+  - 'delete own canvas_dinamizadores_de_semilla content'
+  - 'delete own canvas_espacios_de_trabajo_ content'
+  - 'delete own canvas_establecer content'
+  - 'delete own canvas_expansi_n content'
+  - 'delete own canvas_formacion content'
+  - 'delete own canvas_formalizar content'
+  - 'delete own canvas_gobierno content'
+  - 'delete own canvas_infraestructura content'
+  - 'delete own canvas_medios content'
+  - 'delete own canvas_medios_principales content'
+  - 'delete own canvas_mejores_practicas content'
+  - 'delete own canvas_ngeles content'
+  - 'delete own canvas_persuadir_y_demostrar content'
+  - 'delete own canvas_practica_y_retroalimentac content'
+  - 'delete own canvas_prepare_la_semilla content'
+  - 'delete own canvas_red_de_inversionistas content'
+  - 'delete own canvas_talento content'
+  - 'delete own emprendedores_off_line content'
+  - 'delete own evangelistas content'
+  - 'delete own eventos_inspiradores content'
+  - 'delete own formatos_inscripci_n_emprendimie content'
+  - 'delete own gestion_componentes_mapeo content'
+  - 'delete own hv_asesores content'
+  - 'delete own invitaciones_a_la_red content'
+  - 'delete own listados_de_asistencia_emprended content'
+  - 'delete own material_pedagogico content'
+  - 'delete own metas content'
+  - 'delete own participantes_ficha_inscripci_n content'
+  - 'delete own perfil_mentores content'
+  - 'edit any asesor_gestion_grupos content'
+  - 'edit any biblioteca_abierta content'
+  - 'edit any c2_fortalecer_inscritos content'
+  - 'edit any emprendedores_off_line content'
+  - 'edit any evaluaciones_presenciales_al_ase content'
+  - 'edit any informe_intermedio_del_asesor content'
+  - 'edit any inscripci_n_fase_empoderar content'
+  - 'edit any listado_asistentes_talleres_habi content'
+  - 'edit any listado_grupos_talleres_fortalec content'
+  - 'edit any material_pedagogico content'
+  - 'edit field_ano_fortalecer'
+  - 'edit field_asesor_fase_empoderar'
+  - 'edit field_asesor_fase_fortalecer'
+  - 'edit field_asesor_fortalecer'
+  - 'edit field_grupo'
+  - 'edit field_grupo_fortalecer'
+  - 'edit field_informe_final_aprobado'
+  - 'edit field_informe_pre_aprobado'
+  - 'edit field_mentor_asignado'
+  - 'edit own _gc_formatos_inscripci_n content'
+  - 'edit own actas_reunion_red content'
+  - 'edit own actas_selecci_n_comit_ content'
+  - 'edit own actas_seleccion_comit_fortalecim content'
+  - 'edit own biblioteca_abierta content'
+  - 'edit own canvas_capitalistas_de_riesgo content'
+  - 'edit own canvas_construir_el_primer_produ content'
+  - 'edit own canvas_dinamizadores_de_semilla content'
+  - 'edit own canvas_espacios_de_trabajo_ content'
+  - 'edit own canvas_establecer content'
+  - 'edit own canvas_expansi_n content'
+  - 'edit own canvas_formacion content'
+  - 'edit own canvas_formalizar content'
+  - 'edit own canvas_gobierno content'
+  - 'edit own canvas_infraestructura content'
+  - 'edit own canvas_medios content'
+  - 'edit own canvas_medios_principales content'
+  - 'edit own canvas_mejores_practicas content'
+  - 'edit own canvas_ngeles content'
+  - 'edit own canvas_persuadir_y_demostrar content'
+  - 'edit own canvas_practica_y_retroalimentac content'
+  - 'edit own canvas_prepare_la_semilla content'
+  - 'edit own canvas_red_de_inversionistas content'
+  - 'edit own canvas_talento content'
+  - 'edit own emprendedores_off_line content'
+  - 'edit own evangelistas content'
+  - 'edit own eventos_inspiradores content'
+  - 'edit own field_informe_final_aprobado'
+  - 'edit own field_informe_pre_aprobado'
+  - 'edit own formatos_inscripci_n_emprendimie content'
+  - 'edit own gestion_componentes_mapeo content'
+  - 'edit own hv_asesores content'
+  - 'edit own informe_semestral content'
+  - 'edit own invitaciones_a_la_red content'
+  - 'edit own listados_de_asistencia_emprended content'
+  - 'edit own material_pedagogico content'
+  - 'edit own metas content'
+  - 'edit own participantes_ficha_inscripci_n content'
+  - 'edit own perfil_mentores content'
+  - 'view field_acepto_el_reto'
+  - 'view field_fase_pre_app'
+  - 'view field_manifiesto_que_deseo_parti'
+  - 'view field_yo'
+  - 'view own field_acepto_el_reto'
+  - 'view own field_fase_pre_app'
+  - 'view own field_manifiesto_que_deseo_parti'
+  - 'view own field_yo'

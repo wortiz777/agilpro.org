@@ -1,0 +1,30 @@
+uuid: 9632cf89-b2f5-4516-8791-423d757efa38
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_landing_content
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+    - node.type.oferta
+  module:
+    - text
+id: node.oferta.field_landing_content
+field_name: field_landing_content
+entity_type: node
+bundle: oferta
+label: 'Contenido Landing Page'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+    - plain_text
+field_type: text_long

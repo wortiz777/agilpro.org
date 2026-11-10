@@ -1,0 +1,23 @@
+uuid: 62f7b0a0-7e64-4e42-a3a1-3a9e718c1a2b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cupos_totales
+    - node.type.oferta
+id: node.oferta.field_cupos_totales
+field_name: field_cupos_totales
+entity_type: node
+bundle: oferta
+label: 'Cupos Totales'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

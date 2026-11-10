@@ -1,0 +1,18 @@
+uuid: bae2e6fa-f051-4f8b-93b3-f9d015d33c30
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Canvas - Medios Principales'
+type: canvas_medios_principales
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

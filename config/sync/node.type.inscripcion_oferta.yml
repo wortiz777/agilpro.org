@@ -1,0 +1,11 @@
+uuid: 7d240186-434b-4453-961d-6562b22f5f89
+langcode: es
+status: true
+dependencies: {  }
+name: 'Inscripción a Oferta'
+type: inscripcion_oferta
+description: 'Postulaciones de empresas/colaboradores a programas y evaluación de cupos.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

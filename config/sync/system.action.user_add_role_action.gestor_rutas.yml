@@ -1,0 +1,14 @@
+uuid: d9cd2363-4880-4920-9595-87b120a516d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.gestor_rutas
+  module:
+    - user
+id: user_add_role_action.gestor_rutas
+label: 'Añade el rol Gestor de Rutas al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: gestor_rutas

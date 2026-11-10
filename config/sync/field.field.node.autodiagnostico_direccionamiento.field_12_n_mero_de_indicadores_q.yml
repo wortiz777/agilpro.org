@@ -1,0 +1,23 @@
+uuid: c6fb47f1-d613-41b6-9696-a8bfbbde1887
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_12_n_mero_de_indicadores_q
+    - node.type.autodiagnostico_direccionamiento
+id: node.autodiagnostico_direccionamiento.field_12_n_mero_de_indicadores_q
+field_name: field_12_n_mero_de_indicadores_q
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '12. Número de indicadores que mide la gestión de la empresa.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

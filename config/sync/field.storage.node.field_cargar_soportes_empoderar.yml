@@ -1,0 +1,27 @@
+uuid: d2137ea5-0d3b-4af4-ac1c-d48a0127ffc2
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_cargar_soportes_empoderar
+field_name: field_cargar_soportes_empoderar
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 10
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

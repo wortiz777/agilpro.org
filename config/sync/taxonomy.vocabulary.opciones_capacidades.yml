@@ -1,0 +1,9 @@
+uuid: 5c03fd78-b33d-4fea-ac89-eafd7490234f
+langcode: es
+status: true
+dependencies: {  }
+name: 'Opciones Respuesta Autodiagnóstico Capacidades'
+vid: opciones_capacidades
+description: null
+weight: 0
+new_revision: false

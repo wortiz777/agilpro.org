@@ -1,0 +1,21 @@
+uuid: 1566693f-5616-4ea5-8ebe-f6ec4a9c2c06
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_7cumplimiento
+field_name: field_7cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '7. Registro de Marcas y Patentes'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,30 @@
+uuid: d4f5a5c1-dd2b-47c5-85d1-04db6340eacc
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_estado_emprendimient
+field_name: field_estado_emprendimient
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Empresa Formalizada (Cuenta con NIT)'
+    -
+      value: '2'
+      label: 'Emprendimiento en Consolidación (Aun no tiene NIT)'
+    -
+      value: '3'
+      label: 'Nuevo Emprendimiento (Idea de Negocio)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

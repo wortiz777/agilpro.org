@@ -1,0 +1,40 @@
+uuid: 8d8adfd5-0eae-42fe-b3af-2008b5e60415
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.eventos_inspiradores.field_descripcion_formacion_e
+    - field.field.node.eventos_inspiradores.field_ingresar_nuevo_evento_insp
+    - node.type.eventos_inspiradores
+  module:
+    - user
+id: node.eventos_inspiradores.default
+targetEntityType: node
+bundle: eventos_inspiradores
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ingresar_nuevo_evento_insp:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

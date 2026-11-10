@@ -1,0 +1,20 @@
+uuid: 70347b77-413e-4179-9dc1-89de12e11823
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_duracion_horas
+field_name: field_duracion_horas
+entity_type: node
+type: decimal
+settings:
+  precision: 4
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,251 @@
+uuid: 7f231da8-bdae-4017-a21f-dbdada36216a
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_autodiagnostico_administracion
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Administración, Normatividad y Talento Humano)'
+source:
+  plugin: d7_node_complete
+  node_type: autodiagnostico_administracion
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_autodiagnostico_administracion/0/status:
+    -
+      plugin: get
+      source: comment
+  field_1_admin:
+    -
+      plugin: sub_process
+      source: field_1_admin
+      process:
+        target_id: tid
+  field_2admin:
+    -
+      plugin: sub_process
+      source: field_2admin
+      process:
+        target_id: tid
+  field_3admin:
+    -
+      plugin: sub_process
+      source: field_3admin
+      process:
+        target_id: tid
+  field_4admin:
+    -
+      plugin: sub_process
+      source: field_4admin
+      process:
+        target_id: tid
+  field_5admin:
+    -
+      plugin: sub_process
+      source: field_5admin
+      process:
+        target_id: tid
+  field_6admin:
+    -
+      plugin: sub_process
+      source: field_6admin
+      process:
+        target_id: tid
+  field_7admin:
+    -
+      plugin: sub_process
+      source: field_7admin
+      process:
+        target_id: tid
+  field_8admin:
+    -
+      plugin: sub_process
+      source: field_8admin
+      process:
+        target_id: tid
+  field_9admin:
+    -
+      plugin: sub_process
+      source: field_9admin
+      process:
+        target_id: tid
+  field_10admin:
+    -
+      plugin: sub_process
+      source: field_10admin
+      process:
+        target_id: tid
+  field_1norma:
+    -
+      plugin: get
+      source: field_1norma
+  field_2norma:
+    -
+      plugin: get
+      source: field_2norma
+  field_3norma:
+    -
+      plugin: get
+      source: field_3norma
+  field_4norma:
+    -
+      plugin: get
+      source: field_4norma
+  field_5norma:
+    -
+      plugin: get
+      source: field_5norma
+  field_6norma:
+    -
+      plugin: get
+      source: field_6norma
+  field_1formaliza:
+    -
+      plugin: get
+      source: field_1formaliza
+  field_2formaliza:
+    -
+      plugin: get
+      source: field_2formaliza
+  field_3formaliza:
+    -
+      plugin: get
+      source: field_3formaliza
+  field_4formaliza:
+    -
+      plugin: get
+      source: field_4formaliza
+  field_5formaliza:
+    -
+      plugin: get
+      source: field_5formaliza
+  field_1cumplimiento:
+    -
+      plugin: get
+      source: field_1cumplimiento
+  field_2cumplimiento:
+    -
+      plugin: get
+      source: field_2cumplimiento
+  field_3cumplimiento:
+    -
+      plugin: get
+      source: field_3cumplimiento
+  field_4cumplimiento:
+    -
+      plugin: get
+      source: field_4cumplimiento
+  field_5cumplimiento:
+    -
+      plugin: get
+      source: field_5cumplimiento
+  field_6cumplimiento:
+    -
+      plugin: get
+      source: field_6cumplimiento
+  field_7cumplimiento:
+    -
+      plugin: get
+      source: field_7cumplimiento
+  field_8cumplimiento:
+    -
+      plugin: get
+      source: field_8cumplimiento
+  field_9cumplimiento:
+    -
+      plugin: get
+      source: field_9cumplimiento
+  field_10cumplimiento:
+    -
+      plugin: get
+      source: field_10cumplimiento
+  field_11cumplimiento:
+    -
+      plugin: get
+      source: field_11cumplimiento
+  field_12cumplimiento:
+    -
+      plugin: get
+      source: field_12cumplimiento
+  field_13cumplimiento:
+    -
+      plugin: get
+      source: field_13cumplimiento
+  field_cual14cumplimiento:
+    -
+      plugin: get
+      source: field_cual14cumplimiento
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: autodiagnostico_administracion
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

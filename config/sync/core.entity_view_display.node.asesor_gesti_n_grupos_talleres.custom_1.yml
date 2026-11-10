@@ -1,0 +1,51 @@
+uuid: 4b6facd8-dc9d-4bca-8c77-3a1bedc23e9d
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.custom_1
+    - field.field.node.asesor_gesti_n_grupos_talleres.field_fecha_tall
+    - field.field.node.asesor_gesti_n_grupos_talleres.field_listado_asist
+    - field.field.node.asesor_gesti_n_grupos_talleres.field_registro_fotografico
+    - node.type.asesor_gesti_n_grupos_talleres
+  module:
+    - datetime
+    - file
+    - user
+id: node.asesor_gesti_n_grupos_talleres.custom_1
+targetEntityType: node
+bundle: asesor_gesti_n_grupos_talleres
+mode: custom_1
+content:
+  field_fecha_tall:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_listado_asist:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_registro_fotografico:
+    type: file_default
+    label: inline
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

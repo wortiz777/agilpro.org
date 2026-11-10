@@ -1,0 +1,31 @@
+uuid: 39256ae1-5a11-465d-9805-c5232835e811
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ruta_acceso_a_mercados.body
+    - node.type.ruta_acceso_a_mercados
+  module:
+    - text
+    - user
+id: node.ruta_acceso_a_mercados.teaser
+targetEntityType: node
+bundle: ruta_acceso_a_mercados
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

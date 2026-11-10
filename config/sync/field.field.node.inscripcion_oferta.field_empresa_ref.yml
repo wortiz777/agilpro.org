@@ -1,0 +1,21 @@
+uuid: 89eb202c-14e4-47b2-be76-63b7c7775bd1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_empresa_ref
+    - node.type.inscripcion_oferta
+id: node.inscripcion_oferta.field_empresa_ref
+field_name: field_empresa_ref
+entity_type: node
+bundle: inscripcion_oferta
+label: 'Empresa Beneficiaria'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

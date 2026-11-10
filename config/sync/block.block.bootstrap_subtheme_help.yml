@@ -1,0 +1,22 @@
+uuid: 1a4f364c-327c-45b4-99eb-4647018e9eb4
+langcode: es
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: BeI38GmgZihx5i4tQKme8WMGSqBgTYt5a5f12geP_EA
+id: bootstrap_subtheme_help
+theme: bootstrap_subtheme
+region: highlighted
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Ayuda
+  label_display: '0'
+  provider: help
+visibility: {  }

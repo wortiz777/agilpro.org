@@ -1,0 +1,24 @@
+uuid: 00108bb0-db46-4eef-89d9-5129a729a990
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_amplitud_perceptual
+field_name: field_amplitud_perceptual
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

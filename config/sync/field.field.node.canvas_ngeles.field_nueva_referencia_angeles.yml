@@ -1,0 +1,19 @@
+uuid: dbea94fd-6e2e-4f58-8999-0b6953b299d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_angeles
+    - node.type.canvas_ngeles
+id: node.canvas_ngeles.field_nueva_referencia_angeles
+field_name: field_nueva_referencia_angeles
+entity_type: node
+bundle: canvas_ngeles
+label: 'Ingresar Nueva Referencia Ángeles'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

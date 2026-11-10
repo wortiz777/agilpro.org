@@ -1,0 +1,14 @@
+uuid: 7686238f-9d87-4b0d-afff-8d789cf4fdac
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.mentor_consultor
+  module:
+    - user
+id: user_add_role_action.mentor_consultor
+label: 'Añade el rol Mentor / Consultor al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: mentor_consultor

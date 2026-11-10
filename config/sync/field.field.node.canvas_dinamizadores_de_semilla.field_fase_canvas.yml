@@ -1,0 +1,21 @@
+uuid: 27a4fbec-6ee9-422d-865e-032a4ea5e62a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_dinamizadores_de_semilla
+id: node.canvas_dinamizadores_de_semilla.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_dinamizadores_de_semilla
+label: 'Fase Canvas'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '3. Lanzar'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,12 @@
+uuid: b5ebc4a1-176b-4215-a65d-b0d9bea15fdb
+langcode: es
+status: true
+dependencies: {  }
+id: migrate_drupal_7
+label: 'Import from Drupal 7'
+description: 'Migrations originally generated from drush migrate-upgrade --configure-only'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: migrate

@@ -1,0 +1,24 @@
+uuid: 5b4b7b5c-752d-4573-8a3d-8999d59642ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_linea_padre
+    - taxonomy.vocabulary.lineas_intervencion
+    - taxonomy.vocabulary.rutas_atencion
+id: taxonomy_term.rutas_atencion.field_linea_padre
+field_name: field_linea_padre
+entity_type: taxonomy_term
+bundle: rutas_atencion
+label: 'Línea Padre'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      lineas_intervencion: lineas_intervencion
+field_type: entity_reference

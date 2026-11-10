@@ -1,0 +1,18 @@
+uuid: 7ff93507-9ceb-4c67-bcb6-34f4883b7384
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Ruta | Acceder > Acceso a Financiación'
+type: ruta_acceder_acceso_a_financiaci
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

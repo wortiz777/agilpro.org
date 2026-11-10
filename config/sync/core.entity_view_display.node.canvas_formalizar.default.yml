@@ -1,0 +1,50 @@
+uuid: ee815c0a-dcd5-491d-bc4a-ce0f51e2cff5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_formalizar.field_descripcion_formacion_e
+    - field.field.node.canvas_formalizar.field_fase_canvas
+    - field.field.node.canvas_formalizar.field_ingresar_nueva_referencia_
+    - node.type.canvas_formalizar
+  module:
+    - user
+id: node.canvas_formalizar.default
+targetEntityType: node
+bundle: canvas_formalizar
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fase_canvas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ingresar_nueva_referencia_:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

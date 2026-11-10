@@ -1,0 +1,20 @@
+uuid: f5f5845c-294f-4d39-89e2-ea4ab3f90a29
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_e_mail_contacto
+  module:
+    - user
+id: user.user.field_e_mail_contacto
+field_name: field_e_mail_contacto
+entity_type: user
+bundle: user
+label: 'E-mail de Contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

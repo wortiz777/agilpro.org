@@ -1,0 +1,213 @@
+uuid: d4cfeba0-6a75-4049-817d-44b425dd25c6
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - node.type.material_pedagogico
+  module:
+    - node
+    - user
+id: material_pedag_gico
+label: 'Material Pedagógico'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: 'Material Pedagógico'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          plugin_id: field
+          label: ''
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            trim: false
+            html: false
+          hide_empty: false
+          empty_zero: false
+          settings:
+            link_to_entity: 1
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 0
+      exposed_form:
+        type: basic
+      access:
+        type: perm
+        options:
+          perm: 'access content'
+        perm: 'access content'
+      cache:
+        type: none
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          plugin_id: date
+          order: DESC
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          relationship: none
+          group_type: group
+          plugin_id: bundle
+          operator: in
+          value:
+            material_pedagogico: material_pedagogico
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+            operator_label: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          ui_name: ''
+      style:
+        type: default
+        options:
+          uses_fields: false
+          alignment: horizontal
+          columns_horizontal: '-1'
+          columns_vertical: '4'
+          clear_columns: 1
+          columns_xs: '12'
+          columns_sm: '6'
+          columns_md: '4'
+          columns_lg: '4'
+          column_class: ''
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: full
+          links: 0
+          comments: 0
+      query:
+        type: views_query
+        options: {  }
+      use_more: true
+      use_more_always: false
+      use_more_text: Más
+      header:
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          label: ''
+          empty: false
+          ui_name: ''
+          content: 'Mostrando @start - @end de @total'
+      display_extenders: {  }
+      style_plugin: views_bootstrap_thumbnail_plugin_style
+      style_options:
+        uses_fields: 0
+        alignment: horizontal
+        columns_horizontal: '-1'
+        columns_vertical: '4'
+        clear_columns: 1
+        columns_xs: '12'
+        columns_sm: '6'
+        columns_md: '4'
+        columns_lg: '4'
+        column_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  block_1:
+    id: block_1
+    display_title: Bloque
+    display_plugin: block
+    position: 3
+    display_options:
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+      block_description: 'Material Pedagógico'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }
+  page:
+    id: page
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+      path: material-pedagogico
+      open_new_window: 0
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.permissions
+      tags: {  }

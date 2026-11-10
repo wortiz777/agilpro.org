@@ -1,0 +1,37 @@
+uuid: 74842a6c-c142-411f-a23f-1d9d140af74e
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000053'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_53
+theme: subtema
+region: content
+weight: 9
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000053'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000053'
+  label: 'Dashboard | Coordinador Nacional'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /test
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      coordinador_nacional: coordinador_nacional

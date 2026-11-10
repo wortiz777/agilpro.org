@@ -1,0 +1,181 @@
+uuid: bae516cf-96ac-4319-b9af-187206ef238d
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_inscripci_n_fase_empoderar
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Inscripciones Emprendedores)'
+source:
+  plugin: d7_node_complete
+  node_type: inscripci_n_fase_empoderar
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_inscripci_n_fase_empoderar/0/status:
+    -
+      plugin: get
+      source: comment
+  field_yo:
+    -
+      plugin: get
+      source: field_yo
+  field_manifiesto_que_deseo_parti:
+    -
+      plugin: get
+      source: field_manifiesto_que_deseo_parti
+  field_acepto_el_reto:
+    -
+      plugin: get
+      source: field_acepto_el_reto
+  field_asesor_fase_empoderar:
+    -
+      plugin: sub_process
+      source: field_asesor_fase_empoderar
+      process:
+        target_id: tid
+  field_grupo:
+    -
+      plugin: get
+      source: field_grupo
+  field_cargar_ruta:
+    -
+      plugin: get
+      source: field_cargar_ruta
+  field_ruta_administraci_n:
+    -
+      plugin: get
+      source: field_ruta_administraci_n
+  field_ruta_mercadeo:
+    -
+      plugin: get
+      source: field_ruta_mercadeo
+  field_ruta_t_c_y_prod_:
+    -
+      plugin: get
+      source: field_ruta_t_c_y_prod_
+  field_ruta_financiero:
+    -
+      plugin: get
+      source: field_ruta_financiero
+  field_ruta_desarrollo_competenci:
+    -
+      plugin: get
+      source: field_ruta_desarrollo_competenci
+  field_ruta_acceso_a_mercados:
+    -
+      plugin: get
+      source: field_ruta_acceso_a_mercados
+  field_asesor_fortalecer:
+    -
+      plugin: sub_process
+      source: field_asesor_fortalecer
+      process:
+        target_id: tid
+  field_grupo_talleres_fortalecer:
+    -
+      plugin: get
+      source: field_grupo_talleres_fortalecer
+  field_mentor_asignado:
+    -
+      plugin: sub_process
+      source: field_mentor_asignado
+      process:
+        target_id: tid
+  field_cargar_soportes_empoderar:
+    -
+      plugin: sub_process
+      source: field_cargar_soportes_empoderar
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_cargar_soportes_fortalecer:
+    -
+      plugin: sub_process
+      source: field_cargar_soportes_fortalecer
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_soportes_acceder:
+    -
+      plugin: sub_process
+      source: field_soportes_acceder
+      process:
+        target_id: fid
+        display: display
+        description: description
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: inscripci_n_fase_empoderar
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

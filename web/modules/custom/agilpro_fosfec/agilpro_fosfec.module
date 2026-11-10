@@ -1,0 +1,752 @@
+<?php
+
+/**
+ * @file
+ * Funciones de hooks y lógica de negocio para AgilPro FOSFEC.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\Core\Field\FieldDefinitionInterface;
+use Drupal\Core\Field\FieldItemListInterface;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\Core\Ajax\ReplaceCommand;
+use Drupal\Core\Ajax\HtmlCommand;
+
+/**
+ * Implements hook_entity_field_access().
+ *
+ * Controla permisos de edición a nivel de campo:
+ * 1. El rol 'evaluador_diagnosticador' tiene acceso exclusivo de edición en inscripcion_oferta
+ *    a: field_estado_postulacion, field_evaluador_asignado, field_ruta_asignada,
+ *       field_mentor_asignado y field_compromiso_pdf.
+ * 2. Congela la edición de datos económicos y operativos cuando la transacción
+ *    se encuentra en estado 'auditada_fosfec'.
+ */
+function agilpro_fosfec_entity_field_access($operation, FieldDefinitionInterface $field_definition, AccountInterface $account, ?FieldItemListInterface $items = NULL) {
+  if ($operation === 'edit') {
+    $roles = $account->getRoles();
+
+    // Regla 1: Restricciones de edición para evaluador_diagnosticador en inscripcion_oferta
+    if (in_array('evaluador_diagnosticador', $roles, TRUE) && !in_array('administrator', $roles, TRUE) && !in_array('super_admin', $roles, TRUE)) {
+      $entity = $items ? $items->getEntity() : NULL;
+      if ($entity && $entity->getEntityTypeId() === 'node' && $entity->bundle() === 'inscripcion_oferta') {
+        $allowed_evaluador_fields = [
+          'field_estado_postulacion',
+          'field_evaluador_asignado',
+          'field_ruta_asignada',
+          'field_mentor_asignado',
+          'field_compromiso_pdf',
+        ];
+
+        // Si es un campo específico del bundle y no está en los permitidos, denegar edición
+        $fieldName = $field_definition->getName();
+        if (str_starts_with($fieldName, 'field_') && !in_array($fieldName, $allowed_evaluador_fields, TRUE)) {
+          $forbidden = AccessResult::forbidden('El evaluador no tiene permisos para modificar este campo de la postulación.');
+          return $entity ? $forbidden->addCacheableDependency($entity) : $forbidden;
+        }
+      }
+    }
+
+    // Regla 2: Congelación de campos cuando la transacción está en 'auditada_fosfec' o 'aceptada_digitalmente'
+    if ($items) {
+      $entity = $items->getEntity();
+      if ($entity && $entity->getEntityTypeId() === 'node' && $entity->bundle() === 'fosfec_transaction') {
+        $state = $entity->hasField('field_state') ? (string) $entity->get('field_state')->value : '';
+
+        // Campos protegidos de edición
+        $protected_fields = [
+          'field_empresa_beneficiaria',
+          'field_colaborador_asistente',
+          'field_mentor_consultor',
+          'field_aliado_proveedor',
+          'field_eje_estrategico',
+          'field_linea_intervencion',
+          'field_ruta_atencion',
+          'field_tipo_servicio',
+          'field_fecha_hora_sesion',
+          'field_duracion_horas',
+          'field_modalidad',
+          'field_costo_referencial',
+          'field_evidencia_documento',
+          'field_state',
+        ];
+
+        // 2.1 Para rol mentor_consultor: Bloqueo total si está aceptada_digitalmente o auditada_fosfec
+        if (in_array('mentor_consultor', $roles, TRUE) && !in_array('administrator', $roles, TRUE)) {
+          if (in_array($state, ['aceptada_digitalmente', 'auditada_fosfec'], TRUE)) {
+            if (in_array($field_definition->getName(), $protected_fields, TRUE)) {
+              return AccessResult::forbidden('La sesión ya fue aceptada por el empresario o auditada por FOSFEC y no permite modificaciones.')->addCacheableDependency($entity);
+            }
+          }
+        }
+
+        // 2.2 Si está en 'auditada_fosfec', congelada para todos excepto super_admin o auditor_fosfec
+        if ($state === 'auditada_fosfec') {
+          if (in_array($field_definition->getName(), $protected_fields, TRUE)) {
+            // Solo super_admin o auditor_fosfec pueden modificar si está auditada
+            if (!in_array('administrator', $roles, TRUE) && !in_array('auditor_fosfec', $roles, TRUE)) {
+              return AccessResult::forbidden('Registro transaccional congelado por auditoría FOSFEC.')->addCacheableDependency($entity);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_node_access().
+ *
+ * Restricciones de seguridad operativa:
+ * 1. El Evaluador / Diagnosticador no puede modificar datos corporativos de la Mipyme (node:empresa).
+ * 2. Bloquea la edición o eliminación de transacciones congeladas en 'auditada_fosfec' o 'aceptada_digitalmente'.
+ */
+function agilpro_fosfec_node_access(NodeInterface $node, $op, AccountInterface $account) {
+  $roles = $account->getRoles();
+
+  // Si es administrador o super_admin, no aplicar restricciones adicionales
+  if (in_array('administrator', $roles, TRUE) || in_array('super_admin', $roles, TRUE)) {
+    return AccessResult::neutral();
+  }
+
+  // 1. El evaluador_diagnosticador no puede editar ni borrar nodos empresa
+  if ($node->bundle() === 'empresa' && in_array($op, ['update', 'delete'], TRUE)) {
+    if (in_array('evaluador_diagnosticador', $roles, TRUE)) {
+      return AccessResult::forbidden('El Evaluador no tiene permisos para modificar los datos corporativos de la empresa.')->addCacheableDependency($node);
+    }
+  }
+
+  // 2. Transacciones FOSFEC
+  if ($node->bundle() === 'fosfec_transaction' && in_array($op, ['update', 'delete'], TRUE)) {
+    $state = $node->hasField('field_state') ? (string) $node->get('field_state')->value : '';
+
+    // 2.1 Para mentor_consultor: Bloqueo si está en aceptada_digitalmente o auditada_fosfec
+    if (in_array('mentor_consultor', $roles, TRUE) && in_array($state, ['aceptada_digitalmente', 'auditada_fosfec'], TRUE)) {
+      return AccessResult::forbidden('La sesión se encuentra aceptada por el empresario o auditada por FOSFEC y no puede modificarse ni eliminarse.')->addCacheableDependency($node);
+    }
+
+    // 2.2 Bloqueo general si está auditada_fosfec
+    if ($state === 'auditada_fosfec' && !in_array('auditor_fosfec', $roles, TRUE)) {
+      return AccessResult::forbidden('La transacción se encuentra auditada por FOSFEC y no puede ser modificada ni eliminada.')->addCacheableDependency($node);
+    }
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter() for node_form.
+ *
+ * Añade actualización dinámica AJAX para Eje -> Línea -> Ruta, autotítulo
+ * y auto-fill desde parámetro ?inscripcion={node.id} al registrar sesiones.
+ */
+function agilpro_fosfec_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $node = $form_state->getFormObject()->getEntity();
+  if ($node->bundle() !== 'fosfec_transaction') {
+    return;
+  }
+
+  // 1. Auto-fill desde parámetro de URL ?inscripcion=ID al crear una sesión
+  $request = \Drupal::request();
+  $inscripcion_param = $request->query->get('inscripcion');
+
+  if ($node->isNew() && !empty($inscripcion_param)) {
+    /** @var \Drupal\node\NodeInterface|null $inscripcion */
+    $inscripcion = \Drupal::entityTypeManager()->getStorage('node')->load((int) $inscripcion_param);
+    if ($inscripcion && $inscripcion->bundle() === 'inscripcion_oferta') {
+      // 1.1 Asociar field_inscripcion_ref
+      if (isset($form['field_inscripcion_ref']['widget'][0]['target_id'])) {
+        $form['field_inscripcion_ref']['widget'][0]['target_id']['#default_value'] = $inscripcion;
+        $form['field_inscripcion_ref']['#disabled'] = TRUE;
+      }
+
+      // 1.2 Precargar Empresa Beneficiaria
+      if ($inscripcion->hasField('field_empresa_ref') && !$inscripcion->get('field_empresa_ref')->isEmpty()) {
+        $empresa = $inscripcion->get('field_empresa_ref')->entity;
+        if ($empresa && isset($form['field_empresa_beneficiaria']['widget'][0]['target_id'])) {
+          $form['field_empresa_beneficiaria']['widget'][0]['target_id']['#default_value'] = $empresa;
+          $form['field_empresa_beneficiaria']['#disabled'] = TRUE;
+        }
+      }
+
+      // 1.3 Precargar Oferta Vinculada
+      if ($inscripcion->hasField('field_oferta_ref') && !$inscripcion->get('field_oferta_ref')->isEmpty()) {
+        $oferta = $inscripcion->get('field_oferta_ref')->entity;
+        if ($oferta && isset($form['field_oferta_ref']['widget'][0]['target_id'])) {
+          $form['field_oferta_ref']['widget'][0]['target_id']['#default_value'] = $oferta;
+          $form['field_oferta_ref']['#disabled'] = TRUE;
+        }
+      }
+
+      // 1.4 Precargar Colaborador Asistente
+      if ($inscripcion->hasField('field_colaborador_ref') && !$inscripcion->get('field_colaborador_ref')->isEmpty()) {
+        $colaborador = $inscripcion->get('field_colaborador_ref')->entity;
+        if ($colaborador && isset($form['field_colaborador_asistente']['widget'][0]['target_id'])) {
+          $form['field_colaborador_asistente']['widget'][0]['target_id']['#default_value'] = $colaborador;
+          $form['field_colaborador_asistente']['#disabled'] = TRUE;
+        }
+      }
+
+      // 1.5 Precargar Ruta de Atención
+      if ($inscripcion->hasField('field_ruta_asignada') && !$inscripcion->get('field_ruta_asignada')->isEmpty()) {
+        $ruta = $inscripcion->get('field_ruta_asignada')->entity;
+        if ($ruta && isset($form['field_ruta_atencion']['widget'][0]['target_id'])) {
+          $form['field_ruta_atencion']['widget'][0]['target_id']['#default_value'] = $ruta;
+          $form['field_ruta_atencion']['#disabled'] = TRUE;
+        }
+      }
+
+      // 1.6 Auto-asignar Mentor Consultor con el usuario en sesión
+      $current_user = \Drupal::currentUser();
+      if ($current_user->id() > 0 && isset($form['field_mentor_consultor']['widget'][0]['target_id'])) {
+        $user_entity = \Drupal::entityTypeManager()->getStorage('user')->load($current_user->id());
+        if ($user_entity) {
+          $form['field_mentor_consultor']['widget'][0]['target_id']['#default_value'] = $user_entity;
+          // Si el usuario es mentor_consultor, bloquear el selector
+          if ($user_entity->hasRole('mentor_consultor') && !$user_entity->hasRole('administrator')) {
+            $form['field_mentor_consultor']['#disabled'] = TRUE;
+          }
+        }
+      }
+    }
+  }
+
+  // Contenedor AJAX para Línea y Ruta
+  $form['field_linea_intervencion']['#prefix'] = '<div id="ajax-linea-intervencion-wrapper">';
+  $form['field_linea_intervencion']['#suffix'] = '</div>';
+
+  $form['field_ruta_atencion']['#prefix'] = '<div id="ajax-ruta-atencion-wrapper">';
+  $form['field_ruta_atencion']['#suffix'] = '</div>';
+
+  // AJAX en Eje Estratégico
+  $form['field_eje_estrategico']['widget']['#ajax'] = [
+    'callback' => 'agilpro_fosfec_ajax_update_lineas',
+    'wrapper' => 'ajax-linea-intervencion-wrapper',
+    'event' => 'change',
+  ];
+
+  // AJAX en Línea de Intervención
+  $form['field_linea_intervencion']['widget']['#ajax'] = [
+    'callback' => 'agilpro_fosfec_ajax_update_rutas',
+    'wrapper' => 'ajax-ruta-atencion-wrapper',
+    'event' => 'change',
+  ];
+
+  // Filtrar opciones de Línea según Eje seleccionado
+  $selected_eje = $form_state->getValue(['field_eje_estrategico', 0, 'target_id']) ?:
+    ($node->hasField('field_eje_estrategico') && !$node->get('field_eje_estrategico')->isEmpty() ? $node->get('field_eje_estrategico')->target_id : NULL);
+
+  if ($selected_eje) {
+    $lineas = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+      'vid' => 'lineas_intervencion',
+      'field_eje_padre' => $selected_eje,
+    ]);
+    $linea_options = ['_none' => t('- Seleccionar Línea -')];
+    foreach ($lineas as $l) {
+      $linea_options[$l->id()] = $l->label();
+    }
+    $form['field_linea_intervencion']['widget']['#options'] = $linea_options;
+  }
+
+  // Filtrar opciones de Ruta según Línea seleccionada
+  $selected_linea = $form_state->getValue(['field_linea_intervencion', 0, 'target_id']) ?:
+    ($node->hasField('field_linea_intervencion') && !$node->get('field_linea_intervencion')->isEmpty() ? $node->get('field_linea_intervencion')->target_id : NULL);
+
+  if ($selected_linea) {
+    $rutas = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadByProperties([
+      'vid' => 'rutas_atencion',
+      'field_linea_padre' => $selected_linea,
+    ]);
+    $ruta_options = ['_none' => t('- Seleccionar Ruta -')];
+    foreach ($rutas as $r) {
+      $ruta_options[$r->id()] = $r->label();
+    }
+    $form['field_ruta_atencion']['widget']['#options'] = $ruta_options;
+  }
+}
+
+/**
+ * Callback AJAX para actualizar Líneas según el Eje seleccionado.
+ */
+function agilpro_fosfec_ajax_update_lineas(array &$form, FormStateInterface $form_state) {
+  return $form['field_linea_intervencion'];
+}
+
+/**
+ * Callback AJAX para actualizar Rutas según la Línea seleccionada.
+ */
+function agilpro_fosfec_ajax_update_rutas(array &$form, FormStateInterface $form_state) {
+  return $form['field_ruta_atencion'];
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_presave() for node.
+ *
+ * Genera títulos automáticos, auto-asignación de evaluador, descuento
+ * automático de cupos al aprobar y auto-fill transaccional FOSFEC.
+ */
+function agilpro_fosfec_node_presave(Node $node) {
+  // 1. Lógica para inscripcion_oferta
+  if ($node->bundle() === 'inscripcion_oferta') {
+    // 1.1 Auto-asignar evaluador actual si está vacío
+    if ($node->hasField('field_evaluador_asignado') && $node->get('field_evaluador_asignado')->isEmpty()) {
+      $current_user_id = \Drupal::currentUser()->id();
+      if (!empty($current_user_id)) {
+        $node->set('field_evaluador_asignado', $current_user_id);
+      }
+    }
+
+    // 1.2 Verificar cambio de estado a 'aprobada' para descontar cupo en la oferta vinculada
+    if ($node->hasField('field_estado_postulacion') && $node->get('field_estado_postulacion')->value === 'aprobada') {
+      $original = isset($node->original) ? $node->original : NULL;
+      // Validar que previamente NO estuviera en estado 'aprobada' para evitar doble descuento
+      $was_approved = ($original && $original->hasField('field_estado_postulacion') && $original->get('field_estado_postulacion')->value === 'aprobada');
+      if (!$was_approved) {
+        if ($node->hasField('field_oferta_ref') && !$node->get('field_oferta_ref')->isEmpty()) {
+          $oferta = $node->get('field_oferta_ref')->entity;
+          if ($oferta && $oferta->hasField('field_cupos_disponibles')) {
+            $cupos_actuales = (int) $oferta->get('field_cupos_disponibles')->value;
+            if ($cupos_actuales > 0) {
+              $oferta->set('field_cupos_disponibles', $cupos_actuales - 1);
+              $oferta->save();
+            }
+          }
+        }
+      }
+    }
+
+    // 1.3 Título automático para inscripcion_oferta: INS - [Oferta] - [NIT Empresa]
+    $oferta_label = 'Oferta';
+    if ($node->hasField('field_oferta_ref') && !$node->get('field_oferta_ref')->isEmpty()) {
+      $oferta = $node->get('field_oferta_ref')->entity;
+      if ($oferta) {
+        $oferta_label = $oferta->label();
+      }
+    }
+    $nit = 'NIT';
+    if ($node->hasField('field_empresa_ref') && !$node->get('field_empresa_ref')->isEmpty()) {
+      $empresa = $node->get('field_empresa_ref')->entity;
+      if ($empresa) {
+        $nit = $empresa->hasField('field_nit') && !$empresa->get('field_nit')->isEmpty() ? $empresa->get('field_nit')->value : $empresa->label();
+      }
+    }
+    $node->setTitle('INS - ' . $oferta_label . ' - ' . $nit);
+  }
+
+  // 2. Auto-fill y Título automático para fosfec_transaction: FOSFEC - [NIT] - [Ruta] - [Fecha]
+  if ($node->bundle() === 'fosfec_transaction') {
+    // Si tiene vinculada una inscripción aprobada, ejecutar auto-fill si los campos están vacíos
+    if ($node->hasField('field_inscripcion_ref') && !$node->get('field_inscripcion_ref')->isEmpty()) {
+      /** @var \Drupal\node\NodeInterface $inscripcion */
+      $inscripcion = $node->get('field_inscripcion_ref')->entity;
+      if ($inscripcion) {
+        if ($node->hasField('field_empresa_beneficiaria') && $node->get('field_empresa_beneficiaria')->isEmpty() && $inscripcion->hasField('field_empresa_ref')) {
+          $node->set('field_empresa_beneficiaria', $inscripcion->get('field_empresa_ref')->target_id);
+        }
+        if ($node->hasField('field_colaborador_asistente') && $node->get('field_colaborador_asistente')->isEmpty() && $inscripcion->hasField('field_colaborador_ref')) {
+          $node->set('field_colaborador_asistente', $inscripcion->get('field_colaborador_ref')->target_id);
+        }
+        if ($node->hasField('field_mentor_consultor') && $node->get('field_mentor_consultor')->isEmpty() && $inscripcion->hasField('field_mentor_asignado')) {
+          $node->set('field_mentor_consultor', $inscripcion->get('field_mentor_asignado')->target_id);
+        }
+        if ($node->hasField('field_oferta_ref') && $node->get('field_oferta_ref')->isEmpty() && $inscripcion->hasField('field_oferta_ref')) {
+          $node->set('field_oferta_ref', $inscripcion->get('field_oferta_ref')->target_id);
+        }
+        if ($node->hasField('field_ruta_atencion') && $node->get('field_ruta_atencion')->isEmpty() && $inscripcion->hasField('field_ruta_asignada')) {
+          $node->set('field_ruta_atencion', $inscripcion->get('field_ruta_asignada')->target_id);
+        }
+
+        // Si la oferta tiene defaults de Eje y Línea
+        if ($inscripcion->hasField('field_oferta_ref') && !$inscripcion->get('field_oferta_ref')->isEmpty()) {
+          $oferta = $inscripcion->get('field_oferta_ref')->entity;
+          if ($oferta) {
+            if ($node->hasField('field_eje_estrategico') && $node->get('field_eje_estrategico')->isEmpty() && $oferta->hasField('field_eje_default') && !$oferta->get('field_eje_default')->isEmpty()) {
+              $node->set('field_eje_estrategico', $oferta->get('field_eje_default')->target_id);
+            }
+            if ($node->hasField('field_linea_intervencion') && $node->get('field_linea_intervencion')->isEmpty() && $oferta->hasField('field_linea_default') && !$oferta->get('field_linea_default')->isEmpty()) {
+              $node->set('field_linea_intervencion', $oferta->get('field_linea_default')->target_id);
+            }
+          }
+        }
+      }
+    }
+
+    $nit = 'SIN-NIT';
+    if ($node->hasField('field_empresa_beneficiaria') && !$node->get('field_empresa_beneficiaria')->isEmpty()) {
+      $empresa = $node->get('field_empresa_beneficiaria')->entity;
+      if ($empresa && $empresa->hasField('field_nit') && !$empresa->get('field_nit')->isEmpty()) {
+        $nit = $empresa->get('field_nit')->value;
+      }
+    }
+
+    $ruta_label = 'Intervención';
+    if ($node->hasField('field_ruta_atencion') && !$node->get('field_ruta_atencion')->isEmpty()) {
+      $ruta = $node->get('field_ruta_atencion')->entity;
+      if ($ruta) {
+        $ruta_label = $ruta->label();
+      }
+    }
+
+    $fecha = date('Y-m-d');
+    if ($node->hasField('field_fecha_hora_sesion') && !$node->get('field_fecha_hora_sesion')->isEmpty()) {
+      $fecha_raw = $node->get('field_fecha_hora_sesion')->value;
+      if ($fecha_raw) {
+        $fecha = substr($fecha_raw, 0, 10);
+      }
+    }
+
+    $node->setTitle('FOSFEC - ' . $nit . ' - ' . $ruta_label . ' - ' . $fecha);
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter() for user_register_form.
+ *
+ * Despliega el flujo de auto-registro con consulta AJAX por NIT.
+ */
+function agilpro_fosfec_form_user_register_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['b2b_lookup'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Identificación Empresarial (Mipyme Compensar)'),
+    '#weight' => -10,
+  ];
+
+  $form['b2b_lookup']['search_nit'] = [
+    '#type' => 'number',
+    '#title' => t('NIT de la Empresa'),
+    '#description' => t('Ingrese el NIT sin dígito de verificación ni signos de puntuación.'),
+    '#required' => FALSE,
+  ];
+
+  $form['b2b_lookup']['search_dv'] = [
+    '#type' => 'number',
+    '#title' => t('Dígito de Verificación (DV)'),
+    '#required' => FALSE,
+  ];
+
+  $form['b2b_lookup']['lookup_btn'] = [
+    '#type' => 'button',
+    '#name' => 'lookup_btn',
+    '#value' => t('Verificar NIT'),
+    '#limit_validation_errors' => [],
+    '#submit' => [],
+    '#ajax' => [
+      'callback' => 'agilpro_fosfec_ajax_nit_lookup',
+      'wrapper' => 'b2b-company-info-wrapper',
+    ],
+  ];
+
+  $form['b2b_lookup']['info_wrapper'] = [
+    '#type' => 'container',
+    '#attributes' => ['id' => 'b2b-company-info-wrapper'],
+  ];
+
+  // Contenedor dinámico de nueva empresa
+  $form['b2b_new_company'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Registro de Nueva Empresa'),
+    '#weight' => -9,
+    '#prefix' => '<div id="b2b-new-company-form-wrapper">',
+    '#suffix' => '</div>',
+    '#access' => FALSE,
+  ];
+
+  $form['b2b_new_company']['new_razon_social'] = [
+    '#type' => 'textfield',
+    '#title' => t('Razón Social'),
+  ];
+  $form['b2b_new_company']['new_direccion'] = [
+    '#type' => 'textfield',
+    '#title' => t('Dirección Comercial'),
+  ];
+  $form['b2b_new_company']['new_email_empresa'] = [
+    '#type' => 'email',
+    '#title' => t('E-mail Corporativo'),
+  ];
+
+  $form['#validate'][] = 'agilpro_fosfec_user_register_validate';
+  $form['actions']['submit']['#submit'][] = 'agilpro_fosfec_user_register_submit';
+}
+
+/**
+ * Callback AJAX para la verificación de NIT en el registro.
+ */
+function agilpro_fosfec_ajax_nit_lookup(array &$form, FormStateInterface $form_state) {
+  $nit = $form_state->getValue('search_nit');
+  $response = new AjaxResponse();
+
+  if (empty($nit)) {
+    $markup = '<div class="alert alert-warning">' . t('Por favor ingrese un NIT válido para consultar.') . '</div>';
+    $response->addCommand(new HtmlCommand('#b2b-company-info-wrapper', $markup));
+    return $response;
+  }
+
+  $companies = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+    'type' => 'empresa',
+    'field_nit' => $nit,
+  ]);
+
+  if (!empty($companies)) {
+    /** @var \Drupal\node\NodeInterface $company */
+    $company = reset($companies);
+    $markup = '<div class="alert alert-success">' .
+      '<strong>' . t('Empresa vinculada:') . '</strong> ' . htmlspecialchars($company->label(), ENT_QUOTES, 'UTF-8') . ' (NIT: ' . htmlspecialchars((string) $nit, ENT_QUOTES, 'UTF-8') . ')<br>' .
+      '<small>' . t('Te registrarás como Colaborador de esta empresa.') . '</small>' .
+      '</div>';
+    $form_state->set('b2b_empresa_id', $company->id());
+    $form_state->set('b2b_is_new_empresa', FALSE);
+  }
+  else {
+    $markup = '<div class="alert alert-info">' .
+      '<strong>' . t('Empresa no registrada:') . '</strong> ' . t('El NIT @nit no existe en el sistema. Al registrarte te asignarás como Administrador de la nueva Empresa.', ['@nit' => $nit]) .
+      '</div>';
+    $form_state->set('b2b_is_new_empresa', TRUE);
+  }
+
+  $response->addCommand(new HtmlCommand('#b2b-company-info-wrapper', $markup));
+  return $response;
+}
+
+/**
+ * Validación del auto-registro B2B.
+ */
+function agilpro_fosfec_user_register_validate(array &$form, FormStateInterface $form_state) {
+  // Validaciones personalizadas si son requeridas
+}
+
+/**
+ * Submit handler para vincular o crear la Empresa en el auto-registro.
+ */
+function agilpro_fosfec_user_register_submit(array &$form, FormStateInterface $form_state) {
+  $user = $form_state->getFormObject()->getEntity();
+  $nit = $form_state->getValue('search_nit');
+  $dv = $form_state->getValue('search_dv');
+
+  if (!empty($nit)) {
+    $companies = \Drupal::entityTypeManager()->getStorage('node')->loadByProperties([
+      'type' => 'empresa',
+      'field_nit' => $nit,
+    ]);
+
+    if (!empty($companies)) {
+      $company = reset($companies);
+      $user->set('field_empresa_ref', $company->id());
+      $user->set('field_rol_empresa', 'colaborador');
+    }
+    else {
+      // Crear nueva empresa automáticamente
+      $razon_social = $form_state->getValue('new_razon_social') ?: ('Empresa NIT ' . $nit);
+      $company = Node::create([
+        'type' => 'empresa',
+        'title' => $razon_social,
+        'field_nit' => (int) $nit,
+        'field__dv' => $dv ? (int) $dv : 0,
+      ]);
+      $company->save();
+
+      $user->set('field_empresa_ref', $company->id());
+      $user->set('field_rol_empresa', 'admin_empresa');
+    }
+
+    $user->save();
+  }
+}
+
+/**
+ * Implements hook_theme().
+ *
+ * Registra la plantilla node--oferta.html.twig provista por el módulo.
+ */
+function agilpro_fosfec_theme($existing, $type, $theme, $path) {
+  return [
+    'node__oferta' => [
+      'base hook' => 'node',
+      'template' => 'node--oferta',
+      'path' => $path . '/templates',
+    ],
+    'fosfec_kpi_scorecard' => [
+      'variables' => [
+        'kpis' => [],
+      ],
+      'template' => 'fosfec-kpi-scorecard',
+      'path' => $path . '/templates',
+    ],
+    'fosfec_dashboard_page' => [
+      'variables' => [
+        'kpis' => NULL,
+        'active_tab' => 'inscripciones',
+        'filter_oferta' => '',
+        'filter_estado' => '',
+        'filter_nit' => '',
+        'filter_desde' => '',
+        'filter_hasta' => '',
+        'ofertas_options' => [],
+        'ofertas_data' => [],
+        'inscripciones_data' => [],
+        'transacciones_data' => [],
+        'mentores_list' => [],
+      ],
+      'template' => 'fosfec-dashboard-page',
+      'path' => $path . '/templates',
+    ],
+    'ofertas_catalogo_page' => [
+      'variables' => [
+        'ofertas' => [],
+      ],
+      'template' => 'ofertas-catalogo-page',
+      'path' => $path . '/templates',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_node_insert().
+ *
+ * Garantiza la generación de alias limpios tipo /ofertas/[title] para nodos oferta.
+ */
+function agilpro_fosfec_node_insert(Node $node) {
+  if ($node->bundle() === 'oferta') {
+    if (\Drupal::moduleHandler()->moduleExists('pathauto')) {
+      \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'insert');
+    }
+    else {
+      $alias_clean = \Drupal::service('pathauto.alias_cleaner')->cleanString($node->label());
+      \Drupal::service('path_alias.repository')->save('/node/' . $node->id(), '/ofertas/' . $alias_clean);
+    }
+  }
+}
+
+/**
+ * Implements hook_node_update().
+ *
+ * Garantiza la actualización de alias limpios para nodos oferta.
+ */
+function agilpro_fosfec_node_update(Node $node) {
+  if ($node->bundle() === 'oferta') {
+    if (\Drupal::moduleHandler()->moduleExists('pathauto')) {
+      \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'update');
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_node() for oferta.
+ *
+ * Prepara variables dinámicas para botones CTA, cupos, fechas y calendarios.
+ */
+function agilpro_fosfec_preprocess_node(&$variables) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $variables['node'];
+  if ($node->bundle() !== 'oferta') {
+    return;
+  }
+
+  // 1. Imagen / Banner de la oferta
+  $variables['banner_image_url'] = NULL;
+  if ($node->hasField('field_imagen_oferta') && !$node->get('field_imagen_oferta')->isEmpty()) {
+    $img_file = $node->get('field_imagen_oferta')->entity;
+    if ($img_file) {
+      $variables['banner_image_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($img_file->getFileUri());
+    }
+  }
+  elseif ($node->hasField('field_logo_emprendimien') && !$node->get('field_logo_emprendimien')->isEmpty()) {
+    $img_file = $node->get('field_logo_emprendimien')->entity;
+    if ($img_file) {
+      $variables['banner_image_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($img_file->getFileUri());
+    }
+  }
+
+  // 2. Contenido Landing
+  $landing_html = '';
+  if ($node->hasField('field_landing_content') && !$node->get('field_landing_content')->isEmpty()) {
+    $landing_html = $node->get('field_landing_content')->value;
+  }
+  $variables['landing_content'] = $landing_html;
+
+  // 3. Cupos y Fechas de Inscripción
+  $cupos = ($node->hasField('field_cupos_disponibles') && !$node->get('field_cupos_disponibles')->isEmpty())
+    ? (int) $node->get('field_cupos_disponibles')->value
+    : NULL;
+  $variables['cupos'] = $cupos;
+
+  $today = date('Y-m-d');
+  $in_dates = TRUE;
+  $fecha_inicio = NULL;
+  $fecha_fin = NULL;
+
+  if ($node->hasField('field_fechas_inscripcion') && !$node->get('field_fechas_inscripcion')->isEmpty()) {
+    $fechas = $node->get('field_fechas_inscripcion')->first();
+    if ($fechas) {
+      $fecha_inicio = substr($fechas->value, 0, 10);
+      $fecha_fin = substr($fechas->end_value, 0, 10);
+      $in_dates = ($today >= $fecha_inicio && $today <= $fecha_fin);
+    }
+  }
+  $variables['fecha_inicio'] = $fecha_inicio;
+  $variables['fecha_fin'] = $fecha_fin;
+
+  // Criterio de Postulación activa: cupos > 0 y dentro de fechas
+  $can_apply = ($cupos === NULL || $cupos > 0) && $in_dates;
+  $variables['can_apply'] = $can_apply;
+
+  // Modal URL
+  $variables['postular_url'] = \Drupal\Core\Url::fromRoute('agilpro_fosfec.postular_modal', ['node' => $node->id()])->toString();
+
+  // Modalidad Label
+  $variables['modalidad_label'] = NULL;
+  if ($node->hasField('field_modalidad_participacion') && !$node->get('field_modalidad_participacion')->isEmpty()) {
+    $variables['modalidad_label'] = $node->get('field_modalidad_participacion')->getFieldDefinition()->getSetting('allowed_values')[$node->get('field_modalidad_participacion')->value] ?? $node->get('field_modalidad_participacion')->value;
+  }
+
+  // 4. Documento PDF Términos de Referencia
+  $pdf_url = NULL;
+  if ($node->hasField('field_terminos_referencia_pdf') && !$node->get('field_terminos_referencia_pdf')->isEmpty()) {
+    $pdf_file = $node->get('field_terminos_referencia_pdf')->entity;
+    if ($pdf_file) {
+      $pdf_url = \Drupal::service('file_url_generator')->generateAbsoluteString($pdf_file->getFileUri());
+    }
+  }
+  elseif ($node->hasField('field_compromiso_pdf') && !$node->get('field_compromiso_pdf')->isEmpty()) {
+    $pdf_file = $node->get('field_compromiso_pdf')->entity;
+    if ($pdf_file) {
+      $pdf_url = \Drupal::service('file_url_generator')->generateAbsoluteString($pdf_file->getFileUri());
+    }
+  }
+  // Búsqueda de PDF embebido en el HTML de landing
+  if (!$pdf_url && !empty($landing_html)) {
+    if (preg_match('/href=[\'"]([^\'"]+\.pdf)[\'"]/i', $landing_html, $matches)) {
+      $pdf_url = $matches[1];
+    }
+  }
+  $variables['pdf_url'] = $pdf_url;
+
+  // 5. Botonera de Agendamiento de Calendario (Outlook / Teams / Google Calendar / iCal)
+  $title = $node->label();
+  $desc = strip_tags(substr($landing_html ?: $title, 0, 300));
+  $start_cal = $fecha_inicio ? str_replace('-', '', $fecha_inicio) . 'T140000Z' : date('Ymd\T140000\Z');
+  $end_cal = $fecha_fin ? str_replace('-', '', $fecha_fin) . 'T180000Z' : date('Ymd\T180000\Z', strtotime('+30 days'));
+
+  $variables['cal_urls'] = [
+    'google' => 'https://calendar.google.com/calendar/render?action=TEMPLATE' .
+      '&text=' . urlencode($title) .
+      '&details=' . urlencode($desc) .
+      '&dates=' . $start_cal . '/' . $end_cal .
+      '&location=' . urlencode('Compensar Bogotá - Modalidad Híbrida / Virtual'),
+    'outlook' => 'https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent' .
+      '&subject=' . urlencode($title) .
+      '&body=' . urlencode($desc) .
+      '&startdt=' . ($fecha_inicio ?: date('Y-m-d')) . 'T09:00:00' .
+      '&enddt=' . ($fecha_fin ?: date('Y-m-d', strtotime('+30 days'))) . 'T17:00:00',
+    'teams' => 'https://teams.microsoft.com/l/meeting/new?subject=' . urlencode($title) .
+      '&content=' . urlencode($desc),
+    'ical' => \Drupal\Core\Url::fromRoute('agilpro_fosfec.oferta_ical', ['node' => $node->id()])->toString(),
+  ];
+}
+
+

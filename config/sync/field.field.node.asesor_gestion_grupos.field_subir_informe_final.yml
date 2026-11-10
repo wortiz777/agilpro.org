@@ -1,0 +1,27 @@
+uuid: d5fe7a06-aa4e-4058-ad7d-9bad83917d1f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subir_informe_final
+    - node.type.asesor_gestion_grupos
+  module:
+    - file
+id: node.asesor_gestion_grupos.field_subir_informe_final
+field_name: field_subir_informe_final
+entity_type: node
+bundle: asesor_gestion_grupos
+label: 'Subir Informe Final'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: asesores-informe-final
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

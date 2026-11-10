@@ -1,0 +1,19 @@
+uuid: 805c90f0-7a39-4ae9-8804-44740f44077c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autor_m_pedagogico
+    - node.type.material_pedagogico
+id: node.material_pedagogico.field_autor_m_pedagogico
+field_name: field_autor_m_pedagogico
+entity_type: node
+bundle: material_pedagogico
+label: 'Autor (es)'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

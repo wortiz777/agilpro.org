@@ -1,0 +1,51 @@
+uuid: 6838d9a4-bb6c-4941-9ff8-8d688cba6216
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_caracter_sticas_
+field_name: field_caracter_sticas_
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: 'Jóvenes (menores de 35 años)'
+    -
+      value: '2'
+      label: Indígenas
+    -
+      value: '3'
+      label: 'Población desplazada por conflicto'
+    -
+      value: '4'
+      label: 'Población rural'
+    -
+      value: '5'
+      label: 'Población urbana'
+    -
+      value: '6'
+      label: 'Población socialmente excluida'
+    -
+      value: '7'
+      label: 'Población con baja educación'
+    -
+      value: '8'
+      label: 'Población con discapacidad'
+    -
+      value: '9'
+      label: 'Población de bajo ingreso'
+    -
+      value: '10'
+      label: Afrodecendientes
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

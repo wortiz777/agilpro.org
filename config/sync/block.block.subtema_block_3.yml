@@ -1,0 +1,36 @@
+uuid: 36ce478a-0e25-4ecc-a8ee-8158197de4ce
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000003'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_3
+theme: subtema
+region: content
+weight: 4
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000003'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000003'
+  label: '<front> Logos Entidades'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

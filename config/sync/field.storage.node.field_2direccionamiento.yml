@@ -1,0 +1,24 @@
+uuid: f559e9d4-4e9c-4db6-852e-94f10b1915f3
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_2direccionamiento
+field_name: field_2direccionamiento
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

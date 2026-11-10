@@ -1,0 +1,280 @@
+uuid: f52e3880-c3e7-4565-ac0b-849248ec017b
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_user
+class: Drupal\user\Plugin\migrate\User
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'User accounts'
+source:
+  plugin: d7_user
+process:
+  uid:
+    -
+      plugin: get
+      source: uid
+  name:
+    -
+      plugin: get
+      source: name
+  pass:
+    -
+      plugin: get
+      source: pass
+  mail:
+    -
+      plugin: get
+      source: mail
+  created:
+    -
+      plugin: get
+      source: created
+  access:
+    -
+      plugin: get
+      source: access
+  login:
+    -
+      plugin: get
+      source: login
+  status:
+    -
+      plugin: get
+      source: status
+  timezone:
+    -
+      plugin: get
+      source: timezone
+  langcode:
+    -
+      plugin: user_langcode
+      source: entity_language
+      fallback_to_site_default: false
+  preferred_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  preferred_admin_langcode:
+    -
+      plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+  init:
+    -
+      plugin: get
+      source: init
+  roles:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_user_role
+      source: roles
+  user_picture:
+    -
+      plugin: default_value
+      source: picture
+      default_value: null
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_file
+  field_nombre:
+    -
+      plugin: get
+      source: field_nombre
+  field_apellidos:
+    -
+      plugin: get
+      source: field_apellidos
+  field_tipo_id:
+    -
+      plugin: sub_process
+      source: field_tipo_id
+      process:
+        target_id: tid
+  field_numero_id:
+    -
+      plugin: get
+      source: field_numero_id
+  field_sexo:
+    -
+      plugin: get
+      source: field_sexo
+  field_terminos_condiciones:
+    -
+      plugin: get
+      source: field_terminos_condiciones
+  field_fecha_de_naciomiento:
+    -
+      plugin: sub_process
+      source: field_fecha_de_naciomiento
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d\TH:i:s'
+          to_format: Y-m-d
+          source: value
+  field_movil:
+    -
+      plugin: get
+      source: field_movil
+  field_nivel_educativo:
+    -
+      plugin: get
+      source: field_nivel_educativo
+  field_caracter_sticas_:
+    -
+      plugin: get
+      source: field_caracter_sticas_
+  field_skype:
+    -
+      plugin: get
+      source: field_skype
+  field_camara:
+    -
+      plugin: sub_process
+      source: field_camara
+      process:
+        target_id: tid
+  field_estado_emprendimient:
+    -
+      plugin: get
+      source: field_estado_emprendimient
+  field__dv:
+    -
+      plugin: get
+      source: field__dv
+  field_nit:
+    -
+      plugin: get
+      source: field_nit
+  field_direccion_comercial:
+    -
+      plugin: get
+      source: field_direccion_comercial
+  field_departamento:
+    -
+      plugin: sub_process
+      source: field_departamento
+      process:
+        target_id: tid
+  field_ciudad_municipio:
+    -
+      plugin: get
+      source: field_ciudad_municipio
+  field_logo_emprendimiento:
+    -
+      plugin: sub_process
+      source: field_logo_emprendimiento
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_presentacion_emprendimient:
+    -
+      plugin: get
+      source: field_presentacion_emprendimient
+  field_actividad:
+    -
+      plugin: sub_process
+      source: field_actividad
+      process:
+        target_id: tid
+  field_sector_economico:
+    -
+      plugin: sub_process
+      source: field_sector_economico
+      process:
+        target_id: tid
+  field_rol_emprendimiento:
+    -
+      plugin: get
+      source: field_rol_emprendimiento
+  field_ingresos:
+    -
+      plugin: get
+      source: field_ingresos
+  field_e_mail_contacto:
+    -
+      plugin: sub_process
+      source: field_e_mail_contacto
+      process:
+        value: email
+  field_pagina_web:
+    -
+      plugin: field_link
+      source: field_pagina_web
+  field_telefono_fijo_emprendimien:
+    -
+      plugin: get
+      source: field_telefono_fijo_emprendimien
+  field_fecha_inicio_actividades:
+    -
+      plugin: sub_process
+      source: field_fecha_inicio_actividades
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d\TH:i:s'
+          to_format: Y-m-d
+          source: value
+  field_ingresos_por_ventas_promed:
+    -
+      plugin: get
+      source: field_ingresos_por_ventas_promed
+  field_estrato_socioecon_mico:
+    -
+      plugin: get
+      source: field_estrato_socioecon_mico
+  field_n_mero_de_empleados_formal:
+    -
+      plugin: get
+      source: field_n_mero_de_empleados_formal
+  field_estado_civil:
+    -
+      plugin: get
+      source: field_estado_civil
+  field_como_se_enter_del_programa:
+    -
+      plugin: get
+      source: field_como_se_enter_del_programa
+  field_nombre_del_emprendimiento:
+    -
+      plugin: get
+      source: field_nombre_del_emprendimiento
+  field_redes_sociales:
+    -
+      plugin: get
+      source: field_redes_sociales
+  field_asesor_fase_empoderar:
+    -
+      plugin: sub_process
+      source: field_asesor_fase_empoderar
+      process:
+        target_id: tid
+  field_fase_pre_app:
+    -
+      plugin: get
+      source: field_fase_pre_app
+destination:
+  plugin: 'entity:user'
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user_role
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_file
+    - upgrade_language
+    - upgrade_default_language
+    - upgrade_user_picture_field_instance
+    - upgrade_user_picture_entity_display
+    - upgrade_user_picture_entity_form_display
+    - upgrade_d7_user_role
+include: null

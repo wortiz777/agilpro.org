@@ -1,0 +1,94 @@
+uuid: f20d2926-7bea-4c47-9d05-c400a27eeef1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.listados_de_asistencia_emprended.field_cargar_listado
+    - field.field.node.listados_de_asistencia_emprended.field_fecha_encuentro
+    - field.field.node.listados_de_asistencia_emprended.field_lugar_del_encuentro
+    - field.field.node.listados_de_asistencia_emprended.field_n_mero_de_emprendedores_se
+    - node.type.listados_de_asistencia_emprended
+  module:
+    - datetime
+    - file
+    - path
+id: node.listados_de_asistencia_emprended.default
+targetEntityType: node
+bundle: listados_de_asistencia_emprended
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cargar_listado:
+    type: file_generic
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_fecha_encuentro:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lugar_del_encuentro:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_n_mero_de_emprendedores_se:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

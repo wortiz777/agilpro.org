@@ -1,0 +1,30 @@
+uuid: e2480292-2d52-4677-9a25-e3ba83bcda1b
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_modalidad
+field_name: field_modalidad
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: presencial
+      label: Presencial
+    -
+      value: virtual
+      label: Virtual
+    -
+      value: hibrida
+      label: Híbrida
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

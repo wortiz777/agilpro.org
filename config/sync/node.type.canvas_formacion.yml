@@ -1,0 +1,18 @@
+uuid: 6770ffb7-09a3-4f1a-bbeb-b8b4e0469b21
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Canvas - Formación de Equipo'
+type: canvas_formacion
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,210 @@
+uuid: 7886424f-a5a7-443e-9d2b-b21deb334497
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.empresa.field__dv
+    - field.field.node.empresa.field_actividad
+    - field.field.node.empresa.field_ciudad_municipio
+    - field.field.node.empresa.field_departamento
+    - field.field.node.empresa.field_direccion_comercial
+    - field.field.node.empresa.field_e_mail_contacto
+    - field.field.node.empresa.field_fecha_inicio_actividades
+    - field.field.node.empresa.field_movil
+    - field.field.node.empresa.field_nit
+    - field.field.node.empresa.field_pagina_web
+    - field.field.node.empresa.field_presentacion_emprendimient
+    - field.field.node.empresa.field_sector_economico
+    - field.field.node.empresa.field_telefono_fijo_emprendimien
+    - field.field.node.empresa.field_terminos_condiciones
+    - node.type.empresa
+  module:
+    - node
+label: Empresas
+id: empresas
+description: 'Carga masiva de Empresas / Mipymes (tipo de contenido: empresa)'
+help: 'Importación masiva de personas jurídicas beneficiarias.'
+import_period: -1
+import_period_per_feed: false
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:node'
+processor_configuration:
+  values:
+    type: empresa
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 1
+custom_sources:
+  nit:
+    value: nit
+    label: nit
+    machine_name: nit
+    type: csv
+  dv:
+    value: dv
+    label: dv
+    machine_name: dv
+    type: csv
+  razon_social:
+    value: razon_social
+    label: razon_social
+    machine_name: razon_social
+    type: csv
+  direccion:
+    value: direccion
+    label: direccion
+    machine_name: direccion
+    type: csv
+  ciudad:
+    value: ciudad
+    label: ciudad
+    machine_name: ciudad
+    type: csv
+  email_corporativo:
+    value: email_corporativo
+    label: email_corporativo
+    machine_name: email_corporativo
+    type: csv
+  celular:
+    value: celular
+    label: celular
+    machine_name: celular
+    type: csv
+  telefono_fijo:
+    value: telefono_fijo
+    label: telefono_fijo
+    machine_name: telefono_fijo
+    type: csv
+  pagina_web:
+    value: pagina_web
+    label: pagina_web
+    machine_name: pagina_web
+    type: csv
+  presentacion:
+    value: presentacion
+    label: presentacion
+    machine_name: presentacion
+    type: csv
+  fecha_constitucion:
+    value: fecha_constitucion
+    label: fecha_constitucion
+    machine_name: fecha_constitucion
+    type: csv
+  sector_economico:
+    value: sector_economico
+    label: sector_economico
+    machine_name: sector_economico
+    type: csv
+  departamento:
+    value: departamento
+    label: departamento
+    machine_name: departamento
+    type: csv
+  actividad_principal:
+    value: actividad_principal
+    label: actividad_principal
+    machine_name: actividad_principal
+    type: csv
+  acepto_terminos:
+    value: acepto_terminos
+    label: acepto_terminos
+    machine_name: acepto_terminos
+    type: csv
+  publicado:
+    value: publicado
+    label: publicado
+    machine_name: publicado
+    type: csv
+mappings:
+  -
+    target: field_nit
+    map:
+      value: nit
+    unique:
+      value: true
+  -
+    target: field__dv
+    map:
+      value: dv
+  -
+    target: title
+    map:
+      value: razon_social
+  -
+    target: field_direccion_comercial
+    map:
+      value: direccion
+  -
+    target: field_ciudad_municipio
+    map:
+      value: ciudad
+  -
+    target: field_e_mail_contacto
+    map:
+      value: email_corporativo
+  -
+    target: field_movil
+    map:
+      value: celular
+  -
+    target: field_telefono_fijo_emprendimien
+    map:
+      value: telefono_fijo
+  -
+    target: field_pagina_web
+    map:
+      uri: pagina_web
+  -
+    target: field_presentacion_emprendimient
+    map:
+      value: presentacion
+  -
+    target: field_fecha_inicio_actividades
+    map:
+      value: fecha_constitucion
+  -
+    target: field_sector_economico
+    map:
+      target_id: sector_economico
+    settings:
+      reference_by: name
+      autocreate: true
+  -
+    target: field_departamento
+    map:
+      target_id: departamento
+    settings:
+      reference_by: name
+      autocreate: true
+  -
+    target: field_actividad
+    map:
+      target_id: actividad_principal
+    settings:
+      reference_by: name
+      autocreate: true
+  -
+    target: field_terminos_condiciones
+    map:
+      value: acepto_terminos
+  -
+    target: status
+    map:
+      value: publicado

@@ -1,0 +1,21 @@
+uuid: 6184eb5c-23cb-4b9e-a613-4b6aca9fda15
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modalidad
+    - node.type.fosfec_transaction
+  module:
+    - options
+id: node.fosfec_transaction.field_modalidad
+field_name: field_modalidad
+entity_type: node
+bundle: fosfec_transaction
+label: Modalidad
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

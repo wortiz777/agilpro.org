@@ -1,0 +1,22 @@
+uuid: 780608c8-78e3-4292-8a1b-e4c21f615f69
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencias_acci_n
+    - node.type.metas
+  module:
+    - text
+id: node.metas.field_competencias_acci_n
+field_name: field_competencias_acci_n
+entity_type: node
+bundle: metas
+label: 'Empoderados | Acción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

@@ -1,0 +1,27 @@
+uuid: f1cf2a39-87ee-4df7-b1fc-260ed6b37b16
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.fosfec_transaction
+    - node.type.inscripcion_oferta
+    - node.type.oferta
+  module:
+    - agilpro_fosfec
+    - node
+    - system
+id: evaluador_diagnosticador
+label: 'Evaluador / Diagnosticador'
+weight: 29
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access fosfec dashboard'
+  - 'create fosfec_transaction content'
+  - 'edit any inscripcion_oferta content'
+  - 'edit own inscripcion_oferta content'
+  - 'use views bulk operations'
+  - 'view inscripcion_oferta revisions'
+  - 'view oferta revisions'
+  - 'view own unpublished content'

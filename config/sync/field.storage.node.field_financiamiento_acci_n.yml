@@ -1,0 +1,24 @@
+uuid: 65e7266e-9b91-44c2-9db4-62f80c3d3205
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - text
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_financiamiento_acci_n
+field_name: field_financiamiento_acci_n
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

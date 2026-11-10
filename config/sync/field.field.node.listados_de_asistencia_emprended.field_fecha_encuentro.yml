@@ -1,0 +1,21 @@
+uuid: be191a3d-8a51-4405-bd41-dc11da4f8dfc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_encuentro
+    - node.type.listados_de_asistencia_emprended
+  module:
+    - datetime
+id: node.listados_de_asistencia_emprended.field_fecha_encuentro
+field_name: field_fecha_encuentro
+entity_type: node
+bundle: listados_de_asistencia_emprended
+label: 'Fecha de Reunión'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,201 @@
+uuid: 668b9c40-6cc9-4624-8829-fce79b1ac7d4
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_autodiagn_stico_mercadeo_y_venta
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Mercadeo y Ventas)'
+source:
+  plugin: d7_node_complete
+  node_type: autodiagn_stico_mercadeo_y_venta
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_autodiagn_stico_mercadeo_y_venta/0/status:
+    -
+      plugin: get
+      source: comment
+  field_1mercadeo:
+    -
+      plugin: sub_process
+      source: field_1mercadeo
+      process:
+        target_id: tid
+  field_2mercadeo:
+    -
+      plugin: sub_process
+      source: field_2mercadeo
+      process:
+        target_id: tid
+  field_3mercadeo:
+    -
+      plugin: sub_process
+      source: field_3mercadeo
+      process:
+        target_id: tid
+  field_4mercadeo:
+    -
+      plugin: sub_process
+      source: field_4mercadeo
+      process:
+        target_id: tid
+  field_5mercadeo:
+    -
+      plugin: sub_process
+      source: field_5mercadeo
+      process:
+        target_id: tid
+  field_6mercadeo:
+    -
+      plugin: sub_process
+      source: field_6mercadeo
+      process:
+        target_id: tid
+  field_7mercadeo:
+    -
+      plugin: sub_process
+      source: field_7mercadeo
+      process:
+        target_id: tid
+  field_8mercadeo:
+    -
+      plugin: sub_process
+      source: field_8mercadeo
+      process:
+        target_id: tid
+  field_9mercadeo:
+    -
+      plugin: sub_process
+      source: field_9mercadeo
+      process:
+        target_id: tid
+  field_10mercadeo:
+    -
+      plugin: sub_process
+      source: field_10mercadeo
+      process:
+        target_id: tid
+  field_11mercadeo:
+    -
+      plugin: sub_process
+      source: field_11mercadeo
+      process:
+        target_id: tid
+  field_12mercadeo:
+    -
+      plugin: sub_process
+      source: field_12mercadeo
+      process:
+        target_id: tid
+  field_13mercadeo:
+    -
+      plugin: sub_process
+      source: field_13mercadeo
+      process:
+        target_id: tid
+  field_14mercadeo:
+    -
+      plugin: sub_process
+      source: field_14mercadeo
+      process:
+        target_id: tid
+  field_15mercadeo:
+    -
+      plugin: sub_process
+      source: field_15mercadeo
+      process:
+        target_id: tid
+  field_1ventas:
+    -
+      plugin: get
+      source: field_1ventas
+  field_2ventas:
+    -
+      plugin: get
+      source: field_2ventas
+  field_3ventas:
+    -
+      plugin: get
+      source: field_3ventas
+  field_4ventas:
+    -
+      plugin: get
+      source: field_4ventas
+  field_5ventas:
+    -
+      plugin: get
+      source: field_5ventas
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: autodiagn_stico_mercadeo_y_venta
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

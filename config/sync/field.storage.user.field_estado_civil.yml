@@ -1,0 +1,36 @@
+uuid: b6e0550b-e7de-4fdf-a14f-89cb42bfb808
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_estado_civil
+field_name: field_estado_civil
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Soltero(a)
+      label: Soltero(a)
+    -
+      value: Casado(a)
+      label: Casado(a)
+    -
+      value: 'Unión Libre'
+      label: 'Unión Libre'
+    -
+      value: Separado(a)
+      label: Separado(a)
+    -
+      value: Viudo(a)
+      label: Viudo(a)
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

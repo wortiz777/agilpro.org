@@ -1,0 +1,32 @@
+uuid: 4512ffc4-01b8-4f20-9257-82a06e4e5d6a
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-biblioteca
+  module:
+    - system
+  theme:
+    - subtema
+id: subtema_menu_biblioteca
+theme: subtema
+region: content
+weight: 13
+provider: null
+plugin: 'system_menu_block:menu-biblioteca'
+settings:
+  id: 'system_menu_block:menu-biblioteca'
+  label: menu-biblioteca
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /biblioteca-abierta
+      /biblioteca/*
+      /node/11779

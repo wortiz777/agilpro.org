@@ -1,0 +1,19 @@
+uuid: 31f41508-f068-46dd-84d9-284dead30912
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresar_nuevo_evangelista
+    - node.type.evangelistas
+id: node.evangelistas.field_ingresar_nuevo_evangelista
+field_name: field_ingresar_nuevo_evangelista
+entity_type: node
+bundle: evangelistas
+label: 'Ingresar nuevo evangelista'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

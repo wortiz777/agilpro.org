@@ -1,0 +1,29 @@
+uuid: 4475fa78-120d-4f85-bac5-744d40cbc880
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_acceso_a_mercados.body
+    - node.type.ruta_acceso_a_mercados
+  module:
+    - text
+    - user
+id: node.ruta_acceso_a_mercados.default
+targetEntityType: node
+bundle: ruta_acceso_a_mercados
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

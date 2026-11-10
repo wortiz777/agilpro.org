@@ -1,0 +1,27 @@
+uuid: a3a657c9-eb6e-49c4-96d1-fd160bfac59c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargar_acta_de_reunion
+    - node.type.actas_reunion_red
+  module:
+    - file
+id: node.actas_reunion_red.field_cargar_acta_de_reunion
+field_name: field_cargar_acta_de_reunion
+entity_type: node
+bundle: actas_reunion_red
+label: 'Cargar Acta de Reunión'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'Actas Reunión Red'
+  file_extensions: 'pdf jpg jpeg png bpm gif doc docx ppt pptx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

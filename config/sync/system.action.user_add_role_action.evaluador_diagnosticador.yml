@@ -1,0 +1,14 @@
+uuid: 80963ad5-5040-4d6e-b0ef-27ab44f1f3f7
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.evaluador_diagnosticador
+  module:
+    - user
+id: user_add_role_action.evaluador_diagnosticador
+label: 'Añade el rol Evaluador / Diagnosticador al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: evaluador_diagnosticador

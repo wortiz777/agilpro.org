@@ -1,0 +1,22 @@
+uuid: b6976327-a0b9-47d7-be14-5f3e4ddb1060
+langcode: es
+status: true
+dependencies:
+  theme:
+    - subtema
+_core:
+  default_config_hash: w6fl9cNkMdyboRrLDr2yNgmaTQMBX9-XCmA5NNDWgAo
+id: subtema_secondary_local_tasks
+theme: subtema
+region: content
+weight: 7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas secundarias'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

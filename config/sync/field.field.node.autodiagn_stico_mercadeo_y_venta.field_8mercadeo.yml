@@ -1,0 +1,26 @@
+uuid: c4f0e9c3-6a98-48c2-a74b-32e97433a45d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_8mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_8mercadeo
+field_name: field_8mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '8. La empresa cuenta con imagen corporativa. '
+description: "La imagen corporativa está formada por diversos componentes que al trabajar conjuntamente permiten posicionar a la empresa en la\_ mente del cliente, nombre de la empresa, logo o imagen corporativa, eslogan, sitio web, brochure, folletos, manuales del negocio, tarjetas de presentación, sobres y etiquetas, carpetas, facturas y hasta la forma de vestir de los funcionarios."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

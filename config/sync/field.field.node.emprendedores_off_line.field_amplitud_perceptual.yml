@@ -1,0 +1,23 @@
+uuid: 1ae7cb71-fb16-43ac-9c2b-6f539fefb1bd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amplitud_perceptual
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_amplitud_perceptual
+field_name: field_amplitud_perceptual
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Amplitud Perceptual'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

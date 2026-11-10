@@ -1,0 +1,23 @@
+uuid: 2c983079-d2f2-40c4-a6f5-2c30f075ae69
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mentores_reporte_excel_sep
+    - node.type.metas
+id: node.metas.field_mentores_reporte_excel_sep
+field_name: field_mentores_reporte_excel_sep
+entity_type: node
+bundle: metas
+label: 'Mentores | Reporte Excel (Sep)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,24 @@
+uuid: 74492106-4ca9-463e-9205-b06be2dd744a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_ingresos_por_ventas_promed
+  module:
+    - user
+id: user.user.field_ingresos_por_ventas_promed
+field_name: field_ingresos_por_ventas_promed
+entity_type: user
+bundle: user
+label: '¿Cuál es el ingresos por ventas promedio mensual de los últimos seis meses de su emprendimiento?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

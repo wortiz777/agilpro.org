@@ -1,0 +1,23 @@
+uuid: b512f9f4-667a-4822-9a8c-f8469344f876
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2_9_n_mero_de_facilitadore
+    - node.type.informe_semestral
+id: node.informe_semestral.field_2_9_n_mero_de_facilitadore
+field_name: field_2_9_n_mero_de_facilitadore
+entity_type: node
+bundle: informe_semestral
+label: '9. Número de facilitadores y asesores empresariales convocados y fortalecidos.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

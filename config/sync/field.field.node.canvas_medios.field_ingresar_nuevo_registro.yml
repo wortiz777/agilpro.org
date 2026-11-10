@@ -1,0 +1,19 @@
+uuid: a7e1d948-e9c3-469b-bdb0-667288c9c352
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresar_nuevo_registro
+    - node.type.canvas_medios
+id: node.canvas_medios.field_ingresar_nuevo_registro
+field_name: field_ingresar_nuevo_registro
+entity_type: node
+bundle: canvas_medios
+label: 'Ingresar nuevo registro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

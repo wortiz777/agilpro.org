@@ -1,0 +1,27 @@
+uuid: 4c997d69-fcad-4875-8d76-8e50a901ffae
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_enviar_los_estados_financi
+    - node.type.autodiagn_stico_financiero
+  module:
+    - file
+id: node.autodiagn_stico_financiero.field_enviar_los_estados_financi
+field_name: field_enviar_los_estados_financi
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '8. Enviar los estados financieros que tenga '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: txt
+  max_filesize: ''
+  description_field: false
+field_type: file

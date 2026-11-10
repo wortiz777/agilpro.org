@@ -1,0 +1,18 @@
+uuid: 3446d8eb-6708-405c-a7e4-14b550908db6
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Ruta | Acceder > Acceso a Mercados'
+type: ruta_acceso_a_mercados
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

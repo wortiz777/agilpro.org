@@ -1,0 +1,19 @@
+uuid: 78c563ac-8adf-4d9c-a838-a351bfd35cdc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_f_sicos
+    - node.type.ruta_de_mejoramiento
+id: node.ruta_de_mejoramiento.field_f_sicos
+field_name: field_f_sicos
+entity_type: node
+bundle: ruta_de_mejoramiento
+label: Físicos
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

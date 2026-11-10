@@ -1,0 +1,19 @@
+uuid: 3fe58d0e-81d2-4aa7-8ab4-ef95af8fa117
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_codigo_linea
+    - taxonomy.vocabulary.lineas_intervencion
+id: taxonomy_term.lineas_intervencion.field_codigo_linea
+field_name: field_codigo_linea
+entity_type: taxonomy_term
+bundle: lineas_intervencion
+label: 'Código de Línea'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

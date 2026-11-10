@@ -1,0 +1,344 @@
+uuid: 630d81cc-8aee-4525-ba00-439958ade366
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagnostico_capacidades.field_10_capacicades
+    - field.field.node.autodiagnostico_capacidades.field_11_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_12_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_13_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_14_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_15_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_16_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_17_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_18_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_19_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_1_capaciades
+    - field.field.node.autodiagnostico_capacidades.field_20_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_21_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_22_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_23_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_24_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_25_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_26_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_27_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_28_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_29_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_2_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_30_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_31_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_32_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_33_capaciades
+    - field.field.node.autodiagnostico_capacidades.field_34_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_35_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_3_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_4_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_5_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_6_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_7_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_8_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_9_capacidades
+    - field.field.node.autodiagnostico_capacidades.field__desea_inscribirse_para_pa
+    - node.type.autodiagnostico_capacidades
+  module:
+    - options
+    - user
+id: node.autodiagnostico_capacidades.default
+targetEntityType: node
+bundle: autodiagnostico_capacidades
+mode: default
+content:
+  field_10_capacicades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_11_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_12_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_13_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_14_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_15_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_16_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_17_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_18_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_19_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_1_capaciades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_20_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_21_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_22_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_23_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_24_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_25_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_26_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_27_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_28_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_29_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_2_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_30_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_31_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_32_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_33_capaciades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_34_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_35_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_3_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_4_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_5_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_6_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_7_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_8_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_9_capacidades:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field__desea_inscribirse_para_pa:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,20 @@
+uuid: 7ba21c29-8e75-431e-9c98-bb56ca65cd3e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_rol_emprendimiento
+  module:
+    - user
+id: user.user.field_rol_emprendimiento
+field_name: field_rol_emprendimiento
+entity_type: user
+bundle: user
+label: '¿Cuál es su rol o cargo dentro del emprendimiento?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

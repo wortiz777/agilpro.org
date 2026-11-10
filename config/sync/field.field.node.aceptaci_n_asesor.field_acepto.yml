@@ -1,0 +1,23 @@
+uuid: 9c70e31a-b8c6-4081-b700-71fd89139c30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acepto
+    - node.type.aceptaci_n_asesor
+id: node.aceptaci_n_asesor.field_acepto
+field_name: field_acepto
+entity_type: node
+bundle: aceptaci_n_asesor
+label: Acepto
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

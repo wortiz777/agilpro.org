@@ -1,0 +1,29 @@
+uuid: 1887d2c7-350b-4602-898e-694a12f5b688
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_eventos_de_sensibilizaci_n.body
+    - node.type.tips_eventos_de_sensibilizaci_n
+  module:
+    - text
+    - user
+id: node.tips_eventos_de_sensibilizaci_n.default
+targetEntityType: node
+bundle: tips_eventos_de_sensibilizaci_n
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

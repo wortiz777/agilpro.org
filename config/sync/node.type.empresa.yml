@@ -1,0 +1,11 @@
+uuid: c027546d-7f37-4b51-823a-af9e1c1659d8
+langcode: es
+status: true
+dependencies: {  }
+name: 'Empresa / Mipyme'
+type: empresa
+description: 'Entidad jurídica y corporativa para Mipymes del programa de fomento empresarial.'
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

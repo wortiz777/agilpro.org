@@ -1,0 +1,30 @@
+uuid: 83183fcd-18df-4c35-8668-2bd7e0273165
+langcode: es
+status: true
+dependencies:
+  module:
+    - openid_connect_windows_aad
+id: windows_aad
+label: 'Compensar (Azure AD / Entra ID)'
+plugin: windows_aad
+settings:
+  client_id: COMPENSAR_CLIENT_ID
+  client_secret: COMPENSAR_CLIENT_SECRET
+  iss_allowed_domains: ''
+  authorization_endpoint_wa: 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize'
+  token_endpoint_wa: 'https://login.microsoftonline.com/common/oauth2/v2.0/token'
+  end_session_endpoint: 'https://login.microsoftonline.com/common/oauth2/v2.0/logout'
+  userinfo_endpoint_wa: 'https://graph.microsoft.com/oidc/userinfo'
+  map_ad_groups_to_roles: false
+  group_mapping:
+    method: 0
+    mappings: ''
+    strict: false
+  userinfo_graph_api_wa: 1
+  userinfo_graph_api_use_other_mails: false
+  userinfo_update_email: true
+  hide_email_address_warning: true
+  prompt:
+    - select_account
+  subject_key: sub
+  provider_slug: ''

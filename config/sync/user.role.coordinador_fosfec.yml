@@ -1,0 +1,15 @@
+uuid: 4dabe880-7fe4-4714-9599-574411d9055d
+langcode: es
+status: true
+dependencies:
+  module:
+    - agilpro_fosfec
+    - system
+id: coordinador_fosfec
+label: 'Coordinador FOSFEC'
+weight: 25
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'
+  - 'access fosfec dashboard'

@@ -1,0 +1,21 @@
+uuid: b91c6d53-5a86-48c8-96e7-e025d06c1f61
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_actividad
+    - node.type.empresa
+id: node.empresa.field_actividad
+field_name: field_actividad
+entity_type: node
+bundle: empresa
+label: 'Actividad Principal'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

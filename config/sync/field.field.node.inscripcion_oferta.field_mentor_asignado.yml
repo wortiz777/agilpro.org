@@ -1,0 +1,21 @@
+uuid: 0ac85d22-80fa-47e5-b3d7-df97fd3f2cec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mentor_asignado
+    - node.type.inscripcion_oferta
+id: node.inscripcion_oferta.field_mentor_asignado
+field_name: field_mentor_asignado
+entity_type: node
+bundle: inscripcion_oferta
+label: 'Mentor Asignado'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

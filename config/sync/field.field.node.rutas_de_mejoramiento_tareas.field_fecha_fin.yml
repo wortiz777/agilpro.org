@@ -1,0 +1,21 @@
+uuid: 5bc74478-f01d-4440-99b8-eebbae12dd4b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_fin
+    - node.type.rutas_de_mejoramiento_tareas
+  module:
+    - datetime
+id: node.rutas_de_mejoramiento_tareas.field_fecha_fin
+field_name: field_fecha_fin
+entity_type: node
+bundle: rutas_de_mejoramiento_tareas
+label: 'Fecha Fin'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

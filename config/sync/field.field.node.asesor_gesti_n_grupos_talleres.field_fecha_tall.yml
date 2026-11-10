@@ -1,0 +1,21 @@
+uuid: 9ada6e96-cce8-4bd3-a9a0-5c302411a468
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_tall
+    - node.type.asesor_gesti_n_grupos_talleres
+  module:
+    - datetime
+id: node.asesor_gesti_n_grupos_talleres.field_fecha_tall
+field_name: field_fecha_tall
+entity_type: node
+bundle: asesor_gesti_n_grupos_talleres
+label: Fecha
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

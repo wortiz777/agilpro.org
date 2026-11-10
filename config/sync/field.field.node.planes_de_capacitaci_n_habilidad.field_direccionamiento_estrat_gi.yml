@@ -1,0 +1,21 @@
+uuid: 53498247-fd97-4f00-9604-dbbdcd40a7d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direccionamiento_estrat_gi
+    - node.type.planes_de_capacitaci_n_habilidad
+  module:
+    - options
+id: node.planes_de_capacitaci_n_habilidad.field_direccionamiento_estrat_gi
+field_name: field_direccionamiento_estrat_gi
+entity_type: node
+bundle: planes_de_capacitaci_n_habilidad
+label: 'Direccionamiento Estratégico'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

@@ -1,0 +1,332 @@
+uuid: 325cd975-8d2b-414e-a1de-d03efd68b680
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.metas.field_acceder_off_line
+    - field.field.node.metas.field_acceder_on_line
+    - field.field.node.metas.field_acceder_reporte_excel_sep_
+    - field.field.node.metas.field_asesores_acci_n
+    - field.field.node.metas.field_asesores_on_line
+    - field.field.node.metas.field_asesores_reporte_excel_sep
+    - field.field.node.metas.field_competencias_acci_n
+    - field.field.node.metas.field_competencias_off_line
+    - field.field.node.metas.field_competencias_on_line
+    - field.field.node.metas.field_competencias_reporte_excel
+    - field.field.node.metas.field_financiamiento_acci_n
+    - field.field.node.metas.field_financiamiento_off_line
+    - field.field.node.metas.field_financiamiento_on_line
+    - field.field.node.metas.field_financiamiento_reporte_exc
+    - field.field.node.metas.field_fortalecidos_acci_n
+    - field.field.node.metas.field_fortalecidos_off_line
+    - field.field.node.metas.field_fortalecidos_on_line
+    - field.field.node.metas.field_fortalecidos_reporte_excel
+    - field.field.node.metas.field_mentor_a_acci_n
+    - field.field.node.metas.field_mentores_acci_n
+    - field.field.node.metas.field_mentores_on_line
+    - field.field.node.metas.field_mentores_reporte_excel_sep
+    - field.field.node.metas.field_meta_acceder
+    - field.field.node.metas.field_meta_acceder_financiaci_n
+    - field.field.node.metas.field_meta_asesores
+    - field.field.node.metas.field_meta_conectar
+    - field.field.node.metas.field_meta_empoderar
+    - field.field.node.metas.field_meta_fortalecer
+    - field.field.node.metas.field_meta_mentores
+    - field.field.node.metas.field_sensibilizados_accion
+    - field.field.node.metas.field_sensibilizados_of_line
+    - field.field.node.metas.field_sensibilizados_on_line_
+    - field.field.node.metas.field_sensibilizados_reporte_exc
+    - node.type.metas
+  module:
+    - path
+    - text
+id: node.metas.default
+targetEntityType: node
+bundle: metas
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_acceder_off_line:
+    type: number
+    weight: 20
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_acceder_on_line:
+    type: number
+    weight: 19
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_acceder_reporte_excel_sep_:
+    type: number
+    weight: 21
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_asesores_acci_n:
+    type: text_textfield
+    weight: 30
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_asesores_on_line:
+    type: number
+    weight: 28
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_asesores_reporte_excel_sep:
+    type: number
+    weight: 29
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_competencias_acci_n:
+    type: text_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_competencias_off_line:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_competencias_on_line:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_competencias_reporte_excel:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_financiamiento_acci_n:
+    type: text_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_financiamiento_off_line:
+    type: number
+    weight: 9
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_financiamiento_on_line:
+    type: number
+    weight: 8
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_financiamiento_reporte_exc:
+    type: number
+    weight: 10
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fortalecidos_acci_n:
+    type: text_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fortalecidos_off_line:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fortalecidos_on_line:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_fortalecidos_reporte_excel:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_mentor_a_acci_n:
+    type: text_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mentores_acci_n:
+    type: text_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mentores_on_line:
+    type: number
+    weight: 15
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_mentores_reporte_excel_sep:
+    type: number
+    weight: 16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_acceder:
+    type: number
+    weight: 18
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_acceder_financiaci_n:
+    type: number
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_asesores:
+    type: number
+    weight: 27
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_conectar:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_empoderar:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_fortalecer:
+    type: number
+    weight: 11
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_mentores:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_sensibilizados_accion:
+    type: text_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_sensibilizados_of_line:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_sensibilizados_on_line_:
+    type: number
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_sensibilizados_reporte_exc:
+    type: number
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

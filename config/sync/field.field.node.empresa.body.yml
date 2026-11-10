@@ -1,0 +1,24 @@
+uuid: b4cca3f3-61d5-4f15-a69b-8ccb832f3604
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.empresa
+  module:
+    - text
+id: node.empresa.body
+field_name: body
+entity_type: node
+bundle: empresa
+label: 'Descripción institucional'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

@@ -1,0 +1,21 @@
+uuid: 2276e8d1-490b-44b4-8e60-190bb6b0d660
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_naturaleza_juridica
+    - node.type.gestion_componentes_mapeo
+  module:
+    - options
+id: node.gestion_componentes_mapeo.field_naturaleza_juridica
+field_name: field_naturaleza_juridica
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'Naturaleza Jurídica'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

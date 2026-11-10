@@ -1,0 +1,11 @@
+name: 'AgilPro.org'
+type: module
+description: 'Funcionalidad personalizada de AgilPro.org refactorizada para Drupal 11 (gráficos radar 360°, reglas de roles, redirecciones y filtro por cámara).'
+package: AgilPro
+core_version_requirement: ^11
+php: 8.3
+dependencies:
+  - charts:charts
+  - charts:charts_chartjs
+  - drupal:node
+  - drupal:user

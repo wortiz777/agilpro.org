@@ -1,0 +1,21 @@
+uuid: 1b9e0e79-77d4-4e65-a69d-dadea5e7c843
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_linea_default
+    - node.type.oferta
+id: node.oferta.field_linea_default
+field_name: field_linea_default
+entity_type: node
+bundle: oferta
+label: 'Línea Intervención Default'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

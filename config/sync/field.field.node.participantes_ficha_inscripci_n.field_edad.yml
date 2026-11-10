@@ -1,0 +1,23 @@
+uuid: 973d389a-c2ce-42db-a08c-12aabbda06f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_edad
+    - node.type.participantes_ficha_inscripci_n
+id: node.participantes_ficha_inscripci_n.field_edad
+field_name: field_edad
+entity_type: node
+bundle: participantes_ficha_inscripci_n
+label: Edad
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

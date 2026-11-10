@@ -1,0 +1,19 @@
+uuid: b66f186c-77b5-40ef-b3c8-3d3b19b9fe71
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_gobierno
+    - node.type.canvas_gobierno
+id: node.canvas_gobierno.field_nueva_referencia_gobierno
+field_name: field_nueva_referencia_gobierno
+entity_type: node
+bundle: canvas_gobierno
+label: 'Ingresar Nueva Referencia Gobierno'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

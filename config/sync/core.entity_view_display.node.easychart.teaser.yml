@@ -1,0 +1,31 @@
+uuid: 6f5690b3-6f5c-43b3-93ff-0e48aeadbaa5
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.easychart.body
+    - node.type.easychart
+  module:
+    - text
+    - user
+id: node.easychart.teaser
+targetEntityType: node
+bundle: easychart
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

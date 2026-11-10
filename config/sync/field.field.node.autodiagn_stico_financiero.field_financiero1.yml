@@ -1,0 +1,19 @@
+uuid: eca34852-e2fc-41ff-9c1a-a1aba837f66f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financiero1
+    - node.type.autodiagn_stico_financiero
+id: node.autodiagn_stico_financiero.field_financiero1
+field_name: field_financiero1
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '1. Cual es el régimen de impuesto a las ventas al que pertenece.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

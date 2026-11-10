@@ -1,0 +1,19 @@
+uuid: 772687f1-c632-4496-b557-28eaaf70fec9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__como_se_enter_del_program
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field__como_se_enter_del_program
+field_name: field__como_se_enter_del_program
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: '¿Como se enteró del programa?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

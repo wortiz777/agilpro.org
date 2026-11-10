@@ -1,0 +1,24 @@
+uuid: cc9101d3-fe5d-4f3d-b12f-06a3ffb50159
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_gesti_n_t_cnica_y_producci
+field_name: field_gesti_n_t_cnica_y_producci
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

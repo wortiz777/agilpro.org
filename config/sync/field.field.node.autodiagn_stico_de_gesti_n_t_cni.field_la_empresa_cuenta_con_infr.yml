@@ -1,0 +1,26 @@
+uuid: 5a0c14a9-ac10-4611-a86a-a78eed30d244
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_la_empresa_cuenta_con_infr
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_la_empresa_cuenta_con_infr
+field_name: field_la_empresa_cuenta_con_infr
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '1. La empresa cuenta con infraestructura e instalaciones adecuadas para atender sus necesidades de funcionamiento, producción...'
+description: 'La Empresa cuenta con infraestructura e instalaciones adecuadas para atender sus necesidades de funcionamiento, producción y/u operación que exige el nivel de pedidos actuales y potenciales. (Oficinas, bodegas, maquinaria y equipo, hardware y software, medios de comunicación y transporte, etc.)'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

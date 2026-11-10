@@ -1,0 +1,21 @@
+uuid: 91d89b86-de77-46c9-8d25-e3143434a1d7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rol
+    - node.type.participantes_ficha_inscripci_n
+  module:
+    - options
+id: node.participantes_ficha_inscripci_n.field_rol
+field_name: field_rol
+entity_type: node
+bundle: participantes_ficha_inscripci_n
+label: Rol
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

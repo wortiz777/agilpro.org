@@ -1,0 +1,30 @@
+uuid: 18b62520-8fe1-49c5-8d08-398ed3c1bb8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.informe_intermedio_del_asesor.field_cargar_informe
+    - node.type.informe_intermedio_del_asesor
+  module:
+    - file
+    - user
+id: node.informe_intermedio_del_asesor.default
+targetEntityType: node
+bundle: informe_intermedio_del_asesor
+mode: default
+content:
+  field_cargar_informe:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,26 @@
+uuid: d395ae00-b338-4bda-a782-88348fbd91e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_c_mara_de_comercio
+    - node.type.emprendedores_off_line
+    - taxonomy.vocabulary.c_maras_de_comercio
+id: node.emprendedores_off_line.field_c_mara_de_comercio
+field_name: field_c_mara_de_comercio
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Cámara de Comercio'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      c_maras_de_comercio: c_maras_de_comercio
+    sort:
+      field: _none
+field_type: entity_reference

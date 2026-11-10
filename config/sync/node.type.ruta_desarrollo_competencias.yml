@@ -1,0 +1,18 @@
+uuid: 79ae6d72-e03f-43e3-90b9-4c1aaf3a8c32
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Ruta Desarrollo Competencias | Competencia > Acciones'
+type: ruta_desarrollo_competencias
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

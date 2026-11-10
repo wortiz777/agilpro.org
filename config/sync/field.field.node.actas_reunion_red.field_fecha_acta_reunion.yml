@@ -1,0 +1,21 @@
+uuid: 6b1cfc85-b6cf-4ac7-bc80-b90a153081f9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_acta_reunion
+    - node.type.actas_reunion_red
+  module:
+    - datetime
+id: node.actas_reunion_red.field_fecha_acta_reunion
+field_name: field_fecha_acta_reunion
+entity_type: node
+bundle: actas_reunion_red
+label: 'Fecha Reunión'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

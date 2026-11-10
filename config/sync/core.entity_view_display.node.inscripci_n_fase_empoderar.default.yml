@@ -1,0 +1,184 @@
+uuid: 4b089ec5-44ab-40df-951c-eca9a48c7db3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.inscripci_n_fase_empoderar.field_acepto_el_reto
+    - field.field.node.inscripci_n_fase_empoderar.field_asesor_fase_empoderar
+    - field.field.node.inscripci_n_fase_empoderar.field_asesor_fortalecer
+    - field.field.node.inscripci_n_fase_empoderar.field_cargar_ruta
+    - field.field.node.inscripci_n_fase_empoderar.field_cargar_soportes_empoderar
+    - field.field.node.inscripci_n_fase_empoderar.field_cargar_soportes_fortalecer
+    - field.field.node.inscripci_n_fase_empoderar.field_grupo
+    - field.field.node.inscripci_n_fase_empoderar.field_grupo_talleres_fortalecer
+    - field.field.node.inscripci_n_fase_empoderar.field_manifiesto_que_deseo_parti
+    - field.field.node.inscripci_n_fase_empoderar.field_mentor_asignado
+    - field.field.node.inscripci_n_fase_empoderar.field_ruta_acceso_a_mercados
+    - field.field.node.inscripci_n_fase_empoderar.field_ruta_administraci_n
+    - field.field.node.inscripci_n_fase_empoderar.field_ruta_desarrollo_competenci
+    - field.field.node.inscripci_n_fase_empoderar.field_ruta_financiero
+    - field.field.node.inscripci_n_fase_empoderar.field_ruta_mercadeo
+    - field.field.node.inscripci_n_fase_empoderar.field_ruta_t_c_y_prod_
+    - field.field.node.inscripci_n_fase_empoderar.field_soportes_acceder
+    - field.field.node.inscripci_n_fase_empoderar.field_yo
+    - node.type.inscripci_n_fase_empoderar
+  module:
+    - file
+    - options
+    - user
+id: node.inscripci_n_fase_empoderar.default
+targetEntityType: node
+bundle: inscripci_n_fase_empoderar
+mode: default
+content:
+  field_acepto_el_reto:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_asesor_fase_empoderar:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_asesor_fortalecer:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_cargar_ruta:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_cargar_soportes_empoderar:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_cargar_soportes_fortalecer:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_grupo:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_grupo_talleres_fortalecer:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_manifiesto_que_deseo_parti:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_mentor_asignado:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_ruta_acceso_a_mercados:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ruta_administraci_n:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_ruta_desarrollo_competenci:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_ruta_financiero:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_ruta_mercadeo:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_ruta_t_c_y_prod_:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_soportes_acceder:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_yo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

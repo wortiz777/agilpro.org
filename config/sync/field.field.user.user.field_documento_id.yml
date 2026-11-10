@@ -1,0 +1,20 @@
+uuid: ec0b2d8b-99a2-496a-9ef9-a2d1ac762d5f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_documento_id
+  module:
+    - user
+id: user.user.field_documento_id
+field_name: field_documento_id
+entity_type: user
+bundle: user
+label: 'Documento de Identidad'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

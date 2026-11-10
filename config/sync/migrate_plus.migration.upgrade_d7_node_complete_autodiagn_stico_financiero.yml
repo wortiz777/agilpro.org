@@ -1,0 +1,217 @@
+uuid: 6751f2c2-2818-44c2-902e-dc105b8f9941
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_autodiagn_stico_financiero
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Financiero)'
+source:
+  plugin: d7_node_complete
+  node_type: autodiagn_stico_financiero
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_autodiagn_stico_financiero/0/status:
+    -
+      plugin: get
+      source: comment
+  field_1financiero:
+    -
+      plugin: sub_process
+      source: field_1financiero
+      process:
+        target_id: tid
+  field_2financiero:
+    -
+      plugin: sub_process
+      source: field_2financiero
+      process:
+        target_id: tid
+  field_3financiero:
+    -
+      plugin: sub_process
+      source: field_3financiero
+      process:
+        target_id: tid
+  field_4financiero:
+    -
+      plugin: sub_process
+      source: field_4financiero
+      process:
+        target_id: tid
+  field_5financiero:
+    -
+      plugin: sub_process
+      source: field_5financiero
+      process:
+        target_id: tid
+  field_6financiero:
+    -
+      plugin: sub_process
+      source: field_6financiero
+      process:
+        target_id: tid
+  field_7financiero:
+    -
+      plugin: sub_process
+      source: field_7financiero
+      process:
+        target_id: tid
+  field_8financiero:
+    -
+      plugin: sub_process
+      source: field_8financiero
+      process:
+        target_id: tid
+  field_9financiero:
+    -
+      plugin: sub_process
+      source: field_9financiero
+      process:
+        target_id: tid
+  field_10financiero:
+    -
+      plugin: sub_process
+      source: field_10financiero
+      process:
+        target_id: tid
+  field_11financiero:
+    -
+      plugin: sub_process
+      source: field_11financiero
+      process:
+        target_id: tid
+  field_12financiero:
+    -
+      plugin: sub_process
+      source: field_12financiero
+      process:
+        target_id: tid
+  field_13financiero:
+    -
+      plugin: sub_process
+      source: field_13financiero
+      process:
+        target_id: tid
+  field_14financiero:
+    -
+      plugin: sub_process
+      source: field_14financiero
+      process:
+        target_id: tid
+  field_15financiero:
+    -
+      plugin: sub_process
+      source: field_15financiero
+      process:
+        target_id: tid
+  field_17financiero:
+    -
+      plugin: get
+      source: field_17financiero
+  field_18financiero:
+    -
+      plugin: get
+      source: field_18financiero
+  field_19financiero:
+    -
+      plugin: get
+      source: field_19financiero
+  field_20financiero:
+    -
+      plugin: get
+      source: field_20financiero
+  field_21financiero:
+    -
+      plugin: get
+      source: field_21financiero
+  field_22financiero:
+    -
+      plugin: get
+      source: field_22financiero
+  field_enviar_los_estados_financi:
+    -
+      plugin: sub_process
+      source: field_enviar_los_estados_financi
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_financiero1:
+    -
+      plugin: get
+      source: field_financiero1
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: autodiagn_stico_financiero
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

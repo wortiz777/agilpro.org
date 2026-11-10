@@ -1,0 +1,19 @@
+uuid: 8c31ebab-465e-4509-b146-db6e21238e56
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cual14cumplimiento
+    - node.type.autodiagnostico_administracion
+id: node.autodiagnostico_administracion.field_cual14cumplimiento
+field_name: field_cual14cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '14. Otro ¿Cuál?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

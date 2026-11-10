@@ -1,0 +1,13 @@
+uuid: a352f429-dad5-451e-9a94-590bc07f51b3
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+id: gestor_cursos
+label: 'Gestor de Cursos'
+weight: 27
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'

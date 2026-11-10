@@ -1,0 +1,18 @@
+uuid: 9a106995-f15d-49f5-9588-0ea507866cbd
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Canvas - Ángeles'
+type: canvas_ngeles
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

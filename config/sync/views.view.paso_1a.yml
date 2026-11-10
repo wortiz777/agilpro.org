@@ -1,0 +1,270 @@
+uuid: 667a98ae-5029-41b3-a91f-666c18478cf5
+langcode: es
+status: true
+dependencies:
+  config:
+    - webform.webform.webform_462
+  module:
+    - node
+    - user
+    - webform
+id: paso_1a
+label: 'Paso 1A'
+module: views
+description: ''
+tag: default
+base_table: webform_submission
+base_field: sid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: ''
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Título
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          settings:
+            link_to_entity: 1
+          ui_name: ''
+      pager:
+        type: none
+        options:
+          items_per_page: null
+      exposed_form:
+        type: basic
+      access:
+        type: none
+      cache:
+        type: none
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          label: ''
+          empty: true
+          ui_name: ''
+          content: |-
+            <div class="c-callout-card card-content">
+            	<div class="c-mediaImage--centered margin-left--lv0">
+            		<span aria-hidden="true" class="glyphicon glyphicon-bell">&nbsp;</span>
+            	</div>
+            	<div class="freddicon light-bulb-color margin--lv1 margin-top-bottom--lv0">
+            		<a href="/360-capacidades-emprendedor"><p class="margin-bottom--lv0 small-meta link-underline"><strong><h3>Primer Paso</h3></strong></a><p>Realiza el <b><a href="/360-capacidades-emprendedor">Autodiagnóstico 360° de Capacidades Emprendedoras.</a></b> Obtendrás un completo diagnóstico de tus habilidades como emprendedor y podrás acceder a la fase <b>"Conectar"</b> del programa ¡empréndelo¡.</p> <a class="btn btn-warning" href="/360-capacidades-emprendedor"><i class="fa fa-user-circle-o fa-lg">&nbsp;</i> Realizar Autodiagnóstico </a>
+             	</div>
+            </div>
+            <br>
+          tokenize: 0
+      sorts: {  }
+      arguments: {  }
+      filters:
+        webform_id:
+          id: webform_id
+          table: webform_submission
+          field: webform_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: webform_submission
+          plugin_id: bundle
+          operator: in
+          value:
+            webform_462: webform_462
+          group: 1
+          exposed: false
+        uid_current:
+          id: uid_current
+          table: users
+          field: uid_current
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          plugin_id: user_current
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+      row:
+        type: fields
+        options:
+          default_field_elements: false
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options: {  }
+      relationships: {  }
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          label: ''
+          empty: false
+          ui_name: ''
+          content: |
+            <div class="pasos">
+            	<p><span aria-hidden="true" class="glyphicon glyphicon-ok">&nbsp;</span> Excelente, ya realizaste tu Autodiagnóstico. Vea sus resultados aquí: <a href="/360-capacidades-emprendedor"><b>Autodiagnóstico 360° como emprendedor.</b></a></p>
+            </div>
+            <br>
+          tokenize: 0
+      display_extenders: {  }
+      style_plugin: default
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+      tags: {  }
+  block_1:
+    id: block_1
+    display_title: Bloque
+    display_plugin: block
+    position: 3
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ' '
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          settings:
+            link_to_entity: 0
+          ui_name: ''
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        fields: false
+      display_extenders: {  }
+      block_description: 'Paso 1A'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+      tags: {  }
+  page:
+    id: page
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+      path: paso-1a
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user
+      tags: {  }

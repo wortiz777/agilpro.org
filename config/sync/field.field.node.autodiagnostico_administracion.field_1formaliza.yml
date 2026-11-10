@@ -1,0 +1,21 @@
+uuid: bc764645-54f5-469a-a8b0-f785bf98bf43
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1formaliza
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_1formaliza
+field_name: field_1formaliza
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '1. Renovación matrícula mercantil el ultimo año '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

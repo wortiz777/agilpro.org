@@ -1,0 +1,21 @@
+uuid: 0ae0ce80-e49a-4055-872c-f260479006f4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_acta_de_comit_
+    - node.type.actas_selecci_n_comit_
+  module:
+    - datetime
+id: node.actas_selecci_n_comit_.field_fecha_acta_de_comit_
+field_name: field_fecha_acta_de_comit_
+entity_type: node
+bundle: actas_selecci_n_comit_
+label: 'Fecha Acta de Comité'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

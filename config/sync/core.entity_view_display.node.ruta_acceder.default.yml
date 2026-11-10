@@ -1,0 +1,44 @@
+uuid: f2ca33bc-315e-4e91-9aa8-3c80e85d1df0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_acceder.field_acceso_a_financiaci_n_nota
+    - field.field.node.ruta_acceder.field_acceso_a_mercados_notas_as
+    - field.field.node.ruta_acceder.field_ruta_mentoria
+    - node.type.ruta_acceder
+  module:
+    - user
+id: node.ruta_acceder.default
+targetEntityType: node
+bundle: ruta_acceder
+mode: default
+content:
+  field_acceso_a_financiaci_n_nota:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_acceso_a_mercados_notas_as:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ruta_mentoria:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

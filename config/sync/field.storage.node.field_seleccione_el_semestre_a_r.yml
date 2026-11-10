@@ -1,0 +1,43 @@
+uuid: 76a5f3b8-1ef6-422a-95d2-b7935d5c5360
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_seleccione_el_semestre_a_r
+field_name: field_seleccione_el_semestre_a_r
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Semestre I - 2017'
+      label: 'Semestre I - 2017'
+    -
+      value: 'Semestre II - 2017'
+      label: 'Semestre II - 2017'
+    -
+      value: 'Semestre I - 2018'
+      label: 'Semestre I - 2018'
+    -
+      value: 'Semestre II - 2018'
+      label: 'Semestre II - 2018'
+    -
+      value: 'Semestre I - 2019'
+      label: 'Semestre I - 2019'
+    -
+      value: 'Semestre II - 2019'
+      label: 'Semestre II - 2019'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

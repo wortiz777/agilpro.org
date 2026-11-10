@@ -1,0 +1,19 @@
+uuid: bdf9e732-5d50-4d05-886c-73b74d6ff9f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tiempo_de_dedicaci_n_al_em
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_tiempo_de_dedicaci_n_al_em
+field_name: field_tiempo_de_dedicaci_n_al_em
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Tiempo de dedicación al emprendimiento por el Emprendedor Líder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

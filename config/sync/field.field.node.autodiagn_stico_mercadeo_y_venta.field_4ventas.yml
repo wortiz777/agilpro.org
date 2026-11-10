@@ -1,0 +1,23 @@
+uuid: 7410582e-d481-4f26-b3d9-b7fcf705351a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4ventas
+    - node.type.autodiagn_stico_mercadeo_y_venta
+id: node.autodiagn_stico_mercadeo_y_venta.field_4ventas
+field_name: field_4ventas
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '4. Número de segmentos de clientes que atiende la empresa actualmente.'
+description: 'El concepto de segmentación consiste en la selección de grupos de clientes con demandas similares, perfiles similares y que son atractivos para la empresa, aportan valor. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,27 @@
+uuid: 29fc9c7c-7caa-462a-8b23-afd15381e299
+langcode: es
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_rol_empresa
+field_name: field_rol_empresa
+entity_type: user
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: admin_empresa
+      label: 'Administrador de Empresa'
+    -
+      value: colaborador
+      label: 'Colaborador / Asistente'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

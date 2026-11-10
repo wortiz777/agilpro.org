@@ -1,0 +1,21 @@
+uuid: 6f73c8de-a8dd-4b0b-b0aa-f5ae1a22f637
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_genero
+    - node.type.participantes_ficha_inscripci_n
+  module:
+    - options
+id: node.participantes_ficha_inscripci_n.field_genero
+field_name: field_genero
+entity_type: node
+bundle: participantes_ficha_inscripci_n
+label: Genero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

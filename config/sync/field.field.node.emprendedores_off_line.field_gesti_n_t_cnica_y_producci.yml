@@ -1,0 +1,23 @@
+uuid: c023aec6-d0a2-4b4b-a871-017871861977
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gesti_n_t_cnica_y_producci
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_gesti_n_t_cnica_y_producci
+field_name: field_gesti_n_t_cnica_y_producci
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Gestión Técnica y Producción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

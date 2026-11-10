@@ -1,0 +1,23 @@
+uuid: 419f0032-cc95-42e3-a9c8-41753bc5d54e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_orientaci_n_al_logro
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_orientaci_n_al_logro
+field_name: field_orientaci_n_al_logro
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Orientación al Logro'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

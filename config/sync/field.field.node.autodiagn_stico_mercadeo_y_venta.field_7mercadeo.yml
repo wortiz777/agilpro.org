@@ -1,0 +1,26 @@
+uuid: f8486e2f-0b21-4439-81f8-3201e9582515
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_7mercadeo
+field_name: field_7mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '7. La empresa ha definido estrategias para la promoción de sus productos o servicios.'
+description: 'La promoción es establecer los medios y canales para comunicar al cliente los productos y servicios, así como fomentar la venta. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

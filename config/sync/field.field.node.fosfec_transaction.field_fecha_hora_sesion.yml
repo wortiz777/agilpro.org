@@ -1,0 +1,21 @@
+uuid: bb612a62-1150-4e04-adc1-05f6c1da9eb5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_hora_sesion
+    - node.type.fosfec_transaction
+  module:
+    - datetime_range
+id: node.fosfec_transaction.field_fecha_hora_sesion
+field_name: field_fecha_hora_sesion
+entity_type: node
+bundle: fosfec_transaction
+label: 'Fecha y Hora Sesión'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

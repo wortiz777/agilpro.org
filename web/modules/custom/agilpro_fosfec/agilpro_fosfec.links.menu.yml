@@ -1,0 +1,61 @@
+agilpro_fosfec.fomento_empresarial:
+  title: 'Fomento Empresarial'
+  description: 'Gestión y control de convocatorias, postulaciones y transacciones FOSFEC.'
+  parent: system.admin
+  route_name: agilpro_fosfec.dashboard
+  weight: -10
+
+agilpro_fosfec.dashboard_link:
+  title: 'Tablero de Control FOSFEC'
+  description: 'Monitoreo de ofertas, inscripciones Mipyme y transacciones auditables.'
+  parent: agilpro_fosfec.fomento_empresarial
+  route_name: agilpro_fosfec.dashboard
+  weight: 1
+
+agilpro_fosfec.sabana_link:
+  title: 'Sábana Auditables FOSFEC'
+  description: 'Reporte y descarga de transacciones auditables.'
+  parent: agilpro_fosfec.fomento_empresarial
+  route_name: agilpro_fosfec.sabana_report
+  weight: 2
+
+agilpro_fosfec.mentor_workspace:
+  title: 'Mi Espacio de Mentoría'
+  route_name: agilpro_fosfec.mentor_dashboard
+  menu_name: main
+  weight: 20
+  options:
+    agilpro_icon:
+      bundle: fontawesome
+      icon: 'fa-solid fa-chalkboard-user'
+      position: title_before
+    agilpro_roles:
+      - mentor_consultor
+      - administrator
+      - super_admin
+
+agilpro_fosfec.mentor_empresas:
+  title: 'Mis Empresas Asignadas'
+  route_name: view.mentor_empresas_asignadas.page_1
+  menu_name: main
+  parent: agilpro_fosfec.mentor_workspace
+  weight: 1
+  options:
+    agilpro_icon:
+      bundle: fontawesome
+      icon: 'fa-solid fa-building'
+      position: title_before
+
+agilpro_fosfec.mentor_sesiones:
+  title: 'Registro de Sesiones FOSFEC'
+  route_name: view.mentor_sesiones_transacciones.page_1
+  menu_name: main
+  parent: agilpro_fosfec.mentor_workspace
+  weight: 2
+  options:
+    agilpro_icon:
+      bundle: fontawesome
+      icon: 'fa-solid fa-calendar-check'
+      position: title_before
+
+

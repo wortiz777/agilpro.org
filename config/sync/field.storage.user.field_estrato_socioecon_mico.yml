@@ -1,0 +1,39 @@
+uuid: bd44b058-6902-44a5-89a5-8aba404c9e20
+langcode: und
+status: true
+dependencies:
+  module:
+    - options
+    - user
+id: user.field_estrato_socioecon_mico
+field_name: field_estrato_socioecon_mico
+entity_type: user
+type: list_integer
+settings:
+  allowed_values:
+    -
+      value: 1
+      label: '1'
+    -
+      value: 2
+      label: '2'
+    -
+      value: 3
+      label: '3'
+    -
+      value: 4
+      label: '4'
+    -
+      value: 5
+      label: '5'
+    -
+      value: 6
+      label: '6'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

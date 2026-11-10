@@ -1,0 +1,30 @@
+uuid: d2589e31-5d80-4b20-9b10-197a30febb94
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_desarrollo_competenci
+    - node.type.inscripci_n_fase_empoderar
+    - node.type.ruta_desarrollo_competencias_dim
+id: node.inscripci_n_fase_empoderar.field_ruta_desarrollo_competenci
+field_name: field_ruta_desarrollo_competenci
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Ruta Desarrollo Competencias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ruta_desarrollo_competencias_dim: ruta_desarrollo_competencias_dim
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

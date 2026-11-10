@@ -1,0 +1,9 @@
+uuid: a030b8d5-f0f5-43fe-abef-e5c9cac840ab
+langcode: es
+status: true
+dependencies: {  }
+name: 'Ejes Estratégicos'
+vid: ejes_estrategicos
+description: null
+weight: -10
+new_revision: false

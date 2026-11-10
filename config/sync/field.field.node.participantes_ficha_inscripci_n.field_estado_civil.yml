@@ -1,0 +1,21 @@
+uuid: 46729eba-8a5a-4069-91d0-33eaa46c4ffa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estado_civil
+    - node.type.participantes_ficha_inscripci_n
+  module:
+    - options
+id: node.participantes_ficha_inscripci_n.field_estado_civil
+field_name: field_estado_civil
+entity_type: node
+bundle: participantes_ficha_inscripci_n
+label: 'Estado Civil'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

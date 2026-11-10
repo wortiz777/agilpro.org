@@ -1,0 +1,18 @@
+webform_ids:
+  capacidades_emprendedoras: 'webform_462'
+  direccionamiento: 'webform_121'
+  administracion: 'webform_122'
+  mercadeo: 'webform_123'
+  tecnico_operativo: 'webform_125'
+  financiero: 'webform_127'
+role_ids:
+  asesor: 'asesor'
+  asesor_confirmado: 'asesor_confirmado'
+  emprendedor_registrado: 'emprendedor_registrado'
+  emprendedor_con_perfil: 'emprendedor_con_perfil'
+  emprendedor_fase_conectar: 'emprendedor_fase_conectar'
+camara_restricted_paths:
+  - '/gestion-c2-inscripcion'
+  - '/360-capacidades-emprendedoras'
+  - '/gestion-usuarios'
+

@@ -1,0 +1,25 @@
+{%
+  set d7_id_map = {
+    'menu-iniciar-sesi-n': 'block-menu-menu-iniciar-sesi-n',
+    'account': 'block-system-user-menu',
+    'menu-recursos-abiertos': 'block-menu-menu-recursos-abiertos',
+    'menu-biblioteca': 'block-menu-menu-biblioteca',
+    'menu-360-emprendimiento': 'block-menu-menu-360-emprendimiento',
+    'menu-gesti-n-general': 'block-menu-menu-gesti-n-general',
+    'menu-men-componente-iii': 'block-menu-menu-men-componente-iii',
+    'menu-entregables-asesores-taller': 'block-menu-menu-entregables-asesores-taller',
+    'menu-men-entregables-asesores-ta': 'block-menu-menu-men-entregables-asesores-ta',
+    'menu-men-gesti-n-metas': 'block-menu-menu-men-gesti-n-metas',
+    'menu-regresar': 'block-menu-menu-regresar',
+    'menu-que-quieres-hacer': 'block-menu-menu-que-quieres-hacer',
+  }
+%}
+{% set block_id = d7_id_map[derivative_plugin_id] ?? attributes.id %}
+<section{{ attributes.setAttribute('id', block_id).addClass('block', 'block-menu', 'clearfix')|without('role', 'aria-labelledby', 'data-component-id') }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes.addClass('block-title')|without('id') }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {{ content }}
+</section>

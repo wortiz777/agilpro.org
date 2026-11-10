@@ -1,0 +1,8 @@
+name: 'AgilPro OnBase Connector'
+type: module
+description: 'Conector asíncrono, desacoplado y tolerante a fallos para Hyland OnBase REST Web API de Compensar con streaming de PDF y Queue API.'
+package: 'AgilPro'
+core_version_requirement: ^10 || ^11
+dependencies:
+  - key:key
+

@@ -1,0 +1,27 @@
+uuid: bd7d1db8-de1f-43e2-878f-d160f24216f8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargar_soportes_empoderar
+    - node.type.inscripci_n_fase_empoderar
+  module:
+    - file
+id: node.inscripci_n_fase_empoderar.field_cargar_soportes_empoderar
+field_name: field_cargar_soportes_empoderar
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Cargar soportes - Empoderar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'Soportes - Empoderar'
+  file_extensions: 'pdf xls xlsx doc docx ppt pptx'
+  max_filesize: ''
+  description_field: false
+field_type: file

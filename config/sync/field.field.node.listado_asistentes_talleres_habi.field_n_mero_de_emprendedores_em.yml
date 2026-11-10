@@ -1,0 +1,23 @@
+uuid: 4bcf05dc-09d4-4815-9a3d-35fc505496b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_n_mero_de_emprendedores_em
+    - node.type.listado_asistentes_talleres_habi
+id: node.listado_asistentes_talleres_habi.field_n_mero_de_emprendedores_em
+field_name: field_n_mero_de_emprendedores_em
+entity_type: node
+bundle: listado_asistentes_talleres_habi
+label: 'Número de Emprendedores Empoderados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,14 @@
+uuid: a9a0e8b9-08fd-44f8-a189-4a586c9715f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.coordinador_nacional
+  module:
+    - user
+id: user_remove_role_action.coordinador_nacional
+label: 'Elimina el rol Coordinador Nacional al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: coordinador_nacional

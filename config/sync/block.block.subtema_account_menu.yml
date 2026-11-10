@@ -1,0 +1,35 @@
+uuid: 0c65ee56-2101-44ac-b17d-2f21e6edc96a
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+_core:
+  default_config_hash: KH_tJgmJozRQ97zKa5-EodoDcFc_SQ7vudOLtn8C2a0
+id: subtema_account_menu
+theme: subtema
+region: secondary_menu
+weight: -24
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'Menú de cuenta de usuario'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

@@ -1,0 +1,19 @@
+uuid: d360f94d-88c3-40e9-9f96-ac39521df7f2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ciudad_municipio
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_ciudad_municipio
+field_name: field_ciudad_municipio
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: Ciudad/Municipio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

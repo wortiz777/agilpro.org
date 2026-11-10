@@ -1,0 +1,26 @@
+uuid: 719d42af-3629-48b6-a17c-1da16fc79ba9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ciiu_
+    - node.type.formatos_inscripci_n_emprendimie
+    - taxonomy.vocabulary.ciiu_divisi_n_rev_4_
+id: node.formatos_inscripci_n_emprendimie.field_ciiu_
+field_name: field_ciiu_
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'CIIU '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      ciiu_divisi_n_rev_4_: ciiu_divisi_n_rev_4_
+    sort:
+      field: _none
+field_type: entity_reference

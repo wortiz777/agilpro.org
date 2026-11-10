@@ -1,0 +1,19 @@
+uuid: 65a588e3-9e30-42a9-a622-44fe65507ae9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_expansion
+    - node.type.canvas_expansi_n
+id: node.canvas_expansi_n.field_nueva_referencia_expansion
+field_name: field_nueva_referencia_expansion
+entity_type: node
+bundle: canvas_expansi_n
+label: 'Ingresar Nueva Referencia Expansión'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

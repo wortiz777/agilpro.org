@@ -1,0 +1,18 @@
+uuid: 3532d1d0-46b2-4c7d-bc66-05cbe1771e34
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Actas Selección Comité'
+type: actas_selecci_n_comit_
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

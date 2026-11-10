@@ -1,0 +1,20 @@
+uuid: 759d6642-c49a-4464-8a88-c4e2dd50859d
+langcode: es
+status: true
+dependencies:
+  theme:
+    - subtema
+_core:
+  default_config_hash: sz6KjJd2RGxMtPJ8v3NRighA07Rep6_nnt_y-S0Vc2M
+id: subtema_page_title
+theme: subtema
+region: content
+weight: -25
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Título de la página'
+  label_display: '0'
+  provider: core
+visibility: {  }

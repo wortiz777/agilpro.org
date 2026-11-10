@@ -1,0 +1,440 @@
+uuid: e61741e4-d786-4359-ac8d-3eff19936838
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.emprendedores_off_line.field_administraci_n
+    - field.field.node.emprendedores_off_line.field_amplitud_perceptual
+    - field.field.node.emprendedores_off_line.field_autodiagn_stico_emprendedo
+    - field.field.node.emprendedores_off_line.field_autodiagn_stico_emprendimi
+    - field.field.node.emprendedores_off_line.field_breve_perfil
+    - field.field.node.emprendedores_off_line.field_breve_proyecto
+    - field.field.node.emprendedores_off_line.field_c_dula
+    - field.field.node.emprendedores_off_line.field_c_mara_de_comercio
+    - field.field.node.emprendedores_off_line.field_cargo_del_emprendedor_l_de
+    - field.field.node.emprendedores_off_line.field_celular
+    - field.field.node.emprendedores_off_line.field_ciudad_emprendedor_l_der
+    - field.field.node.emprendedores_off_line.field_ciuu
+    - field.field.node.emprendedores_off_line.field_como_se_enter_de_empr_ndel
+    - field.field.node.emprendedores_off_line.field_creatividad_e_innovaci_n
+    - field.field.node.emprendedores_off_line.field_direcci_n_emprendedor_l_de
+    - field.field.node.emprendedores_off_line.field_direcci_n_emprendimiento
+    - field.field.node.emprendedores_off_line.field_direccionamiento
+    - field.field.node.emprendedores_off_line.field_e_mail
+    - field.field.node.emprendedores_off_line.field_empleos_formales
+    - field.field.node.emprendedores_off_line.field_empleos_informales
+    - field.field.node.emprendedores_off_line.field_estado_civ
+    - field.field.node.emprendedores_off_line.field_estrato_socioecon
+    - field.field.node.emprendedores_off_line.field_fase_acceder
+    - field.field.node.emprendedores_off_line.field_fase_empoderar
+    - field.field.node.emprendedores_off_line.field_fase_fortalecer
+    - field.field.node.emprendedores_off_line.field_fecha_de_nacimiento
+    - field.field.node.emprendedores_off_line.field_financier
+    - field.field.node.emprendedores_off_line.field_g_nero
+    - field.field.node.emprendedores_off_line.field_gesti_n_t_cnica_y_producci
+    - field.field.node.emprendedores_off_line.field_grado_de_vulnerabilidad
+    - field.field.node.emprendedores_off_line.field_ingresos_por_ventas_mensua
+    - field.field.node.emprendedores_off_line.field_liderazgo
+    - field.field.node.emprendedores_off_line.field_mercade
+    - field.field.node.emprendedores_off_line.field_nivel_de_estudios_emprende
+    - field.field.node.emprendedores_off_line.field_nombre_emprendimiento
+    - field.field.node.emprendedores_off_line.field_orientaci_n_al_logro
+    - field.field.node.emprendedores_off_line.field_orientaci_n_al_mercado
+    - field.field.node.emprendedores_off_line.field_pensamiento_sist_mico
+    - field.field.node.emprendedores_off_line.field_registro_mercantil
+    - field.field.node.emprendedores_off_line.field_remuneraci_n_promedio_mens
+    - field.field.node.emprendedores_off_line.field_rentabilidad
+    - field.field.node.emprendedores_off_line.field_ruta_de_fortalecimiento
+    - field.field.node.emprendedores_off_line.field_sector_econ_mico
+    - field.field.node.emprendedores_off_line.field_ser
+    - field.field.node.emprendedores_off_line.field_tiempo_de_dedicaci_n_al_em
+    - node.type.emprendedores_off_line
+  module:
+    - path
+id: node.emprendedores_off_line.default
+targetEntityType: node
+bundle: emprendedores_off_line
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_administraci_n:
+    type: number
+    weight: 40
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_amplitud_perceptual:
+    type: number
+    weight: 34
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_autodiagn_stico_emprendedo:
+    type: boolean_checkbox
+    weight: 33
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_autodiagn_stico_emprendimi:
+    type: boolean_checkbox
+    weight: 34
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_breve_perfil:
+    type: string_textarea
+    weight: 24
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_breve_proyecto:
+    type: string_textarea
+    weight: 25
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_c_dula:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cargo_del_emprendedor_l_de:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_celular:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ciudad_emprendedor_l_der:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ciuu:
+    type: string_textfield
+    weight: 26
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_como_se_enter_de_empr_ndel:
+    type: string_textfield
+    weight: 28
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_creatividad_e_innovaci_n:
+    type: number
+    weight: 33
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_direcci_n_emprendedor_l_de:
+    type: string_textfield
+    weight: 9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_direcci_n_emprendimiento:
+    type: string_textfield
+    weight: 11
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_direccionamiento:
+    type: number
+    weight: 39
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_e_mail:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_empleos_formales:
+    type: string_textfield
+    weight: 18
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_empleos_informales:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_estado_civ:
+    type: string_textfield
+    weight: 15
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_estrato_socioecon:
+    type: string_textfield
+    weight: 14
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fase_acceder:
+    type: boolean_checkbox
+    weight: 32
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_fase_empoderar:
+    type: boolean_checkbox
+    weight: 30
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_fase_fortalecer:
+    type: boolean_checkbox
+    weight: 31
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_fecha_de_nacimiento:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_financier:
+    type: number
+    weight: 43
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_g_nero:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_gesti_n_t_cnica_y_producci:
+    type: number
+    weight: 42
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_grado_de_vulnerabilidad:
+    type: string_textfield
+    weight: 16
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ingresos_por_ventas_mensua:
+    type: string_textfield
+    weight: 12
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_liderazgo:
+    type: number
+    weight: 36
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_mercade:
+    type: number
+    weight: 41
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_nivel_de_estudios_emprende:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_nombre_emprendimiento:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_orientaci_n_al_logro:
+    type: number
+    weight: 37
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_orientaci_n_al_mercado:
+    type: number
+    weight: 38
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_pensamiento_sist_mico:
+    type: number
+    weight: 35
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_registro_mercantil:
+    type: string_textfield
+    weight: 19
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_remuneraci_n_promedio_mens:
+    type: string_textfield
+    weight: 13
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_rentabilidad:
+    type: string_textfield
+    weight: 17
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_de_fortalecimiento:
+    type: boolean_checkbox
+    weight: 35
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_sector_econ_mico:
+    type: string_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ser:
+    type: number
+    weight: 32
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_tiempo_de_dedicaci_n_al_em:
+    type: string_textfield
+    weight: 27
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_c_mara_de_comercio: true
+  promote: true
+  sticky: true

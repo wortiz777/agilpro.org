@@ -1,0 +1,50 @@
+uuid: 43155282-4a9e-4777-b46c-56c7b150b6d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_medios.field_descripcion_formacion_e
+    - field.field.node.canvas_medios.field_fase_canvas
+    - field.field.node.canvas_medios.field_ingresar_nuevo_registro
+    - node.type.canvas_medios
+  module:
+    - user
+id: node.canvas_medios.default
+targetEntityType: node
+bundle: canvas_medios
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fase_canvas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ingresar_nuevo_registro:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

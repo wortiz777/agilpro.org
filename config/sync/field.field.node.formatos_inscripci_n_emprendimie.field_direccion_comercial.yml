@@ -1,0 +1,19 @@
+uuid: 6061333e-7171-4186-ac86-15cf7a33e67b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_direccion_comercial
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_direccion_comercial
+field_name: field_direccion_comercial
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Dirección Comercial'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

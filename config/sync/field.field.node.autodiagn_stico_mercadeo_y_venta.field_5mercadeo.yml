@@ -1,0 +1,26 @@
+uuid: ae5c0ec6-8647-4a8d-9481-c5a32be92d8e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_5mercadeo
+field_name: field_5mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '5. En la empresa se tiene establecida estrategia para la consecución de nuevos clientes.'
+description: 'Una estrategia es un plan que especifica una serie de pasos que tienen como fin la consecución de un determinado objetivo.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

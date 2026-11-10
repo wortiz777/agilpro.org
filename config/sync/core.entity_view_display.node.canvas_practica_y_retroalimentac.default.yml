@@ -1,0 +1,40 @@
+uuid: d02d6323-6a90-478e-8476-50e52f0d439d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_practica_y_retroalimentac.field_descripcion_formacion_e
+    - field.field.node.canvas_practica_y_retroalimentac.field_ingresar_nueva_pr_ctica
+    - node.type.canvas_practica_y_retroalimentac
+  module:
+    - user
+id: node.canvas_practica_y_retroalimentac.default
+targetEntityType: node
+bundle: canvas_practica_y_retroalimentac
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ingresar_nueva_pr_ctica:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

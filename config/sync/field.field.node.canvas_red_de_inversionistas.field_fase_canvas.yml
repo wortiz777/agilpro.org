@@ -1,0 +1,21 @@
+uuid: 9d5bdc72-e8b4-4425-8512-9a35386b05d0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_red_de_inversionistas
+id: node.canvas_red_de_inversionistas.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_red_de_inversionistas
+label: 'Fase Canvas'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '1. Reconocimiento'
+default_value_callback: ''
+settings: {  }
+field_type: string

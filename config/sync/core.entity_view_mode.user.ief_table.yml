@@ -1,0 +1,11 @@
+uuid: 393a1785-38dc-4ef4-867e-55b184cb612d
+langcode: es
+status: true
+dependencies:
+  module:
+    - user
+id: user.ief_table
+label: ief_table
+description: null
+targetEntityType: user
+cache: true

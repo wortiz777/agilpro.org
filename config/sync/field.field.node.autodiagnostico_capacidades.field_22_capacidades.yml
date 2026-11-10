@@ -1,0 +1,26 @@
+uuid: 6a3ae2ef-f189-4f6a-b372-dcae31981604
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_22_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_22_capacidades
+field_name: field_22_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '22. Personas cercanas a usted, lo catalogan como una persona que sabe escuchar.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

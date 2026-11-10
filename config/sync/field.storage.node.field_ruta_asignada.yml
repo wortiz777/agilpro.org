@@ -1,0 +1,20 @@
+uuid: 2eee37ba-1f3b-44b6-a9e2-ad71d3cd7ade
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ruta_asignada
+field_name: field_ruta_asignada
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

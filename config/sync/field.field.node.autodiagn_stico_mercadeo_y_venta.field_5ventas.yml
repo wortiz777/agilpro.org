@@ -1,0 +1,23 @@
+uuid: 7aafba91-a243-415a-86fd-d4ce6ebcb688
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5ventas
+    - node.type.autodiagn_stico_mercadeo_y_venta
+id: node.autodiagn_stico_mercadeo_y_venta.field_5ventas
+field_name: field_5ventas
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '5. Número de canales de distribución que maneja la empresa actualmente.'
+description: 'Un canal de distribución es el conducto que cada empresa escoge para llevar sus productos al consumidor de la forma más completa, eficiente y económica posible.  la distribución tiene como misión poner el producto a disposición de los consumidores en la cantidad, el lugar y el momento apropiados, y con los servicios necesarios.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

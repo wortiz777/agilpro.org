@@ -1,0 +1,173 @@
+uuid: 28cfb402-68ee-4c2c-bec3-af9df56746b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagnostico_administracion.field_10admin
+    - field.field.node.autodiagnostico_administracion.field_10cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_11cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_12cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_13cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_1_admin
+    - field.field.node.autodiagnostico_administracion.field_1cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_1formaliza
+    - field.field.node.autodiagnostico_administracion.field_1norma
+    - field.field.node.autodiagnostico_administracion.field_2admin
+    - field.field.node.autodiagnostico_administracion.field_2cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_2formaliza
+    - field.field.node.autodiagnostico_administracion.field_2norma
+    - field.field.node.autodiagnostico_administracion.field_3admin
+    - field.field.node.autodiagnostico_administracion.field_3cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_3formaliza
+    - field.field.node.autodiagnostico_administracion.field_3norma
+    - field.field.node.autodiagnostico_administracion.field_4admin
+    - field.field.node.autodiagnostico_administracion.field_4cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_4formaliza
+    - field.field.node.autodiagnostico_administracion.field_4norma
+    - field.field.node.autodiagnostico_administracion.field_5admin
+    - field.field.node.autodiagnostico_administracion.field_5cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_5formaliza
+    - field.field.node.autodiagnostico_administracion.field_5norma
+    - field.field.node.autodiagnostico_administracion.field_6admin
+    - field.field.node.autodiagnostico_administracion.field_6cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_6norma
+    - field.field.node.autodiagnostico_administracion.field_7admin
+    - field.field.node.autodiagnostico_administracion.field_7cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_8admin
+    - field.field.node.autodiagnostico_administracion.field_8cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_9admin
+    - field.field.node.autodiagnostico_administracion.field_9cumplimiento
+    - field.field.node.autodiagnostico_administracion.field_cual14cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - path
+id: node.autodiagnostico_administracion.default
+targetEntityType: node
+bundle: autodiagnostico_administracion
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_1norma:
+    type: number
+    weight: 12
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_2norma:
+    type: number
+    weight: 13
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_3norma:
+    type: number
+    weight: 14
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_4norma:
+    type: number
+    weight: 15
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_5norma:
+    type: number
+    weight: 16
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_6norma:
+    type: number
+    weight: 17
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_cual14cumplimiento:
+    type: string_textfield
+    weight: 36
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_10admin: true
+  field_10cumplimiento: true
+  field_11cumplimiento: true
+  field_12cumplimiento: true
+  field_13cumplimiento: true
+  field_1_admin: true
+  field_1cumplimiento: true
+  field_1formaliza: true
+  field_2admin: true
+  field_2cumplimiento: true
+  field_2formaliza: true
+  field_3admin: true
+  field_3cumplimiento: true
+  field_3formaliza: true
+  field_4admin: true
+  field_4cumplimiento: true
+  field_4formaliza: true
+  field_5admin: true
+  field_5cumplimiento: true
+  field_5formaliza: true
+  field_6admin: true
+  field_6cumplimiento: true
+  field_7admin: true
+  field_7cumplimiento: true
+  field_8admin: true
+  field_8cumplimiento: true
+  field_9admin: true
+  field_9cumplimiento: true
+  promote: true
+  sticky: true

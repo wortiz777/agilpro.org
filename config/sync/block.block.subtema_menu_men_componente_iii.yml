@@ -1,0 +1,54 @@
+uuid: 39183365-d0ac-4090-aece-a80c42441c5b
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-men-componente-iii
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_men_componente_iii
+theme: subtema
+region: content
+weight: 11
+provider: null
+plugin: 'system_menu_block:menu-men-componente-iii'
+settings:
+  id: 'system_menu_block:menu-men-componente-iii'
+  label: menu-men-componente-iii
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /gestion-c3-identificacion
+      /gestion-c3-capacitacion
+      /gestion-c3-optimizacion
+      /gestion-c3-accesibilidad
+      /gestion-c3-aplicabilidad
+      /gestion-c3-feedback
+      /gestion-c3-documentacion
+      /stat/*
+      /node/429
+      /node/2470
+      /node/2472
+      /node/2474
+      /node/2475
+      /node/2476
+      /node/2477
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      coordinador_regional: coordinador_regional
+      coordinador_nacional: coordinador_nacional

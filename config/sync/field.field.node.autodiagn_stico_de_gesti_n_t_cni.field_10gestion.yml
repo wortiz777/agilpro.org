@@ -1,0 +1,26 @@
+uuid: e2aa3f93-8e72-40ea-a79a-c62e4ec24ea4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10gestion
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_10gestion
+field_name: field_10gestion
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '10. La empresa cuenta con una estrategia para generar, capacitar y proteger el know-how propio. '
+description: "Know How proviene del inglés y significa: \"Saber hacer\"   \r\nConsiste en las capacidades y habilidades que un individuo o una organización poseen en cuanto a la realización de un tarea específica.\r\nEl Know-how es la pericia, la destreza o la habilidad, adquiridas gracias a la experiencia y la práctica prolongada, mientras que el saber hacer es poder resolver los problemas con soluciones prácticas.\r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

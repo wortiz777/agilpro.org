@@ -1,0 +1,23 @@
+uuid: 1a3626d7-a8d6-41e6-ab1b-2b10d85329bb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fortalecidos_reporte_excel
+    - node.type.metas
+id: node.metas.field_fortalecidos_reporte_excel
+field_name: field_fortalecidos_reporte_excel
+entity_type: node
+bundle: metas
+label: 'Fortalecidos | Reporte Excel (Sep)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

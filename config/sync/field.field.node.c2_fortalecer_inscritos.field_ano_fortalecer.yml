@@ -1,0 +1,21 @@
+uuid: 251eee96-8334-4f0e-ac6f-ba0afc2f4f83
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ano_fortalecer
+    - node.type.c2_fortalecer_inscritos
+  module:
+    - options
+id: node.c2_fortalecer_inscritos.field_ano_fortalecer
+field_name: field_ano_fortalecer
+entity_type: node
+bundle: c2_fortalecer_inscritos
+label: 'Edición (año)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

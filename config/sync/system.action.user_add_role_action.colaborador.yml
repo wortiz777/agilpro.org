@@ -1,0 +1,14 @@
+uuid: f8514a58-06aa-4ccd-9e94-acf7b953051a
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.colaborador
+  module:
+    - user
+id: user_add_role_action.colaborador
+label: 'Añade el rol Colaborador Empresa al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: colaborador

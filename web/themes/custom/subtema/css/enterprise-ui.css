@@ -1,0 +1,3114 @@
+/* ==========================================================================
+   AGILPRO.ORG — SISTEMA DE DISEÑO CORPORATIVO (INSPIRADO EN APPLE / GOOGLE)
+   100% Responsivo (Mobile-First, Tablet & Desktop) para Drupal 11
+   ========================================================================== */
+
+:root {
+  /* Paleta Corporativa (Inspiración Google Cloud / Apple Enterprise) */
+  --agp-navy: #0a2540;
+  --agp-brand-blue: #0052cc;
+  --agp-brand-blue-dark: #003d99;
+  --agp-cyan: #009cd4;
+  --agp-cyan-soft: #e8f5fe;
+  --agp-surface-tint: #f0f7ff;
+  --agp-bg-canvas: #f5f5f7;
+  --agp-surface: #ffffff;
+  --agp-surface-glass: rgba(255, 255, 255, 0.86);
+  --agp-text-primary: #1d1d1f;
+  --agp-text-secondary: #515154;
+  --agp-text-muted: #6e6e73;
+  --agp-border-subtle: rgba(15, 23, 42, 0.08);
+  --agp-border-focus: rgba(0, 156, 212, 0.45);
+
+  /* Sombras de Elevación Suave (Apple / Material 3) */
+  --agp-shadow-header: 0 1px 0 rgba(15, 23, 42, 0.06), 0 8px 24px -4px rgba(15, 23, 42, 0.05);
+  --agp-shadow-card: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --agp-shadow-card-hover: 0 20px 38px -10px rgba(15, 23, 42, 0.12), 0 4px 12px rgba(15, 23, 42, 0.05);
+  --agp-shadow-dropdown: 0 22px 44px -12px rgba(15, 23, 42, 0.18), 0 4px 16px -2px rgba(15, 23, 42, 0.06);
+
+  /* Radios y Transiciones */
+  --agp-radius-xl: 24px;
+  --agp-radius-lg: 18px;
+  --agp-radius-md: 12px;
+  --agp-radius-sm: 8px;
+  --agp-radius-pill: 9999px;
+  --agp-transition: 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Tipografía Corporativa */
+  --agp-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Google Sans', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* --------------------------------------------------------------------------
+   1. Base Global, Tipografía Fluida y Lienzo Responsivo
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--agp-font-sans) !important;
+  color: var(--agp-text-primary);
+  background-color: var(--agp-bg-canvas) !important;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+body.navbar-is-fixed-top {
+  padding-top: 84px !important;
+}
+
+.main-container.container-fluid {
+  max-width: 1380px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100% !important;
+  padding: 20px clamp(16px, 3vw, 40px) 64px !important;
+  box-sizing: border-box !important;
+}
+
+/* Tipografía Corporativa Fluida (Apple / Google Style) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--agp-font-sans) !important;
+  color: var(--agp-navy);
+  letter-spacing: -0.022em;
+  font-weight: 700;
+}
+
+.titulo,
+h1.page-header,
+h1.title {
+  font-size: clamp(1.75rem, 3.2vw, 2.65rem) !important;
+  line-height: 1.18 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  color: var(--agp-navy) !important;
+  border-bottom: none !important;
+  margin-top: 8px !important;
+  margin-bottom: 24px !important;
+  text-align: center;
+}
+
+.titulo-2 {
+  font-size: clamp(1.45rem, 2.5vw, 2.1rem) !important;
+  line-height: 1.24 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  color: var(--agp-navy) !important;
+  margin-bottom: 24px !important;
+}
+
+p {
+  color: var(--agp-text-secondary);
+  font-size: 15.5px;
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* --------------------------------------------------------------------------
+   2. Barra de Navegación Global (Frosted Glass Apple / Google Header)
+   -------------------------------------------------------------------------- */
+header#navbar.navbar-default {
+  background: var(--agp-surface-glass) !important;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--agp-border-subtle) !important;
+  box-shadow: var(--agp-shadow-header);
+  min-height: 74px;
+  top: 0 !important;
+  margin-top: 0 !important;
+  transition: box-shadow var(--agp-transition), background-color var(--agp-transition), left 150ms ease-out, width 150ms ease-out, top 150ms ease-out;
+  z-index: 450;
+  left: 0 !important;
+  width: 100% !important;
+}
+
+[dir="rtl"] header#navbar.navbar-default {
+  left: auto !important;
+  right: var(--drupal-displace-offset-right, 0px) !important;
+  width: calc(100% - var(--drupal-displace-offset-right, 0px)) !important;
+}
+
+header#navbar.navbar--scrolled {
+  background: rgba(255, 255, 255, 0.94) !important;
+  box-shadow: 0 10px 30px -6px rgba(15, 23, 42, 0.1);
+}
+
+header#navbar > .container-fluid {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: clamp(16px, 2.5vw, 36px);
+  padding-right: clamp(16px, 2.5vw, 36px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 74px;
+  flex-wrap: wrap;
+}
+
+header#navbar > .container-fluid::before,
+header#navbar > .container-fluid::after,
+header#navbar .navbar-header::before,
+header#navbar .navbar-header::after,
+div#navbar-collapse::before,
+div#navbar-collapse::after {
+  display: none !important;
+}
+
+header#navbar .navbar-header {
+  display: flex;
+  align-items: center;
+  margin: 0 !important;
+  float: none !important;
+}
+
+header#navbar .navbar-brand.logo {
+  padding: 6px 16px 6px 0 !important;
+  margin: 0 !important;
+  height: auto !important;
+  display: inline-flex;
+  align-items: center;
+  transition: transform var(--agp-transition), opacity var(--agp-transition);
+}
+
+header#navbar .navbar-brand.logo:hover {
+  transform: scale(1.02);
+  opacity: 0.92;
+}
+
+header#navbar .navbar-brand.logo img {
+  max-height: 46px;
+  width: auto;
+}
+
+/* Botón Hamburguesa Móvil Moderno */
+header#navbar .navbar-toggle {
+  border: 1px solid var(--agp-border-subtle) !important;
+  border-radius: 10px !important;
+  padding: 10px 12px !important;
+  margin: 0 !important;
+  background: var(--agp-surface) !important;
+  transition: background-color var(--agp-transition), box-shadow var(--agp-transition);
+}
+
+header#navbar .navbar-toggle:hover,
+header#navbar .navbar-toggle:focus {
+  background: var(--agp-surface-tint) !important;
+  box-shadow: 0 0 0 3px var(--agp-cyan-soft);
+}
+
+header#navbar .navbar-toggle .icon-bar {
+  background-color: var(--agp-navy) !important;
+  height: 2px;
+  width: 20px;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (min-width: 992px) {
+  div#navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    padding: 0 0 0 20px !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  div#navbar-collapse > nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+/* Ítems de Nivel Superior (Main Menu) */
+#navbar-collapse > nav > ul.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0 !important;
+  float: none !important;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li {
+  position: relative;
+  float: none !important;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > a {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 15px !important;
+  border-radius: var(--agp-radius-pill);
+  color: var(--agp-text-primary) !important;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.25 !important;
+  background-color: transparent !important;
+  transition: color var(--agp-transition), background-color var(--agp-transition);
+  text-decoration: none !important;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > a > span:first-child i,
+#navbar-collapse > nav > ul.navbar-nav > li > a > span:first-child .glyphicon {
+  color: var(--agp-brand-blue);
+  font-size: 15px;
+  transition: transform var(--agp-transition), color var(--agp-transition);
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > a:hover,
+#navbar-collapse > nav > ul.navbar-nav > li > a:focus,
+#navbar-collapse > nav > ul.navbar-nav > li.open > a {
+  color: var(--agp-brand-blue) !important;
+  background-color: var(--agp-surface-tint) !important;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li.active > a,
+#navbar-collapse > nav > ul.navbar-nav > li > a.is-active {
+  color: var(--agp-brand-blue) !important;
+  background-color: var(--agp-cyan-soft) !important;
+}
+
+/* Chevron moderno */
+#navbar-collapse > nav > ul.navbar-nav > li > a .caret {
+  border: none !important;
+  width: 6.5px;
+  height: 6.5px;
+  border-right: 1.8px solid currentColor !important;
+  border-bottom: 1.8px solid currentColor !important;
+  transform: rotate(45deg);
+  margin-left: 4px;
+  margin-top: -2px;
+  vertical-align: middle;
+  transition: transform var(--agp-transition);
+  opacity: 0.7;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li.open > a .caret {
+  transform: rotate(-135deg);
+  margin-top: 2px;
+  opacity: 1;
+}
+
+/* Submenús Desplegables Flotantes */
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu {
+  min-width: 256px;
+  padding: 8px !important;
+  margin-top: 10px !important;
+  background: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--agp-border-subtle) !important;
+  border-radius: 16px !important;
+  box-shadow: var(--agp-shadow-dropdown) !important;
+  display: block !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px) scale(0.98);
+  transform-origin: top left;
+  transition: opacity 0.18s ease, transform var(--agp-transition), visibility 0.18s;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li.open > ul.dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu > li {
+  margin: 2px 0;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu > li > a {
+  display: flex !important;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 14px !important;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--agp-text-primary) !important;
+  background: transparent !important;
+  transition: background-color var(--agp-transition), color var(--agp-transition), transform var(--agp-transition);
+  white-space: nowrap;
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu > li > a > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 9px;
+  background-color: var(--agp-surface-tint);
+  color: var(--agp-brand-blue);
+  flex-shrink: 0;
+  transition: background-color var(--agp-transition), color var(--agp-transition);
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu > li > a:hover,
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu > li > a:focus {
+  background-color: var(--agp-surface-tint) !important;
+  color: var(--agp-brand-blue) !important;
+  transform: translateX(3px);
+}
+
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu > li > a:hover > span:first-child,
+#navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu > li > a:focus > span:first-child {
+  background-color: var(--agp-brand-blue);
+  color: #ffffff;
+}
+
+/* CTA Derecha: Iniciar Sesión / Mi Cuenta */
+#navbar-collapse .region-navigation {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  margin-left: auto !important;
+  padding: 0 !important;
+  gap: 8px !important;
+}
+
+section#block-menu-menu-iniciar-sesi-n,
+section#block-system-user-menu,
+section#block-subtema-account-menu,
+#navbar-collapse .region-navigation .block,
+#navbar-collapse .region-navigation section {
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Excluir explícitamente .contextual-links de los estilos flex de la barra de navegación */
+section#block-menu-menu-iniciar-sesi-n ul:not(.contextual-links),
+section#block-system-user-menu ul:not(.contextual-links),
+section#block-subtema-account-menu ul:not(.contextual-links),
+#navbar-collapse .region-navigation ul:not(.contextual-links) {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  flex-wrap: nowrap !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+section#block-menu-menu-iniciar-sesi-n ul:not(.contextual-links) > li,
+section#block-system-user-menu ul:not(.contextual-links) > li,
+section#block-subtema-account-menu ul:not(.contextual-links) > li,
+#navbar-collapse .region-navigation ul:not(.contextual-links) > li {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  list-style: none !important;
+}
+
+/* Enlace general de Menú de Cuenta (Mi Perfil, etc.) */
+#navbar-collapse .region-navigation ul:not(.contextual-links) > li > a,
+section#block-system-user-menu ul:not(.contextual-links) > li > a,
+section#block-subtema-account-menu ul:not(.contextual-links) > li > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 7px 14px !important;
+  border-radius: var(--agp-radius-pill, 9999px) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  line-height: 1.25 !important;
+  color: var(--agp-brand-blue, #0052cc) !important;
+  background-color: var(--agp-surface-tint, #f0f4ff) !important;
+  border: 1px solid rgba(0, 82, 204, 0.16) !important;
+  text-decoration: none !important;
+  transition: all var(--agp-transition, 0.2s cubic-bezier(0.16, 1, 0.3, 1)) !important;
+  white-space: nowrap !important;
+}
+
+#navbar-collapse .region-navigation ul:not(.contextual-links) > li > a:hover,
+#navbar-collapse .region-navigation ul:not(.contextual-links) > li > a:focus,
+section#block-system-user-menu ul:not(.contextual-links) > li > a:hover,
+section#block-system-user-menu ul:not(.contextual-links) > li > a:focus,
+section#block-subtema-account-menu ul:not(.contextual-links) > li > a:hover,
+section#block-subtema-account-menu ul:not(.contextual-links) > li > a:focus {
+  background-color: var(--agp-brand-blue, #0052cc) !important;
+  color: #ffffff !important;
+  border-color: var(--agp-brand-blue, #0052cc) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.24);
+}
+
+/* Enlace Cerrar Sesión / Log out (estilo sutil diferenciado) */
+#navbar-collapse .region-navigation ul:not(.contextual-links) > li > a[href*="logout"],
+section#block-system-user-menu ul:not(.contextual-links) > li > a[href*="logout"],
+section#block-subtema-account-menu ul:not(.contextual-links) > li > a[href*="logout"] {
+  background-color: transparent !important;
+  border: 1px solid rgba(0, 0, 0, 0.12) !important;
+  color: var(--agp-text-secondary, #515154) !important;
+}
+
+#navbar-collapse .region-navigation ul:not(.contextual-links) > li > a[href*="logout"]:hover,
+#navbar-collapse .region-navigation ul:not(.contextual-links) > li > a[href*="logout"]:focus,
+section#block-system-user-menu ul:not(.contextual-links) > li > a[href*="logout"]:hover,
+section#block-system-user-menu ul:not(.contextual-links) > li > a[href*="logout"]:focus,
+section#block-subtema-account-menu ul:not(.contextual-links) > li > a[href*="logout"]:hover,
+section#block-subtema-account-menu ul:not(.contextual-links) > li > a[href*="logout"]:focus {
+  background-color: #fee2e2 !important;
+  color: #dc2626 !important;
+  border-color: #fca5a5 !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.18) !important;
+}
+
+/* Botón Iniciar Sesión y Crear Cuenta (para anónimos) */
+section#block-menu-menu-iniciar-sesi-n ul > li > a {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  padding: 8px 18px !important;
+  border-radius: var(--agp-radius-pill, 9999px) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  transition: transform var(--agp-transition, 0.2s cubic-bezier(0.16, 1, 0.3, 1)),
+              background-color var(--agp-transition, 0.2s cubic-bezier(0.16, 1, 0.3, 1)),
+              box-shadow var(--agp-transition, 0.2s cubic-bezier(0.16, 1, 0.3, 1)),
+              border-color var(--agp-transition, 0.2s cubic-bezier(0.16, 1, 0.3, 1)) !important;
+}
+
+/* 1. Botón Primario: Iniciar Sesión */
+section#block-menu-menu-iniciar-sesi-n ul > li > a[href*="login"] {
+  background: var(--agp-brand-blue, #0052cc) !important;
+  color: #ffffff !important;
+  border: 1px solid transparent !important;
+  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.25) !important;
+}
+
+section#block-menu-menu-iniciar-sesi-n ul > li > a[href*="login"]:hover,
+section#block-menu-menu-iniciar-sesi-n ul > li > a[href*="login"]:focus {
+  background: var(--agp-brand-blue-dark, #003e99) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(0, 82, 204, 0.35) !important;
+}
+
+/* 2. Botón Secundario Elegante: Crear nueva cuenta (estilo corporativo Apple/Compensar) */
+section#block-menu-menu-iniciar-sesi-n ul > li > a[href*="register"] {
+  background: var(--agp-surface-tint, #f0f4ff) !important;
+  color: var(--agp-brand-blue, #0052cc) !important;
+  border: 1px solid rgba(0, 82, 204, 0.22) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04) !important;
+}
+
+section#block-menu-menu-iniciar-sesi-n ul > li > a[href*="register"]:hover,
+section#block-menu-menu-iniciar-sesi-n ul > li > a[href*="register"]:focus {
+  background: #e1ebfa !important;
+  color: var(--agp-brand-blue-dark, #003e99) !important;
+  border-color: rgba(0, 82, 204, 0.38) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 3px 10px rgba(0, 82, 204, 0.18) !important;
+}
+
+/* Iconos dentro de enlaces de la barra de navegación */
+#navbar-collapse .region-navigation ul > li > a i,
+#navbar-collapse .region-navigation ul > li > a .glyphicon {
+  font-size: 14px;
+  color: inherit !important;
+  vertical-align: middle;
+}
+
+/* --------------------------------------------------------------------------
+   3. Menús Contextuales Horizontales (Segmented Pill Control Estilo Apple)
+   -------------------------------------------------------------------------- */
+section#block-menu-menu-recursos-abiertos,
+section#block-menu-menu-360-emprendimiento {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto 32px !important;
+  text-align: center;
+}
+
+section#block-menu-menu-recursos-abiertos > h2.block-title,
+section#block-menu-menu-360-emprendimiento > h2.block-title {
+  display: none !important;
+}
+
+section#block-menu-menu-recursos-abiertos ul.menu.nav,
+section#block-menu-menu-360-emprendimiento ul.menu.nav {
+  display: inline-flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  background: rgba(226, 232, 240, 0.72);
+  padding: 6px !important;
+  border-radius: var(--agp-radius-pill);
+  border: 1px solid var(--agp-border-subtle);
+  max-width: 100%;
+}
+
+section#block-menu-menu-recursos-abiertos ul.menu.nav > li,
+section#block-menu-menu-360-emprendimiento ul.menu.nav > li {
+  float: none !important;
+  margin: 0 !important;
+  display: inline-flex;
+}
+
+section#block-menu-menu-recursos-abiertos ul.menu.nav > li > a,
+section#block-menu-menu-360-emprendimiento ul.menu.nav > li > a {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px !important;
+  border-radius: var(--agp-radius-pill) !important;
+  background: transparent !important;
+  color: var(--agp-text-secondary) !important;
+  font-size: 14px;
+  font-weight: 600;
+  border: none !important;
+  box-shadow: none !important;
+  transition: all var(--agp-transition);
+  margin: 0 !important;
+}
+
+section#block-menu-menu-recursos-abiertos ul.menu.nav > li > a:hover,
+section#block-menu-menu-360-emprendimiento ul.menu.nav > li > a:hover {
+  color: var(--agp-navy) !important;
+  background: rgba(255, 255, 255, 0.6) !important;
+}
+
+section#block-menu-menu-recursos-abiertos ul.menu.nav > li.active > a,
+section#block-menu-menu-recursos-abiertos ul.menu.nav > li > a.active,
+section#block-menu-menu-recursos-abiertos ul.menu.nav > li > a.is-active,
+section#block-menu-menu-360-emprendimiento ul.menu.nav > li.active > a,
+section#block-menu-menu-360-emprendimiento ul.menu.nav > li > a.active,
+section#block-menu-menu-360-emprendimiento ul.menu.nav > li > a.is-active {
+  background: var(--agp-surface) !important;
+  color: var(--agp-brand-blue) !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.08) !important;
+}
+
+/* --------------------------------------------------------------------------
+   4. Menú Lateral (Sidebar Navigation Card — Biblioteca / Gestión)
+   -------------------------------------------------------------------------- */
+.region-sidebar-first.well {
+  background: var(--agp-surface) !important;
+  border: 1px solid var(--agp-border-subtle) !important;
+  border-radius: var(--agp-radius-lg) !important;
+  box-shadow: var(--agp-shadow-card) !important;
+  padding: 20px !important;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .region-sidebar-first.well {
+    position: sticky;
+    top: 98px;
+  }
+}
+
+.region-sidebar-first .block-menu h2.block-title {
+  display: block !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--agp-text-muted) !important;
+  margin: 0 0 12px 10px !important;
+}
+
+.region-sidebar-first ul.menu.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.region-sidebar-first ul.menu.nav > li > a {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px !important;
+  border-radius: 10px !important;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--agp-text-primary) !important;
+  transition: all var(--agp-transition);
+}
+
+.region-sidebar-first ul.menu.nav > li > a i {
+  color: var(--agp-brand-blue);
+  width: 18px;
+  text-align: center;
+}
+
+.region-sidebar-first ul.menu.nav > li > a:hover {
+  background-color: var(--agp-surface-tint) !important;
+  color: var(--agp-brand-blue) !important;
+  transform: translateX(2px);
+}
+
+.region-sidebar-first ul.menu.nav > li.active > a,
+.region-sidebar-first ul.menu.nav > li > a.active,
+.region-sidebar-first ul.menu.nav > li > a.is-active {
+  background-color: var(--agp-brand-blue) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.22);
+}
+
+.region-sidebar-first ul.menu.nav > li.active > a i,
+.region-sidebar-first ul.menu.nav > li > a.is-active i {
+  color: #ffffff !important;
+}
+
+/* --------------------------------------------------------------------------
+   5. Portada (<front>) — Arquitectura Bento Corporativa (Apple / Google)
+   -------------------------------------------------------------------------- */
+
+/* Bloque Hero (#block-block-46) */
+section#block-block-46 {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-xl);
+  box-shadow: var(--agp-shadow-card);
+  padding: clamp(24px, 4vw, 56px) clamp(20px, 4vw, 48px);
+  margin-bottom: 40px;
+}
+
+section#block-block-46 .intro-front {
+  max-width: 960px !important;
+  margin: 0 auto !important;
+}
+
+section#block-block-46 .intro-front ol {
+  list-style: none;
+  counter-reset: hero-step;
+  padding: 0;
+  margin: 28px 0 36px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
+  gap: 20px;
+}
+
+section#block-block-46 .intro-front ol > li {
+  counter-increment: hero-step;
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-lg);
+  padding: 24px 22px;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  color: var(--agp-text-primary) !important;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left !important;
+  transition: transform var(--agp-transition), box-shadow var(--agp-transition);
+}
+
+section#block-block-46 .intro-front ol > li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--agp-shadow-card-hover);
+}
+
+section#block-block-46 .intro-front ol > li::before {
+  content: "0" counter(hero-step);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--agp-cyan-soft);
+  color: var(--agp-brand-blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+section#block-block-46 iframe {
+  border-radius: 16px;
+  box-shadow: 0 16px 36px -8px rgba(15, 23, 42, 0.18);
+  max-width: 100%;
+}
+
+/* Bloque "¡empréndelo! es para ti sí..." (#block-block-5) */
+section#block-block-5 {
+  margin-top: 0 !important;
+  margin-bottom: 48px !important;
+  padding: 16px 0;
+}
+
+section#block-block-5 .container {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+
+section#block-block-5 .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: 24px;
+  margin: 0 !important;
+}
+
+section#block-block-5 .row::before,
+section#block-block-5 .row::after {
+  display: none !important;
+}
+
+section#block-block-5 .row > div[class*="col-"] {
+  width: 100% !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+section#block-block-5 .item {
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-lg);
+  padding: 32px 28px !important;
+  box-shadow: var(--agp-shadow-card);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--agp-transition), box-shadow var(--agp-transition);
+}
+
+section#block-block-5 .item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--agp-shadow-card-hover);
+}
+
+section#block-block-5 .item .numero {
+  font-size: 2.75rem !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  color: var(--agp-brand-blue) !important;
+  opacity: 0.18;
+  margin: 0 !important;
+  display: block;
+}
+
+section#block-block-5 .item p {
+  font-size: 1.15rem !important;
+  color: var(--agp-text-primary) !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* Bloque Mapa (#block-block-10) y Mapas / Reportes Iframe */
+section#block-block-10,
+article#node-640,
+article.node--type-page {
+  margin-bottom: 40px;
+}
+
+section#block-block-10 iframe,
+article iframe {
+  width: 100% !important;
+  max-width: 100% !important;
+  border-radius: var(--agp-radius-lg);
+  border: 1px solid var(--agp-border-subtle) !important;
+  box-shadow: var(--agp-shadow-card);
+  background: var(--agp-surface);
+}
+
+/* Bloque "Recursos Abiertos" en Portada (#block-block-34) */
+section#block-block-34 hr {
+  display: none;
+}
+
+section#block-block-34 > div > div[style] {
+  margin-top: 24px !important;
+  margin-bottom: 48px !important;
+}
+
+section#block-block-34 .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr));
+  gap: 24px;
+  margin: 16px 0 0 !important;
+}
+
+section#block-block-34 .row::before,
+section#block-block-34 .row::after {
+  display: none !important;
+}
+
+section#block-block-34 .row > .col-md-4 {
+  width: 100% !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+section#block-block-34 .row > .col-md-4 > div[style] {
+  border: 1px solid var(--agp-border-subtle) !important;
+  border-radius: var(--agp-radius-lg) !important;
+  padding: 32px 28px !important;
+  max-width: 100% !important;
+  min-height: 210px !important;
+  height: 100%;
+  margin: 0 !important;
+  background-color: var(--agp-surface) !important;
+  box-shadow: var(--agp-shadow-card) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  transition: transform var(--agp-transition), box-shadow var(--agp-transition), border-color var(--agp-transition);
+}
+
+section#block-block-34 .row > .col-md-4 > div[style]:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--agp-shadow-card-hover) !important;
+  border-color: rgba(0, 156, 212, 0.35) !important;
+}
+
+section#block-block-34 .row > .col-md-4 > div[style] a {
+  color: var(--agp-navy) !important;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+section#block-block-34 .row > .col-md-4 > div[style] a i {
+  color: var(--agp-brand-blue);
+}
+
+/* Bloque Logos Aliados (#block-block-3) */
+section#block-block-3 .logos-front {
+  width: 100% !important;
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-xl);
+  padding: clamp(24px, 4vw, 48px);
+  box-shadow: var(--agp-shadow-card);
+}
+
+section#block-block-3 .logos-front img {
+  margin: 10px auto;
+  object-fit: contain;
+  transition: transform var(--agp-transition);
+}
+
+section#block-block-3 .logos-front img:hover {
+  transform: scale(1.05);
+}
+
+/* --------------------------------------------------------------------------
+   6. Barra de Filtros Expuestos y Grillas CSS Responsivas (Vistas)
+   -------------------------------------------------------------------------- */
+.view {
+  margin-bottom: 48px;
+}
+
+.view-header {
+  margin-bottom: 20px;
+}
+
+.view-header h3,
+.view-header h4,
+.view-header {
+  color: var(--agp-text-secondary);
+  font-weight: 600;
+  font-size: 14.5px;
+}
+
+/* Badge contador corporativo (Apple / Google M3) */
+.view-header > p:only-child,
+.view-header > h4:only-child,
+.view-header:not(:has(*)) {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 18px;
+  border-radius: var(--agp-radius-pill);
+  background: var(--agp-surface-tint);
+  border: 1px solid rgba(0, 82, 204, 0.12);
+  color: var(--agp-brand-blue);
+  font-weight: 600;
+  font-size: 13.5px;
+  box-shadow: 0 1px 3px rgba(0, 82, 204, 0.05);
+}
+
+.view-filters {
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-lg);
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: var(--agp-shadow-card);
+}
+
+.views-exposed-form {
+  margin: 0;
+}
+
+.views-exposed-form .views-exposed-widgets,
+.views-exposed-form .d-flex.flex-wrap {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: flex-end !important;
+  gap: 16px !important;
+  margin: 0 !important;
+}
+
+.views-exposed-form .views-exposed-widget,
+.views-exposed-form .form-item {
+  float: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 1 1 220px;
+}
+
+.views-exposed-form .views-exposed-widget.views-submit-button,
+.views-exposed-form .form-actions {
+  flex: 0 0 auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.views-exposed-form label,
+.views-exposed-form .form-item label {
+  display: block;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+  color: var(--agp-text-secondary) !important;
+  margin-bottom: 6px !important;
+  text-transform: uppercase;
+  font-size: 11.5px !important;
+}
+
+.form-control:not([type="file"]):not(textarea),
+.views-exposed-form select.form-select,
+.views-exposed-form input.form-text {
+  height: 44px !important;
+}
+
+.views-exposed-form select[multiple],
+.views-exposed-form select[size]:not([size="1"]) {
+  height: auto !important;
+  min-height: 90px;
+  max-height: 140px;
+}
+
+.form-control,
+.views-exposed-form .form-select,
+.views-exposed-form .form-text {
+  border-radius: 10px !important;
+  border: 1px solid rgba(15, 23, 42, 0.15) !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  color: var(--agp-text-primary) !important;
+  padding: 8px 14px !important;
+  background-color: #ffffff !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.form-control:focus,
+.views-exposed-form .form-select:focus,
+.views-exposed-form .form-text:focus {
+  border-color: var(--agp-brand-blue) !important;
+  box-shadow: 0 0 0 3px var(--agp-cyan-soft) !important;
+  outline: none !important;
+}
+
+textarea.form-control {
+  min-height: 110px !important;
+  height: auto !important;
+}
+
+/* Widgets de Carga de Imágenes y Archivos (ManagedFile / ImageWidget) */
+.image-widget,
+.js-form-managed-file.form-managed-file {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: var(--agp-surface-muted);
+  border: 1px dashed rgba(0, 82, 204, 0.28);
+  border-radius: var(--agp-radius-md);
+  margin-bottom: 8px;
+}
+
+.image-widget .image-preview {
+  flex: 0 0 auto;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid var(--agp-border-subtle);
+  box-shadow: var(--agp-shadow-sm);
+}
+
+.image-widget .image-preview img {
+  max-width: 140px;
+  max-height: 140px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+.image-widget .image-widget-data,
+.js-form-managed-file .image-widget-data {
+  flex: 1 1 260px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+input[type="file"].form-file,
+input[type="file"].form-control {
+  height: auto !important;
+  min-height: 46px !important;
+  padding: 7px 12px !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.16) !important;
+  border-radius: 10px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+input[type="file"].form-file::file-selector-button,
+input[type="file"].form-control::file-selector-button {
+  background: var(--agp-surface-tint);
+  color: var(--agp-brand-blue);
+  border: 1px solid rgba(0, 82, 204, 0.2);
+  border-radius: 8px;
+  padding: 6px 14px;
+  margin-right: 12px;
+  font-weight: 600;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: all var(--agp-transition);
+}
+
+input[type="file"].form-file::file-selector-button:hover,
+input[type="file"].form-control::file-selector-button:hover {
+  background: var(--agp-brand-blue);
+  color: #ffffff;
+}
+
+.js-form-managed-file button[data-drupal-selector$="upload-button"].js-hide,
+.js-form-managed-file input[data-drupal-selector$="upload-button"].js-hide {
+  display: inline-flex !important;
+  align-items: center;
+}
+
+.btn {
+  border-radius: var(--agp-radius-pill) !important;
+  font-weight: 600 !important;
+  padding: 10px 24px !important;
+  transition: all var(--agp-transition) !important;
+  border: none !important;
+}
+
+.btn-info,
+.btn-primary,
+.views-exposed-form input[type="submit"],
+.views-exposed-form button[type="submit"] {
+  background: var(--agp-brand-blue) !important;
+  color: #ffffff !important;
+  border-radius: var(--agp-radius-pill) !important;
+  font-weight: 600 !important;
+  padding: 10px 24px !important;
+  box-shadow: 0 2px 8px rgba(0, 82, 204, 0.24) !important;
+  border: none !important;
+  cursor: pointer;
+}
+
+.btn-info:hover,
+.btn-primary:hover,
+.views-exposed-form input[type="submit"]:hover,
+.views-exposed-form button[type="submit"]:hover {
+  background: var(--agp-brand-blue-dark) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 82, 204, 0.32) !important;
+}
+
+.views-exposed-form input[id*="reset"],
+.views-exposed-form button[id*="reset"] {
+  background: var(--agp-surface-tint) !important;
+  color: var(--agp-text-secondary) !important;
+  border-radius: var(--agp-radius-pill) !important;
+  font-weight: 600 !important;
+  padding: 10px 20px !important;
+  border: 1px solid var(--agp-border-subtle) !important;
+  cursor: pointer;
+  transition: all var(--agp-transition) !important;
+}
+
+.views-exposed-form input[id*="reset"]:hover,
+.views-exposed-form button[id*="reset"]:hover {
+  background: #e2e8f0 !important;
+  color: var(--agp-navy) !important;
+}
+
+/* Grilla CSS Moderna y Responsiva para Emprendimientos, Biblioteca, Mapeo y Canvas */
+.views-bootstrap-thumbnail-plugin-style > .row,
+.views-bootstrap-grid-plugin-style > .row,
+.views-view-grid > .row {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr));
+  gap: 24px;
+  margin: 0 !important;
+}
+
+.views-bootstrap-thumbnail-plugin-style > .row::before,
+.views-bootstrap-thumbnail-plugin-style > .row::after,
+.views-bootstrap-grid-plugin-style > .row::before,
+.views-bootstrap-grid-plugin-style > .row::after,
+.views-view-grid > .row::before,
+.views-view-grid > .row::after,
+.views-bootstrap-thumbnail-plugin-style > .row > .clearfix,
+.views-bootstrap-grid-plugin-style > .row > .clearfix {
+  display: none !important;
+}
+
+.views-bootstrap-thumbnail-plugin-style > .row > div[class*="col-"],
+.views-bootstrap-grid-plugin-style > .row > div[class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  float: none !important;
+  display: flex;
+}
+
+/* Tarjetas (.thumbnail y article.node-gestion-componentes-mapeo) */
+.thumbnail,
+article.node-gestion-componentes-mapeo {
+  width: 100%;
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  margin: 0 !important;
+  padding: 24px !important;
+  background: var(--agp-surface) !important;
+  border: 1px solid var(--agp-border-subtle) !important;
+  border-radius: var(--agp-radius-lg) !important;
+  box-shadow: var(--agp-shadow-card) !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  transition: transform var(--agp-transition), box-shadow var(--agp-transition), border-color var(--agp-transition);
+}
+
+.thumbnail:hover,
+article.node-gestion-componentes-mapeo:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--agp-shadow-card-hover) !important;
+  border-color: rgba(0, 156, 212, 0.3) !important;
+}
+
+.view-emprendimientos-impulsados .thumbnail h1.field-content {
+  font-size: 1.2rem !important;
+  line-height: 1.35 !important;
+  color: var(--agp-navy) !important;
+  margin: 0 0 8px !important;
+  text-align: center;
+}
+
+.view-emprendimientos-impulsados .views-field-field-logo-emprendimiento img {
+  max-height: 140px;
+  width: auto;
+  margin: 8px auto 14px;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.view-emprendimientos-impulsados .views-field-field-presentacion-emprendimient {
+  font-size: 14px;
+  color: var(--agp-text-secondary);
+  line-height: 1.55;
+  margin-bottom: 8px;
+  flex-grow: 1;
+}
+
+.view-emprendimientos-impulsados .views-field-field-sector-economico,
+.view-emprendimientos-impulsados .views-field-field-ciudad-municipio,
+.view-emprendimientos-impulsados .views-field-field-e-mail-contacto {
+  font-size: 13.5px;
+  border-top: 1px solid var(--agp-border-subtle);
+  padding-top: 8px;
+}
+
+/* Mapeo Institucional Paneles */
+article.node-gestion-componentes-mapeo header h2 {
+  font-size: 1.15rem !important;
+  line-height: 1.35 !important;
+  margin: 0 0 12px !important;
+}
+
+article.node-gestion-componentes-mapeo header h2 a {
+  color: var(--agp-navy) !important;
+}
+
+article.node-gestion-componentes-mapeo fieldset.panel {
+  border: 1px solid var(--agp-border-subtle) !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+article.node-gestion-componentes-mapeo .panel-heading {
+  background: var(--agp-surface-tint) !important;
+  border-bottom: 1px solid var(--agp-border-subtle) !important;
+  border-radius: 11px 11px 0 0 !important;
+  padding: 10px 16px !important;
+}
+
+article.node-gestion-componentes-mapeo .panel-heading a {
+  color: var(--agp-brand-blue) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+}
+
+/* Canvas de la Red */
+.view-canvas .attachment-after {
+  margin-top: 32px;
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-xl);
+  padding: clamp(20px, 3vw, 36px);
+  box-shadow: var(--agp-shadow-card);
+}
+
+.view-canvas .thumbnail {
+  background: #f8fafc !important;
+}
+
+.view-canvas .thumbnail h4.field-content {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--agp-brand-blue);
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--agp-cyan-soft);
+}
+
+/* --------------------------------------------------------------------------
+   7. Tablas de Vistas Corporativas (Apple / Material 3 Data Tables)
+   -------------------------------------------------------------------------- */
+.view-content:has(table.views-table),
+.view-content:has(table.table),
+.agp-table-card {
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-lg);
+  box-shadow: var(--agp-shadow-card);
+  padding: 0;
+  margin-top: 20px;
+  margin-bottom: 28px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+table.views-table,
+table.views-view-table,
+table#views-aggregator-datatable,
+table.tablefield,
+table.table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  margin: 0 !important;
+  background: var(--agp-surface);
+  border: none !important;
+}
+
+table.views-table thead th,
+table.views-view-table thead th,
+table#views-aggregator-datatable thead th,
+table.tablefield thead th,
+table.table thead th {
+  background: var(--agp-surface-tint) !important;
+  color: var(--agp-navy) !important;
+  font-weight: 700 !important;
+  font-size: 12.5px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.04em !important;
+  padding: 16px 20px !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-bottom: 2px solid rgba(0, 82, 204, 0.14) !important;
+  vertical-align: middle !important;
+  white-space: nowrap;
+}
+
+table.views-table thead th a,
+table.views-view-table thead th a {
+  color: var(--agp-navy) !important;
+  text-decoration: none !important;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.18s ease;
+}
+
+table.views-table thead th a:hover,
+table.views-view-table thead th a:hover {
+  color: var(--agp-brand-blue) !important;
+}
+
+table.views-table thead th.is-active,
+table.views-view-table thead th.is-active {
+  background: rgba(0, 82, 204, 0.08) !important;
+  color: var(--agp-brand-blue) !important;
+}
+
+table.views-table thead th.is-active a,
+table.views-view-table thead th.is-active a {
+  color: var(--agp-brand-blue) !important;
+}
+
+table.views-table tbody tr,
+table.views-view-table tbody tr,
+table#views-aggregator-datatable tbody tr,
+table.tablefield tbody tr,
+table.table tbody tr {
+  transition: background-color 0.18s ease;
+  background-color: transparent;
+}
+
+table.views-table tbody tr:hover,
+table.views-view-table tbody tr:hover,
+table#views-aggregator-datatable tbody tr:hover,
+table.tablefield tbody tr:hover,
+table.table tbody tr:hover {
+  background-color: rgba(0, 82, 204, 0.035) !important;
+}
+
+table.views-table tbody td,
+table.views-view-table tbody td,
+table#views-aggregator-datatable tbody td,
+table.tablefield tbody td,
+table.table tbody td {
+  padding: 14px 20px !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: var(--agp-text-primary) !important;
+  border-top: 1px solid var(--agp-border-subtle) !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  vertical-align: middle !important;
+}
+
+table.views-table tbody td.is-active,
+table.views-view-table tbody td.is-active {
+  background-color: rgba(0, 82, 204, 0.015);
+}
+
+table.views-table tbody td a,
+table.views-view-table tbody td a {
+  color: var(--agp-brand-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+table.views-table tbody td a:hover,
+table.views-view-table tbody td a:hover {
+  color: var(--agp-brand-blue-dark);
+  text-decoration: underline;
+}
+
+/* Badges y Pastillas de Acciones en Filas de Vistas */
+.views-field-view-user a,
+.views-field-view-submission a,
+.views-field-view-node a,
+.views-field-edit-node a,
+.views-field-delete-node a,
+.views-field a[href*="/roles"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  padding: 5px 14px !important;
+  border-radius: var(--agp-radius-pill) !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+  transition: all var(--agp-transition) !important;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.views-field-view-user a,
+.views-field-view-submission a,
+.views-field-view-node a {
+  background: var(--agp-surface-tint) !important;
+  color: var(--agp-brand-blue) !important;
+  border: 1px solid rgba(0, 82, 204, 0.18) !important;
+}
+
+.views-field-view-user a:hover,
+.views-field-view-submission a:hover,
+.views-field-view-node a:hover {
+  background: var(--agp-brand-blue) !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.25) !important;
+}
+
+.views-field-edit-node a,
+.views-field a[href*="/roles"] {
+  background: #ecfdf5 !important;
+  color: #047857 !important;
+  border: 1px solid #a7f3d0 !important;
+}
+
+.views-field-edit-node a:hover,
+.views-field a[href*="/roles"]:hover {
+  background: #047857 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(4, 120, 87, 0.25) !important;
+}
+
+.views-field-delete-node a {
+  background: #fef2f2 !important;
+  color: #b91c1c !important;
+  border: 1px solid #fecaca !important;
+}
+
+.views-field-delete-node a:hover {
+  background: #b91c1c !important;
+  color: #ffffff !important;
+}
+
+/* Tarjetas de Nodos en Modo Teaser en Vistas */
+.views-row > article.node--view-mode-teaser {
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-lg);
+  box-shadow: var(--agp-shadow-card);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  transition: transform var(--agp-transition), box-shadow var(--agp-transition), border-color var(--agp-transition);
+}
+
+.views-row > article.node--view-mode-teaser:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--agp-shadow-card-hover);
+  border-color: rgba(0, 156, 212, 0.35);
+}
+
+.views-row > article.node--view-mode-teaser .node__title {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  margin: 0 0 12px !important;
+}
+
+.views-row > article.node--view-mode-teaser .node__title a {
+  color: var(--agp-navy);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+.views-row > article.node--view-mode-teaser .node__title a:hover {
+  color: var(--agp-brand-blue);
+}
+
+.views-row > article.node--view-mode-teaser .field {
+  margin-bottom: 8px;
+}
+
+.views-row > article.node--view-mode-teaser .field__label {
+  font-size: 12.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--agp-text-secondary);
+  margin-bottom: 4px;
+}
+
+.views-row > article.node--view-mode-teaser .file {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--agp-radius-md);
+  background: var(--agp-surface-tint);
+  border: 1px solid rgba(0, 82, 204, 0.16);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.views-row > article.node--view-mode-teaser .file a {
+  color: var(--agp-brand-blue);
+  text-decoration: none;
+}
+
+/* Estado Vacío de Vistas (Empty State) */
+.view-empty {
+  background: var(--agp-surface);
+  border: 1px dashed rgba(15, 23, 42, 0.18);
+  border-radius: var(--agp-radius-xl);
+  padding: 48px 32px;
+  text-align: center;
+  color: var(--agp-text-secondary);
+  font-size: 15.5px;
+  margin: 24px 0;
+  box-shadow: var(--agp-shadow-card);
+}
+
+/* Iconos de Descarga y Exportación de Datos (XLS / CSV) */
+.feed-icon,
+.views-data-export,
+a.views-data-export,
+.view a[href*="/download/"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 8px 18px !important;
+  border-radius: var(--agp-radius-pill) !important;
+  background: var(--agp-surface) !important;
+  border: 1px solid rgba(0, 82, 204, 0.22) !important;
+  color: var(--agp-brand-blue) !important;
+  font-weight: 600 !important;
+  font-size: 13.5px !important;
+  text-decoration: none !important;
+  box-shadow: var(--agp-shadow-sm) !important;
+  transition: all var(--agp-transition) !important;
+  margin-top: 16px !important;
+}
+
+.feed-icon:hover,
+.views-data-export:hover,
+a.views-data-export:hover,
+.view a[href*="/download/"]:hover {
+  background: var(--agp-surface-tint) !important;
+  border-color: var(--agp-brand-blue) !important;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.18) !important;
+}
+
+.jumbotron {
+  background: var(--agp-surface) !important;
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-xl) !important;
+  box-shadow: var(--agp-shadow-card);
+  padding: clamp(28px, 5vw, 56px) !important;
+  text-align: center;
+}
+  background: var(--agp-surface) !important;
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-xl) !important;
+  box-shadow: var(--agp-shadow-card);
+  padding: clamp(28px, 5vw, 56px) !important;
+  text-align: center;
+}
+
+/* Tarjetas de Pasos del Emprendedor en Portada */
+.c-callout-card {
+  width: 100% !important;
+  max-width: 780px !important;
+  margin: 16px auto !important;
+  padding: 28px !important;
+  border-radius: var(--agp-radius-lg) !important;
+  border: 1px solid var(--agp-border-subtle) !important;
+  box-shadow: var(--agp-shadow-card) !important;
+  background: var(--agp-surface) !important;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.pasos {
+  width: 100% !important;
+  max-width: 780px !important;
+  margin: 12px auto !important;
+  padding: 18px 24px !important;
+  border-radius: var(--agp-radius-md) !important;
+  background: #ecfdf5 !important;
+  border: 1px solid #a7f3d0 !important;
+  color: #065f46 !important;
+}
+
+/* --------------------------------------------------------------------------
+   8. Formulario de Inicio de Sesión (/user/login) y Autenticación SSO
+   -------------------------------------------------------------------------- */
+form.user-login-form,
+form.user-pass,
+form.user-register-form {
+  max-width: 460px;
+  margin: 28px auto 20px;
+  padding: clamp(24px, 4vw, 40px);
+  background: var(--agp-surface);
+  border: 1px solid var(--agp-border-subtle);
+  border-radius: var(--agp-radius-xl);
+  box-shadow: var(--agp-shadow-card);
+}
+
+/* Formulario y Botón de Inicio de Sesión Unificado Compensar (Azure AD / Entra ID) */
+form.openid-connect-login-form {
+  max-width: 460px;
+  margin: 0 auto 56px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+form.openid-connect-login-form::before {
+  content: "— o accede con tu identidad corporativa —";
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--agp-text-muted);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+form.openid-connect-login-form button[id*="windows-aad"],
+form.openid-connect-login-form button[id*="openid-connect"] {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  min-height: 48px;
+  gap: 12px !important;
+  padding: 12px 24px !important;
+  background: #1e293b !important;
+  color: #ffffff !important;
+  border-radius: 14px !important;
+  font-size: 14.5px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.18) !important;
+  transition: all var(--agp-transition) !important;
+  cursor: pointer;
+}
+
+form.openid-connect-login-form button[id*="windows-aad"]::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21 21'%3E%3Cpath fill='%23f25022' d='M1 1h9v9H1z'/%3E%3Cpath fill='%2300a4ef' d='M1 11h9v9H1z'/%3E%3Cpath fill='%237fba00' d='M11 1h9v9H11z'/%3E%3Cpath fill='%23ffb900' d='M11 11h9v9H11z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+}
+
+form.openid-connect-login-form button[id*="windows-aad"]:hover,
+form.openid-connect-login-form button[id*="openid-connect"]:hover {
+  background: #0f172a !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.28) !important;
+  border-color: rgba(0, 156, 212, 0.45) !important;
+}
+
+/* Paginador Bootstrap y Drupal 11 Moderno (Apple / Material 3) */
+nav.pager,
+.pager,
+ul.pagination,
+ul.pager__items {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin: 36px auto 24px !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+ul.pagination > li,
+.pager__item,
+li.page-item {
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+}
+
+ul.pagination > li > a,
+ul.pagination > li > span,
+.pager__item a,
+.pager__item span,
+li.page-item > a,
+li.page-item > span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-width: 42px !important;
+  height: 42px !important;
+  padding: 8px 16px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--agp-border-subtle) !important;
+  background: var(--agp-surface) !important;
+  color: var(--agp-text-primary) !important;
+  font-weight: 600 !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+  box-shadow: var(--agp-shadow-sm) !important;
+  transition: all var(--agp-transition) !important;
+}
+
+ul.pagination > li > a:hover,
+.pager__item a:hover,
+li.page-item > a:hover {
+  background-color: var(--agp-surface-tint) !important;
+  border-color: rgba(0, 82, 204, 0.3) !important;
+  color: var(--agp-brand-blue) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 82, 204, 0.15) !important;
+}
+
+ul.pagination > li.active > a,
+ul.pagination > li.active > span,
+.pager__item.is-active a,
+.pager__item.is-active span,
+li.page-item.active > a,
+li.page-item.active > span {
+  background-color: var(--agp-brand-blue) !important;
+  border-color: var(--agp-brand-blue) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 82, 204, 0.32) !important;
+  transform: scale(1.05);
+}
+
+.pager__item--previous a,
+.pager__item--next a,
+.pager__item--first a,
+.pager__item--last a {
+  padding: 8px 18px !important;
+  border-radius: var(--agp-radius-pill) !important;
+  background: var(--agp-surface-tint) !important;
+  color: var(--agp-brand-blue) !important;
+  font-weight: 600 !important;
+}
+
+/* --------------------------------------------------------------------------
+   9. Pie de Página Corporativo (Footer)
+   -------------------------------------------------------------------------- */
+footer.footer {
+  background: #0f172a !important;
+  color: #94a3b8;
+  padding: 48px 24px 36px !important;
+  margin-top: 64px !important;
+  border-top: none !important;
+}
+
+footer.footer .redessociales {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 16px auto 24px !important;
+}
+
+footer.footer .redessociales > p {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   10. Adaptabilidad Móvil y Tablet (Media Queries Responsivas)
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  body.navbar-is-fixed-top {
+    padding-top: 76px !important;
+  }
+
+  header#navbar .navbar-header {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  div#navbar-collapse {
+    width: 100%;
+    background: var(--agp-surface);
+    border: 1px solid var(--agp-border-subtle) !important;
+    border-radius: var(--agp-radius-lg);
+    padding: 14px !important;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: var(--agp-shadow-dropdown);
+    max-height: calc(100vh - 96px);
+    overflow-y: auto;
+  }
+
+  #navbar-collapse > nav > ul.navbar-nav {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 4px;
+  }
+
+  #navbar-collapse > nav > ul.navbar-nav > li > a {
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 12px 16px !important;
+  }
+
+  #navbar-collapse > nav > ul.navbar-nav > li > ul.dropdown-menu {
+    position: static !important;
+    float: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-left: 2px solid var(--agp-cyan-soft) !important;
+    border-radius: 0 !important;
+    margin: 4px 0 8px 16px !important;
+    padding: 4px 0 4px 10px !important;
+    display: none !important;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  #navbar-collapse > nav > ul.navbar-nav > li.open > ul.dropdown-menu {
+    display: block !important;
+  }
+
+  #navbar-collapse .region-navigation {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--agp-border-subtle);
+    justify-content: center;
+    width: 100%;
+  }
+
+  section#block-menu-menu-iniciar-sesi-n,
+  section#block-menu-menu-iniciar-sesi-n ul.menu,
+  section#block-menu-menu-iniciar-sesi-n ul.menu > li,
+  section#block-menu-menu-iniciar-sesi-n ul.menu > li > a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Ocultar línea divisoria vertical de logos en móvil/tablet */
+  .linea-vertical {
+    display: none !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .c-callout-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 22px !important;
+  }
+
+  .view-filters {
+    padding: 16px !important;
+    border-radius: var(--agp-radius-md) !important;
+  }
+
+  .views-exposed-form .views-exposed-widgets,
+  .views-exposed-form .d-flex.flex-wrap {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  .views-exposed-form .views-exposed-widget,
+  .views-exposed-form .form-item,
+  .views-exposed-form .views-exposed-widget.views-submit-button,
+  .views-exposed-form .form-actions,
+  .views-exposed-form .views-exposed-widget.views-submit-button .btn,
+  .views-exposed-form .form-actions .btn,
+  .views-exposed-form input[type="submit"] {
+    width: 100% !important;
+    flex: 1 1 100% !important;
+  }
+
+  .view-header > p:only-child,
+  .view-header > h4:only-child,
+  .view-header:not(:has(*)) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .view-content:has(table.views-table),
+  .view-content:has(table.table),
+  .agp-table-card {
+    border-radius: var(--agp-radius-md) !important;
+    margin-top: 14px;
+    margin-bottom: 20px;
+  }
+
+  table.views-table,
+  table.views-view-table,
+  table.table {
+    min-width: 580px;
+  }
+
+  table.views-table thead th,
+  table.views-view-table thead th,
+  table.table thead th {
+    padding: 12px 14px !important;
+    font-size: 11.5px !important;
+  }
+
+  table.views-table tbody td,
+  table.views-view-table tbody td,
+  table.table tbody td {
+    padding: 12px 14px !important;
+    font-size: 13.5px !important;
+  }
+
+  section#block-menu-menu-recursos-abiertos ul.menu.nav,
+  section#block-menu-menu-360-emprendimiento ul.menu.nav {
+    border-radius: var(--agp-radius-lg);
+    width: 100%;
+  }
+
+  section#block-menu-menu-recursos-abiertos ul.menu.nav > li,
+  section#block-menu-menu-360-emprendimiento ul.menu.nav > li,
+  section#block-menu-menu-recursos-abiertos ul.menu.nav > li > a,
+  section#block-menu-menu-360-emprendimiento ul.menu.nav > li > a {
+    width: 100%;
+    justify-content: center;
+  }
+
+  section#block-block-10 iframe,
+  article#node-640 iframe {
+    height: 360px !important;
+  }
+}
+
+/* ==========================================================================
+   14. WEBFORMS & MATRICES LIKERT 360° (CAPACIDADES & EMPRENDIMIENTOS)
+   ========================================================================== */
+
+/* Título Centrado del Autodiagnóstico */
+.path-webform h1.page-header,
+.page-node-type-webform h1.page-header,
+h1.page-header:has(+ .webform-submission-form) {
+  text-align: center !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+  font-size: 28px !important;
+  font-weight: 700 !important;
+  color: #0077b6 !important;
+  letter-spacing: -0.02em !important;
+  margin-top: 15px !important;
+  margin-bottom: 25px !important;
+  border-bottom: none !important;
+}
+
+/* Contenedor tipo Tarjeta Corporativa para la Matriz Likert */
+.form-type-webform-likert,
+.webform-likert-table-wrapper {
+  background: #ffffff !important;
+  border-radius: var(--agp-radius-lg, 12px) !important;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06), 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+  border: 1px solid #e2e8f0 !important;
+  overflow: hidden !important;
+  margin-bottom: 30px !important;
+  position: relative !important;
+}
+
+/* Tabla Matriz Likert */
+table.webform-likert-table {
+  width: 100% !important;
+  margin-bottom: 0 !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: none !important;
+  background: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Cabecera Azul Turquesa Corporativa (Estilo D7 Compensar Empréndelo) */
+table.webform-likert-table thead tr {
+  background: #009cd4 !important;
+}
+
+table.webform-likert-table thead th {
+  background: #009cd4 !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  text-align: center !important;
+  padding: 14px 10px !important;
+  border-top: none !important;
+  border-bottom: 2px solid #0082b2 !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.28) !important;
+  border-right: none !important;
+  vertical-align: middle !important;
+  letter-spacing: 0.01em !important;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Primera columna de encabezado (Preguntas) */
+table.webform-likert-table thead th:first-child {
+  border-left: none !important;
+  text-align: left !important;
+  width: 52% !important;
+}
+
+/* Encabezados de Opciones (Nunca, Rara Vez, Algunas Veces, Casi Siempre, Siempre) */
+table.webform-likert-table thead th:not(:first-child) {
+  width: 9.6% !important;
+  min-width: 80px !important;
+  white-space: nowrap !important;
+}
+
+/* Filas del Cuerpo */
+table.webform-likert-table tbody tr {
+  transition: background-color 0.15s ease !important;
+}
+
+/* Cebra Alternante */
+table.webform-likert-table tbody tr:nth-child(odd) {
+  background-color: #ffffff !important;
+}
+
+table.webform-likert-table tbody tr:nth-child(even) {
+  background-color: #f8fafc !important;
+}
+
+/* Resaltado al pasar el cursor (Hover para fácil seguimiento visual) */
+table.webform-likert-table tbody tr:hover {
+  background-color: #e0f2fe !important;
+}
+
+/* Celdas del Cuerpo */
+table.webform-likert-table tbody td {
+  padding: 12px 14px !important;
+  vertical-align: middle !important;
+  border-top: 1px solid #e2e8f0 !important;
+  border-bottom: none !important;
+  border-right: none !important;
+}
+
+/* Columna de Texto de Pregunta */
+table.webform-likert-table tbody td:first-child {
+  text-align: left !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  line-height: 1.48 !important;
+  border-left: none !important;
+}
+
+table.webform-likert-table tbody td:first-child .form-item,
+table.webform-likert-table tbody td:first-child .form-item label {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-weight: 500 !important;
+  color: inherit !important;
+  cursor: default !important;
+}
+
+/* Asterisco de Pregunta Requerida */
+table.webform-likert-table .form-required::after,
+table.webform-likert-table abbr.form-required {
+  color: #e11d48 !important;
+  font-weight: 700 !important;
+  margin-left: 3px !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+/* Columnas de Radiobuttons (Centrados con divisor sutil y clic fácil en toda la celda) */
+table.webform-likert-table tbody td:not(:first-child) {
+  text-align: center !important;
+  vertical-align: middle !important;
+  border-left: 1px solid #edf2f7 !important;
+  padding: 0 !important;
+  cursor: pointer !important;
+  position: relative !important;
+  user-select: none !important;
+}
+
+table.webform-likert-table tbody td:not(:first-child):hover {
+  background-color: rgba(0, 156, 212, 0.08) !important;
+}
+
+table.webform-likert-table td .form-type-radio,
+table.webform-likert-table td .js-form-type-radio,
+table.webform-likert-table td .form-check,
+table.webform-likert-table td .radio {
+  margin: 0 !important;
+  padding: 10px 0 !important;
+  min-height: auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: static !important;
+  width: 100% !important;
+  height: 100% !important;
+  cursor: pointer !important;
+}
+
+/* Radiobuttons Modernos y Accesibles */
+table.webform-likert-table td input[type="radio"] {
+  position: static !important;
+  float: none !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin: 0 !important;
+  cursor: pointer !important;
+  accent-color: #009cd4 !important;
+  transition: transform 0.12s ease, filter 0.12s ease !important;
+}
+
+/* Mostrar claramente el texto de la pregunta en la primera columna */
+table.webform-likert-table tbody td:first-child label,
+table.webform-likert-table tbody td:first-child .form-item label,
+table.webform-likert-table tbody td:first-child .form-required {
+  display: inline-block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  color: #1e293b !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  cursor: default !important;
+}
+
+/* Ocultar únicamente las etiquetas vacías/duplicadas de los radiobuttons en las columnas de opciones */
+table.webform-likert-table tbody td:not(:first-child) label,
+table.webform-likert-table tbody td:not(:first-child) label.form-check-label {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+table.webform-likert-table input[type="radio"]:hover {
+  transform: scale(1.22) !important;
+  filter: drop-shadow(0 2px 4px rgba(0, 156, 212, 0.35)) !important;
+}
+
+table.webform-likert-table input[type="radio"]:focus {
+  outline: 2px solid #009cd4 !important;
+  outline-offset: 2px !important;
+}
+
+/* Resaltado interactivo para filas sin responder (Validación amigable) */
+table.webform-likert-table tbody tr.likert-row-unanswered {
+  background-color: #fff1f2 !important;
+  border-left: 4px solid #ef4444 !important;
+  animation: pulse-missing 1.5s infinite alternate ease-in-out;
+}
+
+table.webform-likert-table tbody tr.likert-row-unanswered td:first-child {
+  color: #991b1b !important;
+  font-weight: 600 !important;
+}
+
+@keyframes pulse-missing {
+  0% {
+    background-color: #fff1f2;
+  }
+  100% {
+    background-color: #ffe4e6;
+  }
+}
+
+/* Banner de Notificación de Preguntas Pendientes */
+.likert-validation-banner {
+  background: #fef2f2 !important;
+  border: 1px solid #fca5a5 !important;
+  border-left: 5px solid #dc2626 !important;
+  border-radius: var(--agp-radius-md, 8px) !important;
+  color: #991b1b !important;
+  padding: 14px 20px !important;
+  margin-bottom: 20px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1) !important;
+}
+
+/* Visibilidad permanente para Mensajes del Sistema (Drupal 11 / Bootstrap 3 Compatibility) */
+.region-highlighted,
+.highlighted,
+div[data-drupal-messages],
+.alert-wrapper {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 100 !important;
+  margin-top: 15px !important;
+  margin-bottom: 20px !important;
+}
+
+.alert,
+.alert.fade,
+.alert.fade.show,
+.alert.fade.in,
+.alert.show {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 12px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  border-radius: 12px !important;
+  padding: 16px 20px !important;
+  font-size: 14.5px !important;
+  line-height: 1.5 !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+  border: 1px solid transparent !important;
+}
+
+.alert-danger {
+  background-color: #fef2f2 !important;
+  border-color: #fecaca !important;
+  color: #991b1b !important;
+}
+
+.alert-danger .alert-heading {
+  color: #b91c1c !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  margin-top: 0 !important;
+  margin-bottom: 6px !important;
+}
+
+.alert-success {
+  background-color: #f0fdf4 !important;
+  border-color: #bbf7d0 !important;
+  color: #166534 !important;
+}
+
+.alert-warning {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #92400e !important;
+}
+
+.alert-info {
+  background-color: #eff6ff !important;
+  border-color: #bfdbfe !important;
+  color: #1e40af !important;
+}
+
+/* Botones de Acción del Formulario (Enviar) */
+.webform-submission-form .form-actions {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-top: 30px !important;
+  margin-bottom: 40px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.webform-submission-form .form-actions input[type="submit"],
+.webform-submission-form .form-actions button[type="submit"] {
+  background: linear-gradient(135deg, #009cd4 0%, #0077b6 100%) !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  padding: 13px 42px !important;
+  border-radius: var(--agp-radius-pill, 9999px) !important;
+  border: none !important;
+  box-shadow: 0 4px 14px rgba(0, 156, 212, 0.35) !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+}
+
+.webform-submission-form .form-actions input[type="submit"]:hover,
+.webform-submission-form .form-actions button[type="submit"]:hover {
+  background: linear-gradient(135deg, #0087b8 0%, #005f92 100%) !important;
+  box-shadow: 0 6px 20px rgba(0, 156, 212, 0.45) !important;
+  transform: translateY(-2px) !important;
+}
+
+.webform-submission-form .form-actions input[type="submit"]:active,
+.webform-submission-form .form-actions button[type="submit"]:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(0, 156, 212, 0.3) !important;
+}
+
+/* ==========================================================================
+   Accessibility: Skip Link & Visually Hidden (Drupal & Bootstrap)
+   ========================================================================== */
+a[href="#main-content"],
+.skip-link,
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within),
+.visually-hidden.focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  overflow: hidden !important;
+  height: 1px !important;
+  width: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+
+a[href="#main-content"]:focus,
+a[href="#main-content"]:active,
+.skip-link:focus,
+.skip-link:active,
+.visually-hidden-focusable:focus,
+.visually-hidden-focusable:active,
+.visually-hidden.focusable:focus,
+.visually-hidden.focusable:active {
+  position: fixed !important;
+  top: 14px !important;
+  left: 14px !important;
+  z-index: 100000 !important;
+  width: auto !important;
+  height: auto !important;
+  clip: auto !important;
+  clip-path: none !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  padding: 10px 20px !important;
+  background: var(--agp-primary, #009cd4) !important;
+  color: #ffffff !important;
+  font-family: var(--agp-font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  border-radius: var(--agp-radius-pill, 9999px) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25) !important;
+  text-decoration: none !important;
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+/* --------------------------------------------------------------------------
+   Ajuste de convivencia con el nuevo Menú Administrativo de Drupal 11 (Navigation)
+   -------------------------------------------------------------------------- */
+@media (min-width: 64rem) {
+  /* Desplazamiento vertical ÚNICAMENTE cuando la barra horizontal administrativa (top-bar) existe y es visible */
+  aside.top-bar:has(.top-bar__tools:not(:empty), .top-bar__context:not(:empty), .top-bar__actions:not(:empty)) ~ .dialog-off-canvas-main-canvas header#navbar.navbar-default,
+  body:has(aside.top-bar:not([style*="display: none"]):not(:empty)) header#navbar.navbar-default {
+    top: var(--admin-toolbar-top-bar-height, 64px) !important;
+  }
+
+  body:has(aside.top-bar:not([style*="display: none"]):not(:empty)).navbar-is-fixed-top {
+    padding-top: calc(84px + var(--admin-toolbar-top-bar-height, 64px)) !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Alineación y Estilo UX de Enlaces Contextuales (Lápiz y Menú de Bloques)
+   -------------------------------------------------------------------------- */
+/* 1. Comportamiento en la barra de navegación superior */
+#navbar header,
+#navbar .region-navigation,
+#navbar .contextual-region,
+#navbar .block {
+  position: relative;
+}
+
+#navbar .contextual {
+  position: absolute !important;
+  top: 18px !important;
+  right: 8px !important;
+  z-index: 1055 !important;
+  display: block !important;
+}
+
+/* El botón trigger nativo del lápiz */
+.contextual .trigger {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  min-height: 28px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border-radius: 50% !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0.85;
+  cursor: pointer !important;
+  transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.contextual .trigger:hover,
+.contextual.open .trigger {
+  opacity: 1 !important;
+  transform: scale(1.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22) !important;
+  border-color: var(--agp-primary, #009cd4) !important;
+}
+
+/* El botón trigger de Drupal tiene .visually-hidden cuando el mouse no está sobre la región;
+   asegurar que dentro de #navbar nunca desaparezca de forma rota ni se salga de posición */
+#navbar .contextual .trigger.visually-hidden {
+  position: relative !important;
+  clip: auto !important;
+  clip-path: none !important;
+  overflow: hidden !important;
+  width: 28px !important;
+  height: 28px !important;
+  opacity: 0.3 !important;
+}
+
+#navbar:hover .contextual .trigger.visually-hidden,
+#navbar .contextual-region:hover .contextual .trigger.visually-hidden {
+  opacity: 0.9 !important;
+}
+
+/* Los enlaces de texto contextuales (.contextual-links) SIEMPRE deben estar ocultos si no está abierto */
+.contextual-links,
+ul.contextual-links,
+.contextual:not(.open) .contextual-links,
+.contextual:not(.open) ul.contextual-links,
+.contextual-region .contextual:not(.open) .contextual-links {
+  display: none !important;
+}
+
+/* Cuando se despliega (.open), se muestra como un popover flotante estilizado debajo del lápiz */
+.contextual.open .contextual-links,
+.contextual-region .contextual.open .contextual-links,
+#navbar .contextual.open .contextual-links {
+  display: flex !important;
+  flex-direction: column !important;
+  position: absolute !important;
+  top: 34px !important;
+  right: 0 !important;
+  left: auto !important;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.18), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+  padding: 6px !important;
+  min-width: 170px !important;
+  z-index: 1060 !important;
+  list-style: none !important;
+  margin: 0 !important;
+}
+
+.contextual.open .contextual-links li,
+.contextual-region .contextual.open .contextual-links li {
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  background: transparent !important;
+  display: block !important;
+  float: none !important;
+  width: 100% !important;
+}
+
+.contextual.open .contextual-links li a,
+.contextual-region .contextual.open .contextual-links li a {
+  display: flex !important;
+  align-items: center !important;
+  padding: 8px 14px !important;
+  color: #334155 !important;
+  font-family: var(--agp-font-sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  white-space: nowrap !important;
+  transition: background-color 0.15s ease, color 0.15s ease !important;
+}
+
+.contextual.open .contextual-links li a:hover,
+.contextual-region .contextual.open .contextual-links li a:hover {
+  background-color: #f1f5f9 !important;
+  color: var(--agp-primary, #009cd4) !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   Presentación de Campos En Línea (Inline Field Labels)
+   -------------------------------------------------------------------------- */
+.field--label-inline {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: baseline !important;
+  gap: 8px !important;
+  margin-bottom: 10px !important;
+}
+
+.field--label-inline .field__label {
+  font-weight: 600 !important;
+  color: var(--agp-text-primary, #1d1d1f) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
+
+.field--label-inline .field__label::after {
+  content: ":" !important;
+}
+
+.field--label-inline .field__item,
+.field--label-inline .field__items {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--agp-text-secondary, #515154) !important;
+}
+
+
+
+
+
+/* ==========================================================================
+   MENÚ PRINCIPAL VERTICAL LATERAL (AGILPRO SIDEBAR NAVIGATION)
+   Look & feel idéntico a Drupal 11 Navigation / Gin Sidebar, colapsable.
+   ========================================================================== */
+
+:root {
+  --agp-vnav-width-collapsed: 64px;
+  --agp-vnav-width-expanded: 260px;
+  --agp-vnav-bg: #ffffff;
+  --agp-vnav-border: #e2e8f0;
+  --agp-vnav-hover: #f1f5f9;
+  --agp-vnav-active-bg: #fff1ec;
+  --agp-vnav-active-text: #e0592a;
+  --agp-vnav-text: #1e293b;
+  --agp-vnav-text-muted: #64748b;
+  --agp-vnav-transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --agp-vnav-zindex: 450;
+}
+
+/* 1. Contenedor de la barra lateral vertical */
+.agilpro-sidebar-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--agp-vnav-width-collapsed);
+  background: var(--agp-vnav-bg);
+  border-right: 1px solid var(--agp-vnav-border);
+  box-shadow: 2px 0 16px rgba(15, 23, 42, 0.05);
+  z-index: var(--agp-vnav-zindex);
+  display: flex;
+  flex-direction: column;
+  transition: width var(--agp-vnav-transition), transform var(--agp-vnav-transition), left var(--agp-vnav-transition);
+  overflow: visible;
+  user-select: none;
+}
+
+/* ==========================================================================
+   Coexistencia y Posicionamiento contra el Menú Administrativo de Drupal 11
+   ========================================================================== */
+@media (min-width: 64rem) {
+  /* Cuando existe el menú administrativo (.admin-toolbar): pegarse inmediatamente a su derecha */
+  .dialog-off-canvas-main-canvas:has(~ .admin-toolbar) .agilpro-sidebar-nav,
+  .admin-toolbar ~ .dialog-off-canvas-main-canvas .agilpro-sidebar-nav,
+  body:has(.admin-toolbar) .agilpro-sidebar-nav {
+    left: var(--drupal-displace-offset-left, var(--admin-toolbar-sidebar-width, 4.5rem)) !important;
+  }
+
+  html[data-admin-toolbar="expanded"] body:has(.admin-toolbar) .agilpro-sidebar-nav,
+  html[data-admin-toolbar="expanded"] .admin-toolbar ~ .dialog-off-canvas-main-canvas .agilpro-sidebar-nav,
+  body:has(.admin-toolbar[data-admin-toolbar="expanded"]) .agilpro-sidebar-nav {
+    left: var(--drupal-displace-offset-left, var(--admin-toolbar-sidebar-width, 16.5rem)) !important;
+  }
+
+  /* Ajuste vertical si la barra superior administrativa (top-bar) existe */
+  body:has(aside.top-bar:not([style*="display: none"]):not(:empty)) .agilpro-sidebar-nav {
+    top: var(--admin-toolbar-top-bar-height, 64px) !important;
+  }
+
+  /*
+   * El menú administrativo de Drupal 11 (módulo Navigation) despliega sus submenús
+   * tipo Popover flotante ([data-toolbar-popover-wrapper]) al hacer clic.
+   * Asignamos z-index prioritario para que NUNCA quede solapado ni cubierto por el menú main.
+   */
+  .admin-toolbar,
+  .admin-toolbar-control-bar,
+  .admin-toolbar [data-toolbar-popover-wrapper],
+  .admin-toolbar .toolbar-popover--expanded,
+  .admin-toolbar [data-safe-triangle],
+  .admin-toolbar-overlay {
+    z-index: 10000 !important;
+  }
+}
+
+/* Estado Expandido */
+.agilpro-sidebar-nav.is-expanded {
+  width: var(--agp-vnav-width-expanded) !important;
+  box-shadow: 4px 0 24px rgba(15, 23, 42, 0.12);
+}
+
+/* 2. Header de la barra lateral (Botón de colapsar/expandir) */
+.agilpro-sidebar-header {
+  height: 64px;
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--agp-vnav-border);
+  gap: 12px;
+  background: #ffffff;
+}
+
+.agilpro-sidebar-toggle {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  color: var(--agp-vnav-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.agilpro-sidebar-toggle:hover {
+  background: #e2e8f0;
+  color: #000000;
+}
+
+.agilpro-sidebar-toggle .toggle-icon-bars {
+  display: inline-block;
+  font-size: 16px;
+}
+.agilpro-sidebar-toggle .toggle-icon-arrow {
+  display: none;
+  font-size: 15px;
+}
+
+.agilpro-sidebar-nav.is-expanded .agilpro-sidebar-toggle .toggle-icon-bars {
+  display: none;
+}
+.agilpro-sidebar-nav.is-expanded .agilpro-sidebar-toggle .toggle-icon-arrow {
+  display: inline-block;
+}
+
+.agilpro-sidebar-brand-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--agp-vnav-text);
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--agp-vnav-transition);
+}
+
+.agilpro-sidebar-nav.is-expanded .agilpro-sidebar-brand-text {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 3. Área desplazable de los ítems de menú */
+.agilpro-sidebar-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 8px;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+}
+
+.agilpro-sidebar-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.agilpro-sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+/* 4. Lista y enlaces verticales */
+.agilpro-vertical-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.agilpro-vmenu-item {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.agilpro-vmenu-link {
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 10px;
+  color: var(--agp-vnav-text) !important;
+  text-decoration: none !important;
+  font-size: 0.92rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.agilpro-vmenu-link:hover,
+.agilpro-vmenu-link:focus {
+  background-color: var(--agp-vnav-hover);
+  color: #000000 !important;
+}
+
+.agilpro-vmenu-item.active > .agilpro-vmenu-link {
+  background-color: var(--agp-vnav-active-bg);
+  color: var(--agp-vnav-active-text) !important;
+  font-weight: 700;
+}
+
+/* Iconos Font Awesome dentro de enlaces */
+.agilpro-vmenu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  margin-right: 14px;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.agilpro-vmenu-icon i,
+.agilpro-vmenu-icon .icon,
+.agilpro-vmenu-link i,
+.agilpro-vmenu-link .icon,
+.agilpro-vmenu-link > span > i {
+  font-size: 18px;
+  width: 20px;
+  min-width: 20px;
+  text-align: center;
+  margin-right: 0;
+  color: #64748b;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.agilpro-vmenu-link:hover .agilpro-vmenu-icon i,
+.agilpro-vmenu-link:hover i,
+.agilpro-vmenu-item.active > .agilpro-vmenu-link .agilpro-vmenu-icon i,
+.agilpro-vmenu-item.active > .agilpro-vmenu-link i {
+  color: var(--agp-vnav-active-text);
+}
+
+.agilpro-vmenu-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+
+/* Ocultar texto cuando la barra está colapsada pero MANTENER ICONO VISIBLE */
+.agilpro-sidebar-nav:not(.is-expanded) .agilpro-vmenu-link {
+  padding: 0 16px;
+  justify-content: center;
+}
+
+.agilpro-sidebar-nav:not(.is-expanded) .agilpro-vmenu-icon {
+  margin-right: 0;
+}
+
+.agilpro-sidebar-nav:not(.is-expanded) .agilpro-vmenu-content,
+.agilpro-sidebar-nav:not(.is-expanded) .submenu-arrow {
+  display: none !important;
+  opacity: 0;
+  max-width: 0;
+  visibility: hidden;
+}
+
+.agilpro-sidebar-nav.is-expanded .agilpro-vmenu-content {
+  opacity: 1;
+  max-width: 190px;
+  visibility: visible;
+  transition: opacity 0.25s ease 0.05s, max-width 0.25s ease;
+}
+
+/* Flechita para submenús */
+.submenu-arrow {
+  font-size: 12px;
+  margin-left: auto;
+  color: #94a3b8;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.agilpro-vmenu-item.is-open > .agilpro-vmenu-link .submenu-arrow {
+  transform: rotate(90deg);
+  color: var(--agp-vnav-active-text);
+}
+
+/* 5. Submenús multinivel */
+/* En modo colapsado: flotante tipo Popover al costado */
+.agilpro-sidebar-nav:not(.is-expanded) .agilpro-submenu {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 230px;
+  background: #ffffff;
+  border: 1px solid var(--agp-vnav-border);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.14);
+  list-style: none;
+  padding: 8px;
+  margin: 0 0 0 6px;
+  z-index: 1050;
+}
+
+.agilpro-sidebar-nav:not(.is-expanded) .agilpro-vmenu-item:hover > .agilpro-submenu {
+  display: block;
+}
+
+/* En modo expandido: acordeón vertical */
+.agilpro-sidebar-nav.is-expanded .agilpro-submenu {
+  display: none;
+  list-style: none;
+  margin: 4px 0 6px 14px;
+  padding: 4px 0 4px 10px;
+  border-left: 2px solid #e2e8f0;
+}
+
+.agilpro-sidebar-nav.is-expanded .agilpro-vmenu-item.is-open > .agilpro-submenu {
+  display: block;
+}
+
+.agilpro-submenu .agilpro-vmenu-link {
+  height: 36px;
+  font-size: 0.86rem;
+  padding: 0 10px;
+}
+
+/* 6. Desplazamiento dinámico del layout de página y navbar superior */
+@media (min-width: 64rem) {
+  /* Centrado general consistente para el contenedor principal */
+  .main-container,
+  .main-container.container-fluid {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 1380px !important;
+    width: 100% !important;
+  }
+
+  /* Asegurar que las secciones internas ocupen el 100% cuando no hay barras laterales */
+  .row:not(:has(aside.col-sm-3)) > section.col-sm-12,
+  .row:not(:has(aside.col-sm-3)) > section.col-sm-9 {
+    width: 100% !important;
+  }
+
+  /* Cuando el usuario es anónimo o no está el menú vertical: ancho completo sin margen izquierdo */
+  body:not(.user-logged-in) header#navbar.navbar-default,
+  body:not(:has(.agilpro-sidebar-nav)) header#navbar.navbar-default {
+    left: 0 !important;
+    width: 100% !important;
+  }
+
+  body:not(.user-logged-in) .main-container,
+  body:not(:has(.agilpro-sidebar-nav)) .main-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Usuario Autenticado / No Administrador (sin .admin-toolbar pero con menú vertical): pegado a la izquierda */
+  body.user-logged-in:not(:has(.admin-toolbar)) .agilpro-sidebar-nav,
+  body:not(:has(.admin-toolbar)) .agilpro-sidebar-nav {
+    left: 0 !important;
+  }
+
+  body.user-logged-in:not(:has(.admin-toolbar)):has(.agilpro-sidebar-nav) header#navbar.navbar-default {
+    left: var(--agp-vnav-width-collapsed) !important;
+    width: calc(100% - var(--agp-vnav-width-collapsed)) !important;
+    transition: left var(--agp-vnav-transition), width var(--agp-vnav-transition);
+  }
+
+  body.user-logged-in:not(:has(.admin-toolbar)):has(.agilpro-sidebar-nav) .dialog-off-canvas-main-canvas,
+  body.user-logged-in:not(:has(.admin-toolbar)):has(.agilpro-sidebar-nav) > .main-container {
+    padding-left: var(--agp-vnav-width-collapsed);
+    transition: padding-left var(--agp-vnav-transition);
+  }
+
+  body.user-logged-in:not(:has(.admin-toolbar)):has(.agilpro-sidebar-nav).agilpro-vnav-expanded header#navbar.navbar-default {
+    left: var(--agp-vnav-width-expanded) !important;
+    width: calc(100% - var(--agp-vnav-width-expanded)) !important;
+  }
+
+  body.user-logged-in:not(:has(.admin-toolbar)):has(.agilpro-sidebar-nav).agilpro-vnav-expanded .dialog-off-canvas-main-canvas,
+  body.user-logged-in:not(:has(.admin-toolbar)):has(.agilpro-sidebar-nav).agilpro-vnav-expanded > .main-container {
+    padding-left: var(--agp-vnav-width-expanded);
+  }
+
+  /* Usuario Administrador (con .admin-toolbar activa): pegado inmediatamente al menú administrativo */
+  body:has(.admin-toolbar) header#navbar.navbar-default {
+    left: calc(var(--admin-toolbar-sidebar-width, 4.5rem) + var(--agp-vnav-width-collapsed)) !important;
+    width: calc(100% - var(--admin-toolbar-sidebar-width, 4.5rem) - var(--agp-vnav-width-collapsed)) !important;
+    transition: left var(--agp-vnav-transition), width var(--agp-vnav-transition);
+  }
+
+  body:has(.admin-toolbar) .dialog-off-canvas-main-canvas,
+  body:has(.admin-toolbar) > .main-container {
+    padding-left: calc(var(--admin-toolbar-sidebar-width, 4.5rem) + var(--agp-vnav-width-collapsed));
+    transition: padding-left var(--agp-vnav-transition);
+  }
+
+  body:has(.admin-toolbar).agilpro-vnav-expanded header#navbar.navbar-default {
+    left: calc(var(--admin-toolbar-sidebar-width, 4.5rem) + var(--agp-vnav-width-expanded)) !important;
+    width: calc(100% - var(--admin-toolbar-sidebar-width, 4.5rem) - var(--agp-vnav-width-expanded)) !important;
+  }
+
+  body:has(.admin-toolbar).agilpro-vnav-expanded .dialog-off-canvas-main-canvas,
+  body:has(.admin-toolbar).agilpro-vnav-expanded > .main-container {
+    padding-left: calc(var(--admin-toolbar-sidebar-width, 4.5rem) + var(--agp-vnav-width-expanded));
+  }
+}
+
+/* En dispositivos móviles (pantallas pequeñas < 64rem) */
+@media (max-width: 63.99rem) {
+  .agilpro-sidebar-nav {
+    transform: translateX(-100%);
+  }
+
+  .agilpro-sidebar-nav.is-mobile-open {
+    transform: translateX(0);
+    width: var(--agp-vnav-width-expanded);
+  }
+}
+
+/* =============================================================================
+   CORRECCIÓN GLOBAL DE CONTRASTE: TÍTULOS Y LABELS H4 / .label
+   Garantiza que ningún h4, título de campo o etiqueta quede en texto blanco
+   sobre fondos claros o contenedores estándar del sitio.
+   ============================================================================= */
+h4,
+h4.label,
+h4.field-content,
+.field-label h4,
+.field__label h4,
+.views-field h4,
+.views-label h4,
+.view-header h4,
+.panel-title h4,
+.panel-heading h4,
+h4.panel-title,
+.box-title h4,
+.card-title h4,
+.modal-title h4,
+legend h4 {
+  color: var(--agp-navy, #002d62) !important;
+  font-family: var(--agp-font-sans, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.015em !important;
+}
+
+/* Si un elemento h4 tiene clase .label de Bootstrap pero no tiene clase de badge de estado explícita */
+h4.label:not(.label-primary):not(.label-success):not(.label-danger):not(.label-warning):not(.label-info) {
+  color: var(--agp-navy, #002d62) !important;
+  background: transparent !important;
+  font-size: 1.15rem !important;
+  display: block !important;
+  text-align: left !important;
+  white-space: normal !important;
+  padding: 0 !important;
+}
+
+/* Enlaces dentro de encabezados h4 */
+h4 a,
+h4.field-content a,
+.views-field h4 a {
+  color: var(--agp-navy, #002d62) !important;
+  text-decoration: none !important;
+  transition: color 0.18s ease;
+}
+
+h4 a:hover,
+h4.field-content a:hover,
+.views-field h4 a:hover {
+  color: var(--agp-brand-blue, #0052cc) !important;
+  text-decoration: underline !important;
+}
+
+/* Corrección para etiquetas de campos en vistas y formularios que usen clase .label */
+.views-field .label:not(.badge):not(.label-primary):not(.label-success):not(.label-danger):not(.label-warning):not(.label-info),
+.views-label:not(.badge):not(.label-primary):not(.label-success):not(.label-danger):not(.label-warning):not(.label-info),
+span.views-label,
+strong.views-label {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+/* =============================================================================
+   CORRECCIÓN DE CONTRASTE: LABELS Y LEGENDS EN FORMULARIOS Y DATE/TIME WIDGETS
+   ============================================================================= */
+label,
+.control-label,
+legend,
+fieldset legend,
+.fieldset-legend,
+fieldset .fieldset-legend,
+.form-item label,
+.form-wrapper label,
+label.label:not(.badge):not(.label-primary):not(.label-success):not(.label-danger):not(.label-warning):not(.label-info) {
+  color: var(--agp-navy, #002d62) !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+}
+
+.field--name-field-fecha-hora-sesion legend,
+.field--name-field-fecha-hora-sesion .fieldset-legend,
+.field--name-field-fecha-hora-sesion label {
+  color: var(--agp-navy, #002d62) !important;
+  font-size: 0.95rem !important;
+  font-weight: 700 !important;
+}
+

@@ -1,0 +1,24 @@
+uuid: 01c95dd2-569a-4172-ba85-5fa9fe3f1b6e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.aceptaci_n_asesor.field_acepto
+    - field.field.node.aceptaci_n_asesor.field_asesor
+    - node.type.aceptaci_n_asesor
+  module:
+    - user
+id: node.aceptaci_n_asesor.default
+targetEntityType: node
+bundle: aceptaci_n_asesor
+mode: default
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_acepto: true
+  field_asesor: true
+  langcode: true

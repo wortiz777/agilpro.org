@@ -1,0 +1,21 @@
+uuid: f2c72a3e-d566-4074-9ef4-ed9cb2c29aa9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_5cumplimiento
+field_name: field_5cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '5.Licencia de Bomberos'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

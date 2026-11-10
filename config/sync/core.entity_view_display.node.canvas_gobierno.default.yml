@@ -1,0 +1,40 @@
+uuid: ad4c7301-73c6-4318-b153-086ac9015236
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_gobierno.field_descripcion_formacion_e
+    - field.field.node.canvas_gobierno.field_nueva_referencia_gobierno
+    - node.type.canvas_gobierno
+  module:
+    - user
+id: node.canvas_gobierno.default
+targetEntityType: node
+bundle: canvas_gobierno
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nueva_referencia_gobierno:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,14 @@
+uuid: d3f2fb78-999c-45d9-a3c7-477ec5fcd615
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.asesor
+  module:
+    - user
+id: user_add_role_action.asesor
+label: 'Añade el rol Asesor al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: asesor

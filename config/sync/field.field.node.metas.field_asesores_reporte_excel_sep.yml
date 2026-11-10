@@ -1,0 +1,23 @@
+uuid: 3f864dd4-fce1-4575-b290-cd5527907821
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asesores_reporte_excel_sep
+    - node.type.metas
+id: node.metas.field_asesores_reporte_excel_sep
+field_name: field_asesores_reporte_excel_sep
+entity_type: node
+bundle: metas
+label: 'Asesores | Reporte Excel (Sep)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

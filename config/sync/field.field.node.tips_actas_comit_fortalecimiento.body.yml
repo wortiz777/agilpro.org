@@ -1,0 +1,24 @@
+uuid: 6ebd0b48-a2cc-4215-b326-cead91777bab
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tips_actas_comit_fortalecimiento
+  module:
+    - text
+id: node.tips_actas_comit_fortalecimiento.body
+field_name: body
+entity_type: node
+bundle: tips_actas_comit_fortalecimiento
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

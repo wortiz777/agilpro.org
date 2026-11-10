@@ -1,0 +1,21 @@
+uuid: 6553cd62-9d21-4da5-8c75-18a617c4538e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_comit_
+    - node.type.actas_seleccion_comit_fortalecim
+  module:
+    - datetime
+id: node.actas_seleccion_comit_fortalecim.field_fecha_comit_
+field_name: field_fecha_comit_
+entity_type: node
+bundle: actas_seleccion_comit_fortalecim
+label: 'Fecha Comité'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

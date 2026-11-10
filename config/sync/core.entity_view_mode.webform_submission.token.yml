@@ -1,0 +1,11 @@
+uuid: cdc56499-a097-46a9-b3e4-64117587bc11
+langcode: es
+status: true
+dependencies:
+  module:
+    - webform
+id: webform_submission.token
+label: Token
+description: null
+targetEntityType: webform_submission
+cache: true

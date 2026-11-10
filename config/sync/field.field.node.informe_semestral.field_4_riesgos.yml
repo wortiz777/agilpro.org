@@ -1,0 +1,21 @@
+uuid: b28ad2a0-5ca1-4005-b311-6655e3545bfe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4_riesgos
+    - node.type.informe_semestral
+  module:
+    - options
+id: node.informe_semestral.field_4_riesgos
+field_name: field_4_riesgos
+entity_type: node
+bundle: informe_semestral
+label: '4. Riesgos más relevantes que puedan afectar el desempeño del proyecto en el futuro:'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

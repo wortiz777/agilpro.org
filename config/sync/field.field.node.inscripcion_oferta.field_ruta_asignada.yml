@@ -1,0 +1,21 @@
+uuid: de17d35b-f1bb-40be-8e51-049d651927a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ruta_asignada
+    - node.type.inscripcion_oferta
+id: node.inscripcion_oferta.field_ruta_asignada
+field_name: field_ruta_asignada
+entity_type: node
+bundle: inscripcion_oferta
+label: 'Ruta de Atención'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

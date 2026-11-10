@@ -1,0 +1,19 @@
+services:
+  logger.channel.agilpro_onbase:
+    parent: logger.channel_base
+    arguments: ['agilpro_onbase']
+
+  agilpro_onbase.client:
+    class: Drupal\agilpro_onbase\Service\OnBaseClientService
+    arguments:
+      - '@http_client'
+      - '@key.repository'
+      - '@logger.factory'
+      - '@file_system'
+
+  agilpro_onbase.queue_dispatcher:
+    class: Drupal\agilpro_onbase\Service\OnBaseQueueDispatcher
+    arguments:
+      - '@queue'
+      - '@logger.channel.agilpro_onbase'
+

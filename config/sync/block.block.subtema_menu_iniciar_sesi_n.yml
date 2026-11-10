@@ -1,0 +1,33 @@
+uuid: 1f0edca0-f3d5-4c23-98ce-ee9e933c98f5
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-iniciar-sesi-n
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_iniciar_sesi_n
+theme: subtema
+region: secondary_menu
+weight: -25
+provider: null
+plugin: 'system_menu_block:menu-iniciar-sesi-n'
+settings:
+  id: 'system_menu_block:menu-iniciar-sesi-n'
+  label: menu-iniciar-sesi-n
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

@@ -1,0 +1,23 @@
+uuid: e39e413e-b4d4-4799-87d8-4d4db6cd55c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_autodiagn_stico_emprendedo
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_autodiagn_stico_emprendedo
+field_name: field_autodiagn_stico_emprendedo
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Autodiagnóstico Emprendedor'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

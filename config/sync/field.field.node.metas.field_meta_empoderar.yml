@@ -1,0 +1,23 @@
+uuid: ba2979ef-ee4d-4c37-8074-cd3898758475
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_empoderar
+    - node.type.metas
+id: node.metas.field_meta_empoderar
+field_name: field_meta_empoderar
+entity_type: node
+bundle: metas
+label: 'Meta Empoderados'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: f05940d3-b4b8-49af-9c8a-1667df3c0cb3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_competencias_on_line
+    - node.type.metas
+id: node.metas.field_competencias_on_line
+field_name: field_competencias_on_line
+entity_type: node
+bundle: metas
+label: 'Empoderados | On-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

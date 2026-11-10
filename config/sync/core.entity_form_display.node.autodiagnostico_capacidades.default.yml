@@ -1,0 +1,313 @@
+uuid: 80648bdb-11f6-4cca-9561-b843cbdd3af0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagnostico_capacidades.field_10_capacicades
+    - field.field.node.autodiagnostico_capacidades.field_11_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_12_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_13_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_14_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_15_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_16_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_17_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_18_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_19_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_1_capaciades
+    - field.field.node.autodiagnostico_capacidades.field_20_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_21_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_22_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_23_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_24_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_25_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_26_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_27_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_28_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_29_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_2_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_30_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_31_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_32_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_33_capaciades
+    - field.field.node.autodiagnostico_capacidades.field_34_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_35_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_3_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_4_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_5_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_6_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_7_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_8_capacidades
+    - field.field.node.autodiagnostico_capacidades.field_9_capacidades
+    - field.field.node.autodiagnostico_capacidades.field__desea_inscribirse_para_pa
+    - node.type.autodiagnostico_capacidades
+  module:
+    - path
+id: node.autodiagnostico_capacidades.default
+targetEntityType: node
+bundle: autodiagnostico_capacidades
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_10_capacicades:
+    type: options_buttons
+    weight: 46
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_11_capacidades:
+    type: options_buttons
+    weight: 47
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_12_capacidades:
+    type: options_buttons
+    weight: 48
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_13_capacidades:
+    type: options_buttons
+    weight: 49
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_14_capacidades:
+    type: options_buttons
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_15_capacidades:
+    type: options_buttons
+    weight: 51
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_16_capacidades:
+    type: options_buttons
+    weight: 52
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_17_capacidades:
+    type: options_buttons
+    weight: 53
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_18_capacidades:
+    type: options_buttons
+    weight: 54
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_19_capacidades:
+    type: options_buttons
+    weight: 55
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_1_capaciades:
+    type: options_buttons
+    weight: 37
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_20_capacidades:
+    type: options_buttons
+    weight: 56
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_21_capacidades:
+    type: options_buttons
+    weight: 57
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_22_capacidades:
+    type: options_buttons
+    weight: 58
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_23_capacidades:
+    type: options_buttons
+    weight: 59
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_24_capacidades:
+    type: options_buttons
+    weight: 60
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_25_capacidades:
+    type: options_buttons
+    weight: 61
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_26_capacidades:
+    type: options_buttons
+    weight: 62
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_27_capacidades:
+    type: options_buttons
+    weight: 63
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_28_capacidades:
+    type: options_buttons
+    weight: 64
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_29_capacidades:
+    type: options_buttons
+    weight: 65
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_2_capacidades:
+    type: options_buttons
+    weight: 38
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_30_capacidades:
+    type: options_buttons
+    weight: 66
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_31_capacidades:
+    type: options_buttons
+    weight: 67
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_32_capacidades:
+    type: options_buttons
+    weight: 68
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_33_capaciades:
+    type: options_buttons
+    weight: 69
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_34_capacidades:
+    type: options_buttons
+    weight: 70
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_35_capacidades:
+    type: options_buttons
+    weight: 71
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_3_capacidades:
+    type: options_buttons
+    weight: 39
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_4_capacidades:
+    type: options_buttons
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_5_capacidades:
+    type: options_buttons
+    weight: 41
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_6_capacidades:
+    type: options_buttons
+    weight: 42
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_7_capacidades:
+    type: options_buttons
+    weight: 43
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_8_capacidades:
+    type: options_buttons
+    weight: 44
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_9_capacidades:
+    type: options_buttons
+    weight: 45
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field__desea_inscribirse_para_pa:
+    type: boolean_checkbox
+    weight: 72
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

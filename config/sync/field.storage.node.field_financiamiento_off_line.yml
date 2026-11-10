@@ -1,0 +1,24 @@
+uuid: 49c026e2-940b-4d6e-a2ac-073ee7575f87
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_financiamiento_off_line
+field_name: field_financiamiento_off_line
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

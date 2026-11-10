@@ -1,0 +1,21 @@
+uuid: 7b8be9bd-a9be-4afb-a1e7-775f33757a24
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_oferta_ref
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_oferta_ref
+field_name: field_oferta_ref
+entity_type: node
+bundle: fosfec_transaction
+label: 'Oferta de Origen'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings: {  }
+field_type: entity_reference

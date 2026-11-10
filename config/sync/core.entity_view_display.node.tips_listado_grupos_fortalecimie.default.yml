@@ -1,0 +1,29 @@
+uuid: 095e2efe-9375-4990-9a6c-63f72765c9b4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_listado_grupos_fortalecimie.body
+    - node.type.tips_listado_grupos_fortalecimie
+  module:
+    - text
+    - user
+id: node.tips_listado_grupos_fortalecimie.default
+targetEntityType: node
+bundle: tips_listado_grupos_fortalecimie
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

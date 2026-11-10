@@ -1,0 +1,30 @@
+uuid: 8fcee6ba-5ea9-4b3d-82f5-e9cc1581e166
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_modalidad_participacion
+field_name: field_modalidad_participacion
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: convocatoria_abierta
+      label: 'Convocatoria Abierta'
+    -
+      value: cupos_limitados
+      label: 'Cupos Limitados'
+    -
+      value: invitacion_cerrada
+      label: 'Invitación Cerrada'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

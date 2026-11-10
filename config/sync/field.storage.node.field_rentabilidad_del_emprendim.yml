@@ -1,0 +1,24 @@
+uuid: e0a7d21f-aa64-4f7b-ac8a-29a82828594e
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_rentabilidad_del_emprendim
+field_name: field_rentabilidad_del_emprendim
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

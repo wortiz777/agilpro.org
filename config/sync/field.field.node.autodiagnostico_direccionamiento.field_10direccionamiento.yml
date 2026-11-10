@@ -1,0 +1,26 @@
+uuid: 6db307d5-e7f6-48be-b76f-75539baa874c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_10direccionamiento
+    - node.type.autodiagnostico_direccionamiento
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_direccionamiento.field_10direccionamiento
+field_name: field_10direccionamiento
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '10. En la empresa se utilizan:  gráficos, histogramas y/o diagramas para medir como se hace el trabajo.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

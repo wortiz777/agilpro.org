@@ -1,0 +1,19 @@
+uuid: 7d4e9177-cf02-4bd7-9714-7871eedba706
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ciuu
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_ciuu
+field_name: field_ciuu
+entity_type: node
+bundle: emprendedores_off_line
+label: CIUU
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

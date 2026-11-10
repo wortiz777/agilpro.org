@@ -1,0 +1,22 @@
+uuid: 5e213ac1-97ec-42d8-ab9a-bd6c8d615805
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asesores_acci_n
+    - node.type.metas
+  module:
+    - text
+id: node.metas.field_asesores_acci_n
+field_name: field_asesores_acci_n
+entity_type: node
+bundle: metas
+label: 'Asesores | Acción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

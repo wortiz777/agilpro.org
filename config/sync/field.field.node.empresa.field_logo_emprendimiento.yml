@@ -1,0 +1,38 @@
+uuid: 144d5df1-921e-4f30-a24e-0f881624adf3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_logo_emprendimiento
+    - node.type.empresa
+  module:
+    - image
+id: node.empresa.field_logo_emprendimiento
+field_name: field_logo_emprendimiento
+entity_type: node
+bundle: empresa
+label: 'Logo o Imagen Corporativa'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg webp'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

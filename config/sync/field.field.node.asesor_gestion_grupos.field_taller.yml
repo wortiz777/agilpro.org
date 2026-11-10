@@ -1,0 +1,30 @@
+uuid: 502e47ec-2f18-4cb2-910a-02f116ff424a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_taller
+    - node.type.asesor_gesti_n_grupos_talleres
+    - node.type.asesor_gestion_grupos
+id: node.asesor_gestion_grupos.field_taller
+field_name: field_taller
+entity_type: node
+bundle: asesor_gestion_grupos
+label: Talleres
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      asesor_gesti_n_grupos_talleres: asesor_gesti_n_grupos_talleres
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

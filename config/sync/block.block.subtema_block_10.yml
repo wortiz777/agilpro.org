@@ -1,0 +1,36 @@
+uuid: ce335ea3-e5e0-4666-872f-b3f39c1a6852
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000010'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_10
+theme: subtema
+region: content
+weight: -14
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000010'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000010'
+  label: '<front> Donde Estamos'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous

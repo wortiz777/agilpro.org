@@ -1,0 +1,24 @@
+uuid: c57c24f4-8223-433b-9377-1697d1577dc9
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - taxonomy
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_18_capacidades
+field_name: field_18_capacidades
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

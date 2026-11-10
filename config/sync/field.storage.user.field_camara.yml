@@ -1,0 +1,20 @@
+uuid: d03fac6d-c6b1-4fe1-9ec5-d1b58eb3a77e
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_camara
+field_name: field_camara
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,272 @@
+uuid: 758a3bfb-63f8-4f98-9e85-c33057478743
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagnostico_direccionamiento.field_10_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_10direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_11_n_mero_de_objetivos_emp
+    - field.field.node.autodiagnostico_direccionamiento.field_11_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_12_n_mero_de_indicadores_q
+    - field.field.node.autodiagnostico_direccionamiento.field_12_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_13_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_13_porcentaje_de_avance_de
+    - field.field.node.autodiagnostico_direccionamiento.field_14_el_n_mero_de_veces_que_
+    - field.field.node.autodiagnostico_direccionamiento.field_14_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_1_direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_1_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_2_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_2direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_3_direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_3_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_4_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_4direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_5_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_5direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_6_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_6direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_7_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_7direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_8_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_8direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_9_observaciones
+    - field.field.node.autodiagnostico_direccionamiento.field_9direccionamiento
+    - field.field.node.autodiagnostico_direccionamiento.field_observaciones_generales_de
+    - node.type.autodiagnostico_direccionamiento
+  module:
+    - user
+id: node.autodiagnostico_direccionamiento.default
+targetEntityType: node
+bundle: autodiagnostico_direccionamiento
+mode: default
+content:
+  field_10_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_10direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_11_n_mero_de_objetivos_emp:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_11_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_12_n_mero_de_indicadores_q:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_12_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_13_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_13_porcentaje_de_avance_de:
+    type: number_decimal
+    label: inline
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_14_el_n_mero_de_veces_que_:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_14_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_1_direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_1_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_2_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_2direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_3_direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_3_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_4_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_4direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_5_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_5direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_6_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_6direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_7_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_7direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_8_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_8direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_9_observaciones:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_9direccionamiento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_observaciones_generales_de:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

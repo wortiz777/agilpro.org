@@ -1,0 +1,23 @@
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.oferta
+  module:
+    - node
+id: oferta_pattern
+label: 'Patrón Oferta'
+type: 'canonical_entities:node'
+pattern: 'ofertas/[node:title]'
+selection_criteria:
+  oferta_bundle:
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: node
+    bundles:
+      oferta: oferta
+selection_logic: and
+weight: 0
+relationships: {  }
+

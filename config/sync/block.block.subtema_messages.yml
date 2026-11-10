@@ -1,0 +1,22 @@
+uuid: 255c7945-8650-44a9-ac07-192d7145d115
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - subtema
+_core:
+  default_config_hash: kj7QP5SwXD5O5myljMUXK5n0tDa_J12VvmKLTRNWMkk
+id: subtema_messages
+theme: subtema
+region: highlighted
+weight: -21
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Mensajes de estado'
+  label_display: '0'
+  provider: system
+visibility: {  }

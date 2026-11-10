@@ -1,0 +1,14 @@
+uuid: 229397fe-59e7-402d-8175-7eba9c093fa3
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.coordinador_nacional
+  module:
+    - user
+id: user_add_role_action.coordinador_nacional
+label: 'Añade el rol Coordinador Nacional al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: coordinador_nacional

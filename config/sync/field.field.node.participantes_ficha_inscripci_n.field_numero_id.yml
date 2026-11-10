@@ -1,0 +1,23 @@
+uuid: cd8885d9-0aea-420d-91dd-097307325992
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_numero_id
+    - node.type.participantes_ficha_inscripci_n
+id: node.participantes_ficha_inscripci_n.field_numero_id
+field_name: field_numero_id
+entity_type: node
+bundle: participantes_ficha_inscripci_n
+label: 'Número de Identificación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

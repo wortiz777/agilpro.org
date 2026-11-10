@@ -1,0 +1,25 @@
+uuid: 526ea4c1-72ae-47fd-b6d2-6d6746500a8e
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - user
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: user.field_telefono_fijo_emprendimien
+field_name: field_telefono_fijo_emprendimien
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

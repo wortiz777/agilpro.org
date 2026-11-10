@@ -1,0 +1,40 @@
+uuid: 623ff112-7072-46b4-ad1b-cc2fd2ccf781
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000049'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_49
+theme: subtema
+region: content
+weight: 2
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000049'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000049'
+  label: 'Caja de Herramientas (Google Drive)'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /biblioteca/caja-herramientas
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      coordinador_regional: coordinador_regional
+      coordinador_nacional: coordinador_nacional
+      colaborador: colaborador
+      asesor: asesor

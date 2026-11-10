@@ -1,0 +1,26 @@
+uuid: 0d16fc72-b115-4ad9-b0c4-ea2e6eb78c8a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_8direccionamiento
+    - node.type.autodiagnostico_direccionamiento
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_direccionamiento.field_8direccionamiento
+field_name: field_8direccionamiento
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '8.La empresa tiene un proceso para comunicar a sus colaboradores los roles que deben desempeñar para alcanzar los objetivos em'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

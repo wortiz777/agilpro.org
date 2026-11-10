@@ -1,0 +1,19 @@
+uuid: 837500c2-575e-4a3b-83a9-78ba075ecaa1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_objetivos_metas_
+    - node.type.ruta_desarrollo_competencias
+id: node.ruta_desarrollo_competencias.field_objetivos_metas_
+field_name: field_objetivos_metas_
+entity_type: node
+bundle: ruta_desarrollo_competencias
+label: 'Objetivos/Metas '
+description: "Proyecte objetivos y/o metas para su desarrollo, recuerde que sean: Planteadas en positivo,  con un verbo en accion un resultado medible u observables y una referencia al tiempo.  \r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

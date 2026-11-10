@@ -1,0 +1,20 @@
+uuid: 864ee27d-df1a-4c39-a7f4-4decadd5ae5c
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_eje_estrategico
+field_name: field_eje_estrategico
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

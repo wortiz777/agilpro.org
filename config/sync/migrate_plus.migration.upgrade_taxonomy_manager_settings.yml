@@ -1,0 +1,36 @@
+uuid: efb27273-8087-419d-8c80-5f307c79aad0
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_taxonomy_manager_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Taxonomy manager'
+source:
+  plugin: variable
+  variables:
+    - taxonomy_manager_pager_tree_page_size
+    - taxonomy_manager_disable_mouseover
+  source_module: taxonomy_manager
+process:
+  taxonomy_manager_pager_tree_page_size:
+    -
+      plugin: get
+      source: taxonomy_manager_pager_tree_page_size
+  taxonomy_manager_disable_mouseover:
+    -
+      plugin: get
+      source: taxonomy_manager_disable_mouseover
+destination:
+  plugin: config
+  config_name: taxonomy_manager.settings
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }
+include: null

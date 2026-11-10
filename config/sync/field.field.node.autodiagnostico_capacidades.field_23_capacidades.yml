@@ -1,0 +1,26 @@
+uuid: 67d92f00-f33c-4794-a52c-80757ed2d522
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_23_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_23_capacidades
+field_name: field_23_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '23. Posee un marco claro de sus principios y valores y  los aplica en su proyecto emprendedor.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

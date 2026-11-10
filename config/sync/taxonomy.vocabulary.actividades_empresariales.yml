@@ -1,0 +1,9 @@
+uuid: 643920ab-c4ed-48a4-bf52-857ac82d744f
+langcode: es
+status: true
+dependencies: {  }
+name: 'Actividades Empresariales'
+vid: actividades_empresariales
+description: null
+weight: -7
+new_revision: false

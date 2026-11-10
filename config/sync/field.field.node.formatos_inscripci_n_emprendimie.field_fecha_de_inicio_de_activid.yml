@@ -1,0 +1,21 @@
+uuid: 01e9bac9-2858-4e86-b509-91693eb91a88
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fecha_de_inicio_de_activid
+    - node.type.formatos_inscripci_n_emprendimie
+  module:
+    - datetime
+id: node.formatos_inscripci_n_emprendimie.field_fecha_de_inicio_de_activid
+field_name: field_fecha_de_inicio_de_activid
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Fecha de Inicio de Actividades'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

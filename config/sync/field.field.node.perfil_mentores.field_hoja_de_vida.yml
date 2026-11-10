@@ -1,0 +1,27 @@
+uuid: bdd02f1e-d31d-4081-9e80-0455cf51ad11
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hoja_de_vida
+    - node.type.perfil_mentores
+  module:
+    - file
+id: node.perfil_mentores.field_hoja_de_vida
+field_name: field_hoja_de_vida
+entity_type: node
+bundle: perfil_mentores
+label: 'Subir Hoja de Vida'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: ''
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

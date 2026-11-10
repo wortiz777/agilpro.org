@@ -1,0 +1,104 @@
+uuid: 5af34917-1282-4fe0-936f-720f8562bdd0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_de_mejoramiento.field_conocimiento
+    - field.field.node.ruta_de_mejoramiento.field_cualitativos_cifras_cantid
+    - field.field.node.ruta_de_mejoramiento.field_cualitativos_hechos_docume
+    - field.field.node.ruta_de_mejoramiento.field_econ_mico
+    - field.field.node.ruta_de_mejoramiento.field_f_sicos
+    - field.field.node.ruta_de_mejoramiento.field_humano
+    - field.field.node.ruta_de_mejoramiento.field_informaci_n
+    - field.field.node.ruta_de_mejoramiento.field_objetivo_para_qu_lo_quiero
+    - field.field.node.ruta_de_mejoramiento.field_tareas
+    - node.type.ruta_de_mejoramiento
+  module:
+    - user
+id: node.ruta_de_mejoramiento.default
+targetEntityType: node
+bundle: ruta_de_mejoramiento
+mode: default
+content:
+  field_conocimiento:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_cualitativos_cifras_cantid:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_cualitativos_hechos_docume:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_econ_mico:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_f_sicos:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_humano:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_informaci_n:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_objetivo_para_qu_lo_quiero:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_tareas:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: ief_table
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

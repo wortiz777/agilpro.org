@@ -1,0 +1,22 @@
+uuid: ab8c7fb1-861d-4ba2-80a2-48e421262f92
+langcode: es
+status: true
+dependencies:
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: xab-uZaGGOodLQS83uWZff71_ycF-oVbeRIMoKp7agg
+id: bootstrap_subtheme_primary_local_tasks
+theme: bootstrap_subtheme
+region: content
+weight: -5
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Solapas principales'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

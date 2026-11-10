@@ -1,0 +1,37 @@
+uuid: 6ddfbdec-1c78-4300-83f2-0c1f5885a032
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000051'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_51
+theme: subtema
+region: content
+weight: -12
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000051'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000051'
+  label: 'Nuevo Informe Semestral'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /test
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      coordinador_regional: coordinador_regional

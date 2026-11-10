@@ -1,0 +1,37 @@
+services:
+  agilpro_org.radar_score_calculator:
+    class: Drupal\agilpro_org\Service\RadarScoreCalculator
+
+  agilpro_org.webform_radar_data_provider:
+    class: Drupal\agilpro_org\Service\WebformRadarDataProvider
+    arguments:
+      - '@database'
+      - '@config.factory'
+
+  agilpro_org.radar_chart_builder:
+    class: Drupal\agilpro_org\Service\RadarChartBuilder
+    arguments:
+      - '@agilpro_org.webform_radar_data_provider'
+      - '@agilpro_org.radar_score_calculator'
+      - '@string_translation'
+
+  agilpro_org.rules_manager:
+    class: Drupal\agilpro_org\Service\RoleAndNodeRulesManager
+    arguments:
+      - '@entity_type.manager'
+      - '@current_user'
+      - '@config.factory'
+      - '@logger.channel.agilpro_org'
+
+  Drupal\agilpro_org\Hook\AgilproOrgHooks:
+    class: Drupal\agilpro_org\Hook\AgilproOrgHooks
+    autowire: false
+    arguments:
+      - '@agilpro_org.rules_manager'
+      - '@entity_type.manager'
+      - '@current_user'
+      - '@config.factory'
+
+  logger.channel.agilpro_org:
+    parent: logger.channel_base
+    arguments: ['agilpro_org']

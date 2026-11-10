@@ -1,0 +1,93 @@
+uuid: 9a325478-da13-439c-ab8b-71b2fd6b87e1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.inscripcion_oferta.field_colaborador_ref
+    - field.field.node.inscripcion_oferta.field_compromiso_pdf
+    - field.field.node.inscripcion_oferta.field_empresa_ref
+    - field.field.node.inscripcion_oferta.field_estado_postulacion
+    - field.field.node.inscripcion_oferta.field_evaluador_asignado
+    - field.field.node.inscripcion_oferta.field_mentor_asignado
+    - field.field.node.inscripcion_oferta.field_oferta_ref
+    - field.field.node.inscripcion_oferta.field_ruta_asignada
+    - node.type.inscripcion_oferta
+  module:
+    - file
+    - options
+    - user
+id: node.inscripcion_oferta.default
+targetEntityType: node
+bundle: inscripcion_oferta
+mode: default
+content:
+  field_colaborador_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_compromiso_pdf:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_empresa_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_estado_postulacion:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  field_evaluador_asignado:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_mentor_asignado:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_oferta_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
+  field_ruta_asignada:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 108
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,23 @@
+uuid: 6872c816-bd8b-432c-9288-a570f115d670
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_19financiero
+    - node.type.autodiagn_stico_financiero
+id: node.autodiagn_stico_financiero.field_19financiero
+field_name: field_19financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '4. Cual es el valor promedio de la rotación de inventarios en días '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,26 @@
+uuid: 18fe2509-50d8-4b04-a6fb-cd8c050a27ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_34_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_34_capacidades
+field_name: field_34_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '34. Transmite al equipo de trabajo constantemente los objetivos y logra que los alcancen.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,21 @@
+uuid: 1846f2e6-8343-44a1-a536-d639dbc372f6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_aceptacion_digital
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_aceptacion_digital
+field_name: field_aceptacion_digital
+entity_type: node
+bundle: fosfec_transaction
+label: 'Aceptación Digital'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: Activado
+  off_label: Desactivado
+field_type: boolean

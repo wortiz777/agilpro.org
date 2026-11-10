@@ -1,0 +1,21 @@
+uuid: ca1e8ca9-d19e-41b3-bef7-fc36d33f1ddc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_fecha_inicio_actividades
+  module:
+    - datetime
+    - user
+id: user.user.field_fecha_inicio_actividades
+field_name: field_fecha_inicio_actividades
+entity_type: user
+bundle: user
+label: 'Fecha Inicio Actividades'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

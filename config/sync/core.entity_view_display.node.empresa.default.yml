@@ -1,0 +1,127 @@
+uuid: 870cf23c-1634-437f-8ad2-1ee1b7f8f473
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.empresa.body
+    - field.field.node.empresa.feeds_item
+    - field.field.node.empresa.field__dv
+    - field.field.node.empresa.field_actividad
+    - field.field.node.empresa.field_ciudad_municipio
+    - field.field.node.empresa.field_departamento
+    - field.field.node.empresa.field_direccion_comercial
+    - field.field.node.empresa.field_e_mail_contacto
+    - field.field.node.empresa.field_fecha_inicio_actividades
+    - field.field.node.empresa.field_logo_emprendimiento
+    - field.field.node.empresa.field_movil
+    - field.field.node.empresa.field_nit
+    - field.field.node.empresa.field_pagina_web
+    - field.field.node.empresa.field_presentacion_emprendimient
+    - field.field.node.empresa.field_sector_economico
+    - field.field.node.empresa.field_telefono_fijo_emprendimien
+    - field.field.node.empresa.field_terminos_condiciones
+    - field.field.node.empresa.field_tipo_id
+    - node.type.empresa
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.empresa.default
+targetEntityType: node
+bundle: empresa
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field__dv:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_actividad:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_ciudad_municipio:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_departamento:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_e_mail_contacto:
+    type: basic_string
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_fecha_inicio_actividades:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_logo_emprendimiento:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nit:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  feeds_item: true
+  field_direccion_comercial: true
+  field_movil: true
+  field_pagina_web: true
+  field_presentacion_emprendimient: true
+  field_sector_economico: true
+  field_telefono_fijo_emprendimien: true
+  field_terminos_condiciones: true
+  field_tipo_id: true
+  langcode: true

@@ -1,0 +1,29 @@
+uuid: c7986783-8d7d-45ba-aa07-fb79162ba077
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_acceder_acceso_a_financiaci.body
+    - node.type.ruta_acceder_acceso_a_financiaci
+  module:
+    - text
+    - user
+id: node.ruta_acceder_acceso_a_financiaci.default
+targetEntityType: node
+bundle: ruta_acceder_acceso_a_financiaci
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: 9c583915-85ed-4f15-ae8c-92c4405dadd4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nivel_de_estudios_emprende
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_nivel_de_estudios_emprende
+field_name: field_nivel_de_estudios_emprende
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Nivel de estudios Emprendedor Líder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

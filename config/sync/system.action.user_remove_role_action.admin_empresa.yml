@@ -1,0 +1,14 @@
+uuid: 5fa1a480-51d7-48de-b7c3-f1ef04f095ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.admin_empresa
+  module:
+    - user
+id: user_remove_role_action.admin_empresa
+label: 'Elimina el rol Admin Empresa al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: admin_empresa

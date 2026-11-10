@@ -1,0 +1,23 @@
+uuid: 42fb49a0-c9f0-4b38-9569-2a25dddcb20a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1ventas
+    - node.type.autodiagn_stico_mercadeo_y_venta
+id: node.autodiagn_stico_mercadeo_y_venta.field_1ventas
+field_name: field_1ventas
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '1. Ventas promedio mensuales en pesos de la empresa en los últimos 12 meses '
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

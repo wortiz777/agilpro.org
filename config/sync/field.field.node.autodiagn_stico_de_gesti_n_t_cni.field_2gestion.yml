@@ -1,0 +1,26 @@
+uuid: 252beb3a-abfc-4269-ae07-167864d553bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2gestion
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_2gestion
+field_name: field_2gestion
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '2.El proceso de elaboración del producto/servicio de la empresa cuenta con un nivel de estandarización y modularidad que facilit'
+description: "El proceso de elaboración del producto/servicio de la empresa cuenta con un nivel de estandarización y modularidad que facilita y agiliza su producción o su realización..\r\nSe conoce como estandarización al proceso mediante el cual se realiza una actividad de manera standard o previamente establecida. \r\nUn sistema de producción modular esta basado en realizar procesos que le den valor agregado al producto y tiene como objetivos : la reducción de costo de producto, el mejor aprovechamiento de la superficie de la planta, incremento de nivel de eficiencia de la planta, cumplimiento de los plazos de entrega,etc"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

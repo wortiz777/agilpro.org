@@ -1,0 +1,23 @@
+uuid: 6c9fb810-8143-442e-9735-f154bd5e0dc9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acepto_reto_fortalecer
+    - node.type.c2_fortalecer_inscritos
+id: node.c2_fortalecer_inscritos.field_acepto_reto_fortalecer
+field_name: field_acepto_reto_fortalecer
+entity_type: node
+bundle: c2_fortalecer_inscritos
+label: 'Acepto el reto'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Acepto el reto'
+  off_label: 'No'
+field_type: boolean

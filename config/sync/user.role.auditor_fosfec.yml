@@ -1,0 +1,13 @@
+uuid: 72f65b70-7943-4f52-9e0f-c642c87bed73
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+id: auditor_fosfec
+label: 'Auditor FOSFEC'
+weight: 32
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'

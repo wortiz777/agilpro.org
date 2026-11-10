@@ -1,0 +1,156 @@
+uuid: 79621cf8-e736-46e9-be64-b911142f3a39
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagn_stico_financiero.field_10financiero
+    - field.field.node.autodiagn_stico_financiero.field_11financiero
+    - field.field.node.autodiagn_stico_financiero.field_12financiero
+    - field.field.node.autodiagn_stico_financiero.field_13financiero
+    - field.field.node.autodiagn_stico_financiero.field_14financiero
+    - field.field.node.autodiagn_stico_financiero.field_15financiero
+    - field.field.node.autodiagn_stico_financiero.field_17financiero
+    - field.field.node.autodiagn_stico_financiero.field_18financiero
+    - field.field.node.autodiagn_stico_financiero.field_19financiero
+    - field.field.node.autodiagn_stico_financiero.field_1financiero
+    - field.field.node.autodiagn_stico_financiero.field_20financiero
+    - field.field.node.autodiagn_stico_financiero.field_21financiero
+    - field.field.node.autodiagn_stico_financiero.field_22financiero
+    - field.field.node.autodiagn_stico_financiero.field_2financiero
+    - field.field.node.autodiagn_stico_financiero.field_3financiero
+    - field.field.node.autodiagn_stico_financiero.field_4financiero
+    - field.field.node.autodiagn_stico_financiero.field_5financiero
+    - field.field.node.autodiagn_stico_financiero.field_6financiero
+    - field.field.node.autodiagn_stico_financiero.field_7financiero
+    - field.field.node.autodiagn_stico_financiero.field_8financiero
+    - field.field.node.autodiagn_stico_financiero.field_9financiero
+    - field.field.node.autodiagn_stico_financiero.field_enviar_los_estados_financi
+    - field.field.node.autodiagn_stico_financiero.field_financiero1
+    - node.type.autodiagn_stico_financiero
+  module:
+    - file
+    - path
+id: node.autodiagn_stico_financiero.default
+targetEntityType: node
+bundle: autodiagn_stico_financiero
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_17financiero:
+    type: number
+    weight: 32
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_18financiero:
+    type: number
+    weight: 33
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_19financiero:
+    type: number
+    weight: 34
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_20financiero:
+    type: number
+    weight: 35
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_21financiero:
+    type: number
+    weight: 36
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_22financiero:
+    type: number
+    weight: 37
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_enviar_los_estados_financi:
+    type: file_generic
+    weight: 24
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_financiero1:
+    type: string_textfield
+    weight: 31
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_10financiero: true
+  field_11financiero: true
+  field_12financiero: true
+  field_13financiero: true
+  field_14financiero: true
+  field_15financiero: true
+  field_1financiero: true
+  field_2financiero: true
+  field_3financiero: true
+  field_4financiero: true
+  field_5financiero: true
+  field_6financiero: true
+  field_7financiero: true
+  field_8financiero: true
+  field_9financiero: true
+  promote: true
+  sticky: true

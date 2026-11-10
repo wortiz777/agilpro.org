@@ -1,0 +1,21 @@
+uuid: 1124944c-0451-400b-b39c-2801b238fee0
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_log_ip_aceptacion
+field_name: field_log_ip_aceptacion
+entity_type: node
+type: string
+settings:
+  max_length: 45
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

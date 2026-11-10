@@ -1,0 +1,23 @@
+uuid: dd5665fd-29c7-4db0-a64f-562fbb6313a6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nit
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_nit
+field_name: field_nit
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: NIT
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

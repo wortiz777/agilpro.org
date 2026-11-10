@@ -1,0 +1,21 @@
+uuid: e6987155-7941-413e-8443-29d61eba45ea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_programa
+    - node.type.oferta
+  module:
+    - options
+id: node.oferta.field_tipo_programa
+field_name: field_tipo_programa
+entity_type: node
+bundle: oferta
+label: 'Tipo de Programa'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

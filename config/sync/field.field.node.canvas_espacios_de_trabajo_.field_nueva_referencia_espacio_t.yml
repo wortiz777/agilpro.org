@@ -1,0 +1,19 @@
+uuid: ecffb2a6-d963-4d19-ab18-f4924a2b5d11
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_espacio_t
+    - node.type.canvas_espacios_de_trabajo_
+id: node.canvas_espacios_de_trabajo_.field_nueva_referencia_espacio_t
+field_name: field_nueva_referencia_espacio_t
+entity_type: node
+bundle: canvas_espacios_de_trabajo_
+label: 'Ingresar Nueva Referencia Espacio de Trabajo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

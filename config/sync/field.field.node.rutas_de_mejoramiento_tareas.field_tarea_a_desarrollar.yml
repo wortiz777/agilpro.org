@@ -1,0 +1,19 @@
+uuid: 265627ef-5df9-4df6-a6c7-67c6cbe4562c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tarea_a_desarrollar
+    - node.type.rutas_de_mejoramiento_tareas
+id: node.rutas_de_mejoramiento_tareas.field_tarea_a_desarrollar
+field_name: field_tarea_a_desarrollar
+entity_type: node
+bundle: rutas_de_mejoramiento_tareas
+label: 'Tarea a desarrollar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,40 @@
+uuid: 3c1f2555-887e-48f3-a5aa-ab7edbd3abc2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_expansi_n.field_descripcion_formacion_e
+    - field.field.node.canvas_expansi_n.field_nueva_referencia_expansion
+    - node.type.canvas_expansi_n
+  module:
+    - user
+id: node.canvas_expansi_n.default
+targetEntityType: node
+bundle: canvas_expansi_n
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nueva_referencia_expansion:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

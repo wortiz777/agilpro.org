@@ -1,0 +1,9 @@
+uuid: 8dc51bcd-bbab-4e03-b32e-1ee9327d356c
+langcode: es
+status: true
+dependencies: {  }
+name: 'Tipo de Documento de Indicación'
+vid: tipo_documento
+description: null
+weight: 4
+new_revision: false

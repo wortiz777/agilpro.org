@@ -1,0 +1,9 @@
+uuid: 86e30522-ef77-497b-8915-38332796b751
+langcode: es
+status: true
+dependencies: {  }
+name: 'Sector Económico'
+vid: sector_econ_mico
+description: null
+weight: 2
+new_revision: false

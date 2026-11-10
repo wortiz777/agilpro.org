@@ -1,0 +1,24 @@
+uuid: c8d9809f-fbae-4f82-adff-2f259f2b3d3c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_fase_pre_app
+  module:
+    - user
+id: user.user.field_fase_pre_app
+field_name: field_fase_pre_app
+entity_type: user
+bundle: user
+label: 'Fase Pre-App'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Si
+  off_label: 'No'
+field_type: boolean

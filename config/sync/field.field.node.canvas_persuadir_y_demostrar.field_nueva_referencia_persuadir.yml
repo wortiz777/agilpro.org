@@ -1,0 +1,19 @@
+uuid: 6e03a61a-eea8-4707-8399-41ebe3ca557a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_persuadir
+    - node.type.canvas_persuadir_y_demostrar
+id: node.canvas_persuadir_y_demostrar.field_nueva_referencia_persuadir
+field_name: field_nueva_referencia_persuadir
+entity_type: node
+bundle: canvas_persuadir_y_demostrar
+label: 'Ingresar Nueva Referencia Persuadir y Demostrar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

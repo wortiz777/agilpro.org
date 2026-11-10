@@ -1,0 +1,24 @@
+uuid: ee4e6c82-e73c-4b33-8fe8-65b114d4f12f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tips_mapeo_institucional
+  module:
+    - text
+id: node.tips_mapeo_institucional.body
+field_name: body
+entity_type: node
+bundle: tips_mapeo_institucional
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

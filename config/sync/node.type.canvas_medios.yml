@@ -1,0 +1,18 @@
+uuid: 25e18ec1-5998-4328-9659-c6d0b60bc39e
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Canvas - Medios'
+type: canvas_medios
+description: null
+help: 'Proveer información de inicio, de inversionistas, de socios a través de  directorios, noticias y comunidades.'
+new_revision: false
+preview_mode: 1
+display_submitted: false

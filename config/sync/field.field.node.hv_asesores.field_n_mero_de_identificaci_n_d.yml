@@ -1,0 +1,23 @@
+uuid: 04d0fb56-75a9-4206-ac51-2683a0b1f5ba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_n_mero_de_identificaci_n_d
+    - node.type.hv_asesores
+id: node.hv_asesores.field_n_mero_de_identificaci_n_d
+field_name: field_n_mero_de_identificaci_n_d
+entity_type: node
+bundle: hv_asesores
+label: 'Número de Identificación del Asesor'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

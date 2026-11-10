@@ -1,0 +1,37 @@
+uuid: 620269ee-d0f9-4e37-b4a1-f5491509d336
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.biblioteca_abierta.field_autor_es_
+    - field.field.node.biblioteca_abierta.field_resena
+    - field.field.node.biblioteca_abierta.field_subir_archivo
+    - field.field.node.biblioteca_abierta.field_ubicaci_n_del_recurso
+    - node.type.biblioteca_abierta
+  module:
+    - file
+    - user
+id: node.biblioteca_abierta.teaser
+targetEntityType: node
+bundle: biblioteca_abierta
+mode: teaser
+content:
+  field_subir_archivo:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_autor_es_: true
+  field_resena: true
+  field_ubicaci_n_del_recurso: true
+  langcode: true

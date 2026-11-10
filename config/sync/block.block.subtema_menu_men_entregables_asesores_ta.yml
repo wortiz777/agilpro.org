@@ -1,0 +1,47 @@
+uuid: 63ca2327-26a3-48dd-a045-6820fb0161e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-men-entregables-asesores-ta
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_men_entregables_asesores_ta
+theme: subtema
+region: content
+weight: -20
+provider: null
+plugin: 'system_menu_block:menu-men-entregables-asesores-ta'
+settings:
+  id: 'system_menu_block:menu-men-entregables-asesores-ta'
+  label: menu-men-entregables-asesores-ta
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /rutas-de-mejoramiento
+      /rutas-de-mejoramiento-ajustada
+      /actas-acompañamiento-asesor
+      /seguimiento-compromisos
+      /informe-final-asesor
+      /node/add/ruta-de-mejoramiento
+      /node/add/ruta-de-mejoramiento-ajustada
+      /content/rutas/*
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      coordinador_regional: coordinador_regional
+      coordinador_nacional: coordinador_nacional

@@ -1,0 +1,24 @@
+uuid: 715a47d2-f028-41ea-b89d-63219397bc06
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sector_economico
+    - node.type.empresa
+    - taxonomy.vocabulary.sector_econ_mico
+id: node.empresa.field_sector_economico
+field_name: field_sector_economico
+entity_type: node
+bundle: empresa
+label: 'Sector Económico Principal'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      sector_econ_mico: sector_econ_mico
+field_type: entity_reference

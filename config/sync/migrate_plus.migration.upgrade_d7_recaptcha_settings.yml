@@ -1,0 +1,66 @@
+uuid: 6599df72-418c-4fd9-b4b6-51d01ba3c413
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_recaptcha_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'reCAPTCHA 7 configuration'
+source:
+  plugin: variable
+  variables:
+    - recaptcha_noscript
+    - recaptcha_site_key
+    - recaptcha_size
+    - recaptcha_secret_key
+    - recaptcha_theme
+    - recaptcha_type
+    - recaptcha_use_globally
+    - recaptcha_verify_hostname
+  source_module: recaptcha
+process:
+  site_key:
+    -
+      plugin: get
+      source: recaptcha_site_key
+  secret_key:
+    -
+      plugin: get
+      source: recaptcha_secret_key
+  verify_hostname:
+    -
+      plugin: get
+      source: recaptcha_verify_hostname
+  use_globally:
+    -
+      plugin: get
+      source: recaptcha_use_globally
+  widget/theme:
+    -
+      plugin: get
+      source: recaptcha_theme
+  widget/type:
+    -
+      plugin: get
+      source: recaptcha_type
+  widget/size:
+    -
+      plugin: get
+      source: recaptcha_size
+  widget/noscript:
+    -
+      plugin: get
+      source: recaptcha_noscript
+destination:
+  plugin: config
+  config_name: recaptcha.settings
+idMap: {  }
+migration_dependencies:
+  required: {  }
+  optional: {  }
+include: null

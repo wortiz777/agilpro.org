@@ -1,0 +1,6 @@
+{% set attributes = attributes.addClass('site-branding') %}
+{% if site_logo %}
+  <a class="logo navbar-btn pull-left navbar-brand" href="{{ path('<front>') }}" title="{{ 'Inicio'|t }}" rel="home">
+    <img src="{{ site_logo }}" alt="{{ 'Inicio'|t }}" />
+  </a>
+{% endif %}

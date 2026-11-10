@@ -1,0 +1,9 @@
+uuid: efb36a97-0641-4637-996a-af38f2f6621f
+langcode: es
+status: true
+dependencies: {  }
+name: 'Rutas de Atención'
+vid: rutas_atencion
+description: null
+weight: -8
+new_revision: false

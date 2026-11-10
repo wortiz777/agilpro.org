@@ -1,0 +1,21 @@
+uuid: fac5b748-0d78-44fb-8cb5-6638fe4f08c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mentor_consultor
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_mentor_consultor
+field_name: field_mentor_consultor
+entity_type: node
+bundle: fosfec_transaction
+label: 'Mentor / Consultor'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

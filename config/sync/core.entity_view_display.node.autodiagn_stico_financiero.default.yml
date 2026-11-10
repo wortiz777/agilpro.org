@@ -1,0 +1,235 @@
+uuid: 130fb994-3413-4615-b47a-d015c44ab0c2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagn_stico_financiero.field_10financiero
+    - field.field.node.autodiagn_stico_financiero.field_11financiero
+    - field.field.node.autodiagn_stico_financiero.field_12financiero
+    - field.field.node.autodiagn_stico_financiero.field_13financiero
+    - field.field.node.autodiagn_stico_financiero.field_14financiero
+    - field.field.node.autodiagn_stico_financiero.field_15financiero
+    - field.field.node.autodiagn_stico_financiero.field_17financiero
+    - field.field.node.autodiagn_stico_financiero.field_18financiero
+    - field.field.node.autodiagn_stico_financiero.field_19financiero
+    - field.field.node.autodiagn_stico_financiero.field_1financiero
+    - field.field.node.autodiagn_stico_financiero.field_20financiero
+    - field.field.node.autodiagn_stico_financiero.field_21financiero
+    - field.field.node.autodiagn_stico_financiero.field_22financiero
+    - field.field.node.autodiagn_stico_financiero.field_2financiero
+    - field.field.node.autodiagn_stico_financiero.field_3financiero
+    - field.field.node.autodiagn_stico_financiero.field_4financiero
+    - field.field.node.autodiagn_stico_financiero.field_5financiero
+    - field.field.node.autodiagn_stico_financiero.field_6financiero
+    - field.field.node.autodiagn_stico_financiero.field_7financiero
+    - field.field.node.autodiagn_stico_financiero.field_8financiero
+    - field.field.node.autodiagn_stico_financiero.field_9financiero
+    - field.field.node.autodiagn_stico_financiero.field_enviar_los_estados_financi
+    - field.field.node.autodiagn_stico_financiero.field_financiero1
+    - node.type.autodiagn_stico_financiero
+  module:
+    - file
+    - user
+id: node.autodiagn_stico_financiero.default
+targetEntityType: node
+bundle: autodiagn_stico_financiero
+mode: default
+content:
+  field_10financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_11financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_12financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_13financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_14financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_15financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_17financiero:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_18financiero:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_19financiero:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_1financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_20financiero:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_21financiero:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_22financiero:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_2financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_3financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_4financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_5financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_6financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_7financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_8financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_9financiero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_enviar_los_estados_financi:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_financiero1:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

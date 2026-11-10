@@ -1,0 +1,37 @@
+uuid: 3b82b67e-4070-4936-a0e8-155ab797fd26
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_naturaleza_juridica
+field_name: field_naturaleza_juridica
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Publica
+    -
+      value: '2'
+      label: Privada
+    -
+      value: '3'
+      label: Mixta
+    -
+      value: '4'
+      label: Internacional
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

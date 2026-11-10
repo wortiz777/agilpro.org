@@ -1,0 +1,163 @@
+uuid: a7c46f7e-5408-476f-bbf9-d5c51d7fc619
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.aceptaci_n_asesor
+    - node.type.asesor_gesti_n_grupos_talleres
+    - node.type.asesor_gestion_grupos
+    - node.type.biblioteca_abierta
+    - node.type.evaluaciones_presenciales_al_ase
+    - node.type.informe_intermedio_del_asesor
+    - node.type.inscripci_n_fase_empoderar
+    - node.type.listado_asistentes_talleres_habi
+    - node.type.listado_grupos_talleres_fortalec
+    - node.type.material_pedagogico
+    - node.type.planes_de_capacitaci_n_habilidad
+    - node.type.ruta_acceder
+    - node.type.ruta_acceder_acceso_a_financiaci
+    - node.type.ruta_acceder_mentor_a
+    - node.type.ruta_acceso_a_mercados
+    - node.type.ruta_de_mejoramiento
+    - node.type.ruta_desarrollo_competencias
+    - node.type.ruta_desarrollo_competencias_dim
+    - node.type.rutas_de_mejoramiento_tareas
+    - node.type.seguimiento_de_compromisos
+  module:
+    - field_permissions
+    - node
+id: asesor
+label: Asesor
+weight: 5
+is_admin: false
+permissions:
+  - 'create aceptaci_n_asesor content'
+  - 'create asesor_gesti_n_grupos_talleres content'
+  - 'create asesor_gestion_grupos content'
+  - 'create biblioteca_abierta content'
+  - 'create evaluaciones_presenciales_al_ase content'
+  - 'create field_acceso_a_financiaci_n_nota'
+  - 'create field_acceso_a_mercados_notas_as'
+  - 'create field_cargar_ruta'
+  - 'create field_conocimiento'
+  - 'create field_cualitativos_cifras_cantid'
+  - 'create field_cualitativos_hechos_docume'
+  - 'create field_econ_mico'
+  - 'create field_f_sicos'
+  - 'create field_grupo_asesor'
+  - 'create field_humano'
+  - 'create field_informaci_n'
+  - 'create field_objetivo_para_qu_lo_quiero'
+  - 'create field_ruta_acceso_a_mercados'
+  - 'create field_ruta_desarrollo_competenci'
+  - 'create field_ruta_mentoria'
+  - 'create field_subir_informe_final'
+  - 'create field_subir_informe_preliminar'
+  - 'create field_taller'
+  - 'create field_tareas'
+  - 'create informe_intermedio_del_asesor content'
+  - 'create listado_asistentes_talleres_habi content'
+  - 'create listado_grupos_talleres_fortalec content'
+  - 'create material_pedagogico content'
+  - 'create planes_de_capacitaci_n_habilidad content'
+  - 'create ruta_acceder content'
+  - 'create ruta_acceder_acceso_a_financiaci content'
+  - 'create ruta_acceder_mentor_a content'
+  - 'create ruta_acceso_a_mercados content'
+  - 'create ruta_de_mejoramiento content'
+  - 'create ruta_desarrollo_competencias content'
+  - 'create ruta_desarrollo_competencias_dim content'
+  - 'create rutas_de_mejoramiento_tareas content'
+  - 'create seguimiento_de_compromisos content'
+  - 'delete any ruta_acceder content'
+  - 'delete any ruta_acceder_acceso_a_financiaci content'
+  - 'delete any ruta_acceder_mentor_a content'
+  - 'delete any ruta_acceso_a_mercados content'
+  - 'delete any ruta_de_mejoramiento content'
+  - 'delete any ruta_desarrollo_competencias content'
+  - 'delete any ruta_desarrollo_competencias_dim content'
+  - 'delete any rutas_de_mejoramiento_tareas content'
+  - 'delete own asesor_gesti_n_grupos_talleres content'
+  - 'delete own asesor_gestion_grupos content'
+  - 'delete own biblioteca_abierta content'
+  - 'delete own evaluaciones_presenciales_al_ase content'
+  - 'delete own informe_intermedio_del_asesor content'
+  - 'delete own listado_asistentes_talleres_habi content'
+  - 'delete own listado_grupos_talleres_fortalec content'
+  - 'delete own material_pedagogico content'
+  - 'delete own planes_de_capacitaci_n_habilidad content'
+  - 'delete own ruta_acceder content'
+  - 'delete own ruta_acceder_acceso_a_financiaci content'
+  - 'delete own ruta_acceder_mentor_a content'
+  - 'delete own ruta_acceso_a_mercados content'
+  - 'delete own ruta_de_mejoramiento content'
+  - 'delete own ruta_desarrollo_competencias content'
+  - 'delete own ruta_desarrollo_competencias_dim content'
+  - 'delete own rutas_de_mejoramiento_tareas content'
+  - 'delete own seguimiento_de_compromisos content'
+  - 'edit any inscripci_n_fase_empoderar content'
+  - 'edit any ruta_acceder content'
+  - 'edit any ruta_acceder_acceso_a_financiaci content'
+  - 'edit any ruta_acceder_mentor_a content'
+  - 'edit any ruta_acceso_a_mercados content'
+  - 'edit any ruta_de_mejoramiento content'
+  - 'edit any ruta_desarrollo_competencias content'
+  - 'edit any ruta_desarrollo_competencias_dim content'
+  - 'edit any rutas_de_mejoramiento_tareas content'
+  - 'edit field_acceso_a_financiaci_n_nota'
+  - 'edit field_acceso_a_mercados_notas_as'
+  - 'edit field_cargar_ruta'
+  - 'edit field_conocimiento'
+  - 'edit field_cualitativos_cifras_cantid'
+  - 'edit field_cualitativos_hechos_docume'
+  - 'edit field_econ_mico'
+  - 'edit field_f_sicos'
+  - 'edit field_humano'
+  - 'edit field_informaci_n'
+  - 'edit field_objetivo_para_qu_lo_quiero'
+  - 'edit field_ruta_acceso_a_mercados'
+  - 'edit field_ruta_administraci_n'
+  - 'edit field_ruta_desarrollo_competenci'
+  - 'edit field_ruta_financiero'
+  - 'edit field_ruta_mentoria'
+  - 'edit field_ruta_mercadeo'
+  - 'edit field_ruta_t_c_y_prod_'
+  - 'edit field_taller'
+  - 'edit field_tareas'
+  - 'edit own asesor_gesti_n_grupos_talleres content'
+  - 'edit own asesor_gestion_grupos content'
+  - 'edit own biblioteca_abierta content'
+  - 'edit own evaluaciones_presenciales_al_ase content'
+  - 'edit own field_acceso_a_financiaci_n_nota'
+  - 'edit own field_acceso_a_mercados_notas_as'
+  - 'edit own field_cargar_ruta'
+  - 'edit own field_conocimiento'
+  - 'edit own field_cualitativos_cifras_cantid'
+  - 'edit own field_cualitativos_hechos_docume'
+  - 'edit own field_econ_mico'
+  - 'edit own field_f_sicos'
+  - 'edit own field_grupo_asesor'
+  - 'edit own field_humano'
+  - 'edit own field_informaci_n'
+  - 'edit own field_objetivo_para_qu_lo_quiero'
+  - 'edit own field_ruta_acceso_a_mercados'
+  - 'edit own field_ruta_desarrollo_competenci'
+  - 'edit own field_ruta_mentoria'
+  - 'edit own field_subir_informe_final'
+  - 'edit own field_subir_informe_preliminar'
+  - 'edit own field_taller'
+  - 'edit own field_tareas'
+  - 'edit own informe_intermedio_del_asesor content'
+  - 'edit own listado_asistentes_talleres_habi content'
+  - 'edit own listado_grupos_talleres_fortalec content'
+  - 'edit own material_pedagogico content'
+  - 'edit own planes_de_capacitaci_n_habilidad content'
+  - 'edit own ruta_acceder content'
+  - 'edit own ruta_acceder_acceso_a_financiaci content'
+  - 'edit own ruta_acceder_mentor_a content'
+  - 'edit own ruta_acceso_a_mercados content'
+  - 'edit own ruta_de_mejoramiento content'
+  - 'edit own ruta_desarrollo_competencias content'
+  - 'edit own ruta_desarrollo_competencias_dim content'
+  - 'edit own rutas_de_mejoramiento_tareas content'
+  - 'edit own seguimiento_de_compromisos content'

@@ -1,0 +1,27 @@
+fosfec_transaction_workflow:
+  id: fosfec_transaction_workflow
+  label: 'Workflow Transaccional FOSFEC'
+  group: node
+  states:
+    programada:
+      label: 'Programada'
+    ejecutada:
+      label: 'Ejecutada con Evidencia'
+    aceptada_digitalmente:
+      label: 'Aceptada Digitalmente'
+    auditada_fosfec:
+      label: 'Auditada y Congelada'
+  transitions:
+    registrar_ejecucion:
+      label: 'Registrar Ejecución'
+      from: [programada]
+      to: ejecutada
+    confirmar_aceptacion:
+      label: 'Confirmar Aceptación Empresario'
+      from: [ejecutada]
+      to: aceptada_digitalmente
+    congelar_auditoria:
+      label: 'Aprobar para Sábana FOSFEC'
+      from: [aceptada_digitalmente]
+      to: auditada_fosfec
+

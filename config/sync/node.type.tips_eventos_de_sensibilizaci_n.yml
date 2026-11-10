@@ -1,0 +1,18 @@
+uuid: d67965a8-45c8-4a23-9b06-5dcefa681c9e
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Tips Eventos de Sensibilización'
+type: tips_eventos_de_sensibilizaci_n
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

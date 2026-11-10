@@ -1,0 +1,19 @@
+uuid: 5f9b42c4-9f49-430a-be96-0ec20989bfde
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7_observaciones
+    - node.type.autodiagnostico_direccionamiento
+id: node.autodiagnostico_direccionamiento.field_7_observaciones
+field_name: field_7_observaciones
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '7. Observaciones'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

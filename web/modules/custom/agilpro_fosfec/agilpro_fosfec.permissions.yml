@@ -1,0 +1,17 @@
+access fosfec dashboard:
+  title: 'Acceder al Dashboard FOSFEC'
+  description: 'Permite visualizar y gestionar el tablero de control de convocatorias, postulaciones y transacciones.'
+  restrict access: false
+
+use views bulk operations:
+  title: 'Usar operaciones masivas (VBO)'
+  description: 'Permite ejecutar acciones por lote sobre inscripciones y transacciones en el tablero FOSFEC.'
+  restrict access: false
+
+access mentor workspace:
+  title: 'Acceder a Mi Espacio de Mentoría'
+  description: 'Permite al mentor/consultor consultar sus Mipymes asignadas y bitácora de sesiones FOSFEC.'
+  restrict access: false
+
+
+

@@ -1,0 +1,26 @@
+uuid: 1ab01b20-a66c-4c6a-a18f-7269933cc33b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4gestion
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_4gestion
+field_name: field_4gestion
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '4. La empresa cuenta con un esquema  para tomar acciones  preventivas y correctivas  necesarias para  eliminar causas y evitar q'
+description: "Acción Correctiva. Conjunto de acciones tomadas para eliminar la(s) causa(s) de una no conformidad  detectada u otra situación indeseable. \r\nAcción Preventiva. Conjunto de acciones tomadas para eliminar la(s) causa(s) de una no \_conformidad potencial u otra situación potencialmente indeseable.\r\nNo Conformidad. \_Incumplimiento de un requisito especificado en producción ( y que el cliente espera), evidencia objetiva de una conclusión adversa a la calidad.\r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

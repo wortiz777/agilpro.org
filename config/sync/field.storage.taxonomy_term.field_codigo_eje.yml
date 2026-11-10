@@ -1,0 +1,21 @@
+uuid: 07f6a41a-ecf6-4a60-92b6-fbf539ea37e0
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_codigo_eje
+field_name: field_codigo_eje
+entity_type: taxonomy_term
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

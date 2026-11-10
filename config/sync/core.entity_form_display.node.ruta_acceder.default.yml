@@ -1,0 +1,87 @@
+uuid: 6466fac8-c7ff-4902-9d45-9b71b0f033aa
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_acceder.field_acceso_a_financiaci_n_nota
+    - field.field.node.ruta_acceder.field_acceso_a_mercados_notas_as
+    - field.field.node.ruta_acceder.field_ruta_mentoria
+    - node.type.ruta_acceder
+  module:
+    - path
+id: node.ruta_acceder.default
+targetEntityType: node
+bundle: ruta_acceder
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_acceso_a_financiaci_n_nota:
+    type: string_textarea
+    weight: 36
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_acceso_a_mercados_notas_as:
+    type: string_textarea
+    weight: 35
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_ruta_mentoria:
+    type: string_textarea
+    weight: -4
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

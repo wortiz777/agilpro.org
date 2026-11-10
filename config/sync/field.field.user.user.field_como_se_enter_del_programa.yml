@@ -1,0 +1,20 @@
+uuid: 8b7973fb-3ca2-41df-9acb-84a65d067d23
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_como_se_enter_del_programa
+  module:
+    - user
+id: user.user.field_como_se_enter_del_programa
+field_name: field_como_se_enter_del_programa
+entity_type: user
+bundle: user
+label: '¿Como se enteró del programa?'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

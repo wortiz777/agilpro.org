@@ -1,0 +1,19 @@
+uuid: 6d4c6443-b9e6-438d-9781-df9c0ec39d90
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dependencia
+    - node.type.gestion_componentes_mapeo
+id: node.gestion_componentes_mapeo.field_dependencia
+field_name: field_dependencia
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: Dependencia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

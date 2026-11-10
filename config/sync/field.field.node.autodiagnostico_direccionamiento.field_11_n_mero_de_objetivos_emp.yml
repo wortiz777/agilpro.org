@@ -1,0 +1,23 @@
+uuid: 53ef026f-721c-42a6-97db-9434cbfe82cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11_n_mero_de_objetivos_emp
+    - node.type.autodiagnostico_direccionamiento
+id: node.autodiagnostico_direccionamiento.field_11_n_mero_de_objetivos_emp
+field_name: field_11_n_mero_de_objetivos_emp
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '11. Número de objetivos empresariales que la empresa está trabajando actualmente.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

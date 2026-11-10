@@ -1,0 +1,21 @@
+uuid: c53b154e-348f-4a89-82d9-abc593f55899
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_id
+    - node.type.empresa
+id: node.empresa.field_tipo_id
+field_name: field_tipo_id
+entity_type: node
+bundle: empresa
+label: 'Tipo de Identificación'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

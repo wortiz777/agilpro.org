@@ -1,0 +1,23 @@
+uuid: 16d6caed-a1b1-4260-82e0-13f507b4eea0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2_12_n_mero_de_mentores_qu
+    - node.type.informe_semestral
+id: node.informe_semestral.field_2_12_n_mero_de_mentores_qu
+field_name: field_2_12_n_mero_de_mentores_qu
+entity_type: node
+bundle: informe_semestral
+label: '12. Número de mentores que prestan sus servicios de mentoria a los jóvenes emprendedores.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

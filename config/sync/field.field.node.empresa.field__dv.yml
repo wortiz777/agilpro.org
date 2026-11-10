@@ -1,0 +1,23 @@
+uuid: e00a24b9-fd9d-460c-9747-742e23eaa9d5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__dv
+    - node.type.empresa
+id: node.empresa.field__dv
+field_name: field__dv
+entity_type: node
+bundle: empresa
+label: 'Dígito de Verificación (DV)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

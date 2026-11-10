@@ -1,0 +1,18 @@
+uuid: a209f3d2-c803-4cfb-9ef7-43dc052e1d1e
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Canvas - Persuadir y Demostrar'
+type: canvas_persuadir_y_demostrar
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

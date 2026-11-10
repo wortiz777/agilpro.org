@@ -1,0 +1,19 @@
+uuid: 3b8ff1f6-83c3-4c6a-926b-913639d5ac50
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_diagn_stico
+    - node.type.ruta_desarrollo_competencias
+id: node.ruta_desarrollo_competencias.field_diagn_stico
+field_name: field_diagn_stico
+entity_type: node
+bundle: ruta_desarrollo_competencias
+label: Diagnóstico
+description: 'Describa su diagnóstico en los diferentes aspectos tratados  durante el taller y que sea relevantes para su análisis y desarrollo.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

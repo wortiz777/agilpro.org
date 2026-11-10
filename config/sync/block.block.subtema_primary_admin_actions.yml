@@ -1,0 +1,20 @@
+uuid: c1dc7b78-f9dd-4913-b7cb-622df9b48849
+langcode: es
+status: true
+dependencies:
+  theme:
+    - subtema
+_core:
+  default_config_hash: G7iRe5JsYWmKYl4yfcpZg7OuM-dJHKsy_OvDuAine_g
+id: subtema_primary_admin_actions
+theme: subtema
+region: content
+weight: 5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Acciones principales de administración'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 28519675-62fb-4f12-b6ae-50a60c2904ff
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_estrato_socioecon_mico
+  module:
+    - options
+    - user
+id: user.user.field_estrato_socioecon_mico
+field_name: field_estrato_socioecon_mico
+entity_type: user
+bundle: user
+label: 'Estrato Socioeconómico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

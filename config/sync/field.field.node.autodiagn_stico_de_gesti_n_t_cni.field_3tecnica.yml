@@ -1,0 +1,23 @@
+uuid: a4de0b6c-0af9-41c2-a403-bb83b629051e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3tecnica
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_3tecnica
+field_name: field_3tecnica
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '3. La Capacidad productiva estimada en unidades de producción o servicios al mes '
+description: "La capacidad productiva hace referencia al máximo nivel de producción que puede soportar una empresa, en circunstancias normales de funcionamiento durante un periodo de tiempo determinado. \r\nSe expresa en unidades relacionadas con periodos de tiempo: horas máquina diarias, horas hombre por semana, volumen anual, etc."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

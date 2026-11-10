@@ -1,0 +1,16 @@
+uuid: 596f9aa7-221f-4cc0-a065-c69460df3b23
+langcode: es
+status: true
+dependencies:
+  config:
+    - node.type.empresa
+  module:
+    - node
+    - system
+id: colaborador
+label: 'Colaborador Empresa'
+weight: 34
+is_admin: false
+permissions:
+  - 'access content'
+  - 'edit own empresa content'

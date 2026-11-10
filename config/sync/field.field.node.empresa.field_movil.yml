@@ -1,0 +1,19 @@
+uuid: 20165909-b772-4e1f-bea5-10fc64b2f931
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movil
+    - node.type.empresa
+id: node.empresa.field_movil
+field_name: field_movil
+entity_type: node
+bundle: empresa
+label: 'Número Móvil de Contacto'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

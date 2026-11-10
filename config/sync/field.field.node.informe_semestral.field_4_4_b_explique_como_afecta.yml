@@ -1,0 +1,19 @@
+uuid: 7e920d59-83b2-49fd-82cb-21997cafcea7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4_4_b_explique_como_afecta
+    - node.type.informe_semestral
+id: node.informe_semestral.field_4_4_b_explique_como_afecta
+field_name: field_4_4_b_explique_como_afecta
+entity_type: node
+bundle: informe_semestral
+label: "4.4(B). Explique como afectaría este riesgo el desempeño del proyecto:\t"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

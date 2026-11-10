@@ -1,0 +1,14 @@
+uuid: bcd378db-e08e-4c38-95a5-3805c757ebf4
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.auxiliar_admin
+  module:
+    - user
+id: user_add_role_action.auxiliar_admin
+label: 'Añade el rol Auxiliar Administrativo al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: auxiliar_admin

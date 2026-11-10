@@ -1,0 +1,21 @@
+uuid: b601aa62-c023-45d8-8ada-0d578380d373
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_4cumplimiento
+field_name: field_4cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '4. Sayco Acinpro'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

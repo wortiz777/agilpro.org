@@ -1,0 +1,21 @@
+uuid: b9b6a997-ac4b-42fe-9cdf-e78f04e2e0cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_genero
+    - node.type.gestion_componentes_mapeo
+  module:
+    - options
+id: node.gestion_componentes_mapeo.field_genero
+field_name: field_genero
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: Genero
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

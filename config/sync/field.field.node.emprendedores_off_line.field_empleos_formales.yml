@@ -1,0 +1,19 @@
+uuid: f188b101-c1d5-40fc-bf64-563dc0113c6f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_empleos_formales
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_empleos_formales
+field_name: field_empleos_formales
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Empleos formales'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

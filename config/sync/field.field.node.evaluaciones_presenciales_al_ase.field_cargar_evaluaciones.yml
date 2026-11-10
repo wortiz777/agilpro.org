@@ -1,0 +1,27 @@
+uuid: 2776e230-32ef-423b-9ed3-f432f1cf2314
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargar_evaluaciones
+    - node.type.evaluaciones_presenciales_al_ase
+  module:
+    - file
+id: node.evaluaciones_presenciales_al_ase.field_cargar_evaluaciones
+field_name: field_cargar_evaluaciones
+entity_type: node
+bundle: evaluaciones_presenciales_al_ase
+label: 'Cargar Evaluaciones'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: Evaluaciones-Presenciales-a-Asesores
+  file_extensions: 'pdf jpg jpeg png bpm gif doc docx ppt pptx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

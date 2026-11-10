@@ -1,0 +1,31 @@
+uuid: 70cefed1-327f-441c-9cd1-069c67d1d728
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000048'
+  module:
+    - block_content
+    - system
+  theme:
+    - subtema
+id: subtema_block_48
+theme: subtema
+region: content
+weight: -10
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000048'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000048'
+  label: 'Botónes Descargas'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /C2/Gestion-Emprendedores
+      /C2/emprendedores-off-line
+      /C2/emprendedores-off-line-Nal

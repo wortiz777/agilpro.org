@@ -1,0 +1,11 @@
+uuid: a4f8c5f3-7fd7-4b9e-9375-6edfea1a5c78
+langcode: es
+status: true
+dependencies: {  }
+name: Chart
+type: easychart
+description: "Create a chart using the world's best web charting tool: Highcharts"
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

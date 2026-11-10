@@ -1,0 +1,26 @@
+uuid: 02c8e2c5-25e5-4b2d-a248-851c93f595ce
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_9admin
+    - node.type.autodiagnostico_administracion
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_administracion.field_9admin
+field_name: field_9admin
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '9. La empresa cuenta con planes o programas para capacitar el nivel directivo o el personal de la empresa.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

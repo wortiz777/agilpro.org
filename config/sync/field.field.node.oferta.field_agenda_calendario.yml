@@ -1,0 +1,23 @@
+uuid: e5bb949b-5136-4046-b6b5-e0b87be7877e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_agenda_calendario
+    - node.type.oferta
+  module:
+    - link
+id: node.oferta.field_agenda_calendario
+field_name: field_agenda_calendario
+entity_type: node
+bundle: oferta
+label: 'Integración Agenda/iCal'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

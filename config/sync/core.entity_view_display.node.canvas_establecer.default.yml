@@ -1,0 +1,50 @@
+uuid: 6d14f703-eea3-489a-a7c0-feebc3ccdae6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_establecer.field_descripcion_formacion_e
+    - field.field.node.canvas_establecer.field_fase_canvas
+    - field.field.node.canvas_establecer.field_ingresar_nuevo_establecer
+    - node.type.canvas_establecer
+  module:
+    - user
+id: node.canvas_establecer.default
+targetEntityType: node
+bundle: canvas_establecer
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_fase_canvas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ingresar_nuevo_establecer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

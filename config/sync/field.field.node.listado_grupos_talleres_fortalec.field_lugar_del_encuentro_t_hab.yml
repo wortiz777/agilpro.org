@@ -1,0 +1,19 @@
+uuid: ce7ee391-77da-4b3c-a189-2c7d283c65cf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lugar_del_encuentro_t_hab
+    - node.type.listado_grupos_talleres_fortalec
+id: node.listado_grupos_talleres_fortalec.field_lugar_del_encuentro_t_hab
+field_name: field_lugar_del_encuentro_t_hab
+entity_type: node
+bundle: listado_grupos_talleres_fortalec
+label: 'Lugar del Encuentro'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

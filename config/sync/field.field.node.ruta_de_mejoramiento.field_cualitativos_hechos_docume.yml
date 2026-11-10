@@ -1,0 +1,19 @@
+uuid: c236644e-fdc0-46bc-bc82-15aa311c7f4a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cualitativos_hechos_docume
+    - node.type.ruta_de_mejoramiento
+id: node.ruta_de_mejoramiento.field_cualitativos_hechos_docume
+field_name: field_cualitativos_hechos_docume
+entity_type: node
+bundle: ruta_de_mejoramiento
+label: 'Cualitativos (Hechos, documentos)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

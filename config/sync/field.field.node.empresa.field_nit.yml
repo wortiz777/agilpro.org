@@ -1,0 +1,23 @@
+uuid: 68265a9e-e784-4693-9094-60141507b216
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nit
+    - node.type.empresa
+id: node.empresa.field_nit
+field_name: field_nit
+entity_type: node
+bundle: empresa
+label: NIT
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

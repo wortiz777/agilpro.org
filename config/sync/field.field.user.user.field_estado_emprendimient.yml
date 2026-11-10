@@ -1,0 +1,21 @@
+uuid: bac2076f-ffbf-4428-9cc5-e1a52b99f9f3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_estado_emprendimient
+  module:
+    - options
+    - user
+id: user.user.field_estado_emprendimient
+field_name: field_estado_emprendimient
+entity_type: user
+bundle: user
+label: 'Estado de tu Emprendimiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

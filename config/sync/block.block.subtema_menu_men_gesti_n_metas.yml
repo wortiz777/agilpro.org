@@ -1,0 +1,29 @@
+uuid: cc0a5cdd-4c2f-4e2b-b6e9-09c9377ac07f
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-men-gesti-n-metas
+  module:
+    - system
+  theme:
+    - subtema
+id: subtema_menu_men_gesti_n_metas
+theme: subtema
+region: content
+weight: -19
+provider: null
+plugin: 'system_menu_block:menu-men-gesti-n-metas'
+settings:
+  id: 'system_menu_block:menu-men-gesti-n-metas'
+  label: menu-men-gesti-n-metas
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/gestion/metas/*'

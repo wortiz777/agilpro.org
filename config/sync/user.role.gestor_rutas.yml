@@ -1,0 +1,13 @@
+uuid: 67ef553a-d018-402f-870e-3c9adc3925ed
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+id: gestor_rutas
+label: 'Gestor de Rutas'
+weight: 28
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content'

@@ -1,0 +1,26 @@
+uuid: 5552b7f6-bbf3-427b-968c-f069309587a9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_18_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_18_capacidades
+field_name: field_18_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '18. Le agrada hablar en un publico'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

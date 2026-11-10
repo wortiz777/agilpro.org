@@ -1,0 +1,123 @@
+uuid: 87638717-8575-4f02-8bb9-e87e35715cb9
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_asesor_gestion_grupos
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Asesor | Gestión Grupos)'
+source:
+  plugin: d7_node_complete
+  node_type: asesor_gestion_grupos
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_asesor_gestion_grupos/0/status:
+    -
+      plugin: get
+      source: comment
+  field_grupo_asesor:
+    -
+      plugin: get
+      source: field_grupo_asesor
+  field_subir_informe_preliminar:
+    -
+      plugin: sub_process
+      source: field_subir_informe_preliminar
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_subir_informe_final:
+    -
+      plugin: sub_process
+      source: field_subir_informe_final
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_informe_pre_aprobado:
+    -
+      plugin: get
+      source: field_informe_pre_aprobado
+  field_informe_final_aprobado:
+    -
+      plugin: get
+      source: field_informe_final_aprobado
+  field_taller:
+    -
+      plugin: get
+      source: field_taller
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: asesor_gestion_grupos
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

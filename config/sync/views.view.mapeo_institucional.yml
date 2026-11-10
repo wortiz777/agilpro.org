@@ -1,0 +1,2414 @@
+uuid: 01e56fb0-5555-4693-a455-3248cc7ffb36
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.storage.node.body
+    - field.storage.node.field_cargo_o_rol
+    - field.storage.node.field_categoria_entidad
+    - field.storage.node.field_dependencia
+    - field.storage.node.field_direccion_entidad_ecosis
+    - field.storage.node.field_e_mail_contacto
+    - field.storage.node.field_genero
+    - field.storage.node.field_horario_de_atencion_entida
+    - field.storage.node.field_mail_entidad_ecosis
+    - field.storage.node.field_naturaleza_juridica
+    - field.storage.node.field_nombre_persona_de_contacto
+    - field.storage.node.field_otros_contactos
+    - field.storage.node.field_telefonos_contacto
+    - field.storage.node.field_telefonos_entidad_ecosis
+    - field.storage.node.field_tipo_de_emprendimiento_pob
+    - field.storage.node.field_web_entidad_ecosis
+    - node.type.gestion_componentes_mapeo
+    - user.role.administrator
+    - user.role.coordinador_nacional
+    - user.role.coordinador_regional
+  module:
+    - link
+    - node
+    - options
+    - text
+    - user
+id: mapeo_institucional
+label: 'C1 | Mapeo Institucional'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: '<i class="fa fa-university fa-lg">&nbsp;</i>Entidades Participantes'
+      fields:
+        field_categoria_entidad:
+          id: field_categoria_entidad
+          table: node__field_categoria_entidad
+          field: field_categoria_entidad
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Categoría de la Entidad'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: 0
+        field_naturaleza_juridica:
+          id: field_naturaleza_juridica
+          table: node__field_naturaleza_juridica
+          field: field_naturaleza_juridica
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Naturaleza Jurídica'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_dependencia:
+          id: field_dependencia
+          table: node__field_dependencia
+          field: field_dependencia
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Dependencia
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_telefonos_entidad_ecosis:
+          id: field_telefonos_entidad_ecosis
+          table: node__field_telefonos_entidad_ecosis
+          field: field_telefonos_entidad_ecosis
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Teléfonos de Contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_direccion_entidad_ecosis:
+          id: field_direccion_entidad_ecosis
+          table: node__field_direccion_entidad_ecosis
+          field: field_direccion_entidad_ecosis
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Dirección
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_mail_entidad_ecosis:
+          id: field_mail_entidad_ecosis
+          table: node__field_mail_entidad_ecosis
+          field: field_mail_entidad_ecosis
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'E-mail de Contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: email
+          type: basic_string
+          settings: {  }
+          group_column: email
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_web_entidad_ecosis:
+          id: field_web_entidad_ecosis
+          table: node__field_web_entidad_ecosis
+          field: field_web_entidad_ecosis
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Página Web'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: url
+          type: link
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_horario_de_atencion_entida:
+          id: field_horario_de_atencion_entida
+          table: node__field_horario_de_atencion_entida
+          field: field_horario_de_atencion_entida
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Horario de Atención'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_nombre_persona_de_contacto:
+          id: field_nombre_persona_de_contacto
+          table: node__field_nombre_persona_de_contacto
+          field: field_nombre_persona_de_contacto
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Nombre y Apellidos'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_genero:
+          id: field_genero
+          table: node__field_genero
+          field: field_genero
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Genero
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_telefonos_contacto:
+          id: field_telefonos_contacto
+          table: node__field_telefonos_contacto
+          field: field_telefonos_contacto
+          plugin_id: field
+        field_e_mail_contacto:
+          id: field_e_mail_contacto
+          table: node__field_e_mail_contacto
+          field: field_e_mail_contacto
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'E-mail de Contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: email
+          type: basic_string
+          settings: {  }
+          group_column: email
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente ›'
+            previous: '‹ anterior'
+            first: '« primero'
+            last: 'último »'
+          expose:
+            items_per_page: true
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '25, 50, 100'
+            items_per_page_options_all: false
+            offset: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          autosubmit: 1
+          autosubmit_hide: 1
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            coordinador_nacional: coordinador_nacional
+            coordinador_regional: coordinador_regional
+      cache:
+        type: none
+      sorts: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            gestion_componentes_mapeo: gestion_componentes_mapeo
+      style:
+        type: default
+        options:
+          uses_fields: false
+          alignment: vertical
+          columns_horizontal: '-1'
+          columns_vertical: '3'
+          clear_columns: 1
+          columns_xs: '12'
+          columns_sm: '6'
+          columns_md: '4'
+          columns_lg: '4'
+          column_class: ''
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: full
+          links: 0
+          comments: 0
+      query:
+        type: views_query
+        options: {  }
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          entity_type: node
+          plugin_id: standard
+          required: false
+          ui_name: ''
+          label: author
+      use_ajax: true
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          label: ''
+          empty: true
+          ui_name: ''
+          content: '<H4 class="rteright"><a href="/node/add/gestion-componentes-mapeo"><i class="fa fa-cloud-upload fa-lg">&nbsp;</i>Crear Nueva Entidad del Ecosistema</a></H4>'
+          tokenize: 0
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          label: ''
+          empty: true
+          ui_name: ''
+          content: '<h3> @total Instituciones Mapeadas</h3>'
+      display_extenders: {  }
+      style_plugin: views_bootstrap_grid_plugin_style
+      style_options:
+        uses_fields: 0
+        alignment: vertical
+        columns_horizontal: '-1'
+        columns_vertical: '3'
+        clear_columns: 1
+        columns_xs: '12'
+        columns_sm: '6'
+        columns_md: '4'
+        columns_lg: '4'
+        column_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_categoria_entidad'
+        - 'config:field.storage.node.field_dependencia'
+        - 'config:field.storage.node.field_direccion_entidad_ecosis'
+        - 'config:field.storage.node.field_e_mail_contacto'
+        - 'config:field.storage.node.field_genero'
+        - 'config:field.storage.node.field_horario_de_atencion_entida'
+        - 'config:field.storage.node.field_mail_entidad_ecosis'
+        - 'config:field.storage.node.field_naturaleza_juridica'
+        - 'config:field.storage.node.field_nombre_persona_de_contacto'
+        - 'config:field.storage.node.field_telefonos_contacto'
+        - 'config:field.storage.node.field_telefonos_entidad_ecosis'
+        - 'config:field.storage.node.field_web_entidad_ecosis'
+  block_1:
+    id: block_1
+    display_title: 'Block | Regional'
+    display_plugin: block
+    position: 4
+    display_options:
+      title: ''
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            gestion_componentes_mapeo: gestion_componentes_mapeo
+        uid_current:
+          id: uid_current
+          table: users
+          field: uid_current
+          relationship: uid
+          group_type: group
+          plugin_id: user_current
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            operator_label: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          ui_name: ''
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        title: false
+        filters: false
+        filter_groups: false
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          entity_type: node
+          plugin_id: standard
+          required: false
+          ui_name: ''
+          label: author
+      display_description: ''
+      display_extenders: {  }
+      block_description: 'C1 | Mapeo Institucional | Regiones'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - user
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_categoria_entidad'
+        - 'config:field.storage.node.field_dependencia'
+        - 'config:field.storage.node.field_direccion_entidad_ecosis'
+        - 'config:field.storage.node.field_e_mail_contacto'
+        - 'config:field.storage.node.field_genero'
+        - 'config:field.storage.node.field_horario_de_atencion_entida'
+        - 'config:field.storage.node.field_mail_entidad_ecosis'
+        - 'config:field.storage.node.field_naturaleza_juridica'
+        - 'config:field.storage.node.field_nombre_persona_de_contacto'
+        - 'config:field.storage.node.field_telefonos_contacto'
+        - 'config:field.storage.node.field_telefonos_entidad_ecosis'
+        - 'config:field.storage.node.field_web_entidad_ecosis'
+  block_2:
+    id: block_2
+    display_title: 'Block | Nacional'
+    display_plugin: block
+    position: 5
+    display_options:
+      title: ''
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        title: false
+      display_description: ''
+      display_extenders: {  }
+      block_description: 'C1 | Mapeo Institucional | Nacional'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_categoria_entidad'
+        - 'config:field.storage.node.field_dependencia'
+        - 'config:field.storage.node.field_direccion_entidad_ecosis'
+        - 'config:field.storage.node.field_e_mail_contacto'
+        - 'config:field.storage.node.field_genero'
+        - 'config:field.storage.node.field_horario_de_atencion_entida'
+        - 'config:field.storage.node.field_mail_entidad_ecosis'
+        - 'config:field.storage.node.field_naturaleza_juridica'
+        - 'config:field.storage.node.field_nombre_persona_de_contacto'
+        - 'config:field.storage.node.field_telefonos_contacto'
+        - 'config:field.storage.node.field_telefonos_entidad_ecosis'
+        - 'config:field.storage.node.field_web_entidad_ecosis'
+  page:
+    id: page
+    display_title: Todos
+    display_plugin: page
+    position: 2
+    display_options:
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente ›'
+            previous: '‹ anterior'
+            first: '« primero'
+            last: 'último »'
+          expose:
+            items_per_page: true
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '25, 50, 100'
+            items_per_page_options_all: false
+            offset: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          autosubmit: 0
+          autosubmit_hide: 1
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        exposed_form: false
+        exposed_form_options: false
+      display_description: ''
+      display_extenders: {  }
+      path: mapeo-institucional-asesores
+      exposed_form_options: null
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_categoria_entidad'
+        - 'config:field.storage.node.field_dependencia'
+        - 'config:field.storage.node.field_direccion_entidad_ecosis'
+        - 'config:field.storage.node.field_e_mail_contacto'
+        - 'config:field.storage.node.field_genero'
+        - 'config:field.storage.node.field_horario_de_atencion_entida'
+        - 'config:field.storage.node.field_mail_entidad_ecosis'
+        - 'config:field.storage.node.field_naturaleza_juridica'
+        - 'config:field.storage.node.field_nombre_persona_de_contacto'
+        - 'config:field.storage.node.field_telefonos_contacto'
+        - 'config:field.storage.node.field_telefonos_entidad_ecosis'
+        - 'config:field.storage.node.field_web_entidad_ecosis'
+  page_1:
+    id: page_1
+    display_title: Coordinación
+    display_plugin: page
+    position: 3
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: true
+            text: ' '
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          settings:
+            link_to_entity: 0
+          ui_name: ''
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 0
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            gestion_componentes_mapeo: gestion_componentes_mapeo
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      style:
+        type: default
+        options:
+          uses_fields: false
+          alignment: vertical
+          columns_horizontal: '-1'
+          columns_vertical: '3'
+          clear_columns: 1
+          columns_xs: '12'
+          columns_sm: '6'
+          columns_md: '4'
+          columns_lg: '4'
+          column_class: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: false
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        pager: false
+        style: false
+        row: false
+        fields: false
+        filters: false
+        filter_groups: false
+        header: false
+        pager_options: false
+      display_description: ''
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          label: ''
+          empty: true
+          ui_name: ''
+          content: '<H4 class="rteright"><a href="/node/add/gestion-componentes-mapeo"><i class="fa fa-cloud-upload fa-lg">&nbsp;</i>Crear Nueva Entidad del Ecosistema</a></H4>'
+          tokenize: 0
+      display_extenders: {  }
+      path: C1/Mapeo-Institucional
+      style_plugin: views_bootstrap_grid_plugin_style
+      style_options:
+        uses_fields: 0
+        alignment: vertical
+        columns_horizontal: '-1'
+        columns_vertical: '3'
+        clear_columns: 1
+        columns_xs: '12'
+        columns_sm: '6'
+        columns_md: '4'
+        columns_lg: '4'
+        column_class: ''
+      pager_options: null
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - 'user.node_grants:view'
+        - user.roles
+      tags: {  }
+  page_2:
+    id: page_2
+    display_title: 'Statistic| Mapeo '
+    display_plugin: page
+    position: 6
+    display_options:
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Entidad
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          settings:
+            link_to_entity: 0
+          ui_name: ''
+        field_categoria_entidad:
+          id: field_categoria_entidad
+          table: node__field_categoria_entidad
+          field: field_categoria_entidad
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Categoría de la Entidad'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: 0
+        field_naturaleza_juridica:
+          id: field_naturaleza_juridica
+          table: node__field_naturaleza_juridica
+          field: field_naturaleza_juridica
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Naturaleza Jurídica'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_dependencia:
+          id: field_dependencia
+          table: node__field_dependencia
+          field: field_dependencia
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Dependencia
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_direccion_entidad_ecosis:
+          id: field_direccion_entidad_ecosis
+          table: node__field_direccion_entidad_ecosis
+          field: field_direccion_entidad_ecosis
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Dirección
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_e_mail_contacto:
+          id: field_e_mail_contacto
+          table: node__field_e_mail_contacto
+          field: field_e_mail_contacto
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'E-mail de Contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: email
+          type: basic_string
+          settings: {  }
+          group_column: email
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_web_entidad_ecosis:
+          id: field_web_entidad_ecosis
+          table: node__field_web_entidad_ecosis
+          field: field_web_entidad_ecosis
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Página Web'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: url
+          type: link
+          settings: {  }
+          group_column: ''
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_telefonos_contacto:
+          id: field_telefonos_contacto
+          table: node__field_telefonos_contacto
+          field: field_telefonos_contacto
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Teléfonos de Contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_horario_de_atencion_entida:
+          id: field_horario_de_atencion_entida
+          table: node__field_horario_de_atencion_entida
+          field: field_horario_de_atencion_entida
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Horario de Atención'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_tipo_de_emprendimiento_pob:
+          id: field_tipo_de_emprendimiento_pob
+          table: node__field_tipo_de_emprendimiento_pob
+          field: field_tipo_de_emprendimiento_pob
+          plugin_id: field
+        field_nombre_persona_de_contacto:
+          id: field_nombre_persona_de_contacto
+          table: node__field_nombre_persona_de_contacto
+          field: field_nombre_persona_de_contacto
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Nombre y Apellidos'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_genero:
+          id: field_genero
+          table: node__field_genero
+          field: field_genero
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Genero
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_cargo_o_rol:
+          id: field_cargo_o_rol
+          table: node__field_cargo_o_rol
+          field: field_cargo_o_rol
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Cargo o Rol'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_otros_contactos:
+          id: field_otros_contactos
+          table: node__field_otros_contactos
+          field: field_otros_contactos
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Otros Contactos'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_mail_entidad_ecosis:
+          id: field_mail_entidad_ecosis
+          table: node__field_mail_entidad_ecosis
+          field: field_mail_entidad_ecosis
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'E-mail de Contacto'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: email
+          type: basic_string
+          settings: {  }
+          group_column: email
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        body:
+          id: body
+          table: node__body
+          field: body
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Cuerpo
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente ›'
+            previous: '‹ anterior'
+            first: '« primero'
+            last: 'último »'
+          expose:
+            items_per_page: true
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '25, 50, 100'
+            items_per_page_options_all: false
+            offset: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          autosubmit: 0
+          autosubmit_hide: 1
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            field_camara: field_camara
+            field_categoria_entidad: field_categoria_entidad
+            field_naturaleza_juridica: field_naturaleza_juridica
+          info:
+            field_camara:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_group_and_compress: views_aggregator_group_and_compress
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_categoria_entidad:
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_tally: views_aggregator_tally
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_naturaleza_juridica:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_tally: views_aggregator_tally
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: full
+          links: 0
+          comments: 0
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        exposed_form: false
+        style: false
+        row: false
+        fields: false
+        exposed_form_options: false
+      relationships:
+        uid:
+          id: uid
+          table: node_field_data
+          field: uid
+          relationship: none
+          group_type: group
+          admin_label: author
+          entity_type: node
+          plugin_id: standard
+          required: false
+          ui_name: ''
+          label: author
+      display_description: ''
+      display_extenders: {  }
+      path: stat/table-mapeo
+      exposed_form_options: null
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          field_camara: field_camara
+          field_categoria_entidad: field_categoria_entidad
+          field_naturaleza_juridica: field_naturaleza_juridica
+        info:
+          field_camara:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_group_and_compress: views_aggregator_group_and_compress
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_categoria_entidad:
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_tally: views_aggregator_tally
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_naturaleza_juridica:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_tally: views_aggregator_tally
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:field.storage.node.field_cargo_o_rol'
+        - 'config:field.storage.node.field_categoria_entidad'
+        - 'config:field.storage.node.field_dependencia'
+        - 'config:field.storage.node.field_direccion_entidad_ecosis'
+        - 'config:field.storage.node.field_e_mail_contacto'
+        - 'config:field.storage.node.field_genero'
+        - 'config:field.storage.node.field_horario_de_atencion_entida'
+        - 'config:field.storage.node.field_mail_entidad_ecosis'
+        - 'config:field.storage.node.field_naturaleza_juridica'
+        - 'config:field.storage.node.field_nombre_persona_de_contacto'
+        - 'config:field.storage.node.field_otros_contactos'
+        - 'config:field.storage.node.field_telefonos_contacto'
+        - 'config:field.storage.node.field_tipo_de_emprendimiento_pob'
+        - 'config:field.storage.node.field_web_entidad_ecosis'

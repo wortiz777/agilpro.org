@@ -1,0 +1,22 @@
+uuid: 4a4d8f2e-dc65-42dc-b26c-09f25c5aee74
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fortalecidos_acci_n
+    - node.type.metas
+  module:
+    - text
+id: node.metas.field_fortalecidos_acci_n
+field_name: field_fortalecidos_acci_n
+entity_type: node
+bundle: metas
+label: 'Fortalecidos | Acción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

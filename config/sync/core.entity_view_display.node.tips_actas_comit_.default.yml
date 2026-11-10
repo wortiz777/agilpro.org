@@ -1,0 +1,29 @@
+uuid: b7a309d0-4ac5-4604-959e-dcbbaba051d6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_actas_comit_.body
+    - node.type.tips_actas_comit_
+  module:
+    - text
+    - user
+id: node.tips_actas_comit_.default
+targetEntityType: node
+bundle: tips_actas_comit_
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

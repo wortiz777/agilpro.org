@@ -1,0 +1,187 @@
+uuid: a0e40c12-544a-42e5-b2c4-59b2c65dd4a0
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_informe_semestral
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Informe Semestral)'
+source:
+  plugin: d7_node_complete
+  node_type: informe_semestral
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_informe_semestral/0/status:
+    -
+      plugin: get
+      source: comment
+  field_seleccione_el_semestre_a_r:
+    -
+      plugin: get
+      source: field_seleccione_el_semestre_a_r
+  field_1_resumen_general_del_dese:
+    -
+      plugin: get
+      source: field_1_resumen_general_del_dese
+  field_3_se_ale_los_factores_cr_t:
+    -
+      plugin: get
+      source: field_3_se_ale_los_factores_cr_t
+  field_4_riesgos:
+    -
+      plugin: get
+      source: field_4_riesgos
+  field_4_1_b_explique_como_afecta:
+    -
+      plugin: get
+      source: field_4_1_b_explique_como_afecta
+  field_4_2_b_explique_como_afecta:
+    -
+      plugin: get
+      source: field_4_2_b_explique_como_afecta
+  field_4_3_b_explique_como_afecta:
+    -
+      plugin: get
+      source: field_4_3_b_explique_como_afecta
+  field_4_4_b_explique_como_afecta:
+    -
+      plugin: get
+      source: field_4_4_b_explique_como_afecta
+  field_4_5_b_detalle_el_o_los_otr:
+    -
+      plugin: get
+      source: field_4_5_b_detalle_el_o_los_otr
+  field_5_sustente_como_desde_su_c:
+    -
+      plugin: get
+      source: field_5_sustente_como_desde_su_c
+  field_6_relacione_las_acciones_a:
+    -
+      plugin: get
+      source: field_6_relacione_las_acciones_a
+  field_7_mencione_las_lecciones_a:
+    -
+      plugin: get
+      source: field_7_mencione_las_lecciones_a
+  field_2_1_n_mero_de_personas_sen:
+    -
+      plugin: get
+      source: field_2_1_n_mero_de_personas_sen
+  field_2_2_n_mero_de_empresas_for:
+    -
+      plugin: get
+      source: field_2_2_n_mero_de_empresas_for
+  field_2_3_n_mero_de_empleados_ad:
+    -
+      plugin: get
+      source: field_2_3_n_mero_de_empleados_ad
+  field_2_4_n_mero_de_empresas_que:
+    -
+      plugin: get
+      source: field_2_4_n_mero_de_empresas_que
+  field_2_5_n_mero_de_j_venes_que_:
+    -
+      plugin: get
+      source: field_2_5_n_mero_de_j_venes_que_
+  field_n_mero_de_empresas_fortale:
+    -
+      plugin: get
+      source: field_n_mero_de_empresas_fortale
+  field_2_7_n_mero_de_j_venes_que_:
+    -
+      plugin: get
+      source: field_2_7_n_mero_de_j_venes_que_
+  field_2_8_n_mero_de_j_venes_que_:
+    -
+      plugin: get
+      source: field_2_8_n_mero_de_j_venes_que_
+  field_2_9_n_mero_de_facilitadore:
+    -
+      plugin: get
+      source: field_2_9_n_mero_de_facilitadore
+  field_2_10_n_mero_de_j_venes_que:
+    -
+      plugin: get
+      source: field_2_10_n_mero_de_j_venes_que
+  field_2_11_n_mero_de_j_venes_que:
+    -
+      plugin: get
+      source: field_2_11_n_mero_de_j_venes_que
+  field_2_12_n_mero_de_mentores_qu:
+    -
+      plugin: get
+      source: field_2_12_n_mero_de_mentores_qu
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: informe_semestral
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

@@ -1,0 +1,18 @@
+uuid: 40697655-9bab-41bb-a231-9f8b57970a7b
+langcode: es
+status: true
+dependencies:
+  module:
+    - comment
+    - field_permissions
+    - system
+_core:
+  default_config_hash: Tus1ZTNXKIOnrennR1hnTbc7wUPBXHTUm5UdCpEhJSk
+id: anonymous
+label: 'usuario anónimo'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'create field_fase_pre_app'

@@ -1,0 +1,21 @@
+uuid: 955d2176-55be-4bd4-8202-4e98a109e1b5
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tipo_servicio
+    - node.type.fosfec_transaction
+  module:
+    - options
+id: node.fosfec_transaction.field_tipo_servicio
+field_name: field_tipo_servicio
+entity_type: node
+bundle: fosfec_transaction
+label: 'Tipo de Servicio'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

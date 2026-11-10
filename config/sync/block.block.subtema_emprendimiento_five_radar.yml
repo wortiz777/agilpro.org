@@ -1,0 +1,33 @@
+uuid: 02f5eed5-3fe6-4e9f-a5f2-402ecd020e17
+langcode: es
+status: true
+dependencies:
+  module:
+    - agilpro_org
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_emprendimiento_five_radar
+theme: subtema
+region: content
+weight: -17
+provider: null
+plugin: agilpro_emprendimiento_five_radar_block
+settings:
+  id: agilpro_emprendimiento_five_radar_block
+  label: subtema_emprendimiento_five_radar
+  label_display: '0'
+  provider: agilpro_org
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /360-emprendimientos
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

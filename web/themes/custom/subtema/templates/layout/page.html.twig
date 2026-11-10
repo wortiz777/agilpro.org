@@ -1,0 +1,86 @@
+{%
+  set nav_classes = [
+    'navbar',
+    'navbar-fixed-top',
+    'navbar-default',
+  ]
+%}
+{# Barra lateral izquierda con el menú principal #}
+{{ page.primary_menu }}
+
+<header id="navbar" role="banner" class="{{ nav_classes|join(' ') }}">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      {{ page.header }}
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+        <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-collapse">
+      <nav role="navigation">
+        {% if page.secondary_menu or page.top_header %}
+          <div class="region region-navigation">
+            {{ page.secondary_menu }}
+            {{ page.top_header }}
+          </div>
+        {% endif %}
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="main-container container-fluid">
+  <header role="banner" id="page-header">
+    {{ page.featured_top }}
+  </header>
+
+  <div class="row">
+    {% if page.sidebar_first %}
+      <aside class="col-sm-3" role="complementary">
+        <div class="region region-sidebar-first well">
+          {{ page.sidebar_first }}
+        </div>
+      </aside>
+    {% endif %}
+
+    {%
+      set content_cols = (page.sidebar_first and page.sidebar_second) ? 'col-sm-6' :
+                         ((page.sidebar_first or page.sidebar_second) ? 'col-sm-9' : 'col-sm-12')
+    %}
+    <section class="{{ content_cols }}">
+      {% if page.highlighted %}
+        <div class="highlighted">{{ page.highlighted }}</div>
+      {% endif %}
+      <a id="main-content"></a>
+      {{ page.breadcrumb }}
+      <div class="region region-content">
+        {{ page.content }}
+      </div>
+    </section>
+
+    {% if page.sidebar_second %}
+      <aside class="col-sm-3" role="complementary">
+        <div class="region region-sidebar-second">
+          {{ page.sidebar_second }}
+        </div>
+      </aside>
+    {% endif %}
+  </div>
+</div>
+
+{% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth or page.footer_fifth %}
+  <footer class="footer container-fluid">
+    <div class="region region-footer">
+      {{ page.footer_first }}
+      {{ page.footer_second }}
+      {{ page.footer_third }}
+      {{ page.footer_fourth }}
+      {{ page.footer_fifth }}
+    </div>
+  </footer>
+{% endif %}

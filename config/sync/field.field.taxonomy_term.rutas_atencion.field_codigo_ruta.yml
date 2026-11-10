@@ -1,0 +1,19 @@
+uuid: f00101b6-1219-49ec-8cd5-5c2172f477cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_codigo_ruta
+    - taxonomy.vocabulary.rutas_atencion
+id: taxonomy_term.rutas_atencion.field_codigo_ruta
+field_name: field_codigo_ruta
+entity_type: taxonomy_term
+bundle: rutas_atencion
+label: 'Código de Ruta'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

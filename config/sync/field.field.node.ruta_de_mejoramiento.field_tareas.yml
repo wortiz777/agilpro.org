@@ -1,0 +1,30 @@
+uuid: 0464f6c9-71e6-49c4-bdd2-997f0ff144b8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tareas
+    - node.type.ruta_de_mejoramiento
+    - node.type.rutas_de_mejoramiento_tareas
+id: node.ruta_de_mejoramiento.field_tareas
+field_name: field_tareas
+entity_type: node
+bundle: ruta_de_mejoramiento
+label: 'Agregar Tareas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      rutas_de_mejoramiento_tareas: rutas_de_mejoramiento_tareas
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

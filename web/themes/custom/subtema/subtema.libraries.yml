@@ -1,0 +1,17 @@
+global-styling:
+  version: 2.1.3
+  css:
+    base:
+      /libraries/fontello/css/fontello.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/all.min.css: { type: external }
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/7.2.0/css/v4-shims.min.css: { type: external }
+      //cdn.jsdelivr.net/bootstrap/3.3.7/css/bootstrap.css: { type: external }
+    theme:
+      css/overrides.min.css: {}
+      css/style.css: {}
+      css/enterprise-ui.css: { weight: 100 }
+  js:
+    js/enterprise-ui.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

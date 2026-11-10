@@ -1,0 +1,59 @@
+uuid: e19195fe-0ec5-4c96-91b1-565c8278424b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.material_pedagogico.field_autor_m_pedagogico
+    - field.field.node.material_pedagogico.field_fase_ruta_de_fortalecimien
+    - field.field.node.material_pedagogico.field_resena_mpeg
+    - field.field.node.material_pedagogico.field_subir_archivo_mpg
+    - node.type.material_pedagogico
+  module:
+    - file
+    - options
+    - user
+id: node.material_pedagogico.default
+targetEntityType: node
+bundle: material_pedagogico
+mode: default
+content:
+  field_autor_m_pedagogico:
+    type: string
+    label: inline
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_fase_ruta_de_fortalecimien:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_resena_mpeg:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_subir_archivo_mpg:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 5e02564c-2b69-4fc8-bd42-1efa287c6706
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_establecer
+id: node.canvas_establecer.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_establecer
+label: 'Fase Canvas'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '1. Comenzar'
+default_value_callback: ''
+settings: {  }
+field_type: string

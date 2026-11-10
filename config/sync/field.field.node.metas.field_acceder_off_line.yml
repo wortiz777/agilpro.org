@@ -1,0 +1,23 @@
+uuid: 3b29f261-b039-4952-b7e7-f3d9e2a5e526
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acceder_off_line
+    - node.type.metas
+id: node.metas.field_acceder_off_line
+field_name: field_acceder_off_line
+entity_type: node
+bundle: metas
+label: 'Mentoría | Off-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,19 @@
+uuid: 561cd57b-45b7-4b94-8987-e2ef4968426b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_como_se_enter_de_empr_ndel
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_como_se_enter_de_empr_ndel
+field_name: field_como_se_enter_de_empr_ndel
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Como se enteró de empréndelo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: ea68d753-2ef8-4d6d-a5f5-523153beb67f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5gestion
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_5gestion
+field_name: field_5gestion
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '5. La empresa tiene un sistema de calidad para revisar o evaluar entre otros , procesos, materia prima, insumos, proveedores...'
+description: "Un Sistema de Calidad es una herramienta que le permite a cualquier organización planear, ejecutar y controlar las actividades necesarias para el desarrollo de la misión,\_ a través de la prestación de servicios/ productos con altos estándares de calidad, los cuales son medidos a través de los indicadores de satisfacción de los usuarios.\r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

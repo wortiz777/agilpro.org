@@ -1,0 +1,26 @@
+uuid: 435cf687-4e91-437a-b444-b28edce50940
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_4financiero
+field_name: field_4financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '4. La empresa tiene una política definida para el manejo de su cartera y la mantiene controlada.'
+description: 'La cartera son las deudas que los clientes tienen con nuestra empresa, y están originadas en las ventas que se hacen a crédito o ventas fiadas'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

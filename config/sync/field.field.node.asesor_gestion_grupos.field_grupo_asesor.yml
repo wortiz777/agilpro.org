@@ -1,0 +1,21 @@
+uuid: 062aa725-a806-40eb-a670-48c830f13d6d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_grupo_asesor
+    - node.type.asesor_gestion_grupos
+  module:
+    - options
+id: node.asesor_gestion_grupos.field_grupo_asesor
+field_name: field_grupo_asesor
+entity_type: node
+bundle: asesor_gestion_grupos
+label: Grupo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

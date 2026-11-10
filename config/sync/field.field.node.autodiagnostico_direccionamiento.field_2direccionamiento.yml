@@ -1,0 +1,26 @@
+uuid: 8b4c7649-d4cf-4359-841b-849d789b0548
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2direccionamiento
+    - node.type.autodiagnostico_direccionamiento
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_direccionamiento.field_2direccionamiento
+field_name: field_2direccionamiento
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '2. La empresa cuenta con un diagnóstico actualizado que sirve para determinar objetivos.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

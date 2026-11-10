@@ -1,0 +1,23 @@
+uuid: 718b45f7-8ba5-44b8-abda-85983707699f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_21financiero
+    - node.type.autodiagn_stico_financiero
+id: node.autodiagn_stico_financiero.field_21financiero
+field_name: field_21financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '6. Cuales el monto de su capital de trabajo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

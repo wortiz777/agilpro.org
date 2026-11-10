@@ -1,0 +1,27 @@
+uuid: 80f28cc8-87b8-478e-8eba-87d4361c75ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_soportes_acceder
+    - node.type.inscripci_n_fase_empoderar
+  module:
+    - file
+id: node.inscripci_n_fase_empoderar.field_soportes_acceder
+field_name: field_soportes_acceder
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Cargar soportes - Acceder'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'Soportes - Acceder'
+  file_extensions: 'pdf xls xlsx doc docx ppt pptx'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,35 @@
+uuid: e441f335-588d-4b2b-8c18-8a7394becece
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+_core:
+  default_config_hash: 0W50g5v4cM6tTpsxCIn3dYNvG1zL2hGEarl2tVjSzoQ
+id: subtema_main_menu
+theme: subtema
+region: primary_menu
+weight: -10
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

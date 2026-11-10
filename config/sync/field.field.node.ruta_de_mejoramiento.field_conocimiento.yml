@@ -1,0 +1,19 @@
+uuid: 4cef582c-71bd-499c-aa86-ab966904df85
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conocimiento
+    - node.type.ruta_de_mejoramiento
+id: node.ruta_de_mejoramiento.field_conocimiento
+field_name: field_conocimiento
+entity_type: node
+bundle: ruta_de_mejoramiento
+label: Conocimiento
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

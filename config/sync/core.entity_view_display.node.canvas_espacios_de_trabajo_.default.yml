@@ -1,0 +1,40 @@
+uuid: 84ea8220-10e0-4d5b-a41c-de3caef2988b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_espacios_de_trabajo_.field_descripcion_formacion_e
+    - field.field.node.canvas_espacios_de_trabajo_.field_nueva_referencia_espacio_t
+    - node.type.canvas_espacios_de_trabajo_
+  module:
+    - user
+id: node.canvas_espacios_de_trabajo_.default
+targetEntityType: node
+bundle: canvas_espacios_de_trabajo_
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nueva_referencia_espacio_t:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,27 @@
+uuid: 291d97c4-f078-483f-93db-ec180d81f983
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: 0W50g5v4cM6tTpsxCIn3dYNvG1zL2hGEarl2tVjSzoQ
+id: bootstrap_subtheme_main_menu
+theme: bootstrap_subtheme
+region: primary_menu
+weight: -6
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navegación principal'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: true
+visibility: {  }

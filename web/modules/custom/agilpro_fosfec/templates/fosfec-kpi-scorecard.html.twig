@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * Template para el Bloque KPI Scorecard de FOSFEC.
+ */
+#}
+<div class="fosfec-kpi-grid">
+  <!-- KPI 1: Ofertas Activas -->
+  <div class="fosfec-kpi-card kpi-card-orange">
+    <div class="kpi-icon-wrapper">
+      <span class="kpi-icon">📢</span>
+    </div>
+    <div class="kpi-content">
+      <div class="kpi-value">{{ kpis.ofertas_activas }}</div>
+      <div class="kpi-label">Ofertas Activas</div>
+      <div class="kpi-trend text-muted">Convocatorias de fomento publicadas</div>
+    </div>
+  </div>
+
+  <!-- KPI 2: Total Mipymes Postuladas -->
+  <div class="fosfec-kpi-card kpi-card-blue">
+    <div class="kpi-icon-wrapper">
+      <span class="kpi-icon">🏢</span>
+    </div>
+    <div class="kpi-content">
+      <div class="kpi-value">{{ kpis.total_postuladas }}</div>
+      <div class="kpi-label">Total Mipymes Postuladas</div>
+      <div class="kpi-trend text-muted">Empresas registradas en convocatorias</div>
+    </div>
+  </div>
+
+  <!-- KPI 3: % Tasa de Conversión -->
+  <div class="fosfec-kpi-card kpi-card-green">
+    <div class="kpi-icon-wrapper">
+      <span class="kpi-icon">📈</span>
+    </div>
+    <div class="kpi-content">
+      <div class="kpi-value">{{ kpis.tasa_conversion }}%</div>
+      <div class="kpi-label">Tasa de Ocupación de Cupos</div>
+      <div class="kpi-progress">
+        <div class="kpi-progress-bar" style="width: {{ kpis.tasa_conversion }}%;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- KPI 4: Horas FOSFEC Ejecutadas -->
+  <div class="fosfec-kpi-card kpi-card-purple">
+    <div class="kpi-icon-wrapper">
+      <span class="kpi-icon">⏱️</span>
+    </div>
+    <div class="kpi-content">
+      <div class="kpi-value">{{ kpis.horas_ejecutadas }} h</div>
+      <div class="kpi-label">Horas FOSFEC Ejecutadas</div>
+      <div class="kpi-trend text-muted">Asistencia técnica y mentorías</div>
+    </div>
+  </div>
+</div>
+

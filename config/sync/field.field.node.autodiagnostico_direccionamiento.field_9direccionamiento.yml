@@ -1,0 +1,26 @@
+uuid: b81103ff-7e7a-47bb-94fd-2b916b8f388c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_9direccionamiento
+    - node.type.autodiagnostico_direccionamiento
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_direccionamiento.field_9direccionamiento
+field_name: field_9direccionamiento
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '9. La empresa cuenta con un sistema de información y de manejo de documentos efectivo para la toma de decisiones.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

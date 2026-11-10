@@ -1,0 +1,21 @@
+uuid: e50cac24-1623-4745-a3c7-498ef4808f38
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evaluador_asignado
+    - node.type.inscripcion_oferta
+id: node.inscripcion_oferta.field_evaluador_asignado
+field_name: field_evaluador_asignado
+entity_type: node
+bundle: inscripcion_oferta
+label: 'Evaluador Asignado'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

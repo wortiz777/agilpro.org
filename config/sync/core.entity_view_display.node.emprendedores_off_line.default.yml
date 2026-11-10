@@ -1,0 +1,478 @@
+uuid: c195865f-0f47-44c4-98dd-7afd99c5df20
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.emprendedores_off_line.field_administraci_n
+    - field.field.node.emprendedores_off_line.field_amplitud_perceptual
+    - field.field.node.emprendedores_off_line.field_autodiagn_stico_emprendedo
+    - field.field.node.emprendedores_off_line.field_autodiagn_stico_emprendimi
+    - field.field.node.emprendedores_off_line.field_breve_perfil
+    - field.field.node.emprendedores_off_line.field_breve_proyecto
+    - field.field.node.emprendedores_off_line.field_c_dula
+    - field.field.node.emprendedores_off_line.field_c_mara_de_comercio
+    - field.field.node.emprendedores_off_line.field_cargo_del_emprendedor_l_de
+    - field.field.node.emprendedores_off_line.field_celular
+    - field.field.node.emprendedores_off_line.field_ciudad_emprendedor_l_der
+    - field.field.node.emprendedores_off_line.field_ciuu
+    - field.field.node.emprendedores_off_line.field_como_se_enter_de_empr_ndel
+    - field.field.node.emprendedores_off_line.field_creatividad_e_innovaci_n
+    - field.field.node.emprendedores_off_line.field_direcci_n_emprendedor_l_de
+    - field.field.node.emprendedores_off_line.field_direcci_n_emprendimiento
+    - field.field.node.emprendedores_off_line.field_direccionamiento
+    - field.field.node.emprendedores_off_line.field_e_mail
+    - field.field.node.emprendedores_off_line.field_empleos_formales
+    - field.field.node.emprendedores_off_line.field_empleos_informales
+    - field.field.node.emprendedores_off_line.field_estado_civ
+    - field.field.node.emprendedores_off_line.field_estrato_socioecon
+    - field.field.node.emprendedores_off_line.field_fase_acceder
+    - field.field.node.emprendedores_off_line.field_fase_empoderar
+    - field.field.node.emprendedores_off_line.field_fase_fortalecer
+    - field.field.node.emprendedores_off_line.field_fecha_de_nacimiento
+    - field.field.node.emprendedores_off_line.field_financier
+    - field.field.node.emprendedores_off_line.field_g_nero
+    - field.field.node.emprendedores_off_line.field_gesti_n_t_cnica_y_producci
+    - field.field.node.emprendedores_off_line.field_grado_de_vulnerabilidad
+    - field.field.node.emprendedores_off_line.field_ingresos_por_ventas_mensua
+    - field.field.node.emprendedores_off_line.field_liderazgo
+    - field.field.node.emprendedores_off_line.field_mercade
+    - field.field.node.emprendedores_off_line.field_nivel_de_estudios_emprende
+    - field.field.node.emprendedores_off_line.field_nombre_emprendimiento
+    - field.field.node.emprendedores_off_line.field_orientaci_n_al_logro
+    - field.field.node.emprendedores_off_line.field_orientaci_n_al_mercado
+    - field.field.node.emprendedores_off_line.field_pensamiento_sist_mico
+    - field.field.node.emprendedores_off_line.field_registro_mercantil
+    - field.field.node.emprendedores_off_line.field_remuneraci_n_promedio_mens
+    - field.field.node.emprendedores_off_line.field_rentabilidad
+    - field.field.node.emprendedores_off_line.field_ruta_de_fortalecimiento
+    - field.field.node.emprendedores_off_line.field_sector_econ_mico
+    - field.field.node.emprendedores_off_line.field_ser
+    - field.field.node.emprendedores_off_line.field_tiempo_de_dedicaci_n_al_em
+    - node.type.emprendedores_off_line
+  module:
+    - options
+    - user
+id: node.emprendedores_off_line.default
+targetEntityType: node
+bundle: emprendedores_off_line
+mode: default
+content:
+  field_administraci_n:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 43
+    region: content
+  field_amplitud_perceptual:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 37
+    region: content
+  field_autodiagn_stico_emprendedo:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_autodiagn_stico_emprendimi:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_breve_perfil:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_breve_proyecto:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_c_dula:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_c_mara_de_comercio:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_cargo_del_emprendedor_l_de:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_celular:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_ciudad_emprendedor_l_der:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_ciuu:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_como_se_enter_de_empr_ndel:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_creatividad_e_innovaci_n:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 36
+    region: content
+  field_direcci_n_emprendedor_l_de:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_direcci_n_emprendimiento:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_direccionamiento:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 42
+    region: content
+  field_e_mail:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_empleos_formales:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_empleos_informales:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_estado_civ:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_estrato_socioecon:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_fase_acceder:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_fase_empoderar:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_fase_fortalecer:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_fecha_de_nacimiento:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_financier:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 46
+    region: content
+  field_g_nero:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_gesti_n_t_cnica_y_producci:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 45
+    region: content
+  field_grado_de_vulnerabilidad:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_ingresos_por_ventas_mensua:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_liderazgo:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 39
+    region: content
+  field_mercade:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 44
+    region: content
+  field_nivel_de_estudios_emprende:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_nombre_emprendimiento:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_orientaci_n_al_logro:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 40
+    region: content
+  field_orientaci_n_al_mercado:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 41
+    region: content
+  field_pensamiento_sist_mico:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 38
+    region: content
+  field_registro_mercantil:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_remuneraci_n_promedio_mens:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_rentabilidad:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_ruta_de_fortalecimiento:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_sector_econ_mico:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_ser:
+    type: number_decimal
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 35
+    region: content
+  field_tiempo_de_dedicaci_n_al_em:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 11cdaf02-fd95-457f-a466-e5b43a747d90
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_formacion_e
+    - node.type.canvas_practica_y_retroalimentac
+id: node.canvas_practica_y_retroalimentac.field_descripcion_formacion_e
+field_name: field_descripcion_formacion_e
+entity_type: node
+bundle: canvas_practica_y_retroalimentac
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Con una idea en mente, con programas de entrenamiento que provean retroalimentación se puede ayudar a que esos emprendedores inquietos puedan construir y consolidar sus ideas'
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+uuid: b856eef9-aa21-4c3f-bc5b-78ec7c082b9d
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_autodiagn_stico_emprendimi
+field_name: field_autodiagn_stico_emprendimi
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

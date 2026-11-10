@@ -1,0 +1,26 @@
+uuid: eb390a4b-a668-42f7-bee2-961afab1acb2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3gestioni
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_3gestioni
+field_name: field_3gestioni
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '3. La empresa ha aplicado innovación a sus procesos, productos y servicios'
+description: 'La empresa ha aplicado innovación a sus procesos, productos y servicios'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

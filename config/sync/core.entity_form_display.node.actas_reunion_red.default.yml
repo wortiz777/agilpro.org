@@ -1,0 +1,85 @@
+uuid: c8c347c5-9e20-442f-a131-8ac4131efb90
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.actas_reunion_red.field_cargar_acta_de_reunion
+    - field.field.node.actas_reunion_red.field_evidencias_foto_reunion
+    - field.field.node.actas_reunion_red.field_fecha_acta_reunion
+    - node.type.actas_reunion_red
+  module:
+    - datetime
+    - file
+    - path
+id: node.actas_reunion_red.default
+targetEntityType: node
+bundle: actas_reunion_red
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cargar_acta_de_reunion:
+    type: file_generic
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_evidencias_foto_reunion:
+    type: file_generic
+    weight: 7
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_fecha_acta_reunion:
+    type: datetime_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

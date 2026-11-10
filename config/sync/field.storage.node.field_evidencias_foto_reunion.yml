@@ -1,0 +1,27 @@
+uuid: 9ef492a8-1e85-4470-85d0-062030716f5f
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - file
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_evidencias_foto_reunion
+field_name: field_evidencias_foto_reunion
+entity_type: node
+type: file
+settings:
+  target_type: file
+  display_field: true
+  display_default: true
+  uri_scheme: public
+module: file
+locked: false
+cardinality: 3
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

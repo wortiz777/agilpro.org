@@ -1,0 +1,13 @@
+name: 'AgilPro FOSFEC Transaccional'
+type: module
+description: 'Arquitectura de datos transaccional B2B, máquina de estados y sábana FOSFEC para Compensar.'
+core_version_requirement: ^10 || ^11
+package: 'AgilPro'
+dependencies:
+  - drupal:node
+  - drupal:taxonomy
+  - drupal:options
+  - drupal:datetime
+  - drupal:datetime_range
+  - state_machine:state_machine
+

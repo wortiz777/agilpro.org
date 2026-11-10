@@ -1,0 +1,21 @@
+uuid: 0f8255dc-6e42-4786-a5ca-a579f3d41fbe
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estado_emprendimient
+    - node.type.formatos_inscripci_n_emprendimie
+  module:
+    - options
+id: node.formatos_inscripci_n_emprendimie.field_estado_emprendimient
+field_name: field_estado_emprendimient
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Estado Emprendimiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

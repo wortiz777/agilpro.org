@@ -1,0 +1,20 @@
+uuid: c3ccb622-82f0-4a1d-a424-f5bbca24d0e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_cargo
+  module:
+    - user
+id: user.user.field_cargo
+field_name: field_cargo
+entity_type: user
+bundle: user
+label: 'Cargo en la Mipyme'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+uuid: 6d8dc4da-5a45-4c91-bb80-c1b208c35e3c
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tips_canvas.body
+    - node.type.tips_canvas
+  module:
+    - text
+    - user
+id: node.tips_canvas.teaser
+targetEntityType: node
+bundle: tips_canvas
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

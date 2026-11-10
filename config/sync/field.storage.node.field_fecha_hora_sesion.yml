@@ -1,0 +1,20 @@
+uuid: 503accb3-01ea-4757-86be-7c728d02c964
+langcode: es
+status: true
+dependencies:
+  module:
+    - datetime_range
+    - node
+id: node.field_fecha_hora_sesion
+field_name: field_fecha_hora_sesion
+entity_type: node
+type: daterange
+settings:
+  datetime_type: datetime
+module: datetime_range
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

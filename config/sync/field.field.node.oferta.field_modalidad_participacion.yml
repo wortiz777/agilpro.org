@@ -1,0 +1,21 @@
+uuid: 6c9cba82-a86d-46d8-bf94-107521724458
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_modalidad_participacion
+    - node.type.oferta
+  module:
+    - options
+id: node.oferta.field_modalidad_participacion
+field_name: field_modalidad_participacion
+entity_type: node
+bundle: oferta
+label: 'Modalidad Participación'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

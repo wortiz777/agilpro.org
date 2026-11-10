@@ -1,0 +1,256 @@
+uuid: c1a957ab-faa7-479a-8031-006b3d9fda7a
+langcode: es
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: null
+template: false
+archive: false
+id: webform_462
+title: '360° Capacidades Emprendedoras'
+description: ''
+categories: {  }
+elements: |-
+  capacidades_emprendedoras:
+    '#type': webform_likert
+    '#title': 'Capacidades Emprendedoras'
+    '#title_display': invisible
+    '#required': true
+    '#answers':
+      1: Nunca
+      2: 'Rara Vez'
+      3: 'Algunas Veces'
+      4: 'Casi Siempre'
+      5: Siempre
+    '#questions':
+      1_analiza_situaciones_definiendo_el_contexto_y_los_factores_causales: '1. Analiza situaciones definiendo el contexto y los factores causales'
+      2_asume_bien_los_fracasos_y_saca_el_mejor_provecho_de_ellos: '2. Asume bien los fracasos y saca el mejor provecho de ellos.'
+      3_asume_compromisos_claros_con_sus_clientes_y_los_cumple_con_eficiencia: '3. Asume compromisos claros con sus clientes y los cumple con eficiencia.'
+      4_busca_conocer_otras_opiniones_y_puntos_de_vista: '4. Busca conocer otras opiniones y puntos de vista.'
+      5_con_su_personalidad_inspira_a_los_demas: '5. Con su personalidad inspira a los demás.'
+      6_cuando_recibe_quejas_de_su_producto_o_servicio_lo_asume_y_corrige_para_mejorar: '6. Cuando recibe quejas de su producto o servicio, lo asume y corrige para mejorar.'
+      7_cuando_se_enfrenta_a_situaciones_complejas_controla_sus_emociones_trasmite_confianza_y_comunica_efectivamente: '7. Cuando se enfrenta a situaciones complejas, controla sus emociones, trasmite confianza y comunica efectivamente.'
+      8_cuando_tiene_un_problema_utiliza_uno_o_varios_metodos_de_analisis: '8. Cuando tiene un problema utiliza uno o varios métodos de análisis'
+      9_desarrolla_sus_proyectos_y_labores_potencializando_sus_fortalezas: '9. Desarrolla sus proyectos y labores potencializando sus fortalezas.'
+      10_es_para_usted_facil_salirse_de_un_marco_de_accion_: '10. Es para usted fácil salirse de un marco de acción .'
+      11_explora_informacion_de_otros_entornos_relacionados_con_su_campo_de_accion: '11. Explora información de otros entornos relacionados con su campo de acción.'
+      12_explora_nuevas_y_diferentes_formas_de_hacer_las_cosas: '12. Explora nuevas y diferentes formas de hacer las cosas.'
+      13_frente_a_cada_situacion_es_consciente_de_sus_emociones: '13. Frente a cada situación es consciente de sus emociones.'
+      14_frente_a_las_diferentes_situaciones_visualiza_diversas_formas_de_afrontarlas: '14. Frente a las diferentes situaciones visualiza diversas formas de afrontarlas.'
+      15_frente_a_situaciones_dificiles_tiene_la_capacidad_de_sobreponerse_y_continuar: '15. Frente a situaciones difíciles, tiene la capacidad de sobreponerse y continuar.'
+      16_hace_un_plan_integral_de_desarrollo_de_vida: '16. Hace un plan integral de desarrollo de vida.'
+      17_identifica_las_necesidades_antes_de_ofrecer_el_servicio_o_producto: '17. Identifica las necesidades antes de ofrecer el servicio o producto.'
+      18_le_agrada_hablar_en_un_publico: '18. Le agrada hablar en un publico.'
+      19_le_motivan_los_grandes_riesgos: '19. Le motivan los grandes riesgos.'
+      20_para_la_toma_de_decisiones_tiene_en_cuenta_el_plan_de_desarrollo_de_su_ciudad_departamento: '20. Para la toma de decisiones tiene en cuenta el plan de desarrollo de su ciudad/departamento.'
+      21_percibe_con_facilidad_factores_aspectos_o_situaciones_que_muchos_otros_no: '21. Percibe con facilidad factores/aspectos o situaciones que muchos otros no.'
+      22_personas_cercanas_a_usted_lo_catalogan_como_una_persona_que_sabe_escuchar: '22. Personas cercanas a usted, lo catalogan como una persona que sabe escuchar.'
+      23_posee_un_marco_claro_de_sus_principios_y_valores_y_los_aplica_en_su_proyecto_emprendedor: '23. Posee un marco claro de sus principios y valores y los aplica en su proyecto emprendedor.'
+      24_produce_ideas_que_lleva_a_acciones_y_resultados: '24. Produce ideas que lleva a acciones y resultados.'
+      25_proyecta_y_planea_contemplando_diferentes_escenarios: '25. Proyecta y planea contemplando diferentes escenarios.'
+      26_reconoce_sus_fortalezas_y_sus_debilidades_y_hace_un_plan_para_mejorarlas: '26. Reconoce sus fortalezas y sus debilidades y hace un plan para mejorarlas.'
+      27_se_le_facilita_coordinar_y_dirigir_a_otros_sin_generar_conflictos: '27. Se le facilita coordinar y dirigir a otros, sin generar conflictos.'
+      28_se_le_facilita_generar_contactos_y_redes_en_su_entorno: '28. Se le facilita generar contactos y redes en su entorno.'
+      29_se_le_facilita_percibir_los_diferentes_aspectos_e_impactos_de_un_problema: '29. Se le facilita percibir los diferentes aspectos e impactos de un problema.'
+      30_se_mantiene_atento_e_informado_de_los_cambios_en_su_entorno: '30. Se mantiene atento e informado de los cambios en su entorno.'
+      31_su_plan_de_trabajo_habitual_contempla_un_que_un_como_cuando_resultados_riesgos_etc: '31. Su plan de trabajo habitual, contempla un que, un como, cuando, resultados, riesgos, etc.'
+      32_sus_expectativas_se_ven_colmadas_al_cumplir_sus_objetivos: '32. Sus expectativas se ven colmadas al cumplir sus objetivos.'
+      33_tiene_la_capacidad_de_enfrentar_variados_e_inusuales_problemas_al_mismo_tiempo: '33. Tiene la capacidad de enfrentar variados e inusuales problemas al mismo tiempo.'
+      34_transmite_al_equipo_de_trabajo_constantemente_los_objetivos_y_logra_que_los_alcancen: '34. Transmite al equipo de trabajo constantemente los objetivos y logra que los alcancen.'
+      35_visualiza_mas_oportunidades_que_amenazas: '35. Visualiza mas oportunidades que amenazas.'
+  actions:
+    '#type': webform_actions
+    '#title': 'Submit button(s)'
+    '#submit__label': Enviar
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /360-capacidades-emprendedor
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: both
+  form_submit_once: false
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: true
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_file_limit_message: ''
+  form_attributes: {  }
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: page
+  confirmation_url: ''
+  confirmation_title: '¡Diagnóstico Guardado!'
+  confirmation_message: '<div class="alert alert-success" style="font-size:16px; padding:20px; border-radius:12px;"><h4 style="font-weight:700; margin-top:0;"><i class="fa fa-check-circle"></i> ¡Diagnóstico registrado exitosamente!</h4><p>Tus respuestas de <strong>360° Capacidades Emprendedoras</strong> han sido procesadas correctamente para el cálculo de tu perfil y radar de capacidades.</p></div>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: 'Volver al formulario'
+  confirmation_back_attributes:
+    class:
+      - btn
+      - btn-primary
+      - btn-lg
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  purge_any:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  view_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  update_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  delete_own:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  administer:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  test:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+  configuration:
+    roles: {  }
+    users: {  }
+    permissions: {  }
+handlers: {  }
+variants: {  }

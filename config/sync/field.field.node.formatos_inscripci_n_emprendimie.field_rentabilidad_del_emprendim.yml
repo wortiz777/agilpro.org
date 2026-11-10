@@ -1,0 +1,23 @@
+uuid: 03fef628-e2ac-4f64-9d7c-928516825dba
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_rentabilidad_del_emprendim
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_rentabilidad_del_emprendim
+field_name: field_rentabilidad_del_emprendim
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Rentabilidad del Emprendimiento'
+description: '(Ventas Anuales) / (Activos Totales)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

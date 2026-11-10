@@ -1,0 +1,22 @@
+uuid: 611ab412-45d5-404e-8c7b-704f383d587a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financiamiento_acci_n
+    - node.type.metas
+  module:
+    - text
+id: node.metas.field_financiamiento_acci_n
+field_name: field_financiamiento_acci_n
+entity_type: node
+bundle: metas
+label: 'Financiamiento | Acción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

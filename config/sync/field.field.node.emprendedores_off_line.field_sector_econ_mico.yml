@@ -1,0 +1,19 @@
+uuid: cd547a50-f693-43cb-b525-466ad9da726a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sector_econ_mico
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_sector_econ_mico
+field_name: field_sector_econ_mico
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Sector Económico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,26 @@
+uuid: 83fb4dc6-f849-4a8e-918f-cc9ffacde1ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_6mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_6mercadeo
+field_name: field_6mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '6. En la empresa se tiene establecida estrategia para lograr la fidelidad de los clientes.'
+description: "La fidelización de clientes consiste en lograr que un cliente (un consumidor que ya ha adquirido nuestro producto o servicio) se convierta en un cliente fiel a nuestro producto, servicio o marca; es decir, se convierta en un cliente asiduo o frecuente.\r\nLa fidelización de clientes no solo nos permite lograr que el cliente vuelva a comprarnos o a visitarnos, sino que también nos permite lograr que recomiende nuestro producto o servicio a otros consumidores."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,30 @@
+uuid: 2a9d62a1-3290-41a4-a446-a9c2d65e8de6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_tipo_id
+    - taxonomy.vocabulary.tipo_documento
+  module:
+    - user
+id: user.user.field_tipo_id
+field_name: field_tipo_id
+entity_type: user
+bundle: user
+label: 'Tipo de Identificación'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      tipo_documento: tipo_documento
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

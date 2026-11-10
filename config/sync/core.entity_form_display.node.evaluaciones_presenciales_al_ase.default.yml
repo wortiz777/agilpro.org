@@ -1,0 +1,69 @@
+uuid: 0dc8b9ac-5de0-4e25-8333-e60d18ed54cc
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.evaluaciones_presenciales_al_ase.field_cargar_evaluaciones
+    - node.type.evaluaciones_presenciales_al_ase
+  module:
+    - file
+    - path
+id: node.evaluaciones_presenciales_al_ase.default
+targetEntityType: node
+bundle: evaluaciones_presenciales_al_ase
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_cargar_evaluaciones:
+    type: file_generic
+    weight: 31
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

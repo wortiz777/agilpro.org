@@ -1,0 +1,21 @@
+uuid: c2a81a9e-14b8-4fa0-bcc8-9eda0c6714c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_rol_empresa
+  module:
+    - options
+    - user
+id: user.user.field_rol_empresa
+field_name: field_rol_empresa
+entity_type: user
+bundle: user
+label: 'Rol en la Empresa'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

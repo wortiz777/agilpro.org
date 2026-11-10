@@ -1,0 +1,23 @@
+uuid: 0f54de49-abb7-41f6-8d9f-c2e870f61337
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_n_mero_de_empleados_formal
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_n_mero_de_empleados_formal
+field_name: field_n_mero_de_empleados_formal
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Número de Empleados (Formales e Informales)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

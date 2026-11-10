@@ -1,0 +1,26 @@
+uuid: 591821e8-b865-4b2c-8c10-88504245a5e7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_6_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_6_capacidades
+field_name: field_6_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '6. Cuando recibe quejas de su producto o servicio, lo asume y corrige para mejorar.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

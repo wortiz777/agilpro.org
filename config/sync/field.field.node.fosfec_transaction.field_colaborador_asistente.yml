@@ -1,0 +1,21 @@
+uuid: 4a045a16-87a8-46a2-abf5-c518308150ad
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_colaborador_asistente
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_colaborador_asistente
+field_name: field_colaborador_asistente
+entity_type: node
+bundle: fosfec_transaction
+label: 'Contacto Asistente'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:user'
+  handler_settings: {  }
+field_type: entity_reference

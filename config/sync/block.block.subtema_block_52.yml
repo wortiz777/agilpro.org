@@ -1,0 +1,38 @@
+uuid: cd715215-5b97-49d2-93d5-527624f99c8a
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000052'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_52
+theme: subtema
+region: content
+weight: -22
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000052'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000052'
+  label: 'Comunicado - Mentoría Virtual 01-abr-2019'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /test
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      anonymous: anonymous
+      administrator: administrator
+      colaborador: colaborador

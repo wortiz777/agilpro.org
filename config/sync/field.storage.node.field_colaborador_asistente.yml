@@ -1,0 +1,20 @@
+uuid: a9d03ef7-9c32-49d2-8779-f90554cf6039
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - user
+id: node.field_colaborador_asistente
+field_name: field_colaborador_asistente
+entity_type: node
+type: entity_reference
+settings:
+  target_type: user
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

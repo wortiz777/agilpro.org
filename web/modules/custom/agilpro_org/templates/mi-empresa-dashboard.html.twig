@@ -1,0 +1,266 @@
+{#
+/**
+ * @file
+ * Plantilla del Portal Privado de Autoservicio B2B para Mipymes (/mi-empresa/dashboard).
+ */
+#}
+<div class="mi-empresa-portal-wrapper">
+
+  {# 1. Header del Portal Privado #}
+  <div class="empresa-header-card">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1.25rem;">
+      <div>
+        <div class="portal-badge">🏢 Portal Corporativo B2B Mipyme</div>
+        <h1 class="empresa-title">{{ empresa.nombre }}</h1>
+        <p class="empresa-meta">
+          <strong>NIT:</strong> {{ empresa.nit }}-{{ empresa.dv }} &nbsp;|&nbsp;
+          <strong>Municipio:</strong> {{ empresa.ciudad ?: 'Bogotá D.C.' }} &nbsp;|&nbsp;
+          <strong>Contacto:</strong> {{ empresa.email }}
+        </p>
+      </div>
+      <div>
+        <a href="/ofertas" class="btn-corp btn-corp-orange">
+          🚀 Explorar Nuevas Convocatorias
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {# 2. Menú de Pestañas / Tabs #}
+  <div class="portal-tabs-nav">
+    <a href="/mi-empresa/dashboard?tab=programas" class="portal-tab-btn {% if active_tab == 'programas' %}active{% endif %}">
+      📋 Convocatorias y Mentorías
+      {% if sesiones|length > 0 %}
+        <span class="tab-badge">{{ sesiones|length }}</span>
+      {% endif %}
+    </a>
+    <a href="/mi-empresa/dashboard?tab=perfil" class="portal-tab-btn {% if active_tab == 'perfil' %}active{% endif %}">
+      🏢 Perfil Empresarial y Habeas Data
+    </a>
+    <a href="/mi-empresa/dashboard?tab=equipo" class="portal-tab-btn {% if active_tab == 'equipo' %}active{% endif %}">
+      👥 Equipo de Colaboradores
+      <span class="tab-badge">{{ colaboradores|length }}</span>
+    </a>
+    <a href="/mi-empresa/dashboard?tab=certificados" class="portal-tab-btn {% if active_tab == 'certificados' %}active{% endif %}">
+      🎓 Historial FOSFEC y Certificados
+      <span class="tab-badge">{{ certificados|length }}</span>
+    </a>
+  </div>
+
+  {# 3. Contenido según pestaña activa #}
+  <div class="portal-tab-content">
+
+    {# TAB 1: Convocatorias y Aceptación Digital #}
+    {% if active_tab == 'programas' %}
+      
+      {# Bloque Destacado: Aceptación Digital de Mentorías #}
+      <div class="panel-digital-acceptance">
+        <div class="acceptance-header">
+          <div>
+            <h3 style="margin:0; font-size:1.25rem; font-weight:800; color:#0f172a;">✍️ Aceptación Digital de Sesiones FOSFEC</h3>
+            <p style="margin:4px 0 0; font-size:0.88rem; color:#475569;">
+              Revise las intervenciones ejecutadas por sus mentores, consulte la evidencia técnica adjunta y confirme digitalmente para certificar sus horas de fomento.
+            </p>
+          </div>
+        </div>
+
+        {% if sesiones|length == 0 %}
+          <div style="padding:24px; text-align:center; color:#64748b;">
+            No hay sesiones registradas pendientes de aceptación para su organización.
+          </div>
+        {% else %}
+          <div class="table-responsive">
+            <table class="table-clean">
+              <thead>
+                <tr>
+                  <th>Sesión / Ruta</th>
+                  <th>Mentor</th>
+                  <th>Colaborador</th>
+                  <th>Fecha</th>
+                  <th>Horas</th>
+                  <th>Evidencia Técnica</th>
+                  <th>Estado / Aceptación</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for s in sesiones %}
+                  <tr id="session-row-{{ s.id }}">
+                    <td>
+                      <strong>{{ s.ruta }}</strong>
+                      <div class="text-muted small">ID: #{{ s.id }}</div>
+                    </td>
+                    <td>{{ s.mentor }}</td>
+                    <td>{{ s.asistente }}</td>
+                    <td>{{ s.fecha }}</td>
+                    <td><strong>{{ s.horas }} h</strong></td>
+                    <td>
+                      {% if s.has_pdf %}
+                        <a href="{{ s.pdf_url }}" target="_blank" class="btn-corp btn-corp-outline-blue" style="padding:4px 10px; font-size:0.8rem;">
+                          📄 Ver Evidencia PDF
+                        </a>
+                      {% else %}
+                        <span class="text-muted small">Sin documento adjunto</span>
+                      {% endif %}
+                    </td>
+                    <td>
+                      {% if s.is_aceptada %}
+                        <div class="signed-badge">
+                          ✓ Aceptada Digitalmente
+                          <div class="audit-meta">IP: {{ s.ip_aceptacion }}<br>{{ s.timestamp_aceptacion }}</div>
+                        </div>
+                      {% else %}
+                        <div class="acceptance-action-box">
+                          <label class="acceptance-check-label">
+                            <input type="checkbox" class="confirm-acceptance-checkbox" data-session-id="{{ s.id }}">
+                            <span>Confirmar Aceptación</span>
+                          </label>
+                        </div>
+                      {% endif %}
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% endif %}
+      </div>
+
+      {# Listado de Convocatorias Inscritas #}
+      <div class="section-card">
+        <h3 style="font-size:1.15rem; font-weight:800; color:#0f172a; margin-bottom:1rem;">📋 Convocatorias y Ofertas Postuladas</h3>
+        {% if convocatorias|length == 0 %}
+          <p class="text-muted">Aún no se ha postulado a ninguna convocatoria de fomento. Explore las ofertas disponibles.</p>
+        {% else %}
+          <div class="table-responsive">
+            <table class="table-clean">
+              <thead>
+                <tr>
+                  <th>Convocatoria / Oferta</th>
+                  <th>Ruta Asignada</th>
+                  <th>Mentor Asignado</th>
+                  <th>Fecha de Postulación</th>
+                  <th>Estado</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for c in convocatorias %}
+                  <tr>
+                    <td>
+                      <a href="{{ c.oferta_url }}" target="_blank" style="font-weight:700; color:#0052cc;">
+                        {{ c.oferta_titulo }}
+                      </a>
+                    </td>
+                    <td>{{ c.ruta }}</td>
+                    <td>{{ c.mentor }}</td>
+                    <td>{{ c.fecha }}</td>
+                    <td><span class="badge {{ c.badge_class }}">{{ c.estado_label }}</span></td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% endif %}
+      </div>
+
+    {# TAB 2: Perfil Empresarial y Habeas Data #}
+    {% elseif active_tab == 'perfil' %}
+      <div class="section-card">
+        <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:0.5rem;">🏢 Perfil de la Organización y Tratamiento de Datos</h3>
+        <p class="text-muted" style="margin-bottom:1.5rem;">Mantenga actualizados los datos de su empresa para agilizar postulaciones a nuevas convocatorias y convocatorias FOSFEC.</p>
+        {{ perfil_form }}
+      </div>
+
+    {# TAB 3: Gestión de Colaboradores #}
+    {% elseif active_tab == 'equipo' %}
+      <div class="section-card">
+        <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:0.5rem;">👥 Colaboradores de la Organización</h3>
+        <p class="text-muted" style="margin-bottom:1.5rem;">Los colaboradores autorizados pueden postularse y asistir a las sesiones de mentoría en nombre de la empresa.</p>
+
+        {% if invite_form %}
+          <div style="margin-bottom:2rem;">
+            {{ invite_form }}
+          </div>
+        {% endif %}
+
+        <div class="table-responsive">
+          <table class="table-clean">
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Cédula</th>
+                <th>Correo Electrónico</th>
+                <th>Cargo</th>
+                <th>Rol Organizacional</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for colab in colaboradores %}
+                <tr>
+                  <td><strong>{{ colab.nombre }}</strong></td>
+                  <td>{{ colab.documento }}</td>
+                  <td>{{ colab.mail }}</td>
+                  <td>{{ colab.cargo }}</td>
+                  <td>
+                    {% if colab.is_admin %}
+                      <span class="badge badge-primary">Administrador Mipyme</span>
+                    {% else %}
+                      <span class="badge badge-secondary">Colaborador</span>
+                    {% endif %}
+                  </td>
+                  <td><span class="badge badge-success">{{ colab.status }}</span></td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    {# TAB 4: Certificados e Historial FOSFEC #}
+    {% elseif active_tab == 'certificados' %}
+      <div class="section-card">
+        <h3 style="font-size:1.25rem; font-weight:800; color:#0f172a; margin-bottom:0.5rem;">🎓 Certificados de Participación y Fomento</h3>
+        <p class="text-muted" style="margin-bottom:1.5rem;">Descargue los certificados digitales emitidos por Compensar para las intervenciones completadas satisfactoriamente.</p>
+
+        {% if certificados|length == 0 %}
+          <div style="padding:30px; text-align:center; color:#64748b; background:#f8fafc; border-radius:12px;">
+            Aún no tiene certificados emitidos. Los certificados se generan automáticamente al completar y aceptar digitalmente las sesiones de mentoría de su ruta.
+          </div>
+        {% else %}
+          <div class="table-responsive">
+            <table class="table-clean">
+              <thead>
+                <tr>
+                  <th>Programa / Intervención</th>
+                  <th>Beneficiario Asistente</th>
+                  <th>Horas Aprobadas</th>
+                  <th>Asistencia</th>
+                  <th>Código de Verificación</th>
+                  <th>Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for cert in certificados %}
+                  <tr>
+                    <td><strong>{{ cert.programa }}</strong></td>
+                    <td>{{ cert.asistente }}</td>
+                    <td><strong>{{ cert.horas }} h</strong></td>
+                    <td><span class="badge badge-success">{{ cert.asistencia_pct }}</span></td>
+                    <td><code>{{ cert.codigo_verificacion }}</code></td>
+                    <td>
+                      <a href="{{ cert.download_url }}" target="_blank" class="btn-corp btn-corp-success" style="padding:5px 12px; font-size:0.85rem;">
+                        🎓 Ver / Descargar Certificado
+                      </a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        {% endif %}
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>

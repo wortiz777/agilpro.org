@@ -1,0 +1,26 @@
+uuid: 36d44eb3-0866-4c11-b71e-77f28c24e9d3
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_asesor_visita_inicial
+    - node.type.planes_de_capacitaci_n_habilidad
+    - taxonomy.vocabulary.asesores
+id: node.planes_de_capacitaci_n_habilidad.field_asesor_visita_inicial
+field_name: field_asesor_visita_inicial
+entity_type: node
+bundle: planes_de_capacitaci_n_habilidad
+label: 'Asesor Visita Inicial'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      asesores: asesores
+    sort:
+      field: _none
+field_type: entity_reference

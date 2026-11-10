@@ -1,0 +1,26 @@
+uuid: dfba8e16-1958-4832-bb3a-d18a30ef883a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_7direccionamiento
+    - node.type.autodiagnostico_direccionamiento
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_direccionamiento.field_7direccionamiento
+field_name: field_7direccionamiento
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '7. La empresa tiene un proceso ( indicadores) para medir el cumplimiento de los objetivos empresariales.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

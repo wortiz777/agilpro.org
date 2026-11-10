@@ -1,0 +1,24 @@
+uuid: b094ea5f-f04c-48f9-ac89-49ac29094bf9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tabla_off_ine_asesores
+  module:
+    - text
+id: node.tabla_off_ine_asesores.body
+field_name: body
+entity_type: node
+bundle: tabla_off_ine_asesores
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

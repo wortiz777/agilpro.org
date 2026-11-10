@@ -1,0 +1,20 @@
+uuid: 432221ee-b55b-4917-9d37-8aa220f66939
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - user
+id: user.field_sector_economico
+field_name: field_sector_economico
+entity_type: user
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

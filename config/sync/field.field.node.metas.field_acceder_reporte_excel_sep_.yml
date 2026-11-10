@@ -1,0 +1,23 @@
+uuid: 8d969d54-6b6c-4887-ba3a-917e0b9e6079
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acceder_reporte_excel_sep_
+    - node.type.metas
+id: node.metas.field_acceder_reporte_excel_sep_
+field_name: field_acceder_reporte_excel_sep_
+entity_type: node
+bundle: metas
+label: 'Mentoría | Reporte Excel (Sep)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

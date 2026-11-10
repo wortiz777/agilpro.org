@@ -1,0 +1,21 @@
+uuid: 49599559-bdbd-47da-ba3a-f4f0c179518a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_nivel_educativo
+  module:
+    - options
+    - user
+id: user.user.field_nivel_educativo
+field_name: field_nivel_educativo
+entity_type: user
+bundle: user
+label: 'Nivel Educativo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

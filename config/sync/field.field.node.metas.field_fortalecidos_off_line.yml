@@ -1,0 +1,23 @@
+uuid: 2416d476-c9c7-4fca-8f36-c8cb1b763494
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fortalecidos_off_line
+    - node.type.metas
+id: node.metas.field_fortalecidos_off_line
+field_name: field_fortalecidos_off_line
+entity_type: node
+bundle: metas
+label: 'Fortalecidos | Off-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

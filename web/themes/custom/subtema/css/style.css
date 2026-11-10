@@ -1,0 +1,1436 @@
+/* ESTYLE EMPRENDELO.NET.CO */
+
+h1 {
+    text-align: center;
+}
+
+a:hover,
+a:focus {
+    color: #23527c;
+    text-decoration: none;
+}
+
+/* front anonimo */
+
+header#navbar {
+    height: 77px;
+}
+
+div#navbar-collapse {
+    padding: 12px;
+}
+
+.navbar-default {
+    background-color: rgba(248, 248, 248, 0.98);
+    border-color: #e7e7e7;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default .navbar-nav>.active>a:focus {
+    color: #555;
+    background-color: rgba(8, 8, 8, 0);
+}
+
+.not-logged-in section#block-menu-menu-iniciar-sesi-n {
+    float: right;
+    margin-top: 11px;
+}
+
+.not-logged-in h2.block-title {
+    display: none;
+}
+
+.not-logged-in h1.page-header {
+    display: none;
+}
+
+/* Tabs & Botones Nav   */
+
+.horizontal-tabs ul.horizontal-tabs-list {
+    background-color: #fff0;
+    border-right: none;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list li.selected {
+    background-color: #009cd4;
+    padding: 0px 7px 2px 7px;
+    border-radius: 17px;
+    border: solid 1.5px #ffffff;
+    box-shadow: 1px 1px 6px 1px #777;
+    margin-bottom: 5px;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list .selected strong {
+    color: #fff;
+    font-weight: 100;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list li a:hover {
+    outline: none;
+    background-color: #fff0;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list li:hover {
+    background-color: #eee;
+    border-color: #777 #007fad #009cd4;
+}
+
+div.horizontal-tabs {
+    border: none;
+}
+
+.horizontal-tabs fieldset.horizontal-tabs-pane {
+    padding: 0;
+    border: 0;
+}
+
+.horizontal-tabs ul.horizontal-tabs-list li {
+    min-width: 5em;
+    float: left;
+    background-color: #ffffff;
+    padding: 0px 7px 2px 7px;
+    border-radius: 17px;
+    border: solid 1.5px #ffffff;
+    margin-bottom: 5px;
+    margin-right: 7px;
+}
+
+.nav-tabs>li.active>a {
+    background-color: #31708f !important;
+    color: #fff;
+    padding: 6px 17px 7px 17px;
+    border-radius: 17px;
+    border: solid 1.5px #ffffff;
+    box-shadow: 1px 1px 6px 1px #777;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.nav-tabs>li>a {
+    line-height: 1.42857143;
+    min-width: 5em;
+    float: left;
+    background-color: #ffffff;
+    padding: 7px 15px 7px 15px;
+    border-radius: 17px;
+    border: solid 1.5px #ffffff;
+    margin-bottom: 5px;
+    margin-right: 7px;
+}
+
+.nav-tabs>li>a:hover {
+    border-color: #777 #007fad #009cd4;
+}
+
+.nav-tabs>li.active>a:hover {
+    color: #ffffff;
+    border: solid 1.5px #ffffff;
+    background: #009bd5 !important;
+}
+
+.nav-tabs>li.active>a:focus {
+    color: #ffffff;
+    border: solid 1.5px #ffffff;
+    background: #009bd5 !important;
+}
+
+/* banner fornt */
+.banner-front {
+    margin-left: -15px;
+    margin-top: 12px;
+    width: 98.7vw;
+}
+
+.banner-front img {
+    width: 100%;
+    max-height: 450px;
+}
+
+.banner-front-text {
+    background: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-weight: 900;
+    margin-left: 3em;
+    max-width: 50%;
+    padding: 30px;
+    position: absolute;
+    top: 114px;
+}
+
+.banner-front-text h1 {
+    text-shadow: 3px 5px 2px black;
+    font-size: 42pt;
+    font-weight: 700;
+    text-align: left;
+}
+
+.banner-front-text a {
+    width: 121px;
+    font-size: 14pt;
+}
+
+.banner-front-text .btn-info.active {
+    box-shadow: 1px 1px 2px 1px black !important;
+}
+
+/* logos front */
+
+.logos-front {
+    width: 90%;
+    margin: auto;
+}
+
+
+
+/* intro */
+
+
+section#block-block-7 {
+    width: 50%;
+    float: left;
+    display: flex;
+    padding-left: 80px;
+}
+
+section#block-block-8 {
+    width: 50%;
+    display: flex;
+    height: 535px;
+}
+
+section#block-block-10 {
+    margin-bottom: 51px;
+    margin-top: 51px;
+}
+
+section#block-block-11 {
+    margin-top: 51px;
+}
+
+section#block-block-5 {
+    margin-top: -50px;
+}
+
+.titulo {
+    font-size: 46px;
+    line-height: 56px;
+    padding: 0px 0 3px;
+    font-weight: 700;
+    letter-spacing: -.01em;
+    color: #01519e;
+}
+
+.titulo-2 {
+    font-size: 32px;
+    line-height: 21px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #3479b8;
+}
+
+h1.page-header {
+    margin-top: 5px;
+    font-size: 32px;
+    line-height: 37px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #3479b8;
+}
+
+.item {
+    padding: 35px;
+}
+
+.item .numero {
+    font-size: 15.6rem;
+    font-weight: 900;
+    color: rgba(1, 1, 1, .122);
+    margin-bottom: -10rem;
+    margin-left: -7.5rem;
+    margin-top: -58px;
+    display: block;
+}
+
+.item .item {
+    max-width: 250px;
+    margin: 0 auto;
+}
+
+.item p {
+    font-size: 19pt;
+    color: #009cd4;
+    line-height: 1.2;
+}
+
+
+.on {
+    background: url(/sites/default/files/public/on.png) no-repeat;
+    background-size: 100%;
+    width: 498px;
+    height: 558px;
+    margin-top: -132px;
+}
+
+.text-on {
+    padding: 180px 81px 0px 96px;
+}
+
+
+.intro-1a {
+    background: url(/sites/default/files/public/azul-back.png) no-repeat;
+    background-size: 101%;
+    color: #fff;
+    font-size: 14pt;
+    margin-left: -15px;
+    margin-top: 0px;
+    padding-bottom: 56px;
+    padding-top: 36px;
+    width: 98.7vw;
+    min-height: 262px;
+    background-position: center bottom;
+}
+
+.intro-2 {
+    background: url(/sites/default/files/public/naranja-back.png) no-repeat;
+    background-size: 101%;
+    color: #fff;
+    font-size: 14pt;
+    margin-left: -15px;
+    margin-top: 12px;
+    padding-bottom: 56px;
+    padding-top: 87px;
+    width: 98.7vw;
+}
+
+.intro-ii-test {
+    max-width: 855px;
+    margin: auto;
+    text-align: center;
+}
+
+
+.video {
+    margin-top: -35px;
+}
+
+.html5-video-player {
+    background-color: #ffffff;
+}
+
+/* paso a paso */
+
+.tab-content {
+    box-shadow: 1px 1px 8px 1px #777;
+    padding: 2px 30px 30px;
+    margin-top: 5px;
+    border-radius: 8px;
+    background: #f0f8ff;
+}
+
+
+.tab-content h3 {
+    font-weight: 900;
+    color: #5c5d5c;
+}
+
+.tab-content b {
+    color: #1d93c0;
+}
+
+/* Registro */
+
+.not-front.not-logged-in.no-sidebars.page-user .main-container {
+    max-width: 701px;
+    margin: auto;
+}
+
+.panel-default>.panel-heading {
+    color: #fff;
+    background-color: #009cd4;
+    border: #31708f solid 1.5px;
+}
+
+.panel-default>.panel-heading+.panel-collapse>.panel-body {
+    border-top-color: #ddd;
+    background-color: #f0f8ff;
+}
+
+form#user-login {
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: aliceblue;
+    margin-bottom: 21px;
+}
+
+.row {
+    margin: 32px -15px 27px -15px;
+}
+
+.nav-tabs>li.active>a:hover {
+    color: #abecff;
+}
+
+.front .nav-tabs>li.active>a {
+    background-color: #f0f8ff !important;
+}
+
+/* foter */
+
+.not-logged-in section#block-block-6 {
+    margin-bottom: -64px;
+}
+
+.not-logged-in .footer {
+    margin-top: -14px;
+    padding: 36px 30px 15px 30px;
+    border-top: 1px solid #E5E5E5;
+    background: rgba(8, 8, 8, 0.94);
+}
+
+.logged-in .footer {
+    padding: 36px 30px 15px 30px;
+    border-top: 1px solid #E5E5E5;
+    background: rgba(8, 8, 8, 0.94);
+    margin-top: -13px
+}
+
+.redessociales {
+    display: -webkit-box;
+}
+
+.facebook {
+    background-image: url(/sites/default/files/public/iconos-redes-sociales.jpg);
+    height: 47px;
+    width: 47px;
+    background-repeat: no-repeat;
+    background-position-y: 0%;
+    background-position-x: 0%;
+}
+
+.twitter {
+    background-image: url(/sites/default/files/public/iconos-redes-sociales.jpg);
+    height: 47px;
+    width: 47px;
+    background-repeat: no-repeat;
+    background-position-y: 0%;
+    background-position-x: 101%;
+}
+
+.youtube {
+    background-image: url(/sites/default/files/public/iconos-redes-sociales.jpg);
+    height: 47px;
+    width: 47px;
+    background-repeat: no-repeat;
+    background-position-y: 98%;
+    background-position-x: 33%;
+}
+
+
+/*Menu Primary */
+
+.block-menu h2.block-title {
+    display: none;
+}
+
+.logged-in .region.region-sidebar-first.well {
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0px;
+}
+
+.col-sm-3 h2.block-title {
+    padding: 8px 18px 0px;
+}
+
+.col-sm-3 li.leaf {
+    border-bottom: solid 1px #ccc;
+    background: #fff;
+}
+
+.col-sm-3 li.first.leaf {
+    border-top: solid 2px #337ab7;
+}
+
+.col-sm-3 li.last.leaf {
+    border-bottom: solid 2px #337ab7;
+}
+
+.col-sm-3 ul.menu.nav {
+    display: block;
+}
+
+.col-sm-3 .menu.nav>.active>a,
+.col-sm-3 .menu.nav>.active>a:hover,
+.col-sm-3 .menu.nav>.active>a:focus {
+    background: #5bc0de;
+    color: #fff;
+}
+
+.region.region-sidebar-first.well {
+    overflow-y: auto;
+}
+
+section#block-search-form {
+    margin-top: 15px;
+    padding: 8px;
+}
+
+.logged-in aside.col-sm-3 {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    background: #fff;
+    height: 100vh;
+    border-right: 1px solid #e7e7e7;
+    background-color: #f8f8f8;
+    max-width: 20%;
+    padding: 0px;
+    top: -13px;
+    margin-bottom: -27px
+}
+
+a.list-group-item.menu-titulo {
+    background: #337ab7;
+    color: #fff;
+    font-size: 12pt;
+}
+
+.list-group-item:first-child {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #fff;
+    font-size: 14pt;
+}
+
+#block-block-17 a.list-group-item.menu-titulo,
+#block-block-20 a.list-group-item.menu-titulo,
+#block-block-21 a.list-group-item.menu-titulo,
+#block-block-22 a.list-group-item.menu-titulo {
+    background: #1fa722;
+    color: #fff;
+    font-size: 12pt;
+}
+
+#block-block-18 a.list-group-item.menu-titulo {
+    background: #135190;
+    color: #fff;
+    font-size: 12pt;
+}
+
+#block-block-19 a.list-group-item.menu-titulo {
+    background: #1e93c0;
+    color: #fff;
+    font-size: 12pt;
+}
+
+.list-group {
+    margin-bottom: 0px !important;
+}
+
+
+
+
+/* Contenido logged-in */
+
+.front.logged-in .region.region-content {
+    max-width: 87%;
+    margin: auto;
+}
+
+.page-header {
+    border-bottom: none;
+}
+
+.page-inicio.logged-in .row {
+    margin: auto;
+    max-width: 1300px;
+}
+
+.views-field-field-nombre span.field-content {
+    display: flex;
+    font-weight: bold;
+    color: #555;
+}
+
+.logged-in .row {
+    margin-top: 25px;
+}
+
+.logged-in .main-container.container-fluid {
+    height: auto;
+    padding: 0 .9375em 0 .9375em;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.logged-in section.col-sm-9 {
+    top: 15px;
+    overflow: auto;
+    padding-bottom: 50px;
+    width: 80%;
+}
+
+.front .views-field.views-field-field-nombre {
+    display: flex;
+}
+
+span.views-label.views-label-field-nombre {
+    margin-right: 10px;
+}
+
+.page-node-45 h1.page-header {
+    display: none;
+}
+
+.region.region-content {
+    margin-bottom: 50px;
+}
+
+
+/* Formularios */
+
+.views-exposed-widget .form-control.form-select {
+    background-color: #f0f8ff;
+}
+
+fieldset#bootstrap-panel {
+    margin-bottom: 32px;
+}
+
+fieldset .panel-body {
+    clear: both;
+    display: inherit;
+    background-color: #f0f8ff;
+    border: 1px solid #91b6c1;
+}
+
+.node-type-webform fieldset .panel-body {
+    clear: both;
+    display: inherit;
+    background-color: #dff0d9;
+    border: solid 1px #3c763d;
+    border-radius: 5px;
+}
+
+.field.field-type-taxonomy-term-reference.field-label-above {
+    margin-bottom: 21px;
+}
+
+.help-block {
+    border: 1px solid;
+    border-radius: 11px;
+    padding: 7px;
+    background-color: #d9edf7;
+    font-size: 10pt;
+    color: #333;
+}
+
+
+.form-type-password-confirm .password-help {
+    border-left: 1px solid #333;
+}
+
+.page-node-add-mi-emprendimiento .region.region-content,
+.page-node-add-mi-emprendimiento h1.page-header {
+    max-width: 700px;
+    margin: auto;
+}
+
+
+.vertical-tabs-panes.vertical-tabs-processed.tab-content {
+    display: none;
+}
+
+.form-tablefield .help-block,
+.form-tablefield .tabledrag-toggle-weight-wrapper,
+.table-responsive .tabledrag-toggle-weight-wrapper,
+.form-tablefield .form-item.form-item-field-servicios-de-la-entidad-und-0-tablefield-caption.form-type-textfield.form-group {
+    display: none;
+}
+
+.form-tablefield .panel-body {
+    background-color: #fff;
+}
+
+.double-field-elements {
+    display: flex;
+}
+
+
+
+form#inscripci-n-fase-empoderar-node-form {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Tips */
+article#node-465,
+article#node-464,
+article#node-507,
+article#node-508 {
+    float: right;
+}
+
+#node-465 header,
+#node-464 header,
+#node-507 header,
+#node-508 header {
+    display: none;
+}
+
+#node-465 a,
+#node-464 a,
+#node-507 a,
+#node-508 a {
+    font-size: 16pt !important;
+    padding: 5px 12px 5px 12px;
+    color: #fff;
+    box-shadow: 2px 2px 7px 1px #777;
+    border: solid 2px #ffffff;
+    border-radius: 19px;
+    background-color: #4aa9c5;
+    margin-left: -55px;
+}
+
+h3.field-group-format-toggler.accordion-item.ui-accordion-header.ui-helper-reset.ui-state-default.ui-corner-all {
+    background: #4aa9c500;
+    border: none;
+}
+
+h3.field-group-format-toggler.accordion-item.ui-accordion-header.ui-helper-reset.ui-state-active.ui-corner-top {
+    background: #5bc0de;
+}
+
+
+.field-group-format-wrapper.group-2.field-group-accordion-item.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active {
+    height: auto !important;
+    overflow: auto !important;
+    background: aliceblue;
+}
+
+
+span.ui-icon.ui-icon-triangle-1-e {
+    display: none;
+}
+
+#node-465 .ui-accordion,
+#node-464 .ui-accordion,
+#node-507 .ui-accordion,
+#node-508 .ui-accordion {
+    max-width: 400px;
+}
+
+.ui-accordion .ui-accordion-header .ui-icon {
+    position: absolute;
+    left: 1.5em;
+    top: 50%;
+    margin-top: -8px;
+}
+
+
+/* web-form grid */
+
+th.checkbox.webform-grid-option {
+    min-width: 80px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+td.checkbox.webform-grid-option {
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+/* Metas */
+
+.view-meta-fase-conectar thead {
+    background-color: #337ab7;
+}
+
+td.views-field.views-field-field-meta-empoderar.views-align-center,
+td.views-field.views-field-field-meta-conectar.views-align-center {
+    color: green;
+    background: #c0f3c0;
+}
+
+td.views-field.views-field-field-n-mero-de-emprendedores-em.views-align-center,
+td.views-field.views-field-field-n-mero-de-emprendedores-se.views-align-center {
+    color: #c77102;
+    background: #fff5c3;
+}
+
+.view-meta-fase-conectar td.views-field.views-field-expression-1.views-align-center.red {
+    color: red;
+    background: #f1d1d1;
+}
+
+
+.view-meta-fase-conectar {
+    float: left;
+    max-width: 300px;
+}
+
+.view-meta-fase-conectar-regiones thead {
+    background-color: #337ab7;
+}
+
+.view-meta-fase-conectar-regiones td.views-field.views-field-field-meta-conectar.views-align-center {
+    color: green;
+    background: #c0f3c0;
+}
+
+.view-meta-fase-conectar-regiones td.views-field.views-field-field-n-mero-de-emprendedores-se.views-align-center {
+    color: #c77102;
+    background: #fff5c3;
+}
+
+.view-meta-fase-conectar-regiones td.views-field.views-field-expression-1.views-align-center.red {
+    color: red;
+    background: #f1d1d1;
+}
+
+
+.view-meta-fase-conectar-regiones {
+    float: left;
+    max-width: 300px;
+}
+
+
+.page-node-add--gc-formatos-inscripci-n .field-name-field-ingresar-participantes .form-item {
+    display: flex;
+}
+
+.page-node-add--gc-formatos-inscripci-n .field-name-field-ingresar-participantes label.control-label {
+    margin: 0px 8px;
+}
+
+
+/* Mapeo, Ecosistema */
+
+.view-mapeo-institucional .col-xs-12.col-sm-6.col-md-3.col-lg-3 {
+    border: solid #555 3px;
+    border-radius: 10px;
+    padding: 7px;
+    margin: 5px;
+    background: #d9edf7;
+    width: 24%;
+}
+
+.view-mapeo-institucional tbody {
+    background: #fff;
+}
+
+/* Formulairo y Perfil Usuairo */
+
+.page-user .field.field-name-field-nombre.field-type-text.field-label-hidden,
+.page-user .field.field-name-field-apellidos.field-type-text.field-label-hidden {
+    text-align: center;
+    font-size: 21pt;
+    font-weight: 700;
+}
+
+.page-user h1.page-header {
+    display: none;
+}
+
+div#edit-field-apellidos,
+div#edit-field-nombre,
+div#edit-field-tipo-id,
+div#edit-field-numero-id,
+div#edit-field-sexo,
+div#edit-field-caracter-sticas-,
+div#edit-field-nivel-educativo,
+div#edit-field-estado-civil,
+div#edit-field-estrato-socioecon-mico,
+div#edit-field-fecha-de-naciomiento,
+div#edit-field-movil,
+div#edit-field-telefono-fijo-emprendimien,
+div#edit-field-e-mail-contacto,
+div#edit-field-skype,
+div#edit-field-actividad,
+div#edit-field-sector-economico,
+div#edit-field-n-mero-de-empleados-formal,
+div#edit-field-rol-emprendimiento,
+div#edit-field-ingresos-por-ventas-promed,
+div#edit-field-ingresos,
+div#edit-field-como-se-enter-del-programa {
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+
+div#edit-field-direccion-comercial,
+div#edit-field-departamento,
+div#edit-field-ciudad-municipio {
+    width: 33%;
+    float: left;
+    padding: 5px;
+}
+
+.date-form-element-content-multiline {
+    padding: 0px;
+    border: none;
+}
+
+.form-item-field-acepto-el-reto-und .control-label {
+    color: red;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/* Mi Emprendimiento */
+
+.node-type-mi-emprendimiento .region.region-content,
+.node-type-mi-emprendimiento h1.page-header,
+.node-type-mi-emprendimiento ul.tabs--primary.nav.nav-tabs,
+.page-mi-emprendimiento .region.region-content,
+.page-mi-emprendimiento h1.page-header,
+.page-user .region.region-content,
+.page-user ul.tabs--primary.nav.nav-tabs {
+    max-width: 900px;
+    margin: auto;
+}
+
+.field.field-name-field-nit.field-type-number-integer.field-label-inline.clearfix {
+    float: left;
+}
+
+#block-encefalo-emprendelo-block-radar-chart div,
+#block-encefalo-emprendelo-block-c-emprendedoras-chart div,
+#block-encefalo-emprendelo-block-five-chart div {
+    margin: auto;
+    padding: 10px;
+}
+
+img.img-responsive {
+    margin: auto;
+}
+
+.field.field-name-title.field-type-ds.field-label-hidden {
+    text-align: center;
+}
+
+.field.field-name-field-nit.field-type-number-integer.field-label-inline.clearfix {
+    float: left;
+}
+
+.view-mi-emprendimiento .view-empty {
+    background: #06a7c7;
+    border-radius: 4px;
+    border: 1px solid #777;
+    box-shadow: 2px 3px 7px 0px #777;
+    color: #fff;
+    line-height: 1.3;
+    margin: auto;
+    margin-bottom: 25px;
+    max-width: 311px;
+    min-height: 255px;
+    min-width: 217px;
+    padding: 22px;
+}
+
+div#edit-field-nit {
+    width: 200px;
+    float: left;
+}
+
+div#edit-field-dv {
+    width: 65%;
+    float: left;
+    margin-left: 5px;
+}
+
+input#edit-field-dv-und-0-value {
+    width: 36px;
+}
+
+
+/* Resultados Autodiagnóstico  Emprendedor */
+
+.view-perfil-emprendedor .view-empty,
+.view-perfil-emprendimiento .view-empty,
+.view-360-emprendimientos .view-empty,
+.view-360-capacidades-emprendedoras-emprendedor .view-empty {
+    background: #06a7c7;
+    border-radius: 4px;
+    border: 1px solid #777;
+    box-shadow: 2px 3px 7px 0px #777;
+    color: #fff;
+    line-height: 1.3;
+    margin: auto;
+    max-width: 289px;
+    min-height: 255px;
+    min-width: 217px;
+    padding: 22px;
+}
+
+.view-360-capacidades-emprendedoras-emprendedor .view-empty,
+.view-360-emprendimientos .view-empty {
+    margin-top: -140px;
+}
+
+.attachment.attachment-before {
+    display: -webkit-box;
+}
+
+.view.view-perfil-emprendedor.view-id-perfil_emprendedor.view-display-id-attachment_2 {
+    margin: 87px 15px 0px 57px;
+}
+
+section#block-views-perfil-emprendedor-block-1 {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 21px;
+    border-radius: 7px;
+}
+
+
+/* Tablas */
+
+thead {
+    background-color: #009cd4;
+    color: #fff;
+}
+
+table tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+table {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+tfoot {
+    background: #009cd4;
+    color: #fff;
+}
+
+td,
+th {
+    padding: 0;
+    border: solid 1px #ccc;
+    padding: 5px;
+}
+
+th.views-field.views-align-center {
+    width: 97px;
+}
+
+/* Cards */
+
+.c-callout-card {
+    padding: 12px;
+    line-height: 21px;
+}
+
+.card-content {
+    border: 1px solid #e0e0e0;
+    background: aliceblue;
+    border-radius: 6px;
+    overflow: hidden;
+    display: flex;
+    max-width: 635px;
+    margin: auto;
+    margin-top: 70px;
+    min-height: 103px;
+    box-shadow: 3px 3px 7px 0px #777;
+}
+
+.margin-top-bottom--lv0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.margin-left--lv0 {
+    margin-left: 0;
+}
+
+.margin--lv2 {
+    margin: 12px;
+}
+
+.margin-top-bottom--lv0 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.margin--lv1 {
+    margin: 6px;
+}
+
+.c-mediaImage--centered {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.c-callout-card .glyphicon {
+    font-size: 22px;
+    color: #01519e;
+    margin-left: 12px;
+}
+
+.region-sidebar-second .card-content {
+    background: #009cd4;
+}
+
+.card-content p {
+    font-size: 17px;
+}
+
+/* Intro Coordinadores */
+
+.intro-coordinador {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 60px;
+}
+
+/* Intro Emprendedores */
+
+
+.pasos {
+    margin-top: 35px;
+    font-size: 14pt;
+    color: #555;
+}
+
+.ruta-pasos {
+    display: flex;
+}
+
+.ruta-pasos p {
+    margin: auto;
+    display: inline-flex;
+}
+
+.ruta-pasos img {
+    background-color: #fff;
+    padding: 15px 0px 15px 0px;
+}
+
+section#block-views-paso-2a-block-1,
+section#block-views-paso-2-block-1,
+section#block-block-39,
+section#block-block-40,
+section#block-block-41 {
+    margin-top: -45px;
+}
+
+
+section#block-block-30,
+section#block-block-31,
+section#block-block-32,
+section#block-block-33 {
+    margin-top: -151px;
+}
+
+
+/* dasboard */
+
+h1.page-header {
+    margin-top: 5px;
+}
+
+.info-d {
+    border: 1px solid #5bc0de;
+    border-radius: 5px;
+    padding: 11px;
+    width: 171px;
+    background: #f0f8ff;
+    margin: 30px 0px 30px;
+    box-shadow: 1px 1px 3px 2px #999;
+}
+
+.info-d h1 {
+    color: #01519e;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 30pt;
+}
+
+.info-d p {
+    color: #069ed5;
+    line-height: 1;
+    text-align: center;
+}
+
+section#block-views-n-mero-de-usuarios-block-1,
+section#block-views-usuarios-empoderar-block-1,
+section#block-views-usuarios-acceder-block-1,
+section#block-views-usuarios-fortalecer-block-1,
+section#block-views-emprendimientos-resumen-block-1,
+section#block-views-77fe4ab075403274c58d3dd15594031f,
+section#block-views-01323101b4bf9ef5b0f0c8086206442e,
+section#block-views-058986f1a2ecd0cdc6118721cf888c77,
+section#block-views-resumen-componente-i2-block-1 {
+    width: 190px;
+    float: left;
+}
+
+
+#block-block-23 .btn-info,
+#block-block-28 .btn-info,
+#block-block-17 .btn-info,
+#block-block-18 .btn-info,
+#block-block-19 .btn-info,
+#block-block-20 .btn-info,
+#block-block-37 .btn-info {
+    color: #fff;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    width: 100%;
+    text-align: left;
+    font-size: 14pt;
+}
+
+
+/* bibliogteca abierta */
+
+.thumbnail {
+    background: aliceblue;
+    padding: 0px 20px 27px;
+    min-height: 251px;
+}
+
+/* Gestión Asesores */
+div#edit-field-c-mara-de-comercio-tid-wrapper {
+    width: 50%;
+}
+
+/* Menús Secundarios en Contenido */
+
+.jumbotron {
+    box-shadow: 2px 2px 7px 0px #555;
+    border: solid #31708f 1px;
+    padding: 0px;
+}
+
+ul.menu.nav {
+    display: -webkit-box;
+}
+
+.menu.nav>.active>a,
+.menu.nav>.active>a:hover,
+.menu.nav>.active>a:focus {
+    border-bottom: 4px #5bc0de solid;
+    background: #31708f;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+    color: #333;
+    border-bottom: 4px #337ab7 solid;
+    background: #e7e7e7;
+}
+
+/* Canvas */
+
+.msn-admin {
+    border: solid 2px;
+    border-radius: 7px;
+    padding: 10px;
+    margin-bottom: 30px;
+    background-color: #f7f7f7;
+}
+
+.view-canvas .view-header {
+    border: solid #333;
+    background: #a94442;
+    padding: 0 17px 12px 12px;
+    color: #fff;
+}
+
+.view-canvas .col-xs-12.col-sm-6.col-md-4.col-lg-3 {
+    padding: 5px;
+}
+
+.view-canvas .thumbnail {
+    border: solid;
+    background: #ffc7c7;
+}
+
+.view-canvas h3.field-content {
+    text-align: center;
+    color: #fff;
+    background: #a94442;
+    padding: 5px;
+}
+
+.view-canvas h4.field-content {
+    color: #a94442;
+    font-weight: 600;
+}
+
+.view-canvas .views-field.views-field-field-descripcion-formacion-e {
+    border-bottom: solid 1px #777;
+    margin-bottom: 12px;
+}
+
+.view-canvas a {
+    color: #337ab7;
+    text-decoration: none;
+    position: absolute;
+    bottom: 32px;
+    right: 17px;
+}
+
+.view.view-canvas.view-id-canvas.view-display-id-attachment_3 {
+    border: solid;
+    padding: 17px;
+    border-radius: 7px;
+    background: #fff1f4;
+    margin-bottom: 47px;
+}
+
+.view.view-canvas.view-id-canvas.view-display-id-attachment_1 {
+    border: solid;
+    padding: 17px;
+    border-radius: 7px;
+    background: #acecec;
+    margin-bottom: 47px;
+}
+
+.view-canvas.view-display-id-attachment_1 .view-header {
+    border: solid #333;
+    background: #337ab7;
+    padding: 0 17px 12px 12px;
+    color: #fff;
+}
+
+.view-canvas.view-display-id-attachment_1 h3.field-content {
+    text-align: center;
+    color: #fff;
+    background: #337ab7;
+    padding: 5px;
+}
+
+.view-canvas.view-display-id-attachment_1 h4.field-content {
+    color: #337ab7;
+    font-weight: 600;
+}
+
+.view-canvas.view-display-id-attachment_1 .thumbnail {
+    border: solid;
+    background: #f0f8ff;
+}
+
+
+.view.view-canvas.view-id-canvas.view-display-id-attachment_2 {
+    border: solid;
+    padding: 17px;
+    border-radius: 7px;
+    background: #e4fbdb;
+    margin-bottom: 47px;
+}
+
+.view-canvas.view-display-id-attachment_2 .view-header {
+    border: solid #333;
+    background: #1e9220;
+    padding: 0 17px 12px 12px;
+    color: #fff;
+}
+
+.view-canvas.view-display-id-attachment_2 h3.field-content {
+    text-align: center;
+    color: #fff;
+    background: #1e9221;
+    padding: 5px;
+}
+
+.view-canvas.view-display-id-attachment_2 h4.field-content {
+    color: #1e9221;
+    font-weight: 600;
+}
+
+.view-canvas.view-display-id-attachment_2 .thumbnail {
+    border: solid;
+    background: #c2efb0;
+}
+
+.view-canvas .row {
+    margin-top: 6px;
+    margin-right: -10px;
+    margin-left: -10px;
+}
+
+.views-field.views-field-edit-node {
+    border-top: solid 1px #555;
+}
+
+/* Crear planes de capacitacion */
+
+.page-node-add-planes-de-capacitaci-n-habilidad .form-type-radios.form-group {
+    display: table-cell;
+}
+
+.page-node-add-planes-de-capacitaci-n-habilidad .form-radios {
+    display: -webkit-box;
+    font-size: 14pt;
+}
+
+.page-node-add-planes-de-capacitaci-n-habilidad .form-type-radio {
+    margin-right: 15px;
+}
+
+.radio+.radio,
+.checkbox+.checkbox {
+    margin-top: 0px;
+}
+
+div#prioridad {
+    border: solid 1px;
+    border-radius: 7px;
+    padding: 12px;
+    background: #fff;
+    max-width: 300px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+}
+
+/* Rutra de Mejoramiento */
+
+.page-node-add-ruta-de-mejoramiento .panel-body .field-widget-options-select,
+.page-node-add-ruta-de-mejoramiento .field-widget-number {
+    float: left;
+    border-top: solid 1px #337ab7;
+    padding-top: 15px;
+    min-height: 121px;
+}
+
+.page-node-add-ruta-de-mejoramiento .field-type-entityreference .form-type-select,
+.page-node-add-ruta-de-mejoramiento .field-type-entityreference .form-type-textfield {
+    width: 400px;
+    margin-right: 15px;
+}
+
+.page-node-add-ruta-de-mejoramiento .form-control.form-select {
+    background-color: #ffffff;
+}
+
+.page-node-add-ruta-de-mejoramiento .field-widget-text-textarea {
+    display: flow-root;
+    border-top: solid 1px #337ab7;
+    padding-top: 15px;
+    min-height: 121px;
+}
+
+.page-node-add-ruta-de-mejoramiento .horizontal-tabs-pane label {
+    margin-left: 15px;
+}
+
+
+.views-view-responsive-grid__item {
+    border: solid 1px #abc;
+    border-radius: 15px;
+    padding: 1em;
+    background: #fff;
+}

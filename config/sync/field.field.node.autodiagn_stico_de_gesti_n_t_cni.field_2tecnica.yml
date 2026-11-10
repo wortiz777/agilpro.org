@@ -1,0 +1,23 @@
+uuid: 9737cad2-602a-435f-9407-de8d143af8af
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2tecnica
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_2tecnica
+field_name: field_2tecnica
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '2. Porcentaje de la capacidad instalada mensual que está utilizando actualmente'
+description: 'La capacidad instalada es el potencial de producción o volumen máximo de producción que una empresa puede lograr durante un período de tiempo determinado, teniendo en cuenta todos los recursos que tienen disponibles, sea los equipos de producción, instalaciones, recursos humanos, tecnología, experiencia/conocimientos, etc.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

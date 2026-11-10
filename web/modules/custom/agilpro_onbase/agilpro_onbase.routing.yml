@@ -1,0 +1,42 @@
+agilpro_onbase.settings:
+  path: '/admin/config/services/onbase'
+  defaults:
+    _form: '\Drupal\agilpro_onbase\Form\OnBaseSettingsForm'
+    _title: 'Integración Hyland OnBase'
+  requirements:
+    _permission: 'administer onbase integration'
+
+agilpro_onbase.audit:
+  path: '/admin/config/services/onbase/audit'
+  defaults:
+    _controller: '\Drupal\agilpro_onbase\Controller\OnBaseAuditController::overview'
+    _title: 'Auditoría de Transferencias OnBase'
+  requirements:
+    _permission: 'view onbase audit logs'
+
+agilpro_onbase.requeue:
+  path: '/admin/config/services/onbase/audit/{id}/requeue'
+  defaults:
+    _form: '\Drupal\agilpro_onbase\Form\OnBaseRequeueConfirmForm'
+    _title: 'Reintentar transferencia a OnBase'
+  requirements:
+    _permission: 'administer onbase integration'
+    _csrf_token: 'TRUE'
+
+agilpro_onbase.queue_run:
+  path: '/admin/config/services/onbase/queue/run'
+  defaults:
+    _form: '\Drupal\agilpro_onbase\Form\OnBaseQueueRunForm'
+    _title: 'Procesamiento Manual de Cola OnBase'
+  requirements:
+    _permission: 'administer onbase integration'
+
+agilpro_onbase.health_check:
+  path: '/api/v1/healthz'
+  defaults:
+    _controller: '\Drupal\agilpro_onbase\Controller\OnBaseHealthCheckController::check'
+    _title: 'Health Check API'
+  requirements:
+    _access: 'TRUE'
+
+

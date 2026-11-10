@@ -1,0 +1,135 @@
+uuid: c7d74f14-002a-4b71-806f-a2b341b17221
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_ruta_desarrollo_competencias
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Ruta Desarrollo Competencias | Competencia &gt; Acciones)'
+source:
+  plugin: d7_node_complete
+  node_type: ruta_desarrollo_competencias
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_ruta_desarrollo_competencias/0/status:
+    -
+      plugin: get
+      source: comment
+  field_diagn_stico:
+    -
+      plugin: get
+      source: field_diagn_stico
+  field_puntos_fuertes:
+    -
+      plugin: get
+      source: field_puntos_fuertes
+  field_puntos_debiles_:
+    -
+      plugin: get
+      source: field_puntos_debiles_
+  field_objetivos_metas_:
+    -
+      plugin: get
+      source: field_objetivos_metas_
+  field_fortalecimiento_de_talento:
+    -
+      plugin: get
+      source: field_fortalecimiento_de_talento
+  field_vencer_o_mejorar_puntos_de:
+    -
+      plugin: get
+      source: field_vencer_o_mejorar_puntos_de
+  field_acciones_:
+    -
+      plugin: get
+      source: field_acciones_
+  field_cuando_:
+    -
+      plugin: get
+      source: field_cuando_
+  field_valoracio_resultados_:
+    -
+      plugin: get
+      source: field_valoracio_resultados_
+  field_comentarios_del_asesor:
+    -
+      plugin: get
+      source: field_comentarios_del_asesor
+  field__rea_competencia_de_intere:
+    -
+      plugin: get
+      source: field__rea_competencia_de_intere
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: ruta_desarrollo_competencias
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

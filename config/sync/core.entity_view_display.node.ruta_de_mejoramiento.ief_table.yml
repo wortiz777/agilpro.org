@@ -1,0 +1,45 @@
+uuid: 095d5131-1fef-43e3-abbd-65594c2cc342
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.ief_table
+    - field.field.node.ruta_de_mejoramiento.field_conocimiento
+    - field.field.node.ruta_de_mejoramiento.field_cualitativos_cifras_cantid
+    - field.field.node.ruta_de_mejoramiento.field_cualitativos_hechos_docume
+    - field.field.node.ruta_de_mejoramiento.field_econ_mico
+    - field.field.node.ruta_de_mejoramiento.field_f_sicos
+    - field.field.node.ruta_de_mejoramiento.field_humano
+    - field.field.node.ruta_de_mejoramiento.field_informaci_n
+    - field.field.node.ruta_de_mejoramiento.field_objetivo_para_qu_lo_quiero
+    - field.field.node.ruta_de_mejoramiento.field_tareas
+    - node.type.ruta_de_mejoramiento
+  module:
+    - user
+id: node.ruta_de_mejoramiento.ief_table
+targetEntityType: node
+bundle: ruta_de_mejoramiento
+mode: ief_table
+content:
+  field_objetivo_para_qu_lo_quiero:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_conocimiento: true
+  field_cualitativos_cifras_cantid: true
+  field_cualitativos_hechos_docume: true
+  field_econ_mico: true
+  field_f_sicos: true
+  field_humano: true
+  field_informaci_n: true
+  field_tareas: true
+  langcode: true

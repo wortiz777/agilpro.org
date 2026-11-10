@@ -1,0 +1,30 @@
+uuid: c220ea63-5649-431f-9c21-0c850d041a4e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresar_participantes
+    - node.type._gc_formatos_inscripci_n
+    - node.type.participantes_ficha_inscripci_n
+id: node._gc_formatos_inscripci_n.field_ingresar_participantes
+field_name: field_ingresar_participantes
+entity_type: node
+bundle: _gc_formatos_inscripci_n
+label: 'Ingresar Participantes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      participantes_ficha_inscripci_n: participantes_ficha_inscripci_n
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 01911288-6787-4cd7-86bc-ca6cf4b20390
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_otros_contactos
+    - node.type.gestion_componentes_mapeo
+id: node.gestion_componentes_mapeo.field_otros_contactos
+field_name: field_otros_contactos
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'Otros Contactos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

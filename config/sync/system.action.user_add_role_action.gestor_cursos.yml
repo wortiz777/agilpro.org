@@ -1,0 +1,14 @@
+uuid: 2f6a2e39-3337-4ca9-aa75-270af6f61413
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.gestor_cursos
+  module:
+    - user
+id: user_add_role_action.gestor_cursos
+label: 'Añade el rol Gestor de Cursos al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: gestor_cursos

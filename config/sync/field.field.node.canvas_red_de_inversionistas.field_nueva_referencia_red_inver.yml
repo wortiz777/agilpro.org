@@ -1,0 +1,19 @@
+uuid: b4088bd6-1e5f-4a57-a53c-4cca1b1d371c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_red_inver
+    - node.type.canvas_red_de_inversionistas
+id: node.canvas_red_de_inversionistas.field_nueva_referencia_red_inver
+field_name: field_nueva_referencia_red_inver
+entity_type: node
+bundle: canvas_red_de_inversionistas
+label: 'Ingresar Nueva Referencia Red de Inversionistas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

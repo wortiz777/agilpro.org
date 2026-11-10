@@ -1,0 +1,21 @@
+uuid: 1c578573-9e49-455f-9047-5867ada4cee1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_descripcion_formacion_e
+    - node.type.canvas_talento
+id: node.canvas_talento.field_descripcion_formacion_e
+field_name: field_descripcion_formacion_e
+entity_type: node
+bundle: canvas_talento
+label: Descripción
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 'Las Universidades y empleadores locales tienen un rol importante  atrayendo, desarrollando y reteniendo el talento local.   Universidades impartiendo programas de negocios o tecnológicos.  Y los Empleadores locales dando oportunidades de empleo.'
+default_value_callback: ''
+settings: {  }
+field_type: string

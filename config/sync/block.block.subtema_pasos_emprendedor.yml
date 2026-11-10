@@ -1,0 +1,33 @@
+uuid: aa0a406b-03da-4e58-bcc1-4194a9aa7280
+langcode: es
+status: true
+dependencies:
+  module:
+    - agilpro_org
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_pasos_emprendedor
+theme: subtema
+region: none
+weight: -9
+provider: null
+plugin: agilpro_pasos_emprendedor_block
+settings:
+  id: agilpro_pasos_emprendedor_block
+  label: subtema_pasos_emprendedor
+  label_display: '0'
+  provider: agilpro_org
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

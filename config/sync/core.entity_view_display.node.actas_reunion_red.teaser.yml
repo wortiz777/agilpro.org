@@ -1,0 +1,51 @@
+uuid: 2be53912-5646-4863-9565-f729c4f137c6
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.actas_reunion_red.field_cargar_acta_de_reunion
+    - field.field.node.actas_reunion_red.field_evidencias_foto_reunion
+    - field.field.node.actas_reunion_red.field_fecha_acta_reunion
+    - node.type.actas_reunion_red
+  module:
+    - datetime
+    - file
+    - user
+id: node.actas_reunion_red.teaser
+targetEntityType: node
+bundle: actas_reunion_red
+mode: teaser
+content:
+  field_cargar_acta_de_reunion:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_evidencias_foto_reunion:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_fecha_acta_reunion:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

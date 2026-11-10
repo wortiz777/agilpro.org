@@ -1,0 +1,19 @@
+uuid: 1c88720d-c707-41a9-b126-879d2600e31c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_movil_contacto
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_movil_contacto
+field_name: field_movil_contacto
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Número celular de contacto'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

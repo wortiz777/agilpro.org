@@ -1,0 +1,4138 @@
+uuid: 1f31e32e-45b6-4755-b11e-1f89d96b7fdd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_administraci_n
+    - field.storage.node.field_amplitud_perceptual
+    - field.storage.node.field_autodiagn_stico_emprendedo
+    - field.storage.node.field_autodiagn_stico_emprendimi
+    - field.storage.node.field_c_dula
+    - field.storage.node.field_c_mara_de_comercio
+    - field.storage.node.field_cargo_del_emprendedor_l_de
+    - field.storage.node.field_celular
+    - field.storage.node.field_ciudad_emprendedor_l_der
+    - field.storage.node.field_ciuu
+    - field.storage.node.field_como_se_enter_de_empr_ndel
+    - field.storage.node.field_creatividad_e_innovaci_n
+    - field.storage.node.field_direcci_n_emprendedor_l_de
+    - field.storage.node.field_direcci_n_emprendimiento
+    - field.storage.node.field_direccionamiento
+    - field.storage.node.field_e_mail
+    - field.storage.node.field_empleos_formales
+    - field.storage.node.field_empleos_informales
+    - field.storage.node.field_estado_civ
+    - field.storage.node.field_estrato_socioecon
+    - field.storage.node.field_fase_acceder
+    - field.storage.node.field_fase_empoderar
+    - field.storage.node.field_fase_fortalecer
+    - field.storage.node.field_fecha_de_nacimiento
+    - field.storage.node.field_financier
+    - field.storage.node.field_g_nero
+    - field.storage.node.field_gesti_n_t_cnica_y_producci
+    - field.storage.node.field_grado_de_vulnerabilidad
+    - field.storage.node.field_ingresos_por_ventas_mensua
+    - field.storage.node.field_liderazgo
+    - field.storage.node.field_mercade
+    - field.storage.node.field_nivel_de_estudios_emprende
+    - field.storage.node.field_nombre_emprendimiento
+    - field.storage.node.field_orientaci_n_al_logro
+    - field.storage.node.field_orientaci_n_al_mercado
+    - field.storage.node.field_pensamiento_sist_mico
+    - field.storage.node.field_registro_mercantil
+    - field.storage.node.field_remuneraci_n_promedio_mens
+    - field.storage.node.field_rentabilidad
+    - field.storage.node.field_ruta_de_fortalecimiento
+    - field.storage.node.field_ser
+    - field.storage.node.field_tiempo_de_dedicaci_n_al_em
+    - node.type.emprendedores_off_line
+    - taxonomy.vocabulary.c_maras_de_comercio
+    - user.role.administrator
+    - user.role.coordinador_nacional
+    - user.role.coordinador_regional
+  content:
+    - 'taxonomy_term:c_maras_de_comercio:2a263b61-3f72-4193-a73d-8cfec908b99b'
+  module:
+    - node
+    - taxonomy
+    - text
+    - user
+id: emprendedores_off_line
+label: 'Emprendedores Off-Line'
+module: views
+description: ''
+tag: default
+base_table: node_field_data
+base_field: nid
+display:
+  default:
+    id: default
+    display_title: Master
+    display_plugin: default
+    position: 1
+    display_options:
+      title: '<i class="fa fa-user-times" aria-hidden="true"> </i> Gestionar Emprendedores Off-Line'
+      fields:
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Nombre Emprendedor'
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: false
+            ellipsis: false
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          settings:
+            link_to_entity: 0
+          ui_name: ''
+        edit_node:
+          id: edit_node
+          table: node
+          field: edit_node
+          relationship: none
+          group_type: group
+          plugin_id: entity_link_edit
+          label: Editar
+          exclude: true
+          alter:
+            alter_text: true
+            text: '<i class="fa fa-pencil-square-o fa-lg" aria-hidden="true"> </i>'
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          text: ''
+          ui_name: ''
+        nothing:
+          id: nothing
+          table: views
+          field: nothing
+          relationship: none
+          group_type: group
+          plugin_id: custom
+          label: Emprendedor
+          exclude: false
+          alter:
+            alter_text: true
+            text: |-
+              {{ title }} </br>
+              {{ edit_node }}
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: false
+          ui_name: ''
+        field_c_mara_de_comercio:
+          id: field_c_mara_de_comercio
+          table: node__field_c_mara_de_comercio
+          field: field_c_mara_de_comercio
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Cámara de Comercio'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: tid
+          type: entity_reference_label
+          settings:
+            target_type: taxonomy_term
+          group_column: tid
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_c_dula:
+          id: field_c_dula
+          table: node__field_c_dula
+          field: field_c_dula
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Cédula
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_g_nero:
+          id: field_g_nero
+          table: node__field_g_nero
+          field: field_g_nero
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Género
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_fecha_de_nacimiento:
+          id: field_fecha_de_nacimiento
+          table: node__field_fecha_de_nacimiento
+          field: field_fecha_de_nacimiento
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Fecha de Nacimiento'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_celular:
+          id: field_celular
+          table: node__field_celular
+          field: field_celular
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Celular
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_e_mail:
+          id: field_e_mail
+          table: node__field_e_mail
+          field: field_e_mail
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Correo electrónico'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_direcci_n_emprendedor_l_de:
+          id: field_direcci_n_emprendedor_l_de
+          table: node__field_direcci_n_emprendedor_l_de
+          field: field_direcci_n_emprendedor_l_de
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Dirección Emprendedor Líder'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_nombre_emprendimiento:
+          id: field_nombre_emprendimiento
+          table: node__field_nombre_emprendimiento
+          field: field_nombre_emprendimiento
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Nombre emprendimiento'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_direcci_n_emprendimiento:
+          id: field_direcci_n_emprendimiento
+          table: node__field_direcci_n_emprendimiento
+          field: field_direcci_n_emprendimiento
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Dirección Emprendimiento'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_ingresos_por_ventas_mensua:
+          id: field_ingresos_por_ventas_mensua
+          table: node__field_ingresos_por_ventas_mensua
+          field: field_ingresos_por_ventas_mensua
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Ingresos por ventas mensuales'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_remuneraci_n_promedio_mens:
+          id: field_remuneraci_n_promedio_mens
+          table: node__field_remuneraci_n_promedio_mens
+          field: field_remuneraci_n_promedio_mens
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Remuneración Promedio Mensual'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_estrato_socioecon:
+          id: field_estrato_socioecon
+          table: node__field_estrato_socioecon
+          field: field_estrato_socioecon
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Estrato socioeconómico'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_estado_civ:
+          id: field_estado_civ
+          table: node__field_estado_civ
+          field: field_estado_civ
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Estado civil'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_grado_de_vulnerabilidad:
+          id: field_grado_de_vulnerabilidad
+          table: node__field_grado_de_vulnerabilidad
+          field: field_grado_de_vulnerabilidad
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Grado de vulnerabilidad'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_rentabilidad:
+          id: field_rentabilidad
+          table: node__field_rentabilidad
+          field: field_rentabilidad
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Rentabilidad
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_registro_mercantil:
+          id: field_registro_mercantil
+          table: node__field_registro_mercantil
+          field: field_registro_mercantil
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Registro mercantil'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_empleos_formales:
+          id: field_empleos_formales
+          table: node__field_empleos_formales
+          field: field_empleos_formales
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Empleos formales'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_empleos_informales:
+          id: field_empleos_informales
+          table: node__field_empleos_informales
+          field: field_empleos_informales
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Empleos informales'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_ciudad_emprendedor_l_der:
+          id: field_ciudad_emprendedor_l_der
+          table: node__field_ciudad_emprendedor_l_der
+          field: field_ciudad_emprendedor_l_der
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Ciudad Emprendedor Líder'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_nivel_de_estudios_emprende:
+          id: field_nivel_de_estudios_emprende
+          table: node__field_nivel_de_estudios_emprende
+          field: field_nivel_de_estudios_emprende
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Nivel de estudios Emprendedor Líder'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_cargo_del_emprendedor_l_de:
+          id: field_cargo_del_emprendedor_l_de
+          table: node__field_cargo_del_emprendedor_l_de
+          field: field_cargo_del_emprendedor_l_de
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Cargo del Emprendedor Líder en el Emprendimiento'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_ciuu:
+          id: field_ciuu
+          table: node__field_ciuu
+          field: field_ciuu
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: CIUU
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_tiempo_de_dedicaci_n_al_em:
+          id: field_tiempo_de_dedicaci_n_al_em
+          table: node__field_tiempo_de_dedicaci_n_al_em
+          field: field_tiempo_de_dedicaci_n_al_em
+          plugin_id: field
+        field_como_se_enter_de_empr_ndel:
+          id: field_como_se_enter_de_empr_ndel
+          table: node__field_como_se_enter_de_empr_ndel
+          field: field_como_se_enter_de_empr_ndel
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Como se enteró de empréndelo'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: text_default
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_fase_empoderar:
+          id: field_fase_empoderar
+          table: node__field_fase_empoderar
+          field: field_fase_empoderar
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Fase Empoderar'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_fase_fortalecer:
+          id: field_fase_fortalecer
+          table: node__field_fase_fortalecer
+          field: field_fase_fortalecer
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Fase Fortalecer'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_fase_acceder:
+          id: field_fase_acceder
+          table: node__field_fase_acceder
+          field: field_fase_acceder
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Fase Acceder'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_autodiagn_stico_emprendedo:
+          id: field_autodiagn_stico_emprendedo
+          table: node__field_autodiagn_stico_emprendedo
+          field: field_autodiagn_stico_emprendedo
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Autodiagnóstico Emprendedor'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_autodiagn_stico_emprendimi:
+          id: field_autodiagn_stico_emprendimi
+          table: node__field_autodiagn_stico_emprendimi
+          field: field_autodiagn_stico_emprendimi
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Autodiagnóstico Emprendimiento'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_ruta_de_fortalecimiento:
+          id: field_ruta_de_fortalecimiento
+          table: node__field_ruta_de_fortalecimiento
+          field: field_ruta_de_fortalecimiento
+          plugin_id: field
+          type: boolean
+          settings:
+            format: yes-no
+        field_ser:
+          id: field_ser
+          table: node__field_ser
+          field: field_ser
+          plugin_id: field
+        field_creatividad_e_innovaci_n:
+          id: field_creatividad_e_innovaci_n
+          table: node__field_creatividad_e_innovaci_n
+          field: field_creatividad_e_innovaci_n
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Creatividad e Innovación'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_amplitud_perceptual:
+          id: field_amplitud_perceptual
+          table: node__field_amplitud_perceptual
+          field: field_amplitud_perceptual
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Amplitud Perceptual'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_pensamiento_sist_mico:
+          id: field_pensamiento_sist_mico
+          table: node__field_pensamiento_sist_mico
+          field: field_pensamiento_sist_mico
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Pensamiento Sistémico'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_liderazgo:
+          id: field_liderazgo
+          table: node__field_liderazgo
+          field: field_liderazgo
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Liderazgo
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_orientaci_n_al_logro:
+          id: field_orientaci_n_al_logro
+          table: node__field_orientaci_n_al_logro
+          field: field_orientaci_n_al_logro
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Orientación al Logro'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_orientaci_n_al_mercado:
+          id: field_orientaci_n_al_mercado
+          table: node__field_orientaci_n_al_mercado
+          field: field_orientaci_n_al_mercado
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Orientación al Mercado'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_direccionamiento:
+          id: field_direccionamiento
+          table: node__field_direccionamiento
+          field: field_direccionamiento
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Direccionamiento
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_administraci_n:
+          id: field_administraci_n
+          table: node__field_administraci_n
+          field: field_administraci_n
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Administración
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_mercade:
+          id: field_mercade
+          table: node__field_mercade
+          field: field_mercade
+          plugin_id: field
+        field_gesti_n_t_cnica_y_producci:
+          id: field_gesti_n_t_cnica_y_producci
+          table: node__field_gesti_n_t_cnica_y_producci
+          field: field_gesti_n_t_cnica_y_producci
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: 'Gestión Técnica y Producción'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+        field_financier:
+          id: field_financier
+          table: node__field_financier
+          field: field_financier
+          relationship: none
+          group_type: group
+          plugin_id: field
+          label: Financiero
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: null
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: number_decimal
+          settings:
+            thousand_separator: ''
+            decimal_separator: .
+            scale: 2
+            prefix_suffix: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          ui_name: ''
+          delta_random: false
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente ›'
+            previous: '‹ anterior'
+            first: '« primero'
+            last: 'último »'
+          expose:
+            items_per_page: true
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '25, 50, 100'
+            items_per_page_options_all: false
+            offset: false
+      exposed_form:
+        type: basic
+        options:
+          submit_button: Aplicar
+          reset_button: false
+          reset_button_label: Restablecer
+          exposed_sorts_label: 'Sort by'
+          expose_sort_order: true
+          sort_asc_label: Asc
+          sort_desc_label: Desc
+          autosubmit: 1
+          autosubmit_hide: 1
+      access:
+        type: role
+        options:
+          role:
+            administrator: administrator
+            coordinador_nacional: coordinador_nacional
+            coordinador_regional: coordinador_regional
+      cache:
+        type: none
+      empty:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          label: ''
+          empty: true
+          ui_name: ''
+          content: |-
+            <p class=rtecenter>
+            <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+            </p>
+          tokenize: 0
+      sorts:
+        created:
+          id: created
+          table: node_field_data
+          field: created
+          plugin_id: date
+          order: DESC
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            emprendedores_off_line: emprendedores_off_line
+        field_c_mara_de_comercio_tid:
+          id: field_c_mara_de_comercio_tid
+          table: node__field_c_mara_de_comercio
+          field: field_c_mara_de_comercio_target_id
+          relationship: none
+          group_type: group
+          entity_type: node
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            18: 18
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_c_mara_de_comercio_tid_op
+            label: 'Cámara de Comercio'
+            description: ''
+            use_operator: false
+            operator: in
+            identifier: field_c_mara_de_comercio_tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              administrator: administrator
+              coordinador_regional: coordinador_regional
+              asesor: asesor
+              coordinador_nacional: coordinador_nacional
+              emprendedor_registrado: emprendedor_registrado
+              emprendedor_con_perfil: emprendedor_con_perfil
+              emprendedor_fase_conectar: emprendedor_fase_conectar
+              emprendedor_fase_empoderar: emprendedor_fase_empoderar
+              emprendedor_fase_fortalecer: emprendedor_fase_fortalecer
+              emprendedor_fase_acceder_financiamiento: emprendedor_fase_acceder_financiamiento
+            reduce: false
+            operator_label: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: c_maras_de_comercio
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+          ui_name: ''
+          use_chosen: never
+          field_name: field_c_mara_de_comercio
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          plugin_id: combine
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: 'Buscar por Emprendedor o Proyecto'
+            description: ''
+            use_operator: false
+            operator: combine_op
+            identifier: combine
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              administrator: administrator
+              coordinador_regional: coordinador_regional
+              asesor: asesor
+              coordinador_nacional: coordinador_nacional
+              emprendedor_registrado: emprendedor_registrado
+              emprendedor_con_perfil: emprendedor_con_perfil
+              emprendedor_fase_conectar: emprendedor_fase_conectar
+              emprendedor_fase_empoderar: emprendedor_fase_empoderar
+              emprendedor_fase_fortalecer: emprendedor_fase_fortalecer
+              emprendedor_fase_acceder_financiamiento: emprendedor_fase_acceder_financiamiento
+            operator_label: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            title: title
+            field_nombre_emprendimiento: field_nombre_emprendimiento
+          ui_name: ''
+      style:
+        type: default
+        options:
+          row_class: ''
+          default_row_class: true
+          row_class_special: 1
+          override: 1
+          sticky: 0
+          caption: ''
+          summary: ''
+          columns:
+            edit_node: edit_node
+            title: title
+            field_c_mara_de_comercio: field_c_mara_de_comercio
+            field_c_dula: field_c_dula
+            field_g_nero: field_g_nero
+            field_fecha_de_nacimiento: field_fecha_de_nacimiento
+            field_celular: field_celular
+            field_e_mail: field_e_mail
+            field_direcci_n_emprendedor_l_de: field_direcci_n_emprendedor_l_de
+            field_nombre_emprendimiento: field_nombre_emprendimiento
+            field_direcci_n_emprendimiento: field_direcci_n_emprendimiento
+            field_ingresos_por_ventas_mensua: field_ingresos_por_ventas_mensua
+            field_remuneraci_n_promedio_mens: field_remuneraci_n_promedio_mens
+            field_estrato_socioecon: field_estrato_socioecon
+            field_estado_civ: field_estado_civ
+            field_grado_de_vulnerabilidad: field_grado_de_vulnerabilidad
+            field_rentabilidad: field_rentabilidad
+            field_registro_mercantil: field_registro_mercantil
+            field_empleos_formales: field_empleos_formales
+            field_empleos_informales: field_empleos_informales
+            field_ciudad_emprendedor_l_der: field_ciudad_emprendedor_l_der
+            field_nivel_de_estudios_emprende: field_nivel_de_estudios_emprende
+            field_cargo_del_emprendedor_l_de: field_cargo_del_emprendedor_l_de
+            field_breve_descripci_n_del_perf: field_breve_descripci_n_del_perf
+            field_breve_descripci_n_de_proye: field_breve_descripci_n_de_proye
+            field_ciuu: field_ciuu
+            field_tiempo_de_dedicaci_n_al_em: field_tiempo_de_dedicaci_n_al_em
+            field_como_se_enter_de_empr_ndel: field_como_se_enter_de_empr_ndel
+          info:
+            edit_node:
+              sortable: 0
+              default_sort_order: asc
+              align: views-align-center
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            title:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_c_mara_de_comercio:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_c_dula:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_g_nero:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_fecha_de_nacimiento:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_celular:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_e_mail:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_direcci_n_emprendedor_l_de:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_nombre_emprendimiento:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_direcci_n_emprendimiento:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_ingresos_por_ventas_mensua:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_remuneraci_n_promedio_mens:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_estrato_socioecon:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_estado_civ:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_grado_de_vulnerabilidad:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_rentabilidad:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_registro_mercantil:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_empleos_formales:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_empleos_informales:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_ciudad_emprendedor_l_der:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_nivel_de_estudios_emprende:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_cargo_del_emprendedor_l_de:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_breve_descripci_n_del_perf:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_breve_descripci_n_de_proye:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_ciuu:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_tiempo_de_dedicaci_n_al_em:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+            field_como_se_enter_de_empr_ndel:
+              sortable: 0
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: 0
+              has_aggr: 0
+              aggr:
+                views_aggregator_first: views_aggregator_first
+              aggr_par: ''
+              has_aggr_column: 0
+              aggr_column: views_aggregator_sum
+              aggr_par_column: ''
+          default: '-1'
+          empty_table: 0
+          group_aggregation:
+            grouping_field_class: ''
+          column_aggregation:
+            totals_row_position:
+              2: '2'
+              1: 0
+            totals_per_page: '1'
+            precision: '2'
+            totals_row_class: ''
+      row:
+        type: fields
+      query:
+        type: views_query
+        options: {  }
+      use_ajax: true
+      header:
+        area_text_custom:
+          id: area_text_custom
+          table: views
+          field: area_text_custom
+          relationship: none
+          group_type: group
+          label: ''
+          empty: true
+          ui_name: ''
+          content: |
+            <p> Se listan los emprendedores que participaron en una o varias de las fase del programa empréndelo antes de entrar en operación la Plataforma Web. Puede editar, completar o borrar cualquier dato de la <b>Linea Base</b> del usuario o de su trazabilidad en el programa. </p>
+          tokenize: 0
+        result:
+          id: result
+          table: views
+          field: result
+          relationship: none
+          group_type: group
+          label: ''
+          empty: false
+          ui_name: ''
+          content: '<h3>@total registros encontrados </h3>'
+      display_extenders: {  }
+      style_plugin: views_aggregator
+      style_options:
+        row_class: ''
+        default_row_class: 1
+        row_class_special: 1
+        override: 1
+        sticky: 0
+        caption: ''
+        summary: ''
+        columns:
+          edit_node: edit_node
+          title: title
+          field_c_mara_de_comercio: field_c_mara_de_comercio
+          field_c_dula: field_c_dula
+          field_g_nero: field_g_nero
+          field_fecha_de_nacimiento: field_fecha_de_nacimiento
+          field_celular: field_celular
+          field_e_mail: field_e_mail
+          field_direcci_n_emprendedor_l_de: field_direcci_n_emprendedor_l_de
+          field_nombre_emprendimiento: field_nombre_emprendimiento
+          field_direcci_n_emprendimiento: field_direcci_n_emprendimiento
+          field_ingresos_por_ventas_mensua: field_ingresos_por_ventas_mensua
+          field_remuneraci_n_promedio_mens: field_remuneraci_n_promedio_mens
+          field_estrato_socioecon: field_estrato_socioecon
+          field_estado_civ: field_estado_civ
+          field_grado_de_vulnerabilidad: field_grado_de_vulnerabilidad
+          field_rentabilidad: field_rentabilidad
+          field_registro_mercantil: field_registro_mercantil
+          field_empleos_formales: field_empleos_formales
+          field_empleos_informales: field_empleos_informales
+          field_ciudad_emprendedor_l_der: field_ciudad_emprendedor_l_der
+          field_nivel_de_estudios_emprende: field_nivel_de_estudios_emprende
+          field_cargo_del_emprendedor_l_de: field_cargo_del_emprendedor_l_de
+          field_breve_descripci_n_del_perf: field_breve_descripci_n_del_perf
+          field_breve_descripci_n_de_proye: field_breve_descripci_n_de_proye
+          field_ciuu: field_ciuu
+          field_tiempo_de_dedicaci_n_al_em: field_tiempo_de_dedicaci_n_al_em
+          field_como_se_enter_de_empr_ndel: field_como_se_enter_de_empr_ndel
+        info:
+          edit_node:
+            sortable: 0
+            default_sort_order: asc
+            align: views-align-center
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          title:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_c_mara_de_comercio:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_c_dula:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_g_nero:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_fecha_de_nacimiento:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_celular:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_e_mail:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_direcci_n_emprendedor_l_de:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_nombre_emprendimiento:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_direcci_n_emprendimiento:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_ingresos_por_ventas_mensua:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_remuneraci_n_promedio_mens:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_estrato_socioecon:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_estado_civ:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_grado_de_vulnerabilidad:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_rentabilidad:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_registro_mercantil:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_empleos_formales:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_empleos_informales:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_ciudad_emprendedor_l_der:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_nivel_de_estudios_emprende:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_cargo_del_emprendedor_l_de:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_breve_descripci_n_del_perf:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_breve_descripci_n_de_proye:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_ciuu:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_tiempo_de_dedicaci_n_al_em:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+          field_como_se_enter_de_empr_ndel:
+            sortable: 0
+            default_sort_order: asc
+            align: ''
+            separator: ''
+            empty_column: 0
+            has_aggr: 0
+            aggr:
+              views_aggregator_first: views_aggregator_first
+            aggr_par: ''
+            has_aggr_column: 0
+            aggr_column: views_aggregator_sum
+            aggr_par_column: ''
+        default: '-1'
+        empty_table: 0
+        group_aggregation:
+          grouping_field_class: ''
+        column_aggregation:
+          totals_row_position:
+            2: '2'
+            1: 0
+          totals_per_page: '1'
+          precision: '2'
+          totals_row_class: ''
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_administraci_n'
+        - 'config:field.storage.node.field_amplitud_perceptual'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendedo'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendimi'
+        - 'config:field.storage.node.field_c_dula'
+        - 'config:field.storage.node.field_c_mara_de_comercio'
+        - 'config:field.storage.node.field_cargo_del_emprendedor_l_de'
+        - 'config:field.storage.node.field_celular'
+        - 'config:field.storage.node.field_ciudad_emprendedor_l_der'
+        - 'config:field.storage.node.field_ciuu'
+        - 'config:field.storage.node.field_como_se_enter_de_empr_ndel'
+        - 'config:field.storage.node.field_creatividad_e_innovaci_n'
+        - 'config:field.storage.node.field_direcci_n_emprendedor_l_de'
+        - 'config:field.storage.node.field_direcci_n_emprendimiento'
+        - 'config:field.storage.node.field_direccionamiento'
+        - 'config:field.storage.node.field_e_mail'
+        - 'config:field.storage.node.field_empleos_formales'
+        - 'config:field.storage.node.field_empleos_informales'
+        - 'config:field.storage.node.field_estado_civ'
+        - 'config:field.storage.node.field_estrato_socioecon'
+        - 'config:field.storage.node.field_fase_acceder'
+        - 'config:field.storage.node.field_fase_empoderar'
+        - 'config:field.storage.node.field_fase_fortalecer'
+        - 'config:field.storage.node.field_fecha_de_nacimiento'
+        - 'config:field.storage.node.field_financier'
+        - 'config:field.storage.node.field_g_nero'
+        - 'config:field.storage.node.field_gesti_n_t_cnica_y_producci'
+        - 'config:field.storage.node.field_grado_de_vulnerabilidad'
+        - 'config:field.storage.node.field_ingresos_por_ventas_mensua'
+        - 'config:field.storage.node.field_liderazgo'
+        - 'config:field.storage.node.field_mercade'
+        - 'config:field.storage.node.field_nivel_de_estudios_emprende'
+        - 'config:field.storage.node.field_nombre_emprendimiento'
+        - 'config:field.storage.node.field_orientaci_n_al_logro'
+        - 'config:field.storage.node.field_orientaci_n_al_mercado'
+        - 'config:field.storage.node.field_pensamiento_sist_mico'
+        - 'config:field.storage.node.field_registro_mercantil'
+        - 'config:field.storage.node.field_remuneraci_n_promedio_mens'
+        - 'config:field.storage.node.field_rentabilidad'
+        - 'config:field.storage.node.field_ruta_de_fortalecimiento'
+        - 'config:field.storage.node.field_ser'
+        - 'config:field.storage.node.field_tiempo_de_dedicaci_n_al_em'
+  block_1:
+    id: block_1
+    display_title: Bloque
+    display_plugin: block
+    position: 3
+    display_options:
+      query:
+        type: views_query
+        options: {  }
+      display_extenders: {  }
+      block_description: 'C2 | Gestión Usuarios offline | Regional'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_administraci_n'
+        - 'config:field.storage.node.field_amplitud_perceptual'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendedo'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendimi'
+        - 'config:field.storage.node.field_c_dula'
+        - 'config:field.storage.node.field_c_mara_de_comercio'
+        - 'config:field.storage.node.field_cargo_del_emprendedor_l_de'
+        - 'config:field.storage.node.field_celular'
+        - 'config:field.storage.node.field_ciudad_emprendedor_l_der'
+        - 'config:field.storage.node.field_ciuu'
+        - 'config:field.storage.node.field_como_se_enter_de_empr_ndel'
+        - 'config:field.storage.node.field_creatividad_e_innovaci_n'
+        - 'config:field.storage.node.field_direcci_n_emprendedor_l_de'
+        - 'config:field.storage.node.field_direcci_n_emprendimiento'
+        - 'config:field.storage.node.field_direccionamiento'
+        - 'config:field.storage.node.field_e_mail'
+        - 'config:field.storage.node.field_empleos_formales'
+        - 'config:field.storage.node.field_empleos_informales'
+        - 'config:field.storage.node.field_estado_civ'
+        - 'config:field.storage.node.field_estrato_socioecon'
+        - 'config:field.storage.node.field_fase_acceder'
+        - 'config:field.storage.node.field_fase_empoderar'
+        - 'config:field.storage.node.field_fase_fortalecer'
+        - 'config:field.storage.node.field_fecha_de_nacimiento'
+        - 'config:field.storage.node.field_financier'
+        - 'config:field.storage.node.field_g_nero'
+        - 'config:field.storage.node.field_gesti_n_t_cnica_y_producci'
+        - 'config:field.storage.node.field_grado_de_vulnerabilidad'
+        - 'config:field.storage.node.field_ingresos_por_ventas_mensua'
+        - 'config:field.storage.node.field_liderazgo'
+        - 'config:field.storage.node.field_mercade'
+        - 'config:field.storage.node.field_nivel_de_estudios_emprende'
+        - 'config:field.storage.node.field_nombre_emprendimiento'
+        - 'config:field.storage.node.field_orientaci_n_al_logro'
+        - 'config:field.storage.node.field_orientaci_n_al_mercado'
+        - 'config:field.storage.node.field_pensamiento_sist_mico'
+        - 'config:field.storage.node.field_registro_mercantil'
+        - 'config:field.storage.node.field_remuneraci_n_promedio_mens'
+        - 'config:field.storage.node.field_rentabilidad'
+        - 'config:field.storage.node.field_ruta_de_fortalecimiento'
+        - 'config:field.storage.node.field_ser'
+        - 'config:field.storage.node.field_tiempo_de_dedicaci_n_al_em'
+  block_2:
+    id: block_2
+    display_title: Bloque
+    display_plugin: block
+    position: 4
+    display_options:
+      filters:
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          plugin_id: boolean
+          operator: '='
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          plugin_id: bundle
+          operator: in
+          value:
+            emprendedores_off_line: emprendedores_off_line
+        field_c_mara_de_comercio_tid:
+          id: field_c_mara_de_comercio_tid
+          table: node__field_c_mara_de_comercio
+          field: field_c_mara_de_comercio_target_id
+          relationship: none
+          group_type: group
+          entity_type: node
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_c_mara_de_comercio_tid_op
+            label: 'Cámara de Comercio'
+            description: ''
+            use_operator: false
+            operator: in
+            identifier: field_c_mara_de_comercio_tid
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              administrator: administrator
+              coordinador_regional: coordinador_regional
+              asesor: asesor
+              coordinador_nacional: coordinador_nacional
+              emprendedor_registrado: emprendedor_registrado
+              emprendedor_con_perfil: emprendedor_con_perfil
+              emprendedor_fase_conectar: emprendedor_fase_conectar
+              emprendedor_fase_empoderar: emprendedor_fase_empoderar
+              emprendedor_fase_fortalecer: emprendedor_fase_fortalecer
+              emprendedor_fase_acceder_financiamiento: emprendedor_fase_acceder_financiamiento
+            reduce: false
+            operator_label: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: c_maras_de_comercio
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
+          ui_name: ''
+          use_chosen: never
+          field_name: field_c_mara_de_comercio
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          plugin_id: combine
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: 'Buscar por Emprendedor o Proyecto'
+            description: ''
+            use_operator: false
+            operator: combine_op
+            identifier: combine
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: anonymous
+              administrator: administrator
+              coordinador_regional: coordinador_regional
+              asesor: asesor
+              coordinador_nacional: coordinador_nacional
+              emprendedor_registrado: emprendedor_registrado
+              emprendedor_con_perfil: emprendedor_con_perfil
+              emprendedor_fase_conectar: emprendedor_fase_conectar
+              emprendedor_fase_empoderar: emprendedor_fase_empoderar
+              emprendedor_fase_fortalecer: emprendedor_fase_fortalecer
+              emprendedor_fase_acceder_financiamiento: emprendedor_fase_acceder_financiamiento
+            operator_label: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            title: title
+            field_nombre_emprendimiento: field_nombre_emprendimiento
+          ui_name: ''
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        filters: false
+        filter_groups: false
+      display_extenders: {  }
+      block_description: 'C2 | Gestión Usuarios offline | Nacional'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_administraci_n'
+        - 'config:field.storage.node.field_amplitud_perceptual'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendedo'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendimi'
+        - 'config:field.storage.node.field_c_dula'
+        - 'config:field.storage.node.field_c_mara_de_comercio'
+        - 'config:field.storage.node.field_cargo_del_emprendedor_l_de'
+        - 'config:field.storage.node.field_celular'
+        - 'config:field.storage.node.field_ciudad_emprendedor_l_der'
+        - 'config:field.storage.node.field_ciuu'
+        - 'config:field.storage.node.field_como_se_enter_de_empr_ndel'
+        - 'config:field.storage.node.field_creatividad_e_innovaci_n'
+        - 'config:field.storage.node.field_direcci_n_emprendedor_l_de'
+        - 'config:field.storage.node.field_direcci_n_emprendimiento'
+        - 'config:field.storage.node.field_direccionamiento'
+        - 'config:field.storage.node.field_e_mail'
+        - 'config:field.storage.node.field_empleos_formales'
+        - 'config:field.storage.node.field_empleos_informales'
+        - 'config:field.storage.node.field_estado_civ'
+        - 'config:field.storage.node.field_estrato_socioecon'
+        - 'config:field.storage.node.field_fase_acceder'
+        - 'config:field.storage.node.field_fase_empoderar'
+        - 'config:field.storage.node.field_fase_fortalecer'
+        - 'config:field.storage.node.field_fecha_de_nacimiento'
+        - 'config:field.storage.node.field_financier'
+        - 'config:field.storage.node.field_g_nero'
+        - 'config:field.storage.node.field_gesti_n_t_cnica_y_producci'
+        - 'config:field.storage.node.field_grado_de_vulnerabilidad'
+        - 'config:field.storage.node.field_ingresos_por_ventas_mensua'
+        - 'config:field.storage.node.field_liderazgo'
+        - 'config:field.storage.node.field_mercade'
+        - 'config:field.storage.node.field_nivel_de_estudios_emprende'
+        - 'config:field.storage.node.field_nombre_emprendimiento'
+        - 'config:field.storage.node.field_orientaci_n_al_logro'
+        - 'config:field.storage.node.field_orientaci_n_al_mercado'
+        - 'config:field.storage.node.field_pensamiento_sist_mico'
+        - 'config:field.storage.node.field_registro_mercantil'
+        - 'config:field.storage.node.field_remuneraci_n_promedio_mens'
+        - 'config:field.storage.node.field_rentabilidad'
+        - 'config:field.storage.node.field_ruta_de_fortalecimiento'
+        - 'config:field.storage.node.field_ser'
+        - 'config:field.storage.node.field_tiempo_de_dedicaci_n_al_em'
+  page:
+    id: page
+    display_title: Page
+    display_plugin: page
+    position: 2
+    display_options:
+      title: ''
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 50
+          total_pages: null
+          id: 0
+          tags:
+            next: 'siguiente ›'
+            previous: '‹ anterior'
+            first: '« primero'
+            last: 'último »'
+          expose:
+            items_per_page: true
+            items_per_page_label: 'Elementos por página'
+            items_per_page_options: '25, 50, 100'
+            items_per_page_options_all: false
+            offset: false
+      query:
+        type: views_query
+        options: {  }
+      defaults:
+        title: false
+      display_extenders: {  }
+      path: emprendedores-off-line
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+        - user.roles
+      tags:
+        - 'config:field.storage.node.field_administraci_n'
+        - 'config:field.storage.node.field_amplitud_perceptual'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendedo'
+        - 'config:field.storage.node.field_autodiagn_stico_emprendimi'
+        - 'config:field.storage.node.field_c_dula'
+        - 'config:field.storage.node.field_c_mara_de_comercio'
+        - 'config:field.storage.node.field_cargo_del_emprendedor_l_de'
+        - 'config:field.storage.node.field_celular'
+        - 'config:field.storage.node.field_ciudad_emprendedor_l_der'
+        - 'config:field.storage.node.field_ciuu'
+        - 'config:field.storage.node.field_como_se_enter_de_empr_ndel'
+        - 'config:field.storage.node.field_creatividad_e_innovaci_n'
+        - 'config:field.storage.node.field_direcci_n_emprendedor_l_de'
+        - 'config:field.storage.node.field_direcci_n_emprendimiento'
+        - 'config:field.storage.node.field_direccionamiento'
+        - 'config:field.storage.node.field_e_mail'
+        - 'config:field.storage.node.field_empleos_formales'
+        - 'config:field.storage.node.field_empleos_informales'
+        - 'config:field.storage.node.field_estado_civ'
+        - 'config:field.storage.node.field_estrato_socioecon'
+        - 'config:field.storage.node.field_fase_acceder'
+        - 'config:field.storage.node.field_fase_empoderar'
+        - 'config:field.storage.node.field_fase_fortalecer'
+        - 'config:field.storage.node.field_fecha_de_nacimiento'
+        - 'config:field.storage.node.field_financier'
+        - 'config:field.storage.node.field_g_nero'
+        - 'config:field.storage.node.field_gesti_n_t_cnica_y_producci'
+        - 'config:field.storage.node.field_grado_de_vulnerabilidad'
+        - 'config:field.storage.node.field_ingresos_por_ventas_mensua'
+        - 'config:field.storage.node.field_liderazgo'
+        - 'config:field.storage.node.field_mercade'
+        - 'config:field.storage.node.field_nivel_de_estudios_emprende'
+        - 'config:field.storage.node.field_nombre_emprendimiento'
+        - 'config:field.storage.node.field_orientaci_n_al_logro'
+        - 'config:field.storage.node.field_orientaci_n_al_mercado'
+        - 'config:field.storage.node.field_pensamiento_sist_mico'
+        - 'config:field.storage.node.field_registro_mercantil'
+        - 'config:field.storage.node.field_remuneraci_n_promedio_mens'
+        - 'config:field.storage.node.field_rentabilidad'
+        - 'config:field.storage.node.field_ruta_de_fortalecimiento'
+        - 'config:field.storage.node.field_ser'
+        - 'config:field.storage.node.field_tiempo_de_dedicaci_n_al_em'

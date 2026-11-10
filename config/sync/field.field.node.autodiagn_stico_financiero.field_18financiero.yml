@@ -1,0 +1,23 @@
+uuid: 5504cad3-a0c3-474e-8d86-fab52eb83cb7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_18financiero
+    - node.type.autodiagn_stico_financiero
+id: node.autodiagn_stico_financiero.field_18financiero
+field_name: field_18financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '3. A cuanto ascienden sus activos'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

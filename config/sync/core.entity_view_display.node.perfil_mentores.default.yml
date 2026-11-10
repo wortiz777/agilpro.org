@@ -1,0 +1,48 @@
+uuid: 4da96f05-8869-4c22-a231-66a22a7c8db9
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.perfil_mentores.field_actividad_cargo_actual
+    - field.field.node.perfil_mentores.field_hoja_de_vida
+    - field.field.node.perfil_mentores.field_perfil
+    - node.type.perfil_mentores
+  module:
+    - file
+    - user
+id: node.perfil_mentores.default
+targetEntityType: node
+bundle: perfil_mentores
+mode: default
+content:
+  field_actividad_cargo_actual:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_hoja_de_vida:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_perfil:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

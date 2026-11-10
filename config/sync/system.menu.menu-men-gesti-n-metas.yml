@@ -1,0 +1,8 @@
+uuid: 4acad705-2149-4913-9cc6-1bba8c58fc7d
+langcode: en
+status: true
+dependencies: {  }
+id: menu-men-gesti-n-metas
+label: 'Menú | Gestión Metas'
+description: ''
+locked: false

@@ -1,0 +1,45 @@
+uuid: 1ddb2dd5-35c3-460f-b4c6-5b326e4498ca
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-entregables-asesores-taller
+  module:
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_menu_entregables_asesores_taller
+theme: subtema
+region: content
+weight: -21
+provider: null
+plugin: 'system_menu_block:menu-entregables-asesores-taller'
+settings:
+  id: 'system_menu_block:menu-entregables-asesores-taller'
+  label: menu-entregables-asesores-taller
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /gestion-c2-entregables
+      /planes-cap-hab
+      /listados-asistencia-talleres-hab-bla
+      /informe-intermedio-asesor
+      /evaluaciones-presenciales-al-asesor
+      /360-capacidades-emprendedoras
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      coordinador_regional: coordinador_regional
+      coordinador_nacional: coordinador_nacional

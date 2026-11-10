@@ -1,0 +1,29 @@
+uuid: 8f57f23b-4766-440b-9918-35c6c2bd2e64
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.tips_actas_comit_fortalecimiento.body
+    - node.type.tips_actas_comit_fortalecimiento
+  module:
+    - text
+    - user
+id: node.tips_actas_comit_fortalecimiento.default
+targetEntityType: node
+bundle: tips_actas_comit_fortalecimiento
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

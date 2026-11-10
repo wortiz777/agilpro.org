@@ -1,0 +1,227 @@
+uuid: 1ca770d3-bd0e-44a4-a333-9dccc00ebadf
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_autodiagnostico_direccionamiento
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Evaluación | Direccionamiento Estratégico)'
+source:
+  plugin: d7_node_complete
+  node_type: autodiagnostico_direccionamiento
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_autodiagnostico_direccionamiento/0/status:
+    -
+      plugin: get
+      source: comment
+  field_1_direccionamiento:
+    -
+      plugin: sub_process
+      source: field_1_direccionamiento
+      process:
+        target_id: tid
+  field_3_direccionamiento:
+    -
+      plugin: sub_process
+      source: field_3_direccionamiento
+      process:
+        target_id: tid
+  field_2direccionamiento:
+    -
+      plugin: sub_process
+      source: field_2direccionamiento
+      process:
+        target_id: tid
+  field_4direccionamiento:
+    -
+      plugin: sub_process
+      source: field_4direccionamiento
+      process:
+        target_id: tid
+  field_5direccionamiento:
+    -
+      plugin: sub_process
+      source: field_5direccionamiento
+      process:
+        target_id: tid
+  field_6direccionamiento:
+    -
+      plugin: sub_process
+      source: field_6direccionamiento
+      process:
+        target_id: tid
+  field_7direccionamiento:
+    -
+      plugin: sub_process
+      source: field_7direccionamiento
+      process:
+        target_id: tid
+  field_8direccionamiento:
+    -
+      plugin: sub_process
+      source: field_8direccionamiento
+      process:
+        target_id: tid
+  field_9direccionamiento:
+    -
+      plugin: sub_process
+      source: field_9direccionamiento
+      process:
+        target_id: tid
+  field_10direccionamiento:
+    -
+      plugin: sub_process
+      source: field_10direccionamiento
+      process:
+        target_id: tid
+  field_1_observaciones:
+    -
+      plugin: get
+      source: field_1_observaciones
+  field_2_observaciones:
+    -
+      plugin: get
+      source: field_2_observaciones
+  field_3_observaciones:
+    -
+      plugin: get
+      source: field_3_observaciones
+  field_4_observaciones:
+    -
+      plugin: get
+      source: field_4_observaciones
+  field_5_observaciones:
+    -
+      plugin: get
+      source: field_5_observaciones
+  field_6_observaciones:
+    -
+      plugin: get
+      source: field_6_observaciones
+  field_7_observaciones:
+    -
+      plugin: get
+      source: field_7_observaciones
+  field_8_observaciones:
+    -
+      plugin: get
+      source: field_8_observaciones
+  field_9_observaciones:
+    -
+      plugin: get
+      source: field_9_observaciones
+  field_10_observaciones:
+    -
+      plugin: get
+      source: field_10_observaciones
+  field_11_n_mero_de_objetivos_emp:
+    -
+      plugin: get
+      source: field_11_n_mero_de_objetivos_emp
+  field_11_observaciones:
+    -
+      plugin: get
+      source: field_11_observaciones
+  field_12_n_mero_de_indicadores_q:
+    -
+      plugin: get
+      source: field_12_n_mero_de_indicadores_q
+  field_12_observaciones:
+    -
+      plugin: get
+      source: field_12_observaciones
+  field_13_porcentaje_de_avance_de:
+    -
+      plugin: get
+      source: field_13_porcentaje_de_avance_de
+  field_13_observaciones:
+    -
+      plugin: get
+      source: field_13_observaciones
+  field_14_el_n_mero_de_veces_que_:
+    -
+      plugin: get
+      source: field_14_el_n_mero_de_veces_que_
+  field_14_observaciones:
+    -
+      plugin: get
+      source: field_14_observaciones
+  field_observaciones_generales_de:
+    -
+      plugin: get
+      source: field_observaciones_generales_de
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: autodiagnostico_direccionamiento
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

@@ -1,0 +1,19 @@
+uuid: f6fa05e9-9f80-40b8-a3c8-57abc3367302
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_codigo_eje
+    - taxonomy.vocabulary.ejes_estrategicos
+id: taxonomy_term.ejes_estrategicos.field_codigo_eje
+field_name: field_codigo_eje
+entity_type: taxonomy_term
+bundle: ejes_estrategicos
+label: 'Código de Eje'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

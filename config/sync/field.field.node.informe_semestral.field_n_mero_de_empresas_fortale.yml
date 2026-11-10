@@ -1,0 +1,23 @@
+uuid: 98b63b57-d761-4b0a-a0cb-f89d9b085002
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_n_mero_de_empresas_fortale
+    - node.type.informe_semestral
+id: node.informe_semestral.field_n_mero_de_empresas_fortale
+field_name: field_n_mero_de_empresas_fortale
+entity_type: node
+bundle: informe_semestral
+label: '6. Número de empresas fortalecidas.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,30 @@
+uuid: 011ebaae-e0f1-4b6f-a70d-db07b37bc89c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.listado_grupos_talleres_fortalec.field_lugar_del_encuentro_t_hab
+    - node.type.listado_grupos_talleres_fortalec
+  module:
+    - user
+id: node.listado_grupos_talleres_fortalec.default
+targetEntityType: node
+bundle: listado_grupos_talleres_fortalec
+mode: default
+content:
+  field_lugar_del_encuentro_t_hab:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

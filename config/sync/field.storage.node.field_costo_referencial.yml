@@ -1,0 +1,20 @@
+uuid: 7c6d6fd8-430d-4eef-954e-1862b01acd6e
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_costo_referencial
+field_name: field_costo_referencial
+entity_type: node
+type: decimal
+settings:
+  precision: 12
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 3def105e-f57e-4b62-b098-150963bb434d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5tecnica
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+id: node.autodiagn_stico_de_gesti_n_t_cni.field_5tecnica
+field_name: field_5tecnica
+entity_type: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+label: '5. Numero de productos o servicios con fallas presentados en promedio por mes en el  ultimo año'
+description: "Fallas : asociado a No Conformidad. \_Incumplimiento de un requisito especificado en producción ( y que el cliente espera), evidencia objetiva de una conclusión adversa a la calidad."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

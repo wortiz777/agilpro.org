@@ -1,0 +1,196 @@
+uuid: 3a76568b-0fbe-4a33-94da-b08ccc6da831
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_menu_links
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Menu links'
+source:
+  plugin: menu_link
+  constants:
+    bundle: menu_link_content
+process:
+  skip_translation:
+    -
+      plugin: skip_on_empty
+      method: row
+      source: skip_translation
+  id:
+    -
+      plugin: get
+      source: mlid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  bundle:
+    -
+      plugin: get
+      source: constants/bundle
+  title:
+    -
+      plugin: get
+      source: link_title
+  description:
+    -
+      plugin: get
+      source: description
+  menu_name:
+    -
+      plugin: migration_lookup
+      migration: upgrade_d7_menu
+      source: menu_name
+    -
+      plugin: skip_on_empty
+      method: row
+  link/uri:
+    -
+      plugin: link_uri
+      source: link_path
+  link/options:
+    -
+      plugin: get
+      source: options
+  route:
+    -
+      plugin: route
+      source:
+        - link_path
+        - options
+  route_name:
+    -
+      plugin: get
+      source: '@route/route_name'
+  route_parameters:
+    -
+      plugin: get
+      source: '@route/route_parameters'
+  url:
+    -
+      plugin: get
+      source: '@route/url'
+  options:
+    -
+      plugin: get
+      source: '@route/options'
+  external:
+    -
+      plugin: get
+      source: external
+  weight:
+    -
+      plugin: get
+      source: weight
+  expanded:
+    -
+      plugin: get
+      source: expanded
+  enabled:
+    -
+      plugin: get
+      source: enabled
+  parent:
+    -
+      plugin: menu_link_parent
+      source:
+        - plid
+        - '@menu_name'
+        - parent_link_path
+  changed:
+    -
+      plugin: get
+      source: updated
+destination:
+  plugin: 'entity:menu_link_content'
+  no_stub: true
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_menu
+  optional:
+    - upgrade_d7_node_complete__gc_formatos_inscripci_n
+    - upgrade_d7_node_complete_aceptaci_n_asesor
+    - upgrade_d7_node_complete_actas_reunion_red
+    - upgrade_d7_node_complete_actas_selecci_n_comit_
+    - upgrade_d7_node_complete_actas_seleccion_comit_fortalecim
+    - upgrade_d7_node_complete_article
+    - upgrade_d7_node_complete_asesor_gesti_n_grupos_talleres
+    - upgrade_d7_node_complete_asesor_gestion_grupos
+    - upgrade_d7_node_complete_autodiagn_stico_de_gesti_n_t_cni
+    - upgrade_d7_node_complete_autodiagn_stico_financiero
+    - upgrade_d7_node_complete_autodiagn_stico_mercadeo_y_venta
+    - upgrade_d7_node_complete_autodiagnostico_administracion
+    - upgrade_d7_node_complete_autodiagnostico_capacidades
+    - upgrade_d7_node_complete_autodiagnostico_direccionamiento
+    - upgrade_d7_node_complete_biblioteca_abierta
+    - upgrade_d7_node_complete_c2_fortalecer_inscritos
+    - upgrade_d7_node_complete_canvas_capitalistas_de_riesgo
+    - upgrade_d7_node_complete_canvas_construir_el_primer_produ
+    - upgrade_d7_node_complete_canvas_dinamizadores_de_semilla
+    - upgrade_d7_node_complete_canvas_espacios_de_trabajo_
+    - upgrade_d7_node_complete_canvas_establecer
+    - upgrade_d7_node_complete_canvas_expansi_n
+    - upgrade_d7_node_complete_canvas_formacion
+    - upgrade_d7_node_complete_canvas_formalizar
+    - upgrade_d7_node_complete_canvas_gobierno
+    - upgrade_d7_node_complete_canvas_infraestructura
+    - upgrade_d7_node_complete_canvas_medios
+    - upgrade_d7_node_complete_canvas_medios_principales
+    - upgrade_d7_node_complete_canvas_mejores_practicas
+    - upgrade_d7_node_complete_canvas_ngeles
+    - upgrade_d7_node_complete_canvas_persuadir_y_demostrar
+    - upgrade_d7_node_complete_canvas_practica_y_retroalimentac
+    - upgrade_d7_node_complete_canvas_prepare_la_semilla
+    - upgrade_d7_node_complete_canvas_red_de_inversionistas
+    - upgrade_d7_node_complete_canvas_talento
+    - upgrade_d7_node_complete_componente_financiero_adicional
+    - upgrade_d7_node_complete_easychart
+    - upgrade_d7_node_complete_emprendedores_off_line
+    - upgrade_d7_node_complete_evaluaciones_presenciales_al_ase
+    - upgrade_d7_node_complete_evangelistas
+    - upgrade_d7_node_complete_eventos_inspiradores
+    - upgrade_d7_node_complete_formatos_inscripci_n_emprendimie
+    - upgrade_d7_node_complete_gestion_componentes_mapeo
+    - upgrade_d7_node_complete_hv_asesores
+    - upgrade_d7_node_complete_informe_intermedio_del_asesor
+    - upgrade_d7_node_complete_informe_semestral
+    - upgrade_d7_node_complete_inscripci_n_fase_empoderar
+    - upgrade_d7_node_complete_invitaciones_a_la_red
+    - upgrade_d7_node_complete_listado_asistentes_talleres_habi
+    - upgrade_d7_node_complete_listado_grupos_talleres_fortalec
+    - upgrade_d7_node_complete_listados_de_asistencia_emprended
+    - upgrade_d7_node_complete_material_pedagogico
+    - upgrade_d7_node_complete_metas
+    - upgrade_d7_node_complete_page
+    - upgrade_d7_node_complete_participantes_ficha_inscripci_n
+    - upgrade_d7_node_complete_perfil_mentores
+    - upgrade_d7_node_complete_planes_de_capacitaci_n_habilidad
+    - upgrade_d7_node_complete_ruta_acceder
+    - upgrade_d7_node_complete_ruta_acceder_acceso_a_financiaci
+    - upgrade_d7_node_complete_ruta_acceder_mentor_a
+    - upgrade_d7_node_complete_ruta_acceso_a_mercados
+    - upgrade_d7_node_complete_ruta_de_mejoramiento
+    - upgrade_d7_node_complete_ruta_desarrollo_competencias
+    - upgrade_d7_node_complete_ruta_desarrollo_competencias_dim
+    - upgrade_d7_node_complete_rutas_de_mejoramiento_tareas
+    - upgrade_d7_node_complete_seguimiento_de_compromisos
+    - upgrade_d7_node_complete_tabla_off_ine_asesores
+    - upgrade_d7_node_complete_tips_actas_comit_
+    - upgrade_d7_node_complete_tips_actas_comit_fortalecimiento
+    - upgrade_d7_node_complete_tips_canvas
+    - upgrade_d7_node_complete_tips_eventos_de_sensibilizaci_n
+    - upgrade_d7_node_complete_tips_inscripci_n_empoderamiento
+    - upgrade_d7_node_complete_tips_listado_grupos_fortalecimie
+    - upgrade_d7_node_complete_tips_listado_grupos_talleres_hab
+    - upgrade_d7_node_complete_tips_mapeo_institucional
+    - upgrade_d7_node_complete_tips_planes_de_capacitaci_n_en_h
+    - upgrade_d7_node_complete_webform
+    - upgrade_d7_menu
+include: null

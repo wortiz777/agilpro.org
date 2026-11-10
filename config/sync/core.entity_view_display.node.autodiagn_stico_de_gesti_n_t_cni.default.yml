@@ -1,0 +1,160 @@
+uuid: 83fb8160-93a0-40d9-972e-d65364b63152
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_10gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_1tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_2gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_2tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_3gestioni
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_3tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_4gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_4tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_5gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_5tecnica
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_6gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_7gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_8gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_9gestion
+    - field.field.node.autodiagn_stico_de_gesti_n_t_cni.field_la_empresa_cuenta_con_infr
+    - node.type.autodiagn_stico_de_gesti_n_t_cni
+  module:
+    - user
+id: node.autodiagn_stico_de_gesti_n_t_cni.default
+targetEntityType: node
+bundle: autodiagn_stico_de_gesti_n_t_cni
+mode: default
+content:
+  field_10gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_1tecnica:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_2gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_2tecnica:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_3gestioni:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_3tecnica:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_4gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_4tecnica:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_5gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_5tecnica:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_6gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_7gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_8gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_9gestion:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_la_empresa_cuenta_con_infr:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

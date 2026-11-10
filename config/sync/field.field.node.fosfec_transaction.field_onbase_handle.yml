@@ -1,0 +1,19 @@
+uuid: 4722a2aa-a67c-4c12-a19b-a4de6944f83c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_onbase_handle
+    - node.type.fosfec_transaction
+id: node.fosfec_transaction.field_onbase_handle
+field_name: field_onbase_handle
+entity_type: node
+bundle: fosfec_transaction
+label: 'ID Documento OnBase'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

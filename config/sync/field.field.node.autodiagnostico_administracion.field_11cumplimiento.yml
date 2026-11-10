@@ -1,0 +1,21 @@
+uuid: 1ceeba6c-bdae-4ff2-b341-e2fd6e4f968f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_11cumplimiento
+field_name: field_11cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '11. Licencias de Software'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

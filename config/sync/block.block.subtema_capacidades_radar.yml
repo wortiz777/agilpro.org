@@ -1,0 +1,33 @@
+uuid: 060e3ab3-8391-4cc1-b536-9436d76c7fa9
+langcode: es
+status: true
+dependencies:
+  module:
+    - agilpro_org
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_capacidades_radar
+theme: subtema
+region: content
+weight: -18
+provider: null
+plugin: agilpro_capacidades_radar_block
+settings:
+  id: agilpro_capacidades_radar_block
+  label: subtema_capacidades_radar
+  label_display: '0'
+  provider: agilpro_org
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /360-capacidades-emprendedor
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      authenticated: authenticated

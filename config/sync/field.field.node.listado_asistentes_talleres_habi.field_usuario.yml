@@ -1,0 +1,23 @@
+uuid: bc0c6076-73a5-4930-a47a-88b09d93983a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usuario
+    - node.type.listado_asistentes_talleres_habi
+id: node.listado_asistentes_talleres_habi.field_usuario
+field_name: field_usuario
+entity_type: node
+bundle: listado_asistentes_talleres_habi
+label: Usuario
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    sort:
+      field: _none
+field_type: entity_reference

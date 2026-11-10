@@ -1,0 +1,24 @@
+uuid: 56ad013b-8f54-4b07-ad3b-c4177abd1a93
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_n_mero_de_empleados_formal
+  module:
+    - user
+id: user.user.field_n_mero_de_empleados_formal
+field_name: field_n_mero_de_empleados_formal
+entity_type: user
+bundle: user
+label: 'Número de Empleados (Formales e Informales)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

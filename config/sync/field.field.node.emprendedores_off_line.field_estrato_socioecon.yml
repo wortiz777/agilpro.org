@@ -1,0 +1,19 @@
+uuid: 2a93b3d7-2b5c-4ffa-8a5f-e8ba7935b823
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_estrato_socioecon
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_estrato_socioecon
+field_name: field_estrato_socioecon
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Estrato socioeconómico'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

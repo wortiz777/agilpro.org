@@ -1,0 +1,21 @@
+uuid: f0371465-694a-4a22-ab82-961d1ea43aa6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_ingresos
+  module:
+    - options
+    - user
+id: user.user.field_ingresos
+field_name: field_ingresos
+entity_type: user
+bundle: user
+label: '¿Que rango de ingresos mensuales percibe usted de su emprendimiento?'
+description: 'SMMLV: Salario Mínimo Mensual Legal Vigente'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

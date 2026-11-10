@@ -1,0 +1,26 @@
+uuid: 1bb8133f-b272-4375-9bd2-b49aba0531c8
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_12mercadeo
+    - node.type.autodiagn_stico_mercadeo_y_venta
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_mercadeo_y_venta.field_12mercadeo
+field_name: field_12mercadeo
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '12. La empresa tiene un proceso de evaluación de la satisfacción del cliente con respecto a los productos y servicios ofrecidos'
+description: "Satisfacción del cliente: \"nivel del estado de ánimo de una persona al adquirir un producto o servicio\" mediante encuestas, reuniones foco, visita, llamada o correo  de seguimiento, encuesta sistemas de quejas y reclamos, buzón de sugerencias, otras.\r\nNivel de Satisfacción = Rendimiento Percibido - Expectativas"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

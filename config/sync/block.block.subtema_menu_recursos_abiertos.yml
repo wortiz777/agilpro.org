@@ -1,0 +1,33 @@
+uuid: b7019f71-ba13-41c2-9565-59c2bd15084c
+langcode: es
+status: true
+dependencies:
+  config:
+    - system.menu.menu-recursos-abiertos
+  module:
+    - system
+  theme:
+    - subtema
+id: subtema_menu_recursos_abiertos
+theme: subtema
+region: content
+weight: -11
+provider: null
+plugin: 'system_menu_block:menu-recursos-abiertos'
+settings:
+  id: 'system_menu_block:menu-recursos-abiertos'
+  label: menu-recursos-abiertos
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: |-
+      /mapeo-institucional
+      /canvas
+      /ubicacion-ecosistemas
+      /node/640

@@ -1,0 +1,23 @@
+uuid: 216bc080-f99a-49b5-9d2a-cf11e16eddb1
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000009'
+  module:
+    - block_content
+  theme:
+    - subtema
+id: subtema_block_9
+theme: subtema
+region: footer_first
+weight: -69
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000009'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000009'
+  label: 'Redes Sociales'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

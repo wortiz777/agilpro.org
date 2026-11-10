@@ -1,0 +1,114 @@
+uuid: 2b56ec5d-330c-4d22-adb6-5e20141d3a08
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.compact
+    - field.field.user.user.feeds_item
+    - field.field.user.user.field__dv
+    - field.field.user.user.field_actividad
+    - field.field.user.user.field_apellidos
+    - field.field.user.user.field_asesor_fase_empoderar
+    - field.field.user.user.field_camara
+    - field.field.user.user.field_caracter_sticas_
+    - field.field.user.user.field_cargo
+    - field.field.user.user.field_ciudad_municipio
+    - field.field.user.user.field_como_se_enter_del_programa
+    - field.field.user.user.field_departamento
+    - field.field.user.user.field_direccion_comercial
+    - field.field.user.user.field_documento_id
+    - field.field.user.user.field_e_mail_contacto
+    - field.field.user.user.field_empresa_ref
+    - field.field.user.user.field_estado_civil
+    - field.field.user.user.field_estado_emprendimient
+    - field.field.user.user.field_estrato_socioecon_mico
+    - field.field.user.user.field_fase_pre_app
+    - field.field.user.user.field_fecha_de_naciomiento
+    - field.field.user.user.field_fecha_inicio_actividades
+    - field.field.user.user.field_ingresos
+    - field.field.user.user.field_ingresos_por_ventas_promed
+    - field.field.user.user.field_logo_emprendimiento
+    - field.field.user.user.field_movil
+    - field.field.user.user.field_n_mero_de_empleados_formal
+    - field.field.user.user.field_nit
+    - field.field.user.user.field_nivel_educativo
+    - field.field.user.user.field_nombre
+    - field.field.user.user.field_nombre_del_emprendimiento
+    - field.field.user.user.field_nombres
+    - field.field.user.user.field_numero_id
+    - field.field.user.user.field_pagina_web
+    - field.field.user.user.field_presentacion_emprendimient
+    - field.field.user.user.field_rol_emprendimiento
+    - field.field.user.user.field_rol_empresa
+    - field.field.user.user.field_sector_economico
+    - field.field.user.user.field_sexo
+    - field.field.user.user.field_telefono_fijo_emprendimien
+    - field.field.user.user.field_terminos_condiciones
+    - field.field.user.user.field_tipo_id
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: l0SHKaTcmotRxHn_b46mtoCaIHxqgnhaT3uFH8a3c-I
+id: user.user.compact
+targetEntityType: user
+bundle: user
+mode: compact
+content:
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: thumbnail
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  feeds_item: true
+  field__dv: true
+  field_actividad: true
+  field_apellidos: true
+  field_asesor_fase_empoderar: true
+  field_camara: true
+  field_caracter_sticas_: true
+  field_cargo: true
+  field_ciudad_municipio: true
+  field_como_se_enter_del_programa: true
+  field_departamento: true
+  field_direccion_comercial: true
+  field_documento_id: true
+  field_e_mail_contacto: true
+  field_empresa_ref: true
+  field_estado_civil: true
+  field_estado_emprendimient: true
+  field_estrato_socioecon_mico: true
+  field_fase_pre_app: true
+  field_fecha_de_naciomiento: true
+  field_fecha_inicio_actividades: true
+  field_ingresos: true
+  field_ingresos_por_ventas_promed: true
+  field_logo_emprendimiento: true
+  field_movil: true
+  field_n_mero_de_empleados_formal: true
+  field_nit: true
+  field_nivel_educativo: true
+  field_nombre: true
+  field_nombre_del_emprendimiento: true
+  field_nombres: true
+  field_numero_id: true
+  field_pagina_web: true
+  field_presentacion_emprendimient: true
+  field_rol_emprendimiento: true
+  field_rol_empresa: true
+  field_sector_economico: true
+  field_sexo: true
+  field_telefono_fijo_emprendimien: true
+  field_terminos_condiciones: true
+  field_tipo_id: true
+  langcode: true
+  member_for: true

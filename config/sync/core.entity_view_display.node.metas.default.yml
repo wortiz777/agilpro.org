@@ -1,0 +1,337 @@
+uuid: f962fde5-dafc-4ea7-90fc-5dba4e5ac8cd
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.metas.field_acceder_off_line
+    - field.field.node.metas.field_acceder_on_line
+    - field.field.node.metas.field_acceder_reporte_excel_sep_
+    - field.field.node.metas.field_asesores_acci_n
+    - field.field.node.metas.field_asesores_on_line
+    - field.field.node.metas.field_asesores_reporte_excel_sep
+    - field.field.node.metas.field_competencias_acci_n
+    - field.field.node.metas.field_competencias_off_line
+    - field.field.node.metas.field_competencias_on_line
+    - field.field.node.metas.field_competencias_reporte_excel
+    - field.field.node.metas.field_financiamiento_acci_n
+    - field.field.node.metas.field_financiamiento_off_line
+    - field.field.node.metas.field_financiamiento_on_line
+    - field.field.node.metas.field_financiamiento_reporte_exc
+    - field.field.node.metas.field_fortalecidos_acci_n
+    - field.field.node.metas.field_fortalecidos_off_line
+    - field.field.node.metas.field_fortalecidos_on_line
+    - field.field.node.metas.field_fortalecidos_reporte_excel
+    - field.field.node.metas.field_mentor_a_acci_n
+    - field.field.node.metas.field_mentores_acci_n
+    - field.field.node.metas.field_mentores_on_line
+    - field.field.node.metas.field_mentores_reporte_excel_sep
+    - field.field.node.metas.field_meta_acceder
+    - field.field.node.metas.field_meta_acceder_financiaci_n
+    - field.field.node.metas.field_meta_asesores
+    - field.field.node.metas.field_meta_conectar
+    - field.field.node.metas.field_meta_empoderar
+    - field.field.node.metas.field_meta_fortalecer
+    - field.field.node.metas.field_meta_mentores
+    - field.field.node.metas.field_sensibilizados_accion
+    - field.field.node.metas.field_sensibilizados_of_line
+    - field.field.node.metas.field_sensibilizados_on_line_
+    - field.field.node.metas.field_sensibilizados_reporte_exc
+    - node.type.metas
+  module:
+    - text
+    - user
+id: node.metas.default
+targetEntityType: node
+bundle: metas
+mode: default
+content:
+  field_acceder_off_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_acceder_on_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_acceder_reporte_excel_sep_:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 21
+    region: content
+  field_asesores_acci_n:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 34
+    region: content
+  field_asesores_on_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 23
+    region: content
+  field_asesores_reporte_excel_sep:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 24
+    region: content
+  field_competencias_acci_n:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_competencias_off_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_competencias_on_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_competencias_reporte_excel:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_financiamiento_acci_n:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_financiamiento_off_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_financiamiento_on_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_financiamiento_reporte_exc:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 18
+    region: content
+  field_fortalecidos_acci_n:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_fortalecidos_off_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_fortalecidos_on_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_fortalecidos_reporte_excel:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_mentor_a_acci_n:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_mentores_acci_n:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_mentores_on_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 26
+    region: content
+  field_mentores_reporte_excel_sep:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_meta_acceder:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_meta_acceder_financiaci_n:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_meta_asesores:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 22
+    region: content
+  field_meta_conectar:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_meta_empoderar:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_meta_fortalecer:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_meta_mentores:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 25
+    region: content
+  field_sensibilizados_accion:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_sensibilizados_of_line:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_sensibilizados_on_line_:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_sensibilizados_reporte_exc:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,21 @@
+uuid: 8644bd08-4122-48cd-b1c9-f571ce4167ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_3cumplimiento
+field_name: field_3cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '3.Licencia o Resolución de Superintendencia o Ministerio correspondiente'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

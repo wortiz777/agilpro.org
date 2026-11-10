@@ -1,0 +1,22 @@
+uuid: a5454184-30d5-4fd9-b39e-253b037b8174
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field__desea_inscribirse_para_pa
+field_name: field__desea_inscribirse_para_pa
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

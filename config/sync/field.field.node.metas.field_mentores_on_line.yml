@@ -1,0 +1,23 @@
+uuid: 608391a7-5009-4370-8bd9-ca6f5113928b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mentores_on_line
+    - node.type.metas
+id: node.metas.field_mentores_on_line
+field_name: field_mentores_on_line
+entity_type: node
+bundle: metas
+label: 'Mentores | On-Line'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,23 @@
+uuid: f893c65b-dc82-4ae0-8b3d-a271a5765826
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2_4_n_mero_de_empresas_que
+    - node.type.informe_semestral
+id: node.informe_semestral.field_2_4_n_mero_de_empresas_que
+field_name: field_2_4_n_mero_de_empresas_que
+entity_type: node
+bundle: informe_semestral
+label: '4. Número de empresas que incrementan sus ventas en un 10% anual.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

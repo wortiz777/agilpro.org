@@ -1,0 +1,115 @@
+uuid: 7795d90c-821a-46f1-a46f-21e883b31af2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.oferta.field_agenda_calendario
+    - field.field.node.oferta.field_cupos_disponibles
+    - field.field.node.oferta.field_cupos_totales
+    - field.field.node.oferta.field_eje_default
+    - field.field.node.oferta.field_fechas_inscripcion
+    - field.field.node.oferta.field_imagen_oferta
+    - field.field.node.oferta.field_landing_content
+    - field.field.node.oferta.field_linea_default
+    - field.field.node.oferta.field_modalidad_participacion
+    - field.field.node.oferta.field_terminos_referencia_pdf
+    - field.field.node.oferta.field_tipo_programa
+    - node.type.oferta
+  module:
+    - datetime_range
+    - link
+    - options
+    - text
+    - user
+id: node.oferta.default
+targetEntityType: node
+bundle: oferta
+mode: default
+content:
+  field_agenda_calendario:
+    type: link
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_cupos_disponibles:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_cupos_totales:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_eje_default:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_fechas_inscripcion:
+    type: daterange_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: medium
+      from_to: both
+      separator: '-'
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_landing_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_linea_default:
+    type: entity_reference_label
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_modalidad_participacion:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_tipo_programa:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_imagen_oferta: true
+  field_terminos_referencia_pdf: true
+  langcode: true

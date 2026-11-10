@@ -1,0 +1,23 @@
+uuid: daed7f1b-59a4-42c8-8049-dd3a680a99a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_1norma
+    - node.type.autodiagnostico_administracion
+id: node.autodiagnostico_administracion.field_1norma
+field_name: field_1norma
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '1. Numero de empleados actuales con contrato a termino fijo o por labor'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

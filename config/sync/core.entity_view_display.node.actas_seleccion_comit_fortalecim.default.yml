@@ -1,0 +1,41 @@
+uuid: 471d651a-7c42-4fa3-97f8-d5253f8de037
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.actas_seleccion_comit_fortalecim.field_fecha_comit_
+    - field.field.node.actas_seleccion_comit_fortalecim.field_subir_acta_fortalecimiento
+    - node.type.actas_seleccion_comit_fortalecim
+  module:
+    - datetime
+    - file
+    - user
+id: node.actas_seleccion_comit_fortalecim.default
+targetEntityType: node
+bundle: actas_seleccion_comit_fortalecim
+mode: default
+content:
+  field_fecha_comit_:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_subir_acta_fortalecimiento:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

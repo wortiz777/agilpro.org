@@ -1,0 +1,21 @@
+uuid: d3af69d4-2fe2-43e6-b548-c210ef4099bf
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_categoria_entidad
+    - node.type.gestion_componentes_mapeo
+  module:
+    - options
+id: node.gestion_componentes_mapeo.field_categoria_entidad
+field_name: field_categoria_entidad
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'Categoría de la Entidad'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

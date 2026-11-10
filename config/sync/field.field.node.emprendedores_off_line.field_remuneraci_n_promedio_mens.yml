@@ -1,0 +1,19 @@
+uuid: 755241f0-5f43-4de1-8e86-68336b5ce94d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_remuneraci_n_promedio_mens
+    - node.type.emprendedores_off_line
+id: node.emprendedores_off_line.field_remuneraci_n_promedio_mens
+field_name: field_remuneraci_n_promedio_mens
+entity_type: node
+bundle: emprendedores_off_line
+label: 'Remuneración Promedio Mensual'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

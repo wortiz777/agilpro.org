@@ -1,0 +1,94 @@
+uuid: a2e055b2-f13d-471b-90bd-80fd4b509381
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.material_pedagogico.field_autor_m_pedagogico
+    - field.field.node.material_pedagogico.field_fase_ruta_de_fortalecimien
+    - field.field.node.material_pedagogico.field_resena_mpeg
+    - field.field.node.material_pedagogico.field_subir_archivo_mpg
+    - node.type.material_pedagogico
+  module:
+    - file
+    - path
+id: node.material_pedagogico.default
+targetEntityType: node
+bundle: material_pedagogico
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_autor_m_pedagogico:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_fase_ruta_de_fortalecimien:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_resena_mpeg:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_subir_archivo_mpg:
+    type: file_generic
+    weight: 3
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

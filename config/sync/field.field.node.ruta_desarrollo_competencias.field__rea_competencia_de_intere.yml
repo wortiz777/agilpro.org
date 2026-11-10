@@ -1,0 +1,19 @@
+uuid: 3aa959ef-7450-4fa3-af4c-eb38c229954f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field__rea_competencia_de_intere
+    - node.type.ruta_desarrollo_competencias
+id: node.ruta_desarrollo_competencias.field__rea_competencia_de_intere
+field_name: field__rea_competencia_de_intere
+entity_type: node
+bundle: ruta_desarrollo_competencias
+label: 'Área, Competencia de interes para el desarrollo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

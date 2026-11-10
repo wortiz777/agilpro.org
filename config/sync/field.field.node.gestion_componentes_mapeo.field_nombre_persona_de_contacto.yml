@@ -1,0 +1,19 @@
+uuid: fa4407da-c459-4e51-857d-d26bedfe38e1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nombre_persona_de_contacto
+    - node.type.gestion_componentes_mapeo
+id: node.gestion_componentes_mapeo.field_nombre_persona_de_contacto
+field_name: field_nombre_persona_de_contacto
+entity_type: node
+bundle: gestion_componentes_mapeo
+label: 'Nombre y Apellidos'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

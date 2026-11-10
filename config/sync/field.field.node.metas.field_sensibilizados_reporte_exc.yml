@@ -1,0 +1,23 @@
+uuid: fd917244-04b8-444f-9d5f-e42d1cdfc0c4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sensibilizados_reporte_exc
+    - node.type.metas
+id: node.metas.field_sensibilizados_reporte_exc
+field_name: field_sensibilizados_reporte_exc
+entity_type: node
+bundle: metas
+label: 'Sensibilizados | Reporte Excel (Sep)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,152 @@
+uuid: f75aebcc-64fc-43c7-a5be-3f3e8fc89636
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_de_mejoramiento.field_conocimiento
+    - field.field.node.ruta_de_mejoramiento.field_cualitativos_cifras_cantid
+    - field.field.node.ruta_de_mejoramiento.field_cualitativos_hechos_docume
+    - field.field.node.ruta_de_mejoramiento.field_econ_mico
+    - field.field.node.ruta_de_mejoramiento.field_f_sicos
+    - field.field.node.ruta_de_mejoramiento.field_humano
+    - field.field.node.ruta_de_mejoramiento.field_informaci_n
+    - field.field.node.ruta_de_mejoramiento.field_objetivo_para_qu_lo_quiero
+    - field.field.node.ruta_de_mejoramiento.field_tareas
+    - node.type.ruta_de_mejoramiento
+  module:
+    - inline_entity_form
+    - path
+id: node.ruta_de_mejoramiento.default
+targetEntityType: node
+bundle: ruta_de_mejoramiento
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_conocimiento:
+    type: string_textfield
+    weight: 23
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_cualitativos_cifras_cantid:
+    type: string_textarea
+    weight: 17
+    region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_cualitativos_hechos_docume:
+    type: string_textarea
+    weight: 18
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_econ_mico:
+    type: string_textfield
+    weight: 21
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_f_sicos:
+    type: string_textfield
+    weight: 22
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_humano:
+    type: string_textfield
+    weight: 20
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_informaci_n:
+    type: string_textfield
+    weight: 24
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_objetivo_para_qu_lo_quiero:
+    type: string_textarea
+    weight: 6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_tareas:
+    type: inline_entity_form_complex
+    weight: 7
+    region: content
+    settings:
+      form_mode: default
+      override_labels: false
+      label_singular: ''
+      label_plural: ''
+      allow_new: true
+      allow_existing: false
+      match_operator: CONTAINS
+      allow_duplicate: false
+      collapsible: false
+      collapsed: false
+      revision: false
+      removed_reference: optional
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

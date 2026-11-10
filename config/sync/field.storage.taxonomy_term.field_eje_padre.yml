@@ -1,0 +1,19 @@
+uuid: 0682c9e1-c927-4c2e-9951-162be487a4d2
+langcode: es
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_eje_padre
+field_name: field_eje_padre
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

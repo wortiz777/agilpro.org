@@ -1,0 +1,39 @@
+uuid: 8c6b0166-240b-4712-bf02-33d873e134a2
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.ruta_desarrollo_competencias_dim.field_acciones
+    - field.field.node.ruta_desarrollo_competencias_dim.field_competencia_
+    - node.type.ruta_desarrollo_competencias_dim
+  module:
+    - options
+    - user
+id: node.ruta_desarrollo_competencias_dim.default
+targetEntityType: node
+bundle: ruta_desarrollo_competencias_dim
+mode: default
+content:
+  field_acciones:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_competencia_:
+    type: list_default
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

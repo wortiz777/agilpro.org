@@ -1,0 +1,382 @@
+{#
+/**
+ * @file
+ * Template principal del Dashboard Administrativo FOSFEC (admin/agilpro/dashboard).
+ * Con estilos corporativos unificados (formulario, botones pill, pestañas y tablas limpias).
+ */
+#}
+<div class="fosfec-dashboard-wrapper">
+
+  {# 1. Cabecera del Dashboard #}
+  <div class="dashboard-header">
+    <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+      <div>
+        <h1 class="page-title">📊 Tablero de Control y Convocatorias FOSFEC</h1>
+        <p class="subtitle">Monitoreo operacional de ofertas de fomento, postulaciones de Mipymes y transacciones auditables.</p>
+      </div>
+      <div class="dashboard-actions">
+        <a href="/node/add/oferta" class="btn-corp btn-corp-orange">
+          ➕ Nueva Convocatoria
+        </a>
+        <a href="/admin/reports/fosfec-sabana" class="btn-corp btn-corp-outline-blue">
+          📑 Sábana Auditables FOSFEC
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {# 2. Bloque Superior KPI Scorecard #}
+  <div class="dashboard-kpis">
+    {{ kpis }}
+  </div>
+
+  {# 3. Barra de Filtros en Tiempo Real #}
+  <div class="filter-card">
+    <form method="GET" action="/admin/agilpro/dashboard" class="filter-form-grid">
+      <input type="hidden" name="tab" value="{{ active_tab }}">
+
+      <div class="filter-group">
+        <label for="filter-oferta">Oferta / Convocatoria</label>
+        <select name="oferta" id="filter-oferta" class="form-control">
+          <option value="">-- Todas las Convocatorias --</option>
+          {% for oid, oname in ofertas_options %}
+            <option value="{{ oid }}" {% if filter_oferta == oid %}selected{% endif %}>{{ oname }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-estado">Estado</label>
+        <select name="estado" id="filter-estado" class="form-control">
+          <option value="">-- Todos los Estados --</option>
+          {% if active_tab == 'inscripciones' %}
+            <option value="postulada" {% if filter_estado == 'postulada' %}selected{% endif %}>Postulada</option>
+            <option value="en_evaluacion" {% if filter_estado == 'en_evaluacion' %}selected{% endif %}>En Evaluación</option>
+            <option value="aprobada" {% if filter_estado == 'aprobada' %}selected{% endif %}>Aprobada</option>
+            <option value="rechazada" {% if filter_estado == 'rechazada' %}selected{% endif %}>Rechazada</option>
+          {% else %}
+            <option value="programada" {% if filter_estado == 'programada' %}selected{% endif %}>Programada</option>
+            <option value="ejecutada" {% if filter_estado == 'ejecutada' %}selected{% endif %}>Ejecutada</option>
+            <option value="aceptada_digitalmente" {% if filter_estado == 'aceptada_digitalmente' %}selected{% endif %}>Aceptada Digitalmente</option>
+            <option value="auditada_fosfec" {% if filter_estado == 'auditada_fosfec' %}selected{% endif %}>Auditada FOSFEC</option>
+          {% endif %}
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="filter-nit">NIT de Empresa</label>
+        <input type="text" name="nit" id="filter-nit" value="{{ filter_nit }}" placeholder="Ej: 900123456" class="form-control">
+      </div>
+
+      <div class="filter-buttons">
+        <button type="submit" class="btn-corp btn-corp-orange">
+          🔍 Filtrar
+        </button>
+        <a href="/admin/agilpro/dashboard?tab={{ active_tab }}" class="btn-corp btn-corp-outline-blue">
+          Restablecer
+        </a>
+      </div>
+    </form>
+  </div>
+
+  {# 4. Navegación por Pestañas (Segmented Tabs) #}
+  <ul class="dashboard-nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link {% if active_tab == 'inscripciones' %}active{% endif %}"
+         href="/admin/agilpro/dashboard?tab=inscripciones{% if filter_oferta %}&oferta={{ filter_oferta }}{% endif %}{% if filter_nit %}&nit={{ filter_nit }}{% endif %}">
+        📝 Pipeline de Postulaciones Mipyme <span class="tab-badge">{{ inscripciones_data|length }}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% if active_tab == 'ofertas' %}active{% endif %}"
+         href="/admin/agilpro/dashboard?tab=ofertas">
+        📢 Ofertas y Convocatorias <span class="tab-badge">{{ ofertas_data|length }}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link {% if active_tab == 'transacciones' %}active{% endif %}"
+         href="/admin/agilpro/dashboard?tab=transacciones{% if filter_oferta %}&oferta={{ filter_oferta }}{% endif %}{% if filter_nit %}&nit={{ filter_nit }}{% endif %}">
+        📑 Monitor Transacciones Auditables <span class="tab-badge">{{ transacciones_data|length }}</span>
+      </a>
+    </li>
+  </ul>
+
+  {# 5. Contenido del Tablero según Pestaña Activa #}
+
+  {# TAB 1: PIPELINE DE INSCRIPCIONES (CON VBO MASIVO) #}
+  {% if active_tab == 'inscripciones' %}
+    <div class="dashboard-content-card">
+      <div class="dashboard-card-header">
+        <h5>Postulaciones Recibidas</h5>
+
+        {# Barra de Operaciones Masivas (VBO) #}
+        <div class="vbo-toolbar" style="display:flex; flex-wrap:wrap; gap:0.5rem; align-items:center;">
+          <span class="vbo-label" style="font-weight:600; font-size:0.85rem;">Acciones por lote (VBO):</span>
+          
+          {# Cambiar Estado #}
+          <div class="vbo-select-wrap" style="display:inline-flex; gap:0.25rem;">
+            <select id="vbo-estado-select" style="font-size:0.85rem; padding:0.35rem 0.6rem; border-radius:6px; border:1px solid #cbd5e1;">
+              <option value="">-- Cambiar Estado --</option>
+              <option value="postulada">Postulada</option>
+              <option value="en_evaluacion">En Evaluación</option>
+              <option value="aprobada">Aprobada</option>
+              <option value="rechazada">Rechazada</option>
+            </select>
+            <button class="btn-corp btn-corp-blue" type="button" id="vbo-cambiar-estado-btn" style="padding:0.35rem 0.75rem; font-size:0.82rem;">Aplicar</button>
+          </div>
+
+          {# Asignar Ruta de Atención #}
+          <div class="vbo-select-wrap" style="display:inline-flex; gap:0.25rem;">
+            <select id="vbo-ruta-select" style="font-size:0.85rem; padding:0.35rem 0.6rem; border-radius:6px; border:1px solid #cbd5e1; max-width:210px;">
+              <option value="">-- Asignar Ruta (1-23) --</option>
+              {% for r_id, r_name in rutas_list %}
+                <option value="{{ r_id }}">{{ r_name }}</option>
+              {% endfor %}
+            </select>
+            <button class="btn-corp btn-corp-outline-blue" type="button" id="vbo-asignar-ruta-btn" style="padding:0.35rem 0.75rem; font-size:0.82rem;">Ruta</button>
+          </div>
+
+          {# Asignar Mentor #}
+          <div class="vbo-select-wrap" style="display:inline-flex; gap:0.25rem;">
+            <select id="vbo-mentor-select" style="font-size:0.85rem; padding:0.35rem 0.6rem; border-radius:6px; border:1px solid #cbd5e1;">
+              <option value="">-- Asignar Mentor --</option>
+              {% for m_id, m_name in mentores_list %}
+                <option value="{{ m_id }}">{{ m_name }}</option>
+              {% endfor %}
+            </select>
+            <button class="btn-corp btn-corp-outline-blue" type="button" id="vbo-asignar-mentor-btn" style="padding:0.35rem 0.75rem; font-size:0.82rem;">Mentor</button>
+          </div>
+
+          <button type="button" class="btn-corp btn-corp-success" style="padding:0.35rem 0.85rem; font-size:0.82rem;" id="vbo-aprobar-btn">
+            ✅ Aprobar
+          </button>
+          <button type="button" class="btn-corp btn-corp-danger-outline" style="padding:0.35rem 0.85rem; font-size:0.82rem;" id="vbo-rechazar-btn">
+            ❌ Rechazar
+          </button>
+        </div>
+      </div>
+
+      <div class="corp-table-responsive">
+        <table class="corp-table" id="table-inscripciones">
+          <thead>
+            <tr>
+              <th width="40"><input type="checkbox" id="vbo-select-all" title="Seleccionar todo"></th>
+              <th>Título / Código</th>
+              <th>Empresa / NIT</th>
+              <th>Convocatoria Vinculada</th>
+              <th>Estado</th>
+              <th>Ruta Asignada</th>
+              <th>Evaluador / Mentor</th>
+              <th>Fecha Registro</th>
+              <th style="text-align:right;">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in inscripciones_data %}
+              <tr>
+                <td><input type="checkbox" class="vbo-item-check" value="{{ item.id }}"></td>
+                <td>
+                  <div class="table-entity-title">{{ item.title }}</div>
+                  <div class="table-entity-id">ID: #{{ item.id }}</div>
+                </td>
+                <td>
+                  <strong>{{ item.empresa_nombre }}</strong><br>
+                  <span class="badge-corp badge-corp-outline">NIT: {{ item.empresa_nit }}</span>
+                </td>
+                <td>
+                  <a href="/node/{{ item.oferta_id }}" target="_blank" class="table-link">
+                    {{ item.oferta_nombre }}
+                  </a>
+                </td>
+                <td>
+                  {% if item.estado == 'aprobada' %}
+                    <span class="badge-corp badge-corp-green">Aprobada</span>
+                  {% elseif item.estado == 'rechazada' %}
+                    <span class="badge-corp badge-corp-red">Rechazada</span>
+                  {% elseif item.estado == 'en_evaluacion' %}
+                    <span class="badge-corp badge-corp-yellow">En Evaluación</span>
+                  {% else %}
+                    <span class="badge-corp badge-corp-blue">Postulada</span>
+                  {% endif %}
+                </td>
+                <td>
+                  <span class="badge-corp badge-corp-outline" style="font-size:0.78rem;">🛣️ {{ item.ruta_nombre }}</span>
+                </td>
+                <td>
+                  <small style="display:block; color:#475569;"><strong>Eval:</strong> {{ item.evaluador_nombre }}</small>
+                  <small style="display:block; color:#64748b;"><strong>Mentor:</strong> {{ item.mentor_nombre }}</small>
+                </td>
+                <td><small style="color:#64748b;">{{ item.created }}</small></td>
+                <td style="text-align:right;">
+                  <a href="{{ item.url_edit }}" class="btn-corp btn-corp-outline-blue" style="padding:0.35rem 0.85rem; font-size:0.82rem;">Calificar / Editar</a>
+                </td>
+              </tr>
+            {% else %}
+              <tr>
+                <td colspan="9" style="text-align:center; padding:3rem; color:#94a3b8;">
+                  No se encontraron postulaciones con los filtros seleccionados.
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {% endif %}
+
+  {# TAB 2: OFERTAS Y CONVOCATORIAS #}
+  {% if active_tab == 'ofertas' %}
+    <div class="dashboard-content-card">
+      <div class="dashboard-card-header">
+        <h5>Ofertas y Convocatorias de Fomento</h5>
+      </div>
+      <div class="corp-table-responsive">
+        <table class="corp-table">
+          <thead>
+            <tr>
+              <th>Convocatoria</th>
+              <th>URL Limpia</th>
+              <th>Fechas</th>
+              <th>Cupos Ocupados / Totales</th>
+              <th>Ocupación (%)</th>
+              <th>Modalidad</th>
+              <th>Estado</th>
+              <th style="text-align:right;">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in ofertas_data %}
+              <tr>
+                <td>
+                  <div class="table-entity-title">{{ item.title }}</div>
+                </td>
+                <td>
+                  <a href="{{ item.alias }}" target="_blank" class="badge-corp badge-corp-outline table-link">
+                    {{ item.alias }} ↗
+                  </a>
+                </td>
+                <td><small style="color:#64748b;">{{ item.fechas }}</small></td>
+                <td>
+                  <strong>{{ item.cupos_ocupados }}</strong> / {{ item.cupos_totales }}
+                  <small style="color:#94a3b8;">({{ item.cupos_disponibles }} disp.)</small>
+                </td>
+                <td style="min-width: 140px;">
+                  <div class="kpi-progress" style="margin-bottom:0.25rem;">
+                    <div class="kpi-progress-bar" style="width: {{ item.pct_ocupacion }}%; background: {% if item.pct_ocupacion >= 80 %}#ef4444{% elseif item.pct_ocupacion >= 50 %}#f59e0b{% else %}#10b981{% endif %};"></div>
+                  </div>
+                  <strong style="font-size:0.82rem;">{{ item.pct_ocupacion }}%</strong>
+                </td>
+                <td><span class="badge-corp badge-corp-purple">{{ item.modalidad }}</span></td>
+                <td>
+                  {% if item.status %}
+                    <span class="badge-corp badge-corp-green">Publicada</span>
+                  {% else %}
+                    <span class="badge-corp badge-corp-gray">Borrador</span>
+                  {% endif %}
+                </td>
+                <td style="text-align:right;">
+                  <a href="{{ item.url_view }}" target="_blank" class="btn-corp btn-corp-outline-blue" style="padding:0.35rem 0.85rem; font-size:0.82rem; margin-right:0.3rem;">Ver</a>
+                  <a href="{{ item.url_edit }}" class="btn-corp btn-corp-outline-blue" style="padding:0.35rem 0.85rem; font-size:0.82rem;">Editar</a>
+                </td>
+              </tr>
+            {% else %}
+              <tr>
+                <td colspan="8" style="text-align:center; padding:3rem; color:#94a3b8;">
+                  No hay convocatorias registradas.
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {% endif %}
+
+  {# TAB 3: MONITOR DE TRANSACCIONES AUDITABLES #}
+  {% if active_tab == 'transacciones' %}
+    <div class="dashboard-content-card">
+      <div class="dashboard-card-header">
+        <h5>Seguimiento de Actas y Transacciones FOSFEC</h5>
+        <a href="/admin/reports/fosfec-sabana/download" class="btn-corp btn-corp-success">
+          📥 Descargar Reporte Sabana (.xlsx)
+        </a>
+      </div>
+      <div class="corp-table-responsive">
+        <table class="corp-table">
+          <thead>
+            <tr>
+              <th>Transacción / Sesión</th>
+              <th>Empresa Beneficiaria</th>
+              <th>Horas</th>
+              <th>Estado Workflow</th>
+              <th>Evidencia PDF</th>
+              <th>Aceptación Digital (IP / Fecha)</th>
+              <th>Sincronización OnBase</th>
+              <th style="text-align:right;">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in transacciones_data %}
+              <tr>
+                <td>
+                  <div class="table-entity-title">{{ item.title }}</div>
+                  <div class="table-entity-id">ID: #{{ item.id }}</div>
+                </td>
+                <td>
+                  <strong>{{ item.empresa_nombre }}</strong><br>
+                  <span class="badge-corp badge-corp-outline">NIT: {{ item.empresa_nit }}</span>
+                </td>
+                <td><span class="badge-corp badge-corp-gray">{{ item.horas }} hrs</span></td>
+                <td>
+                  {% if item.state_label == 'Auditada FOSFEC' %}
+                    <span class="badge-corp badge-corp-green">{{ item.state_label }}</span>
+                  {% elseif item.state_label == 'Aceptada Digitalmente' %}
+                    <span class="badge-corp badge-corp-yellow">{{ item.state_label }}</span>
+                  {% elseif item.state_label == 'Ejecutada' %}
+                    <span class="badge-corp badge-corp-blue">{{ item.state_label }}</span>
+                  {% else %}
+                    <span class="badge-corp badge-corp-purple">{{ item.state_label }}</span>
+                  {% endif %}
+                </td>
+                <td>
+                  {% if item.has_pdf %}
+                    <a href="{{ item.pdf_url }}" target="_blank" class="badge-corp badge-corp-green table-link">
+                      📄 Documento Adjunto
+                    </a>
+                  {% else %}
+                    <span class="badge-corp badge-corp-gray">Sin PDF</span>
+                  {% endif %}
+                </td>
+                <td>
+                  <small style="color:#64748b;">
+                    <strong>IP:</strong> {{ item.ip_aceptacion }}<br>
+                    <strong>Fecha:</strong> {{ item.timestamp_aceptacion }}
+                  </small>
+                </td>
+                <td>
+                  {% if item.onbase_synced %}
+                    <span class="badge-corp badge-corp-green" title="Handle: {{ item.onbase_handle }}">
+                      ☁️ Sincronizado
+                    </span>
+                  {% else %}
+                    <span class="badge-corp badge-corp-yellow">Pendiente</span>
+                  {% endif %}
+                </td>
+                <td style="text-align:right;">
+                  <a href="{{ item.url_edit }}" class="btn-corp btn-corp-outline-blue" style="padding:0.35rem 0.85rem; font-size:0.82rem;">Editar</a>
+                </td>
+              </tr>
+            {% else %}
+              <tr>
+                <td colspan="8" style="text-align:center; padding:3rem; color:#94a3b8;">
+                  No se registran transacciones auditables con los criterios seleccionados.
+                </td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  {% endif %}
+
+</div>

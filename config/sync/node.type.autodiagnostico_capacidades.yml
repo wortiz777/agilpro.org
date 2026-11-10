@@ -1,0 +1,18 @@
+uuid: 008e3f3c-1b41-4687-90ef-8338f278af0e
+langcode: es
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Capacidades Emprendedoras'
+type: autodiagnostico_capacidades
+description: null
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: false

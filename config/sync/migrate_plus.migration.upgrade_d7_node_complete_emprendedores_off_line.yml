@@ -1,0 +1,273 @@
+uuid: f64b043c-2b91-4a1b-9744-8d5ffde824ce
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_emprendedores_off_line
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Emprendedores Off-Line)'
+source:
+  plugin: d7_node_complete
+  node_type: emprendedores_off_line
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_emprendedores_off_line/0/status:
+    -
+      plugin: get
+      source: comment
+  field_c_mara_de_comercio:
+    -
+      plugin: sub_process
+      source: field_c_mara_de_comercio
+      process:
+        target_id: tid
+  field_c_dula:
+    -
+      plugin: get
+      source: field_c_dula
+  field_g_nero:
+    -
+      plugin: get
+      source: field_g_nero
+  field_fecha_de_nacimiento:
+    -
+      plugin: get
+      source: field_fecha_de_nacimiento
+  field_celular:
+    -
+      plugin: get
+      source: field_celular
+  field_e_mail:
+    -
+      plugin: get
+      source: field_e_mail
+  field_direcci_n_emprendedor_l_de:
+    -
+      plugin: get
+      source: field_direcci_n_emprendedor_l_de
+  field_nombre_emprendimiento:
+    -
+      plugin: get
+      source: field_nombre_emprendimiento
+  field_direcci_n_emprendimiento:
+    -
+      plugin: get
+      source: field_direcci_n_emprendimiento
+  field_ingresos_por_ventas_mensua:
+    -
+      plugin: get
+      source: field_ingresos_por_ventas_mensua
+  field_remuneraci_n_promedio_mens:
+    -
+      plugin: get
+      source: field_remuneraci_n_promedio_mens
+  field_estrato_socioecon:
+    -
+      plugin: get
+      source: field_estrato_socioecon
+  field_estado_civ:
+    -
+      plugin: get
+      source: field_estado_civ
+  field_grado_de_vulnerabilidad:
+    -
+      plugin: get
+      source: field_grado_de_vulnerabilidad
+  field_rentabilidad:
+    -
+      plugin: get
+      source: field_rentabilidad
+  field_registro_mercantil:
+    -
+      plugin: get
+      source: field_registro_mercantil
+  field_empleos_formales:
+    -
+      plugin: get
+      source: field_empleos_formales
+  field_empleos_informales:
+    -
+      plugin: get
+      source: field_empleos_informales
+  field_ciudad_emprendedor_l_der:
+    -
+      plugin: get
+      source: field_ciudad_emprendedor_l_der
+  field_nivel_de_estudios_emprende:
+    -
+      plugin: get
+      source: field_nivel_de_estudios_emprende
+  field_cargo_del_emprendedor_l_de:
+    -
+      plugin: get
+      source: field_cargo_del_emprendedor_l_de
+  field_ciuu:
+    -
+      plugin: get
+      source: field_ciuu
+  field_tiempo_de_dedicaci_n_al_em:
+    -
+      plugin: get
+      source: field_tiempo_de_dedicaci_n_al_em
+  field_como_se_enter_de_empr_ndel:
+    -
+      plugin: get
+      source: field_como_se_enter_de_empr_ndel
+  field_sector_econ_mico:
+    -
+      plugin: get
+      source: field_sector_econ_mico
+  field_breve_perfil:
+    -
+      plugin: get
+      source: field_breve_perfil
+  field_breve_proyecto:
+    -
+      plugin: get
+      source: field_breve_proyecto
+  field_fase_empoderar:
+    -
+      plugin: get
+      source: field_fase_empoderar
+  field_fase_fortalecer:
+    -
+      plugin: get
+      source: field_fase_fortalecer
+  field_fase_acceder:
+    -
+      plugin: get
+      source: field_fase_acceder
+  field_autodiagn_stico_emprendedo:
+    -
+      plugin: get
+      source: field_autodiagn_stico_emprendedo
+  field_autodiagn_stico_emprendimi:
+    -
+      plugin: get
+      source: field_autodiagn_stico_emprendimi
+  field_ruta_de_fortalecimiento:
+    -
+      plugin: get
+      source: field_ruta_de_fortalecimiento
+  field_ser:
+    -
+      plugin: get
+      source: field_ser
+  field_creatividad_e_innovaci_n:
+    -
+      plugin: get
+      source: field_creatividad_e_innovaci_n
+  field_amplitud_perceptual:
+    -
+      plugin: get
+      source: field_amplitud_perceptual
+  field_pensamiento_sist_mico:
+    -
+      plugin: get
+      source: field_pensamiento_sist_mico
+  field_liderazgo:
+    -
+      plugin: get
+      source: field_liderazgo
+  field_orientaci_n_al_logro:
+    -
+      plugin: get
+      source: field_orientaci_n_al_logro
+  field_orientaci_n_al_mercado:
+    -
+      plugin: get
+      source: field_orientaci_n_al_mercado
+  field_direccionamiento:
+    -
+      plugin: get
+      source: field_direccionamiento
+  field_administraci_n:
+    -
+      plugin: get
+      source: field_administraci_n
+  field_mercade:
+    -
+      plugin: get
+      source: field_mercade
+  field_gesti_n_t_cnica_y_producci:
+    -
+      plugin: get
+      source: field_gesti_n_t_cnica_y_producci
+  field_financier:
+    -
+      plugin: get
+      source: field_financier
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: emprendedores_off_line
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

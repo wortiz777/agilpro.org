@@ -1,0 +1,26 @@
+uuid: 5d461ec8-d572-489b-8655-5c29fa7803ec
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3admin
+    - node.type.autodiagnostico_administracion
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_administracion.field_3admin
+field_name: field_3admin
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '3. La empresa cuenta con un proceso para mejorar el ambiente de trabajo y las relaciones de los colaboradores'
+description: 'El ambiente de trabajo es donde mas tiempo permanece el colaborador, por lo que se puede destacar por la armonía, el buen clima y la presentación de condiciones óptimas en todo sentido para que se pueda desarrollar su trabajo de la manera más cómoda y eficiente posible. Las relaciones son todos los vínculos que se establecen en el ámbito del trabajo.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

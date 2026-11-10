@@ -1,0 +1,14 @@
+uuid: 7e486599-f95d-430e-be32-a48b6d527393
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.auditor_fosfec
+  module:
+    - user
+id: user_add_role_action.auditor_fosfec
+label: 'Añade el rol Auditor FOSFEC al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: auditor_fosfec

@@ -1,0 +1,26 @@
+uuid: 588fb7e0-02bf-4c09-81c4-6f4cde0387ed
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_5direccionamiento
+    - node.type.autodiagnostico_direccionamiento
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_direccionamiento.field_5direccionamiento
+field_name: field_5direccionamiento
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '5. La estructura y organización interna de la empresa favorece la implementación de estrategias y planes de trabajo definidos.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

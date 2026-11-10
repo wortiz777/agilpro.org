@@ -1,0 +1,50 @@
+uuid: a2e311f7-ac93-4edf-9153-b3db7ee3f560
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_ngeles.field_descripcion_formacion_e
+    - field.field.node.canvas_ngeles.field_fase_canvas
+    - field.field.node.canvas_ngeles.field_nueva_referencia_angeles
+    - node.type.canvas_ngeles
+  module:
+    - user
+id: node.canvas_ngeles.default
+targetEntityType: node
+bundle: canvas_ngeles
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_fase_canvas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_nueva_referencia_angeles:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

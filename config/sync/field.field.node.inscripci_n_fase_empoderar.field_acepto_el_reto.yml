@@ -1,0 +1,23 @@
+uuid: cfdf33b2-d735-4195-84d8-f8907ac137e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acepto_el_reto
+    - node.type.inscripci_n_fase_empoderar
+id: node.inscripci_n_fase_empoderar.field_acepto_el_reto
+field_name: field_acepto_el_reto
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Acepto el reto'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Acepto el reto.'
+  off_label: ''
+field_type: boolean

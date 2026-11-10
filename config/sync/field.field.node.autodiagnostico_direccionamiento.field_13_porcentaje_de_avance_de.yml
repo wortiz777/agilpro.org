@@ -1,0 +1,23 @@
+uuid: 39cd7f91-6cca-4418-b13c-133c290f4916
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13_porcentaje_de_avance_de
+    - node.type.autodiagnostico_direccionamiento
+id: node.autodiagnostico_direccionamiento.field_13_porcentaje_de_avance_de
+field_name: field_13_porcentaje_de_avance_de
+entity_type: node
+bundle: autodiagnostico_direccionamiento
+label: '13. Porcentaje de avance del plan estratégico de la empresa.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: 100.0
+  prefix: ''
+  suffix: ''
+field_type: decimal

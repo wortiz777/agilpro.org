@@ -1,0 +1,23 @@
+uuid: 9fb60c6f-26d9-4773-aa34-0529efa3617a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2_2_n_mero_de_empresas_for
+    - node.type.informe_semestral
+id: node.informe_semestral.field_2_2_n_mero_de_empresas_for
+field_name: field_2_2_n_mero_de_empresas_for
+entity_type: node
+bundle: informe_semestral
+label: '2. Número de empresas fortalecidas que mantienen crecimiento un año después de la intervención.'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

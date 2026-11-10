@@ -1,0 +1,27 @@
+uuid: 2fc0dde6-95c7-4ef0-93df-8f5d6131027a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subir_archivo_mpg
+    - node.type.material_pedagogico
+  module:
+    - file
+id: node.material_pedagogico.field_subir_archivo_mpg
+field_name: field_subir_archivo_mpg
+entity_type: node
+bundle: material_pedagogico
+label: 'Subir Archivo'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: material-pedagogico
+  file_extensions: 'txt doc docx pdf xls xlsx ppt pptx'
+  max_filesize: ''
+  description_field: false
+field_type: file

@@ -1,0 +1,23 @@
+uuid: 92804b16-f8ed-4bab-873d-24e98f19ab50
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_3norma
+    - node.type.autodiagnostico_administracion
+id: node.autodiagnostico_administracion.field_3norma
+field_name: field_3norma
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '3. Número total de empleados con otro tipo de contrato'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,24 @@
+uuid: 0cad2178-6a7c-4324-87e2-bf2b9aaa1b7a
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_12_n_mero_de_indicadores_q
+field_name: field_12_n_mero_de_indicadores_q
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,49 @@
+uuid: 2a0f06fd-6386-4ec8-afc7-14b845927f29
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_nivel_educativo
+field_name: field_nivel_educativo
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '1'
+      label: Primaria
+    -
+      value: '2'
+      label: Secundaria
+    -
+      value: '3'
+      label: Técnico
+    -
+      value: '4'
+      label: Tecnológico
+    -
+      value: '5'
+      label: Profesional
+    -
+      value: '6'
+      label: Especialización
+    -
+      value: '7'
+      label: Maestría
+    -
+      value: '8'
+      label: Doctorado
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 1bd504b6-a782-4c6f-b168-228f5c3ef5ac
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acceso_a_financiaci_n_nota
+    - node.type.ruta_acceder
+id: node.ruta_acceder.field_acceso_a_financiaci_n_nota
+field_name: field_acceso_a_financiaci_n_nota
+entity_type: node
+bundle: ruta_acceder
+label: 'Acceso a Financiación | Notas Asesor'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

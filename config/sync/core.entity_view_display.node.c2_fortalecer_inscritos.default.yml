@@ -1,0 +1,72 @@
+uuid: c7b61fde-3280-40bc-a244-80f95c3fe8e0
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.c2_fortalecer_inscritos.field_acepto_reto_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_ano_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_asesor_fase_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_grupo_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_manifiesto_fortalecer
+    - field.field.node.c2_fortalecer_inscritos.field_yo_fortalecer
+    - node.type.c2_fortalecer_inscritos
+  module:
+    - options
+    - user
+id: node.c2_fortalecer_inscritos.default
+targetEntityType: node
+bundle: c2_fortalecer_inscritos
+mode: default
+content:
+  field_acepto_reto_fortalecer:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ano_fortalecer:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_asesor_fase_fortalecer:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_grupo_fortalecer:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_manifiesto_fortalecer:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_yo_fortalecer:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

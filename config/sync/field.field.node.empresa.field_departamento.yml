@@ -1,0 +1,21 @@
+uuid: 7fb26c83-6778-4d24-be4a-263166e35de6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_departamento
+    - node.type.empresa
+id: node.empresa.field_departamento
+field_name: field_departamento
+entity_type: node
+bundle: empresa
+label: Departamento
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings: {  }
+field_type: entity_reference

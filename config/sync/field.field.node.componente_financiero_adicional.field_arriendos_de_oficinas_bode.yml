@@ -1,0 +1,23 @@
+uuid: cda4ecb4-71ce-447f-87f3-8a0d42467407
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_arriendos_de_oficinas_bode
+    - node.type.componente_financiero_adicional
+id: node.componente_financiero_adicional.field_arriendos_de_oficinas_bode
+field_name: field_arriendos_de_oficinas_bode
+entity_type: node
+bundle: componente_financiero_adicional
+label: 'Arriendos de oficinas, bodegas, equipos, etc.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,26 @@
+uuid: 42f034c9-cf95-487d-84d5-f5088a6044a7
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_21_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_21_capacidades
+field_name: field_21_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '21. Percibe con facilidad factores/aspectos o situaciones que muchos otros no.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

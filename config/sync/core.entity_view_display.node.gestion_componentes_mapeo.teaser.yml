@@ -1,0 +1,142 @@
+uuid: 73a5b4aa-fbde-4709-ba5c-39561b39db14
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.gestion_componentes_mapeo.field_cargo_o_rol
+    - field.field.node.gestion_componentes_mapeo.field_categoria_entidad
+    - field.field.node.gestion_componentes_mapeo.field_dependencia
+    - field.field.node.gestion_componentes_mapeo.field_direccion_entidad_ecosis
+    - field.field.node.gestion_componentes_mapeo.field_e_mail_contacto
+    - field.field.node.gestion_componentes_mapeo.field_genero
+    - field.field.node.gestion_componentes_mapeo.field_horario_de_atencion_entida
+    - field.field.node.gestion_componentes_mapeo.field_mail_entidad_ecosis
+    - field.field.node.gestion_componentes_mapeo.field_naturaleza_juridica
+    - field.field.node.gestion_componentes_mapeo.field_nombre_persona_de_contacto
+    - field.field.node.gestion_componentes_mapeo.field_otros_contactos
+    - field.field.node.gestion_componentes_mapeo.field_telefonos_contacto
+    - field.field.node.gestion_componentes_mapeo.field_telefonos_entidad_ecosis
+    - field.field.node.gestion_componentes_mapeo.field_tipo_de_emprendimiento_pob
+    - field.field.node.gestion_componentes_mapeo.field_web_entidad_ecosis
+    - node.type.gestion_componentes_mapeo
+  module:
+    - link
+    - options
+    - user
+id: node.gestion_componentes_mapeo.teaser
+targetEntityType: node
+bundle: gestion_componentes_mapeo
+mode: teaser
+content:
+  field_categoria_entidad:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_dependencia:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_direccion_entidad_ecosis:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_e_mail_contacto:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_genero:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_horario_de_atencion_entida:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_mail_entidad_ecosis:
+    type: email_mailto
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_naturaleza_juridica:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_nombre_persona_de_contacto:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_telefonos_contacto:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_telefonos_entidad_ecosis:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_web_entidad_ecosis:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_cargo_o_rol: true
+  field_otros_contactos: true
+  field_tipo_de_emprendimiento_pob: true
+  langcode: true

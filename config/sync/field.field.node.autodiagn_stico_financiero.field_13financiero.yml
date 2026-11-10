@@ -1,0 +1,26 @@
+uuid: b61d0885-d146-49b4-a9fe-8f6499a5e4ed
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_13financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_13financiero
+field_name: field_13financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '13. Tiene identificado qué tipos de entidades le pueden prestar apoyo económico en el sector financiero y conoce que  requisitos'
+description: 'Tiene identificado qué tipos de entidades le pueden prestar apoyo económico en el sector financiero y conoce que  requisitos  se piden.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

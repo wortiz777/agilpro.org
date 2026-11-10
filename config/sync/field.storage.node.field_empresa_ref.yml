@@ -1,0 +1,19 @@
+uuid: 2dd0bbc6-a483-4ee7-9ab5-73249f595db3
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_empresa_ref
+field_name: field_empresa_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,21 @@
+uuid: 8a2ce5b9-d87b-439e-92c2-88ea12dbf66f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ubicaci_n_del_recurso
+    - node.type.biblioteca_abierta
+  module:
+    - options
+id: node.biblioteca_abierta.field_ubicaci_n_del_recurso
+field_name: field_ubicaci_n_del_recurso
+entity_type: node
+bundle: biblioteca_abierta
+label: 'Ubicación del recurso'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: f3fd72cd-18ac-465c-b8b6-90991e0628fc
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000004'
+  module:
+    - block_content
+  theme:
+    - subtema
+id: subtema_block_4
+theme: subtema
+region: footer_first
+weight: -68
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000004'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000004'
+  label: 'powered by Ama-gi'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility: {  }

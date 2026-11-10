@@ -1,0 +1,23 @@
+uuid: 66f55bce-ba58-42e8-a874-5a1df42452ea
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_20financiero
+    - node.type.autodiagn_stico_financiero
+id: node.autodiagn_stico_financiero.field_20financiero
+field_name: field_20financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '5. Cual es el monto promedio de rotación de cartera'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

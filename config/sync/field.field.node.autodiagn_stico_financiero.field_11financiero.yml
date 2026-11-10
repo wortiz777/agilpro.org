@@ -1,0 +1,26 @@
+uuid: 34c27aec-5543-4d73-b626-d4c34372cb87
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_11financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_11financiero
+field_name: field_11financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '11. La empresa conoce su necesidad de capital de trabajo y lo genera a través de los ingresos.'
+description: 'Aquellos recursos económicos que requiere la empresa para poder operar.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

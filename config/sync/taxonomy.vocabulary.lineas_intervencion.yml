@@ -1,0 +1,9 @@
+uuid: c6090877-bbb4-4b7e-bd47-0bb1277ce0b7
+langcode: es
+status: true
+dependencies: {  }
+name: 'Líneas de Intervención'
+vid: lineas_intervencion
+description: null
+weight: -9
+new_revision: false

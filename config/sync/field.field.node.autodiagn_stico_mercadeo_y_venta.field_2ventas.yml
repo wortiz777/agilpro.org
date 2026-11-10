@@ -1,0 +1,23 @@
+uuid: 56da18e0-00da-47f5-b37a-22142f67051f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_2ventas
+    - node.type.autodiagn_stico_mercadeo_y_venta
+id: node.autodiagn_stico_mercadeo_y_venta.field_2ventas
+field_name: field_2ventas
+entity_type: node
+bundle: autodiagn_stico_mercadeo_y_venta
+label: '2. Número de clientes de la empresa en los últimos 6 meses.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

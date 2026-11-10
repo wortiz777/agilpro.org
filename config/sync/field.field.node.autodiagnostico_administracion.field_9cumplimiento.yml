@@ -1,0 +1,21 @@
+uuid: e0eea214-ead7-48ec-83a2-4cdf79d6ab30
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_9cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_9cumplimiento
+field_name: field_9cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '9. Licencias de funcionamiento por entidad competente,'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,8 @@
+uuid: 4ee409a7-2913-4275-9119-e7efd3939cb5
+langcode: en
+status: true
+dependencies: {  }
+id: menu-recursos-abiertos
+label: 'Menú | Recursos Abiertos'
+description: ''
+locked: false

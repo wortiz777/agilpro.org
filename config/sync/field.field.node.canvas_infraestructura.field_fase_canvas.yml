@@ -1,0 +1,21 @@
+uuid: 981e93f9-4c7b-48df-8b3a-14d2e3268796
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_canvas
+    - node.type.canvas_infraestructura
+id: node.canvas_infraestructura.field_fase_canvas
+field_name: field_fase_canvas
+entity_type: node
+bundle: canvas_infraestructura
+label: 'Fase Canvas'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '3. Crecimiento'
+default_value_callback: ''
+settings: {  }
+field_type: string

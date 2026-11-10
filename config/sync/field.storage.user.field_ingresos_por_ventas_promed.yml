@@ -1,0 +1,20 @@
+uuid: c4e7c7b1-b977-468a-a8d0-161dcc0f4c31
+langcode: und
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_ingresos_por_ventas_promed
+field_name: field_ingresos_por_ventas_promed
+entity_type: user
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

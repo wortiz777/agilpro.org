@@ -1,0 +1,153 @@
+uuid: e6b7863c-2ecc-4a4c-81c2-0be36e10e620
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_apellidos
+    - field.field.user.user.field_cargo
+    - field.field.user.user.field_documento_id
+    - field.field.user.user.field_empresa_ref
+    - field.field.user.user.field_movil
+    - field.field.user.user.field_nombres
+  module:
+    - user
+label: Usuarios
+id: usuarios
+description: 'Carga masiva de usuarios'
+help: ''
+import_period: -1
+import_period_per_feed: false
+fetcher: upload
+fetcher_configuration:
+  allowed_extensions: 'txt csv tsv xml opml'
+  directory: 'private://feeds'
+parser: csv
+parser_configuration:
+  delimiter: ','
+  no_headers: false
+  line_limit: 100
+processor: 'entity:user'
+processor_configuration:
+  values:
+    roles:
+      - colaborador
+  langcode: es
+  insert_new: 1
+  update_existing: 2
+  update_non_existent: _keep
+  skip_hash_check: false
+  skip_validation: false
+  skip_validation_types: {  }
+  authorize: false
+  revision: false
+  expire: -1
+  owner_feed_author: false
+  owner_id: 0
+custom_sources:
+  email:
+    value: email
+    label: email
+    machine_name: email
+    type: csv
+  username:
+    value: username
+    label: username
+    machine_name: username
+    type: csv
+  documento_id:
+    value: documento_id
+    label: documento_id
+    machine_name: documento_id
+    type: csv
+  nombres:
+    value: nombres
+    label: nombres
+    machine_name: nombres
+    type: csv
+  apellidos:
+    value: apellidos
+    label: apellidos
+    machine_name: apellidos
+    type: csv
+  cargo:
+    value: cargo
+    label: cargo
+    machine_name: cargo
+    type: csv
+  celular:
+    value: celular
+    label: celular
+    machine_name: celular
+    type: csv
+  estado:
+    value: estado
+    label: estado
+    machine_name: estado
+    type: csv
+  rol:
+    value: rol
+    label: rol
+    machine_name: rol
+    type: csv
+  nit_empresa:
+    value: nit_empresa
+    label: nit_empresa
+    machine_name: nit_empresa
+    type: csv
+mappings:
+  -
+    target: mail
+    map:
+      value: email
+    unique:
+      value: true
+  -
+    target: name
+    map:
+      value: username
+    unique:
+      value: true
+  -
+    target: field_documento_id
+    map:
+      value: documento_id
+  -
+    target: field_nombres
+    map:
+      value: nombres
+  -
+    target: field_apellidos
+    map:
+      value: apellidos
+  -
+    target: field_cargo
+    map:
+      value: cargo
+  -
+    target: field_movil
+    map:
+      value: celular
+  -
+    target: status
+    map:
+      value: estado
+  -
+    target: roles
+    map:
+      target_id: rol
+    settings:
+      reference_by: id
+      autocreate: false
+      revoke_roles: false
+      allowed_roles:
+        colaborador: colaborador
+        admin_empresa: admin_empresa
+        asesor: asesor
+        mentor_consultor: mentor_consultor
+  -
+    target: field_empresa_ref
+    map:
+      target_id: nit_empresa
+    settings:
+      reference_by: field_nit
+      autocreate: false

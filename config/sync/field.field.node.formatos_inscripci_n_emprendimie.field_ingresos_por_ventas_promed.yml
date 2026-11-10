@@ -1,0 +1,23 @@
+uuid: 602c5b27-fd54-46e7-b49e-ae7624f8ced6
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingresos_por_ventas_promed
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_ingresos_por_ventas_promed
+field_name: field_ingresos_por_ventas_promed
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: 'Ingresos por ventas promedio mensual últimos seis meses'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

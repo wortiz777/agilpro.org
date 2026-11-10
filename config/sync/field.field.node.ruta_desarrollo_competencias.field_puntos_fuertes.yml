@@ -1,0 +1,19 @@
+uuid: baae0bb0-a2e5-4bee-b9b6-29ebb473851d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_puntos_fuertes
+    - node.type.ruta_desarrollo_competencias
+id: node.ruta_desarrollo_competencias.field_puntos_fuertes
+field_name: field_puntos_fuertes
+entity_type: node
+bundle: ruta_desarrollo_competencias
+label: 'Puntos Fuertes'
+description: 'Revise sus notas y consigne en cada area sus fortalezas personales. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,24 @@
+uuid: 25631308-30ec-46a8-9754-3b49311e1796
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.tips_eventos_de_sensibilizaci_n
+  module:
+    - text
+id: node.tips_eventos_de_sensibilizaci_n.body
+field_name: body
+entity_type: node
+bundle: tips_eventos_de_sensibilizaci_n
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

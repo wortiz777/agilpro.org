@@ -1,0 +1,21 @@
+uuid: f43df427-0813-4e20-a9d3-0ed2bc1f4417
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_8cumplimiento
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_8cumplimiento
+field_name: field_8cumplimiento
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '8. Marquillas'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

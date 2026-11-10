@@ -1,0 +1,14 @@
+uuid: 21ef5db1-9303-4165-a434-cd8558aa0a49
+langcode: es
+status: true
+dependencies:
+  config:
+    - user.role.coordinador_fosfec
+  module:
+    - user
+id: user_add_role_action.coordinador_fosfec
+label: 'Añade el rol Coordinador FOSFEC al(los) usuario(s) seleccionado(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: coordinador_fosfec

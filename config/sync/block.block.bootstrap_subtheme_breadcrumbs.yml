@@ -1,0 +1,22 @@
+uuid: 54503b61-b886-415b-9e16-ecdf41aa5e37
+langcode: es
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bootstrap_subtheme
+_core:
+  default_config_hash: cLEgLqfGgUPrrw9pC1IZ4q3MrB6Nfg710UX4uONnz_k
+id: bootstrap_subtheme_breadcrumbs
+theme: bootstrap_subtheme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: 'Enlaces de ayuda a la navegación'
+  label_display: '0'
+  provider: system
+visibility: {  }

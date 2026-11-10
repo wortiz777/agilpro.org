@@ -1,0 +1,109 @@
+uuid: 4a331e0e-dad9-4454-9d22-7c569aa90009
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_d7_node_complete_seguimiento_de_compromisos
+class: Drupal\node\Plugin\migrate\D7NodeTranslation
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node complete (Seguimiento de Compromisos)'
+source:
+  plugin: d7_node_complete
+  node_type: seguimiento_de_compromisos
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: timestamp
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  content_translation_source:
+    -
+      plugin: get
+      source: source_langcode
+  comment_node_seguimiento_de_compromisos/0/status:
+    -
+      plugin: get
+      source: comment
+  field_fecha_visita:
+    -
+      plugin: sub_process
+      source: field_fecha_visita
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d\TH:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_comentarios_seguimiento:
+    -
+      plugin: get
+      source: field_comentarios_seguimiento
+  field_control_de_compromisos:
+    -
+      plugin: get
+      source: field_control_de_compromisos
+destination:
+  plugin: 'entity_complete:node'
+  translations: true
+  default_bundle: seguimiento_de_compromisos
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+    - upgrade_language
+  optional:
+    - upgrade_d7_field_instance
+include: null

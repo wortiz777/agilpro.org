@@ -1,0 +1,66 @@
+agilpro_fosfec.dashboard:
+  path: '/admin/agilpro/dashboard'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\FosfecDashboardController::dashboardPage'
+    _title: 'Tablero de Control FOSFEC'
+  requirements:
+    _permission: 'access fosfec dashboard'
+
+agilpro_fosfec.dashboard_bulk_inscripciones:
+  path: '/admin/agilpro/dashboard/bulk-inscripciones'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\FosfecDashboardController::bulkProcessInscripciones'
+  requirements:
+    _permission: 'access fosfec dashboard'
+  methods: [POST]
+
+agilpro_fosfec.sabana_report:
+  path: '/admin/reports/fosfec-sabana'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\FosfecSabanaController::reportPage'
+    _title: 'Sábana Auditables FOSFEC'
+  requirements:
+    _permission: 'access administration pages'
+
+agilpro_fosfec.sabana_download:
+  path: '/admin/reports/fosfec-sabana/download'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\FosfecSabanaController::downloadExport'
+    _title: 'Descarga Sábana FOSFEC'
+  requirements:
+    _permission: 'access administration pages'
+
+agilpro_fosfec.postular_modal:
+  path: '/ofertas/{node}/postular-modal'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\PostularOfertaModalController::openModal'
+    _title: 'Postular a Oferta'
+  requirements:
+    _permission: 'access content'
+    node: '\d+'
+
+agilpro_fosfec.oferta_ical:
+  path: '/ofertas/{node}/calendario.ics'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\OfertaIcalController::download'
+    _title: 'Descargar Calendario Oferta'
+  requirements:
+    _permission: 'access content'
+    node: '\d+'
+
+agilpro_fosfec.ofertas_catalogo:
+  path: '/ofertas'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\OfertasCatalogoController::catalogoPage'
+    _title: 'Convocatorias y Programas de Fomento FOSFEC'
+  requirements:
+    _access: 'TRUE'
+
+agilpro_fosfec.mentor_dashboard:
+  path: '/mi-espacio-mentor'
+  defaults:
+    _controller: '\Drupal\agilpro_fosfec\Controller\MentorDashboardController::dashboard'
+    _title: 'Mi Espacio de Mentoría'
+  requirements:
+    _permission: 'access mentor workspace'
+

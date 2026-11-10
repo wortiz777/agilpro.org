@@ -1,0 +1,40 @@
+uuid: 75d3ac32-8f24-4327-89aa-97743789fd26
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_prepare_la_semilla.field_descripcion_formacion_e
+    - field.field.node.canvas_prepare_la_semilla.field_nueva_referencia_semilla
+    - node.type.canvas_prepare_la_semilla
+  module:
+    - user
+id: node.canvas_prepare_la_semilla.default
+targetEntityType: node
+bundle: canvas_prepare_la_semilla
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_nueva_referencia_semilla:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,30 @@
+uuid: d286e0ef-93ee-4b59-905d-16a185788b46
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargar_ruta
+    - node.type.inscripci_n_fase_empoderar
+    - node.type.ruta_de_mejoramiento
+id: node.inscripci_n_fase_empoderar.field_cargar_ruta
+field_name: field_cargar_ruta
+entity_type: node
+bundle: inscripci_n_fase_empoderar
+label: 'Ruta Direccionamiento'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      ruta_de_mejoramiento: ruta_de_mejoramiento
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

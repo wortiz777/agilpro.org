@@ -1,0 +1,27 @@
+uuid: afb2e77e-4b86-4edc-9f6d-cd099c6c4600
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subir_informe_preliminar
+    - node.type.asesor_gestion_grupos
+  module:
+    - file
+id: node.asesor_gestion_grupos.field_subir_informe_preliminar
+field_name: field_subir_informe_preliminar
+entity_type: node
+bundle: asesor_gestion_grupos
+label: 'Subir Informe Preliminar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: asesores-informe-preliminar
+  file_extensions: pdf
+  max_filesize: ''
+  description_field: false
+field_type: file

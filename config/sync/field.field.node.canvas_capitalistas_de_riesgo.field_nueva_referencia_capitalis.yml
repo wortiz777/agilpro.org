@@ -1,0 +1,19 @@
+uuid: b1d26421-166b-4f42-a712-811685a1a423
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_capitalis
+    - node.type.canvas_capitalistas_de_riesgo
+id: node.canvas_capitalistas_de_riesgo.field_nueva_referencia_capitalis
+field_name: field_nueva_referencia_capitalis
+entity_type: node
+bundle: canvas_capitalistas_de_riesgo
+label: 'Ingresar Nueva Referencia Capitalistas de Riesgo'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

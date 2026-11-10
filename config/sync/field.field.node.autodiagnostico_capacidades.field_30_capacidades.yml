@@ -1,0 +1,26 @@
+uuid: 49328fc7-1ba9-4290-8959-d860e0e0182c
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_30_capacidades
+    - node.type.autodiagnostico_capacidades
+    - taxonomy.vocabulary.opciones_capacidades
+id: node.autodiagnostico_capacidades.field_30_capacidades
+field_name: field_30_capacidades
+entity_type: node
+bundle: autodiagnostico_capacidades
+label: '30. Se mantiene atento  e informado de los cambios en su entorno'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_capacidades: opciones_capacidades
+    sort:
+      field: _none
+field_type: entity_reference

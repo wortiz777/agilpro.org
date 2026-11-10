@@ -1,0 +1,23 @@
+uuid: 43b34ab0-7e95-41d6-9cf5-b333de80037e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_financiamiento_reporte_exc
+    - node.type.metas
+id: node.metas.field_financiamiento_reporte_exc
+field_name: field_financiamiento_reporte_exc
+entity_type: node
+bundle: metas
+label: 'Financiamiento | Reporte Excel (Sep)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

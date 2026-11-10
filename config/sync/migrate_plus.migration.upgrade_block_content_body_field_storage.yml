@@ -1,0 +1,83 @@
+uuid: 3b26b868-a3cd-48df-a50e-0b80d20473d8
+langcode: es
+status: true
+dependencies: {  }
+id: upgrade_block_content_body_field_storage
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 6'
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Block content body field storage'
+source:
+  plugin: embedded_data
+  data_rows:
+    -
+      id: block_content.body
+      field_name: body
+      entity_type: block_content
+      type: text_long
+  ids:
+    id:
+      type: string
+  source_module: block
+process:
+  id:
+    -
+      plugin: get
+      source: id
+  field_name:
+    -
+      plugin: get
+      source: field_name
+  entity_type:
+    -
+      plugin: get
+      source: entity_type
+  type:
+    -
+      plugin: get
+      source: type
+  settings:
+    -
+      plugin: get
+      source: settings
+  module:
+    -
+      plugin: get
+      source: text
+  locked:
+    -
+      plugin: get
+      source: locked
+  cardinality:
+    -
+      plugin: get
+      source: cardinality
+  translatable:
+    -
+      plugin: get
+      source: translatable
+  indexes:
+    -
+      plugin: get
+      source: indexes
+  persist_with_no_fields:
+    -
+      plugin: get
+      source: persist_with_no_fields
+  custom_storage:
+    -
+      plugin: get
+      source: custom_storage
+destination:
+  plugin: 'entity:field_storage_config'
+idMap: {  }
+migration_dependencies:
+  required:
+    - upgrade_block_content_type
+  optional: {  }
+include: null

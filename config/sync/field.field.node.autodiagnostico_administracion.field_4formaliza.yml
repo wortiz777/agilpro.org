@@ -1,0 +1,21 @@
+uuid: dfec750c-b661-4b0d-ba88-7abf7c75bd7a
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4formaliza
+    - node.type.autodiagnostico_administracion
+  module:
+    - options
+id: node.autodiagnostico_administracion.field_4formaliza
+field_name: field_4formaliza
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '4. Pago de RETEFUENTE mensual'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

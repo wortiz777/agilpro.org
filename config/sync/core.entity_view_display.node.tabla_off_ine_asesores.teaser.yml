@@ -1,0 +1,31 @@
+uuid: 32befa77-9f76-4737-9837-754a6a98008f
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.tabla_off_ine_asesores.body
+    - node.type.tabla_off_ine_asesores
+  module:
+    - text
+    - user
+id: node.tabla_off_ine_asesores.teaser
+targetEntityType: node
+bundle: tabla_off_ine_asesores
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

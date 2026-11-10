@@ -1,0 +1,19 @@
+uuid: d9edad0f-fc03-45eb-98cf-37e55fd6058d
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_4_5_b_detalle_el_o_los_otr
+    - node.type.informe_semestral
+id: node.informe_semestral.field_4_5_b_detalle_el_o_los_otr
+field_name: field_4_5_b_detalle_el_o_los_otr
+entity_type: node
+bundle: informe_semestral
+label: '4.5(B). Detalle el o los otros riesgos que considere, y la forma de mitigación de los mismos:'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

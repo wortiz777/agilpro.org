@@ -1,0 +1,22 @@
+uuid: e95cdb72-2adc-4920-b008-4df66283c59b
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mentores_acci_n
+    - node.type.metas
+  module:
+    - text
+id: node.metas.field_mentores_acci_n
+field_name: field_mentores_acci_n
+entity_type: node
+bundle: metas
+label: 'Mentores | Acción'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

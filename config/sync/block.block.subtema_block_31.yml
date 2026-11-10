@@ -1,0 +1,37 @@
+uuid: 1b32683f-0597-40d7-97f7-795b75364cd5
+langcode: es
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:00000000-0000-4000-9000-000000000031'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - subtema
+id: subtema_block_31
+theme: subtema
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:00000000-0000-4000-9000-000000000031'
+settings:
+  id: 'block_content:00000000-0000-4000-9000-000000000031'
+  label: 'Ruta Paso 3'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      administrator: administrator
+      colaborador: colaborador

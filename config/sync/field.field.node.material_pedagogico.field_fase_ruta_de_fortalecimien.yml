@@ -1,0 +1,21 @@
+uuid: f6577699-869a-45bb-8fd4-e52280dfca4e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fase_ruta_de_fortalecimien
+    - node.type.material_pedagogico
+  module:
+    - options
+id: node.material_pedagogico.field_fase_ruta_de_fortalecimien
+field_name: field_fase_ruta_de_fortalecimien
+entity_type: node
+bundle: material_pedagogico
+label: 'Fase Ruta de Fortalecimiento'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

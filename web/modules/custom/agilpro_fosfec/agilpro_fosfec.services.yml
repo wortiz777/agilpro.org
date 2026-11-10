@@ -1,0 +1,17 @@
+services:
+  agilpro_fosfec.workflow_subscriber:
+    class: Drupal\agilpro_fosfec\EventSubscriber\FosfecWorkflowSubscriber
+    tags:
+      - { name: event_subscriber }
+
+  agilpro_fosfec.exporter:
+    class: Drupal\agilpro_fosfec\Service\FosfecExporterService
+    arguments: ['@entity_type.manager', '@date.formatter']
+
+  agilpro_fosfec.transaction_guard:
+    class: Drupal\agilpro_fosfec\Guard\FosfecTransactionWorkflowGuard
+    arguments: ['@current_user']
+    tags:
+      - { name: state_machine.guard, group: node }
+
+

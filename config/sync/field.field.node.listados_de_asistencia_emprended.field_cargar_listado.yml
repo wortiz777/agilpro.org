@@ -1,0 +1,27 @@
+uuid: 85b8afb6-ac4e-412a-bb6d-19ae852139ab
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cargar_listado
+    - node.type.listados_de_asistencia_emprended
+  module:
+    - file
+id: node.listados_de_asistencia_emprended.field_cargar_listado
+field_name: field_cargar_listado
+entity_type: node
+bundle: listados_de_asistencia_emprended
+label: 'Cargar Listado'
+description: 'Cargue una copia digital (PDF) de los listados o planillas de asistencia de control del evento de sensibilización. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'Listados Asistencia Sensibilización'
+  file_extensions: 'pdf jpg jpeg png bpm gif doc docx ppt pptx xls xlsx'
+  max_filesize: ''
+  description_field: false
+field_type: file

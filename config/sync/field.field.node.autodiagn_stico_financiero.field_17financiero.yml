@@ -1,0 +1,23 @@
+uuid: 176b30bb-ea31-488d-8715-d8af0d95e59e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_17financiero
+    - node.type.autodiagn_stico_financiero
+id: node.autodiagn_stico_financiero.field_17financiero
+field_name: field_17financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '2. En este momento cual es el monto total de las deudas financieras de la empresa'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

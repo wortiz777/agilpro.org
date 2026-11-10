@@ -1,0 +1,65 @@
+uuid: 66ecac9b-f411-435d-bc93-2d93bac9d5f8
+langcode: es
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.empresa.body
+    - field.field.node.empresa.feeds_item
+    - field.field.node.empresa.field__dv
+    - field.field.node.empresa.field_actividad
+    - field.field.node.empresa.field_ciudad_municipio
+    - field.field.node.empresa.field_departamento
+    - field.field.node.empresa.field_direccion_comercial
+    - field.field.node.empresa.field_e_mail_contacto
+    - field.field.node.empresa.field_fecha_inicio_actividades
+    - field.field.node.empresa.field_logo_emprendimiento
+    - field.field.node.empresa.field_movil
+    - field.field.node.empresa.field_nit
+    - field.field.node.empresa.field_pagina_web
+    - field.field.node.empresa.field_presentacion_emprendimient
+    - field.field.node.empresa.field_sector_economico
+    - field.field.node.empresa.field_telefono_fijo_emprendimien
+    - field.field.node.empresa.field_terminos_condiciones
+    - field.field.node.empresa.field_tipo_id
+    - node.type.empresa
+  module:
+    - text
+    - user
+id: node.empresa.teaser
+targetEntityType: node
+bundle: empresa
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  feeds_item: true
+  field__dv: true
+  field_actividad: true
+  field_ciudad_municipio: true
+  field_departamento: true
+  field_direccion_comercial: true
+  field_e_mail_contacto: true
+  field_fecha_inicio_actividades: true
+  field_logo_emprendimiento: true
+  field_movil: true
+  field_nit: true
+  field_pagina_web: true
+  field_presentacion_emprendimient: true
+  field_sector_economico: true
+  field_telefono_fijo_emprendimien: true
+  field_terminos_condiciones: true
+  field_tipo_id: true
+  langcode: true

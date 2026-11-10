@@ -1,0 +1,24 @@
+uuid: 3e325905-e760-4ed9-8c99-f380480fee28
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_fecha_de_inscripcion
+field_name: field_fecha_de_inscripcion
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

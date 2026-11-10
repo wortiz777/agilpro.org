@@ -1,0 +1,26 @@
+uuid: 82508e63-f9c1-4917-9482-ff40bb61da6e
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_8admin
+    - node.type.autodiagnostico_administracion
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagnostico_administracion.field_8admin
+field_name: field_8admin
+entity_type: node
+bundle: autodiagnostico_administracion
+label: '8. La empresa cuenta con un sistema de gestión.'
+description: "Los sistemas de gestión son el conjunto de políticas, prácticas, procedimientos y procesos utilizados en la elaboración e implementación de estrategias, su ejecución y toda la actividad de gestión asociada a la empresa, preferiblemente documentada y socializada con los funcionarios de la empresa. \r\nSistemas de Gestión de la Seguridad y Salud en el Trabajo (SST) , Sistemas de Gestión de la I+D+i, Sistemas de Gestión de la Responsabilidad Social Empresarial RSE, Sistemas de Gestión Ambiental, Sistemas de Gestión de la Calidad, Sistema de Gestión Integral, etc."
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,59 @@
+uuid: c8f29137-55e1-4e73-b11b-e10582aa6c3f
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.listado_asistentes_talleres_habi.field_cargar_listado_de_asistenc
+    - field.field.node.listado_asistentes_talleres_habi.field_lugar_del_encuentro_t_hab
+    - field.field.node.listado_asistentes_talleres_habi.field_n_mero_de_emprendedores_em
+    - field.field.node.listado_asistentes_talleres_habi.field_usuario
+    - node.type.listado_asistentes_talleres_habi
+  module:
+    - file
+    - user
+id: node.listado_asistentes_talleres_habi.default
+targetEntityType: node
+bundle: listado_asistentes_talleres_habi
+mode: default
+content:
+  field_cargar_listado_de_asistenc:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_lugar_del_encuentro_t_hab:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_n_mero_de_emprendedores_em:
+    type: number_integer
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_usuario:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

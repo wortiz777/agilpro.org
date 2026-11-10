@@ -1,0 +1,50 @@
+uuid: c0e9fe89-587a-4e10-81f4-119e04f33399
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.node.canvas_formacion.field_descripcion_formacion_e
+    - field.field.node.canvas_formacion.field_fase_canvas
+    - field.field.node.canvas_formacion.field_registro_formacion_equipo
+    - node.type.canvas_formacion
+  module:
+    - user
+id: node.canvas_formacion.default
+targetEntityType: node
+bundle: canvas_formacion
+mode: default
+content:
+  field_descripcion_formacion_e:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_fase_canvas:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_registro_formacion_equipo:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

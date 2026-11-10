@@ -1,0 +1,19 @@
+uuid: 10d05df8-4e86-47fb-9895-3ddbd4137b93
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email_empresa
+    - node.type.formatos_inscripci_n_emprendimie
+id: node.formatos_inscripci_n_emprendimie.field_email_empresa
+field_name: field_email_empresa
+entity_type: node
+bundle: formatos_inscripci_n_emprendimie
+label: Email
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

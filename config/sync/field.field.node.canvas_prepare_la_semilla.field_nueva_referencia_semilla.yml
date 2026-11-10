@@ -1,0 +1,19 @@
+uuid: c8e15ec7-5111-43dd-a54f-1c212dc592db
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nueva_referencia_semilla
+    - node.type.canvas_prepare_la_semilla
+id: node.canvas_prepare_la_semilla.field_nueva_referencia_semilla
+field_name: field_nueva_referencia_semilla
+entity_type: node
+bundle: canvas_prepare_la_semilla
+label: 'Ingresar Nueva Referencia Prepare la Semilla'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

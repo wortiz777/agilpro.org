@@ -1,0 +1,24 @@
+uuid: 46e3d89c-875c-482b-a738-dd69b1e89a4b
+langcode: und
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_2_1_n_mero_de_personas_sen
+field_name: field_2_1_n_mero_de_personas_sen
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

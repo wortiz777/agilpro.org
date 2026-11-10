@@ -1,0 +1,26 @@
+uuid: 2c409baf-6c4b-4f8b-9c07-9796f21d0f13
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_8financiero
+    - node.type.autodiagn_stico_financiero
+    - taxonomy.vocabulary.opciones_direcionamiento
+id: node.autodiagn_stico_financiero.field_8financiero
+field_name: field_8financiero
+entity_type: node
+bundle: autodiagn_stico_financiero
+label: '8. Se hace  análisis financiero mensualmente.'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      opciones_direcionamiento: opciones_direcionamiento
+    sort:
+      field: _none
+field_type: entity_reference

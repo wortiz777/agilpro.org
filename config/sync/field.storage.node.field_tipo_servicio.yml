@@ -1,0 +1,30 @@
+uuid: 919b2b05-361c-46d2-ba3d-eb68083af387
+langcode: es
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_tipo_servicio
+field_name: field_tipo_servicio
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: mentoria_1to1
+      label: 'Mentoría 1 a 1'
+    -
+      value: taller
+      label: Taller
+    -
+      value: asesoria_grupal
+      label: 'Asesoría Grupal'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

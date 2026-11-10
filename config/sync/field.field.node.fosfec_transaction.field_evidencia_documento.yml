@@ -1,0 +1,27 @@
+uuid: f1e17e1e-ff5e-41fc-8db5-c5f8916639d1
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evidencia_documento
+    - node.type.fosfec_transaction
+  module:
+    - file
+id: node.fosfec_transaction.field_evidencia_documento
+field_name: field_evidencia_documento
+entity_type: node
+bundle: fosfec_transaction
+label: 'Evidencia Adjunta'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'pdf docx xlsx xls doc png jpg jpeg'
+  max_filesize: '20 MB'
+  description_field: false
+field_type: file
