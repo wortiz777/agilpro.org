@@ -157,3 +157,4 @@ Para quien asuma la continuidad de este proyecto, los siguientes frentes represe
    * Ampliación de los dashboards con gráficos agregados por Cámara de Comercio, sector económico y cumplimiento de metas del presupuesto FOSFEC.
 5. **Despliegue a Servidores de UAT / Producción**:
    * Utilizar la carpeta `config/environments/` (`settings.uat.php`, `settings.prod.php`) y ejecutar importaciones automáticas de configuración vía CI/CD (`drush cim -y`).
+
